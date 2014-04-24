@@ -4,7 +4,6 @@
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # 
 # Translators:
-# ariadna.lawyer.23 <ari2332@hotmail.com>, 2014
 # claudi <claudix.kernel@gmail.com>, 2014
 # mcolomer <mcmlilhity@gmail.com>, 2014
 # sarina <sarina@edx.org>, 2014

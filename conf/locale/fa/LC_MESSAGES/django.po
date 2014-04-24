@@ -40,7 +40,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2014-05-02 17:10-0400\n"
+=======
+"POT-Creation-Date: 2014-04-22 10:12-0400\n"
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 "PO-Revision-Date: 2014-02-06 03:04+0000\n"
 "Last-Translator: nedbat <ned@edx.org>\n"
 "Language-Team: Persian (http://www.transifex.com/projects/p/edx-platform/language/fa/)\n"
@@ -3840,8 +3844,12 @@ msgstr ""
 #: cms/templates/login.html cms/templates/register.html
 #: lms/templates/login.html lms/templates/provider_login.html
 #: lms/templates/provider_login.html lms/templates/register.html
+<<<<<<< HEAD
 #: lms/templates/register.html lms/templates/signup_modal.html
 #: lms/templates/sysadmin_dashboard.html
+=======
+#: lms/templates/signup_modal.html lms/templates/sysadmin_dashboard.html
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 #: lms/templates/university_profile/edge.html
 msgid "Password"
 msgstr ""
@@ -4813,10 +4821,13 @@ msgid ""
 "Please provide launch_url. Click \"Edit\", and fill in the required fields."
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/templates/lti.html
 msgid "Feedback on your work from the grader:"
 msgstr ""
 
+=======
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 #: lms/templates/lti_form.html
 msgid "Press to Launch"
 msgstr ""
@@ -7206,6 +7217,13 @@ msgstr ""
 msgid "User Profile"
 msgstr ""
 
+<<<<<<< HEAD
+=======
+#: lms/templates/discussion/user_profile.html
+msgid "Active Threads"
+msgstr ""
+
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 #: lms/templates/discussion/mustache/_inline_thread.mustache
 #: lms/templates/discussion/mustache/_inline_thread_cohorted.mustache
 msgid "Expand discussion"
@@ -7229,10 +7247,13 @@ msgstr ""
 msgid "View discussion"
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/templates/discussion/mustache/_user_profile.mustache
 msgid "Active Threads"
 msgstr ""
 
+=======
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 #: lms/templates/emails/activation_email.txt
 msgid ""
 "Thank you for signing up for {platform_name}! To activate your account, "
@@ -11974,7 +11995,7 @@ msgstr ""
 
 # empty
 msgid "This is a key string."
-msgstr ""
+msgstr "این یک رشته کلیدی می باشد."
 
 #: wiki/admin.py wiki/models/article.py
 msgid "created"

@@ -38,7 +38,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2014-05-02 17:10-0400\n"
+=======
+"POT-Creation-Date: 2014-04-22 10:12-0400\n"
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 "PO-Revision-Date: 2014-04-07 13:46+0000\n"
 "Last-Translator: sarina <sarina@edx.org>\n"
 "Language-Team: Urdu (http://www.transifex.com/projects/p/edx-platform/language/ur/)\n"
@@ -171,6 +175,7 @@ msgstr ""
 msgid "Enrollment action is invalid"
 msgstr ""
 
+<<<<<<< HEAD
 #. Translators: provider_name is the name of an external, third-party user
 #. authentication service (like
 #. Google or LinkedIn).
@@ -181,6 +186,8 @@ msgid ""
 "provider."
 msgstr ""
 
+=======
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 #: common/djangoapps/student/views.py
 msgid "There was an error receiving your login information. Please email us."
 msgstr ""
@@ -800,7 +807,11 @@ msgid "unanswered"
 msgstr ""
 
 #: common/lib/capa/capa/inputtypes.py
+<<<<<<< HEAD
 msgid "processing"
+=======
+msgid "queued"
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 msgstr ""
 
 #: common/lib/capa/capa/inputtypes.py
@@ -821,10 +832,13 @@ msgid ""
 "by that feedback."
 msgstr ""
 
+<<<<<<< HEAD
 #: common/lib/capa/capa/inputtypes.py
 msgid "No response from Xqueue within {xqueue_timeout} seconds. Aborted."
 msgstr ""
 
+=======
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 #: common/lib/capa/capa/responsetypes.py
 msgid "Error {err} in evaluating hint function {hintfn}."
 msgstr ""
@@ -1365,6 +1379,7 @@ msgstr ""
 msgid "A YouTube URL or a link to a file hosted anywhere on the web."
 msgstr ""
 
+<<<<<<< HEAD
 #. Translators: This is a type of file used for captioning in the video
 #. player.
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
@@ -1375,6 +1390,8 @@ msgstr ""
 msgid "Text (.txt) file"
 msgstr ""
 
+=======
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 #: common/static/js/vendor/mathjax-MathJax-c9db6ac/docs/source/mjtheme/layout.html
 msgid "Navigation"
 msgstr ""
@@ -3838,8 +3855,12 @@ msgstr ""
 #: cms/templates/login.html cms/templates/register.html
 #: lms/templates/login.html lms/templates/provider_login.html
 #: lms/templates/provider_login.html lms/templates/register.html
+<<<<<<< HEAD
 #: lms/templates/register.html lms/templates/signup_modal.html
 #: lms/templates/sysadmin_dashboard.html
+=======
+#: lms/templates/signup_modal.html lms/templates/sysadmin_dashboard.html
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 #: lms/templates/university_profile/edge.html
 msgid "Password"
 msgstr ""
@@ -4180,6 +4201,7 @@ msgstr ""
 msgid "Please verify your new email"
 msgstr ""
 
+<<<<<<< HEAD
 #. Translators: this message is displayed when a user tries to link their
 #. account with a third-party authentication provider (for example, Google or
 #. LinkedIn) with a given edX account, but their third-party account is
@@ -4194,11 +4216,14 @@ msgid ""
 "with your {provider_name} account."
 msgstr ""
 
+=======
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 #: lms/templates/dashboard.html lms/templates/dashboard.html
 #: lms/templates/dashboard/_dashboard_info_language.html
 msgid "edit"
 msgstr ""
 
+<<<<<<< HEAD
 #. Translators: this section lists all the third-party authentication
 #. providers
 #. (for example, Google and LinkedIn) the user can link with or unlink from
@@ -4221,6 +4246,8 @@ msgstr ""
 msgid "link"
 msgstr ""
 
+=======
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 #: lms/templates/dashboard.html lms/templates/dashboard.html
 msgid "Reset Password"
 msgstr ""
@@ -4769,6 +4796,7 @@ msgstr ""
 msgid "Remember me"
 msgstr ""
 
+<<<<<<< HEAD
 #. Translators: this is the last choice of a number of choices of how to log
 #. in
 #. to the site.
@@ -4786,10 +4814,13 @@ msgstr ""
 
 #. Translators:  "External resource" means that this learning module is hosted
 #. on a platform external to the edX LMS
+=======
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 #: lms/templates/lti.html
 msgid "External resource"
 msgstr ""
 
+<<<<<<< HEAD
 #. Translators: "points" is the student's achieved score on this LTI unit, and
 #. "total_points" is the maximum number of points achievable.
 #: lms/templates/lti.html
@@ -4802,6 +4833,8 @@ msgstr ""
 msgid "{total_points} points possible"
 msgstr ""
 
+=======
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 #: lms/templates/lti.html
 msgid "View resource in a new window"
 msgstr ""
@@ -4811,10 +4844,13 @@ msgid ""
 "Please provide launch_url. Click \"Edit\", and fill in the required fields."
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/templates/lti.html
 msgid "Feedback on your work from the grader:"
 msgstr ""
 
+=======
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 #: lms/templates/lti_form.html
 msgid "Press to Launch"
 msgstr ""
@@ -5129,6 +5165,7 @@ msgid "Register below to create your {platform_name} account"
 msgstr ""
 
 #: lms/templates/register.html
+<<<<<<< HEAD
 msgid "Register to start learning today!"
 msgstr ""
 
@@ -5149,6 +5186,8 @@ msgid "Finish your account registration below to start learning."
 msgstr ""
 
 #: lms/templates/register.html
+=======
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 msgid "Please complete the following fields to register for an account. "
 msgstr ""
 
@@ -5614,8 +5653,13 @@ msgstr ""
 msgid "Download transcript"
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/templates/video.html
 msgid "Download Handout"
+=======
+#: lms/templates/video.html lms/templates/video.html
+msgid "{file_format}"
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 msgstr ""
 
 #: lms/templates/word_cloud.html
@@ -6542,10 +6586,13 @@ msgid "Course Progress for Student '{username}' ({email})"
 msgstr ""
 
 #: lms/templates/courseware/progress.html
+<<<<<<< HEAD
 msgid "Download your certificate"
 msgstr ""
 
 #: lms/templates/courseware/progress.html
+=======
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 msgid "{earned:.3n} of {total:.3n} possible points"
 msgstr ""
 
@@ -7208,6 +7255,13 @@ msgstr ""
 msgid "User Profile"
 msgstr ""
 
+<<<<<<< HEAD
+=======
+#: lms/templates/discussion/user_profile.html
+msgid "Active Threads"
+msgstr ""
+
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 #: lms/templates/discussion/mustache/_inline_thread.mustache
 #: lms/templates/discussion/mustache/_inline_thread_cohorted.mustache
 msgid "Expand discussion"
@@ -7231,10 +7285,13 @@ msgstr ""
 msgid "View discussion"
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/templates/discussion/mustache/_user_profile.mustache
 msgid "Active Threads"
 msgstr ""
 
+=======
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 #: lms/templates/emails/activation_email.txt
 msgid ""
 "Thank you for signing up for {platform_name}! To activate your account, "

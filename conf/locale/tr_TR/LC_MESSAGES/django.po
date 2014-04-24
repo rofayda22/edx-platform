@@ -1560,7 +1560,7 @@ msgstr "Kullanıcı {username} yok."
 
 #: lms/djangoapps/courseware/views.py
 msgid "User {username} has never accessed problem {location}"
-msgstr ""
+msgstr "{username} kullanıcısı {location} problemine henüz erişmedi "
 
 #: lms/djangoapps/courseware/features/video.py lms/templates/video.html
 msgid "ERROR: No playable video sources found!"
@@ -1930,6 +1930,8 @@ msgstr "Görev zaten devam ediyor."
 #: lms/djangoapps/instructor/views/legacy.py
 #: lms/djangoapps/instructor/views/legacy.py
 #: lms/djangoapps/instructor/views/tools.py
+#: lms/templates/instructor/instructor_dashboard_2/metrics.html
+#: lms/templates/instructor/instructor_dashboard_2/metrics.html
 msgid "Username"
 msgstr "Kullanıcı adı"
 
@@ -2102,23 +2104,23 @@ msgstr "Modül bulundu."
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Couldn't find module with that urlname: {url}. "
-msgstr ""
+msgstr "Bu url-ismiyle modül bulunamadı: {url}"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Deleted student module state for {state}!"
-msgstr ""
+msgstr "Öğrenci modül durumu {state} için silindi!"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Failed to delete module state for {id}/{url}. "
-msgstr ""
+msgstr "Modül durumunun {id}/{url} için silinmesi başarısız oldu."
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Module state successfully reset!"
-msgstr ""
+msgstr "Modül durumu başarıyla sıfırlandı!"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Couldn't reset module state for {id}/{url}. "
-msgstr ""
+msgstr "Modül durumu {id}/{url} için sıfırlanamadı."
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid ""
@@ -2176,7 +2178,7 @@ msgstr "Bu url ismiyle bir modül bulunamadı."
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Student state for problem {problem}"
-msgstr ""
+msgstr "{problem} problemi için öğrenci durumu"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "List of Beta Testers"
@@ -2539,6 +2541,9 @@ msgid ""
 "answers to any open response assessment questions? If not, please do so and "
 "return to this page."
 msgstr ""
+"Bu derste hiç bir açık uçlu soru bulunamadı. Herhangi bir açık uçlu "
+"değerlendirme sorusu için cevaplarınızı daha önce gönderdiniz mi? Eğer "
+"değilse, lütfen böyle yapın ve bu sayfaya geri dönün."
 
 #: lms/djangoapps/open_ended_grading/utils.py
 msgid "AI Assessment"
@@ -6914,7 +6919,7 @@ msgstr "Öğrenciler"
 
 #: lms/templates/courseware/instructor_dashboard.html
 msgid "Score distribution for problems"
-msgstr ""
+msgstr "Problemler için skor dağılımı"
 
 #: lms/templates/courseware/instructor_dashboard.html
 #: lms/templates/courseware/instructor_dashboard.html
@@ -7787,7 +7792,7 @@ msgstr ""
 #: lms/templates/discussion/mustache/_inline_thread.mustache
 #: lms/templates/discussion/mustache/_inline_thread_cohorted.mustache
 msgid "Collapse discussion"
-msgstr ""
+msgstr "Tartışmayı daralt"
 
 #: lms/templates/discussion/mustache/_inline_thread_show.mustache
 msgid "This thread has been pinned by course staff."
@@ -7837,7 +7842,7 @@ msgstr ""
 #: lms/templates/emails/remove_beta_tester_email_message.txt
 #: lms/templates/emails/unenroll_email_enrolledmessage.txt
 msgid "Dear {full_name}"
-msgstr ""
+msgstr "Sayın {full_name} "
 
 #: lms/templates/emails/add_beta_tester_email_message.txt
 msgid ""
@@ -7902,7 +7907,7 @@ msgstr ""
 
 #: lms/templates/emails/enroll_email_allowedmessage.txt
 msgid "Dear student,"
-msgstr ""
+msgstr "Sayın öğrencimiz,"
 
 #: lms/templates/emails/enroll_email_allowedmessage.txt
 msgid ""
@@ -7963,7 +7968,7 @@ msgstr ""
 
 #: lms/templates/emails/order_confirmation_email.txt
 msgid "Hi {name}"
-msgstr ""
+msgstr "Merhaba {name}"
 
 #: lms/templates/emails/order_confirmation_email.txt
 msgid ""
@@ -7989,19 +7994,19 @@ msgstr ""
 
 #: lms/templates/emails/order_confirmation_email.txt
 msgid "-The {platform_name} Team"
-msgstr ""
+msgstr "- {platform_name} Takımı"
 
 #: lms/templates/emails/order_confirmation_email.txt
 msgid "Your order number is: {order_number}"
-msgstr ""
+msgstr "Sipariş numaranız şöyle: {order_number}"
 
 #: lms/templates/emails/order_confirmation_email.txt
 msgid "The items in your order are:"
-msgstr ""
+msgstr "Siparişinizdeki maddeler şöyle:"
 
 #: lms/templates/emails/order_confirmation_email.txt
 msgid "Quantity - Description - Price"
-msgstr ""
+msgstr "Miktar - Açıklama - Ücret"
 
 #: lms/templates/emails/order_confirmation_email.txt
 msgid "Total billed to credit/debit card: {currency_symbol}{total_cost}"
@@ -8044,7 +8049,7 @@ msgstr ""
 
 #: lms/templates/emails/unenroll_email_allowedmessage.txt
 msgid "Dear Student,"
-msgstr ""
+msgstr "Değerli Öğrencimiz,"
 
 #: lms/templates/emails/unenroll_email_allowedmessage.txt
 msgid ""
@@ -8134,7 +8139,7 @@ msgstr "Atla"
 
 #: lms/templates/instructor/instructor_dashboard_2/analytics.html
 msgid "Score Distribution"
-msgstr ""
+msgstr "Skor Dağılımı"
 
 #: lms/templates/instructor/instructor_dashboard_2/analytics.html
 msgid ""
@@ -8506,7 +8511,7 @@ msgstr "Yönetici Liste İdaresi"
 #. users can be added to.
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Select an Administrator Group:"
-msgstr ""
+msgstr "Bir yönetici grubu seçiniz:"
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Getting available lists..."
@@ -8575,7 +8580,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Add Beta Tester"
-msgstr ""
+msgstr "Beta Sınayıcısı Ekle"
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Discussion Admins"
@@ -8594,7 +8599,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Add Discussion Admin"
-msgstr ""
+msgstr "Tartışma Yöneticisi Ekle"
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Discussion Moderators"
@@ -8674,7 +8679,7 @@ msgstr "E-posta Gönder"
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid "Message:"
-msgstr ""
+msgstr "Mesaj:"
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid ""

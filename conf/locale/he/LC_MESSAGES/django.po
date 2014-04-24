@@ -43,7 +43,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2014-05-02 17:10-0400\n"
+=======
+"POT-Creation-Date: 2014-04-22 10:12-0400\n"
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 "PO-Revision-Date: 2014-03-26 18:20+0000\n"
 "Last-Translator: sdfhjc\n"
 "Language-Team: Hebrew (http://www.transifex.com/projects/p/edx-platform/language/he/)\n"
@@ -3773,11 +3777,11 @@ msgstr ""
 #: cms/templates/404.html cms/templates/error.html
 #: lms/templates/static_templates/404.html
 msgid "Page Not Found"
-msgstr ""
+msgstr "העמוד אינו נמצא"
 
 #: cms/templates/404.html lms/templates/static_templates/404.html
 msgid "Page not found"
-msgstr ""
+msgstr "העמוד אינו נמצא"
 
 #: cms/templates/asset_index.html lms/templates/courseware/courseware.html
 #: lms/templates/verify_student/_modal_editname.html
@@ -3843,8 +3847,12 @@ msgstr ""
 #: cms/templates/login.html cms/templates/register.html
 #: lms/templates/login.html lms/templates/provider_login.html
 #: lms/templates/provider_login.html lms/templates/register.html
+<<<<<<< HEAD
 #: lms/templates/register.html lms/templates/signup_modal.html
 #: lms/templates/sysadmin_dashboard.html
+=======
+#: lms/templates/signup_modal.html lms/templates/sysadmin_dashboard.html
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 #: lms/templates/university_profile/edge.html
 msgid "Password"
 msgstr ""
@@ -4816,10 +4824,13 @@ msgid ""
 "Please provide launch_url. Click \"Edit\", and fill in the required fields."
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/templates/lti.html
 msgid "Feedback on your work from the grader:"
 msgstr ""
 
+=======
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 #: lms/templates/lti_form.html
 msgid "Press to Launch"
 msgstr ""
@@ -7213,6 +7224,13 @@ msgstr ""
 msgid "User Profile"
 msgstr ""
 
+<<<<<<< HEAD
+=======
+#: lms/templates/discussion/user_profile.html
+msgid "Active Threads"
+msgstr ""
+
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 #: lms/templates/discussion/mustache/_inline_thread.mustache
 #: lms/templates/discussion/mustache/_inline_thread_cohorted.mustache
 msgid "Expand discussion"
@@ -7236,10 +7254,13 @@ msgstr ""
 msgid "View discussion"
 msgstr ""
 
+<<<<<<< HEAD
 #: lms/templates/discussion/mustache/_user_profile.mustache
 msgid "Active Threads"
 msgstr ""
 
+=======
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 #: lms/templates/emails/activation_email.txt
 msgid ""
 "Thank you for signing up for {platform_name}! To activate your account, "
@@ -9684,13 +9705,13 @@ msgstr ""
 
 #: cms/templates/404.html
 msgid "The page that you were looking for was not found."
-msgstr ""
+msgstr "העמוד המבוקש אינו נמצא"
 
 #: cms/templates/404.html
 msgid ""
 "Go back to the {homepage} or let us know about any pages that may have been "
 "moved at {email}."
-msgstr ""
+msgstr "חזור אל {homepage} או ספר לנו על דפים שאינם נמצאו באמצעות {email}"
 
 #: cms/templates/500.html
 msgid "Studio Server Error"
@@ -9916,6 +9937,8 @@ msgstr ""
 
 #: cms/templates/container.html
 msgid "Published"
+<<<<<<< HEAD
+=======
 msgstr ""
 
 #: cms/templates/container.html
@@ -9932,10 +9955,30 @@ msgstr ""
 msgid ""
 "You can edit the content of this page, and your changes will be published "
 "with unit {unit_link}."
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 msgstr ""
 
 #: cms/templates/container.html
 msgid ""
+<<<<<<< HEAD
+"To make changes to the content of this page, you need to edit unit "
+"{unit_link} as a draft."
+msgstr ""
+
+#: cms/templates/container.html
+msgid "Draft"
+msgstr ""
+
+#: cms/templates/container.html
+msgid ""
+"You can edit the content of this page, and your changes will be published "
+"with unit {unit_link}."
+msgstr ""
+
+#: cms/templates/container.html
+msgid ""
+=======
+>>>>>>> DO NOT MERGE TO MASTER: Unreviewed translations for LTR langs
 "You can view and edit course components that contain other components on "
 "this page. In the case of experiment blocks, this allows you to confirm that"
 " you have properly configured your experiment groups and make changes to "
@@ -11123,7 +11166,7 @@ msgstr ""
 
 #: cms/templates/overview.html
 msgid "Collapse All Sections"
-msgstr ""
+msgstr "סגור את כל החלקים"
 
 #: cms/templates/overview.html
 msgid "New Section"
@@ -11985,7 +12028,7 @@ msgstr "זוהי שורת מפתח"
 
 #: wiki/admin.py wiki/models/article.py
 msgid "created"
-msgstr ""
+msgstr "נוצר"
 
 #: wiki/forms.py
 msgid "Only localhost... muahahaha"
