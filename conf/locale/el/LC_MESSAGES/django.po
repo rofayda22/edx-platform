@@ -4,6 +4,7 @@
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # 
 # Translators:
+# multiheader <panosfyra4@yahoo.gr>, 2014
 # #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
 # edX translation file.
 # Copyright (C) 2014 EdX
@@ -38,13 +39,14 @@
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # 
 # Translators:
+# multiheader <panosfyra4@yahoo.gr>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
 "POT-Creation-Date: 2014-05-02 17:10-0400\n"
-"PO-Revision-Date: 2014-02-10 03:11+0000\n"
-"Last-Translator: sarina <sarina@edx.org>\n"
+"PO-Revision-Date: 2014-05-05 15:24+0000\n"
+"Last-Translator: multiheader <panosfyra4@yahoo.gr>\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/edx-platform/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -67,7 +69,7 @@ msgstr ""
 
 #: common/djangoapps/course_modes/views.py common/djangoapps/student/views.py
 msgid "Enrollment is closed"
-msgstr ""
+msgstr "Τέλος εγγραφών"
 
 #: common/djangoapps/course_modes/views.py
 msgid "Enrollment mode not supported"
@@ -156,11 +158,11 @@ msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid "Course id not specified"
-msgstr ""
+msgstr "H ταυτότητα του μαθήματος δεν καθορίζεται"
 
 #: common/djangoapps/student/views.py
 msgid "Course id is invalid"
-msgstr ""
+msgstr "Λάθος ταυτότητα μαθήματος"
 
 #: common/djangoapps/student/views.py
 #: lms/templates/courseware/course_about.html
@@ -169,11 +171,11 @@ msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid "You are not enrolled in this course"
-msgstr ""
+msgstr "Δεν είστε εγγεγραμμένος σε αυτο το μάθημα"
 
 #: common/djangoapps/student/views.py
 msgid "Enrollment action is invalid"
-msgstr ""
+msgstr "Λάθος εγγραφή"
 
 #. Translators: provider_name is the name of an external, third-party user
 #. authentication service (like
@@ -188,6 +190,8 @@ msgstr ""
 #: common/djangoapps/student/views.py
 msgid "There was an error receiving your login information. Please email us."
 msgstr ""
+"Παρουσιάστηκε σφάλμα κατά τη λήψη πληροφοριών σύνδεσής σας. Παρακαλούμε να "
+"μας στείλετε μήνυμα."
 
 #: common/djangoapps/student/views.py
 msgid ""
@@ -208,13 +212,16 @@ msgstr ""
 
 #: common/djangoapps/student/views.py lms/templates/provider_login.html
 msgid "Email or password is incorrect."
-msgstr ""
+msgstr "Η διεύθηνση η κωδικός ειναι λάθος."
 
 #: common/djangoapps/student/views.py
 msgid ""
 "This account has not been activated. We have sent another activation "
 "message. Please check your e-mail for the activation instructions."
 msgstr ""
+"Αυτός ο λογαριασμός δεν έχει ενεργοποιηθεί. Έχουμε στείλει άλλο μήνυμα "
+"ενεργοποίησης. Παρακαλούμε ελέγξτε στο λογαριασμό σας το μήνυμα με της "
+"οδηγίες ενεργοποίησης."
 
 #: common/djangoapps/student/views.py
 msgid "Please enter a username"
@@ -242,23 +249,23 @@ msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid "An account with the Public Username '{username}' already exists."
-msgstr ""
+msgstr "Ο λογαριασμός με όνομα χρήστη '{username}' υπάρχει ήδη."
 
 #: common/djangoapps/student/views.py
 msgid "An account with the Email '{email}' already exists."
-msgstr ""
+msgstr "Ο λογαριασμός με την διέυθηνση '{email}' υπάρχει ήδη."
 
 #: common/djangoapps/student/views.py
 msgid "Error (401 {field}). E-mail us."
-msgstr ""
+msgstr "Σφάλμα (401{field}). Στείλτε μας μήνυμα."
 
 #: common/djangoapps/student/views.py
 msgid "To enroll, you must follow the honor code."
-msgstr ""
+msgstr "Για να εγγραφείτε, θα πρέπει να ακολουθήσετε τον κώδικα τιμής."
 
 #: common/djangoapps/student/views.py
 msgid "You must accept the terms of service."
-msgstr ""
+msgstr "Πρέπει να αποδεχτείτε τους όρους χρήσης της υπηρεσίας."
 
 #: common/djangoapps/student/views.py
 msgid "Username must be minimum of two characters long"
@@ -322,11 +329,12 @@ msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid "Valid e-mail is required."
-msgstr ""
+msgstr "Απαιτείται έγγυρη διεύθυνση ταχυδρομίου."
 
 #: common/djangoapps/student/views.py
 msgid "Username should only consist of A-Z and 0-9, with no spaces."
 msgstr ""
+"Το όνομα χρήστη θα πρέπει να αποτελείται μόνο απο A-Z και 0-9, χωρίς κενά."
 
 #: common/djangoapps/student/views.py common/djangoapps/student/views.py
 msgid "Password: "
@@ -334,11 +342,12 @@ msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid "Could not send activation e-mail."
-msgstr ""
+msgstr "Δεν ήταν δυνατή η αποστολή μηνύματος ενεργοποίησης."
 
 #: common/djangoapps/student/views.py
 msgid "Unknown error. Please e-mail us to let us know how it happened."
 msgstr ""
+"Άγνωστο σφάλμα. Παρακαλώ στείλτε μας μήνυμα για να μας πείτε πώς συνέβη."
 
 #: common/djangoapps/student/views.py
 msgid ""
@@ -358,35 +367,35 @@ msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid "No inactive user with this e-mail exists"
-msgstr ""
+msgstr "Δεν υπάρχει κανένας ανενεργός χρήστης με αυτη την διέυθηνση"
 
 #: common/djangoapps/student/views.py
 msgid "Unable to send reactivation email"
-msgstr ""
+msgstr "Μη έγγυρη αποστολή μηνύματος επανενεργοποίησης"
 
 #: common/djangoapps/student/views.py
 msgid "Invalid password"
-msgstr ""
+msgstr "Μη έγκυρος κωδικός πρόσβασης"
 
 #: common/djangoapps/student/views.py
 msgid "Valid e-mail address required."
-msgstr ""
+msgstr "Απαιτείται έγκυρη διεύθυνση."
 
 #: common/djangoapps/student/views.py
 msgid "An account with this e-mail already exists."
-msgstr ""
+msgstr "Ένας λογαριασμός με αυτή τη διεύθηνση υπάρχει ήδη."
 
 #: common/djangoapps/student/views.py
 msgid "Old email is the same as the new email."
-msgstr ""
+msgstr "Η παλιά διεύθηνση είναι ίδια με τη νέα διεύθηνση."
 
 #: common/djangoapps/student/views.py
 msgid "Name required"
-msgstr ""
+msgstr "Όνομα υποχρεωτικό"
 
 #: common/djangoapps/student/views.py common/djangoapps/student/views.py
 msgid "Invalid ID"
-msgstr ""
+msgstr "Μη έγγυρη ταυτότητα"
 
 #. Translators: the translation for "LONG_DATE_FORMAT" must be a format
 #. string for formatting dates in a long form.  For example, the
@@ -1381,27 +1390,27 @@ msgstr ""
 
 #: common/static/js/vendor/mathjax-MathJax-c9db6ac/docs/source/mjtheme/layout.html
 msgid "Navigation"
-msgstr ""
+msgstr "Πλοήγηση"
 
 #: common/static/js/vendor/mathjax-MathJax-c9db6ac/docs/source/mjtheme/layout.html
 msgid "About these documents"
-msgstr ""
+msgstr "Σχετικά με αυτά τα έγγραφα"
 
 #: common/static/js/vendor/mathjax-MathJax-c9db6ac/docs/source/mjtheme/layout.html
 msgid "Index"
-msgstr ""
+msgstr "Ευρετήριο"
 
 #: common/static/js/vendor/mathjax-MathJax-c9db6ac/docs/source/mjtheme/layout.html
 #: lms/templates/wiki/plugins/attachments/index.html
 #: lms/templates/discussion/_thread_list_template.html
 msgid "Search"
-msgstr ""
+msgstr "Αναζήτηση"
 
 #: common/static/js/vendor/mathjax-MathJax-c9db6ac/docs/source/mjtheme/layout.html
 #: lms/templates/static_templates/copyright.html
 #: lms/templates/static_templates/copyright.html
 msgid "Copyright"
-msgstr ""
+msgstr "Πνευματική ιδιοκτησία"
 
 #: lms/djangoapps/class_dashboard/dashboard_data.py
 msgid ""
@@ -1772,16 +1781,18 @@ msgstr ""
 
 #: lms/djangoapps/django_comment_client/base/views.py
 msgid "allowed file types are '%(file_types)s'"
-msgstr ""
+msgstr "επιτρεπόμενοι τύποι αρχείων είναι '%(file_types)s'"
 
 #: lms/djangoapps/django_comment_client/base/views.py
 msgid "maximum upload file size is %(file_size)sK"
-msgstr ""
+msgstr "μέγιστο μέγεθος αρχείου αποστολής είναι %(file_size)sΚ"
 
 #: lms/djangoapps/django_comment_client/base/views.py
 msgid ""
 "Error uploading file. Please contact the site administrator. Thank you."
 msgstr ""
+"Σφάλμα μεταφόρτωση του αρχείου. Παρακαλώ επικοινωνήστε με τον διαχειριστή "
+"της σελίδας.Ευχαριστώ."
 
 #: lms/djangoapps/django_comment_client/base/views.py
 msgid "Good"
@@ -2225,7 +2236,7 @@ msgstr ""
 #: lms/djangoapps/instructor_task/tasks.py
 #: lms/templates/wiki/plugins/attachments/index.html wiki/models/article.py
 msgid "deleted"
-msgstr ""
+msgstr "διεγραμένο"
 
 #. Translators: This is a past-tense verb that is inserted into task progress
 #. messages as {action}.
@@ -2570,7 +2581,7 @@ msgstr ""
 #: lms/templates/shoppingcart/verified_cert_receipt.html
 #: wiki/plugins/attachments/forms.py
 msgid "Description"
-msgstr ""
+msgstr "Περιγραφή"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Comments"
@@ -3122,10 +3133,14 @@ msgid ""
 "You're receiving this e-mail because you requested a password reset for your"
 " user account at edx.org."
 msgstr ""
+"Λάβατε αυτό το μήνυμα γιατί έχετε ζητήσει επαναφοράς κωδικού πρόσβασης για "
+"το λογαριασμό χρήστη σας στο edx.org."
 
 #: lms/templates/registration/password_reset_email.html
 msgid "Please go to the following page and choose a new password:"
 msgstr ""
+"Παρακαλώ πηγαίνετε στην επόμενη σελίδα και να επιλέξετε ένα νέο κωδικό "
+"πρόσβασης:"
 
 #: lms/templates/registration/password_reset_email.html
 msgid ""
@@ -3135,15 +3150,15 @@ msgstr ""
 
 #: lms/templates/registration/password_reset_email.html
 msgid "Thanks for using our site!"
-msgstr ""
+msgstr "Ευχαριστούμε για την χρήση της σελίδας μας!"
 
 #: lms/templates/registration/password_reset_email.html
 msgid "The edX Team"
-msgstr ""
+msgstr "Η ομάδα edX"
 
 #: lms/templates/wiki/article.html
 msgid "Last modified:"
-msgstr ""
+msgstr "Τελευταία τροποποίηση:"
 
 #: lms/templates/wiki/article.html
 msgid "See all children"
@@ -3151,25 +3166,25 @@ msgstr ""
 
 #: lms/templates/wiki/article.html
 msgid "This article was last modified:"
-msgstr ""
+msgstr "Το άρθρο αυτό τροποποιήθηκε τελευταία:"
 
 #: lms/templates/wiki/create.html lms/templates/wiki/create.html.py
 msgid "Add new article"
-msgstr ""
+msgstr "Προσθήκη νέου άρθρου"
 
 #: lms/templates/wiki/create.html
 msgid "Create article"
-msgstr ""
+msgstr "Δημιουργία άρθρου"
 
 #: lms/templates/wiki/create.html lms/templates/wiki/delete.html
 #: lms/templates/wiki/delete.html.py
 msgid "Go back"
-msgstr ""
+msgstr "Πήγαινε πίσω"
 
 #: lms/templates/wiki/delete.html lms/templates/wiki/delete.html.py
 #: lms/templates/wiki/edit.html
 msgid "Delete article"
-msgstr ""
+msgstr "Διαγραφή του άρθρου"
 
 #: lms/templates/wiki/delete.html
 #: lms/templates/wiki/plugins/attachments/index.html
@@ -3183,13 +3198,15 @@ msgstr "Διαγραφή"
 
 #: lms/templates/wiki/delete.html
 msgid "You cannot delete a root article."
-msgstr ""
+msgstr "Δεν μπορείτε να διαγράψετε ένα άρθρο διαδρομής"
 
 #: lms/templates/wiki/delete.html
 msgid ""
 "You cannot delete this article because you do not have permission to delete "
 "articles with children. Try to remove the children manually one-by-one."
 msgstr ""
+"Δεν μπορείτε να διαγράψετε αυτό το άρθρο γιατί δεν έχετε άδεια να διαγράψετε"
+" άρθρα με παιδιά. Προσπαθήστε να αφαιρέσετε τα παιδιά με το χέρι ένα-ένα."
 
 #: lms/templates/wiki/delete.html
 msgid ""
@@ -3473,7 +3490,7 @@ msgstr ""
 #: lms/templates/wiki/plugins/attachments/index.html
 #: wiki/plugins/attachments/wiki_plugin.py
 msgid "Attachments"
-msgstr ""
+msgstr "Συνημμένα"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Upload new file"
@@ -3922,7 +3939,7 @@ msgstr ""
 #: lms/templates/navigation.html lms/templates/static_templates/help.html
 #: lms/templates/static_templates/help.html wiki/plugins/help/wiki_plugin.py
 msgid "Help"
-msgstr ""
+msgstr "Βοήθεια"
 
 #: common/templates/course_modes/choose.html
 msgid "Upgrade Your Registration for {} | Choose Your Track"
@@ -6956,7 +6973,7 @@ msgstr ""
 #: lms/templates/discussion/mustache/_inline_discussion_cohorted.mustache
 #: wiki/forms.py wiki/forms.py wiki/forms.py
 msgid "Title"
-msgstr ""
+msgstr "Τίτλος"
 
 #: lms/templates/discussion/_inline_new_post.html
 #: lms/templates/discussion/_new_post.html
@@ -12028,19 +12045,20 @@ msgstr "Αυτό είναι ένα βασικό πεδίο."
 
 #: wiki/admin.py wiki/models/article.py
 msgid "created"
-msgstr ""
+msgstr "δημιουργήθηκε"
 
 #: wiki/forms.py
 msgid "Only localhost... muahahaha"
-msgstr ""
+msgstr "Mόνο localhost... χαχαχαχαχα"
 
 #: wiki/forms.py
 msgid "Initial title of the article. May be overridden with revision titles."
 msgstr ""
+"Αρχικός τίτλος του άρθρου. Μπορεί να παρακαμφθεί με τίτλους αναθεώρησης"
 
 #: wiki/forms.py
 msgid "Type in some contents"
-msgstr ""
+msgstr "Πληχτρολόγισε στοιχεία περιεχομένου"
 
 #: wiki/forms.py
 msgid ""
@@ -12048,19 +12066,24 @@ msgid ""
 "can use more complex features like adding plugins, meta data, related "
 "articles etc..."
 msgstr ""
+"Αυτό είναι ακριβώς το αρχικό περιεχόμενο του άρθρου σου. Αφού δημιουργηθεί "
+"μπορείς να χρησιμοποίησεις πιο σύνθετες λειτουργίες όπως προσθέτοντας "
+"πρόσθετα, μετα-δεδομένα, συναφή άρθρα κλπ..."
 
 #: wiki/forms.py wiki/forms.py
 msgid "Contents"
-msgstr ""
+msgstr "Περιεχόμενα"
 
 #: wiki/forms.py wiki/forms.py
 msgid "Summary"
-msgstr ""
+msgstr "Περίληψη"
 
 #: wiki/forms.py
 msgid ""
 "Give a short reason for your edit, which will be stated in the revision log."
 msgstr ""
+"Δώστε ενα σύντομο λόγο για την έκδοση σας,που θα αναφέρθη στο ημερολόγιο "
+"αναθεώρησης."
 
 #: wiki/forms.py
 msgid ""
@@ -12068,18 +12091,21 @@ msgid ""
 "have been automatically merged with the new contents. Please review the text"
 " below."
 msgstr ""
+"Την στιγμή του μόνταζ, κάποιος αλλαξε την διασκευή. Τα περιεχόμενα "
+"συγχωνεύθηκαν αυτομάτως με τα νέα περιεχόμενα. Παρακαλω επιθεωρήστε το "
+"κείμενο παρακάτω."
 
 #: wiki/forms.py
 msgid "No changes made. Nothing to save."
-msgstr ""
+msgstr "Δεν έγιναν αλλαγές. Τίποτα δεν σώθηκε."
 
 #: wiki/forms.py
 msgid "Select an option"
-msgstr ""
+msgstr "Επιλέξτε μια επιλογή"
 
 #: wiki/forms.py
 msgid "Slug"
-msgstr ""
+msgstr "Συντομία"
 
 #: wiki/forms.py
 msgid ""
@@ -12087,30 +12113,33 @@ msgid ""
 "alphanumeric characters and - or _. Note that you cannot change the slug "
 "after creating the article."
 msgstr ""
+"Αυτή θα είναι η διευθυνση που θα μπορεί να βρεθεί το άρθρο σου. "
+"Χρησιμοποιήσε μόνο αλφαριθμητικούς χαρακτήρες καί - ή όπως _. Υπενθύμιση δεν"
+" μπορείς να αλλάξεις τη συντομία αφου εχεις δημιουργήση το άρθρο."
 
 #: wiki/forms.py
 msgid "Write a brief message for the article's history log."
-msgstr ""
+msgstr "Γράψτε ένα σύντομο μήνυμα για το ιστορικό καταγραφής του άρθρου."
 
 #: wiki/forms.py
 msgid "A slug may not begin with an underscore."
-msgstr ""
+msgstr "Μια συντομία δεν μπορέι να ξεκινησει με υπογράμμιση."
 
 #: wiki/forms.py
 msgid "A deleted article with slug \"%s\" already exists."
-msgstr ""
+msgstr "Ένα διαγραμμένο άρθρο με τη συντομία \"%s\" υπάρχει ήδη."
 
 #: wiki/forms.py
 msgid "A slug named \"%s\" already exists."
-msgstr ""
+msgstr "Μια συντομία ονομασμένη \"%s\" υπάρχει ήδη."
 
 #: wiki/forms.py
 msgid "Yes, I am sure"
-msgstr ""
+msgstr "Ναι, ειμαι σίγουρος"
 
 #: wiki/forms.py
 msgid "Purge"
-msgstr ""
+msgstr "Καθαρίσε"
 
 #: wiki/forms.py
 msgid ""
@@ -12118,236 +12147,255 @@ msgid ""
 " Purging is a good idea if you want to free the slug such that users can "
 "create new articles in its place."
 msgstr ""
+"Καθάρισε το άρθρο: Απομάκρυνση εντελώς (όλων των δεδομένων) χωρίς αναίρεση. "
+"Το καθάρισμα ειναι μια καλή ιδέα όταν θες να ελευθερώσεις τη συντομία ώστε "
+"χρήστες να φτιάξουν καινούργια άρθρα στη θέση του."
 
 #: wiki/forms.py wiki/plugins/attachments/forms.py
 #: wiki/plugins/images/forms.py
 msgid "You are not sure enough!"
-msgstr ""
+msgstr "Δεν είστε αρκετά σίγουροι!"
 
 #: wiki/forms.py
 msgid "While you tried to delete this article, it was modified. TAKE CARE!"
 msgstr ""
+"Ενώ εσείς προσπαθήσατε να διαγράψετε αυτό το άρθρο, τροποποιήθηκε. ΠΡΟΣΕΞΤΕ!"
 
 #: wiki/forms.py
 msgid "Lock article"
-msgstr ""
+msgstr "Κλειδώστε το άρθρο"
 
 #: wiki/forms.py
 msgid "Deny all users access to edit this article."
 msgstr ""
+"Απαγορέυστε την είσοδο σε όλους τους χρήστες την επεξεργασία του άρθρου."
 
 #: wiki/forms.py
 msgid "Permissions"
-msgstr ""
+msgstr "Δικαιώματα"
 
 #: wiki/forms.py
 msgid "Owner"
-msgstr ""
+msgstr "Ιδιοκτήτης"
 
 #: wiki/forms.py
 msgid "Enter the username of the owner."
-msgstr ""
+msgstr "Εισάγετε το όνομα του κατόχου."
 
 #: wiki/forms.py
 msgid "(none)"
-msgstr ""
+msgstr "(οὐδείς)"
 
 #: wiki/forms.py
 msgid "Inherit permissions"
-msgstr ""
+msgstr "Κληρονομικά δικαιώματα"
 
 #: wiki/forms.py
 msgid ""
 "Check here to apply the above permissions recursively to articles under this"
 " one."
 msgstr ""
+"Ελέγξτε εδώ για να εφαρμόσετε τα ανωτέρω δικαιώματα αναδρομικά στα άρθρα "
+"κάτω από αυτό."
 
 #: wiki/forms.py
 msgid "Permission settings for the article were updated."
-msgstr ""
+msgstr "Ρυθμίσεις αδειών για το άρθρο ενημερώθηκαν."
 
 #: wiki/forms.py
 msgid "Your permission settings were unchanged, so nothing saved."
 msgstr ""
+"Οι ρυθμίσεις άδεια σας παρέμειναν αμετάβλητες, έτσι τίποτα δεν αποθηκεύτηκε."
 
 #: wiki/forms.py
 msgid "No user with that username"
-msgstr ""
+msgstr "Δεν υπάρχει χρήστης με αυτό το όνομα"
 
 #: wiki/forms.py
 msgid "Article locked for editing"
-msgstr ""
+msgstr "Άρθρο κλειδωσε για επεξεργασία"
 
 #: wiki/forms.py
 msgid "Article unlocked for editing"
-msgstr ""
+msgstr "Άρθρο ξεκλειδωθήκε για επεξεργασία"
 
 #: wiki/forms.py
 msgid "Filter..."
-msgstr ""
+msgstr "Φίλτρο..."
 
 #: wiki/core/plugins/base.py
 msgid "Settings for plugin"
-msgstr ""
+msgstr "Ρυθμίσεις για πρόσθετα"
 
 #: wiki/models/article.py wiki/models/pluginbase.py
 #: wiki/plugins/attachments/models.py
 msgid "current revision"
-msgstr ""
+msgstr "τρέχουσα αναθεώρηση"
 
 #: wiki/models/article.py
 msgid ""
 "The revision being displayed for this article. If you need to do a roll-"
 "back, simply change the value of this field."
 msgstr ""
+"Η αναθεώρηση που εμφανίζεται για αυτό το άρθρο. Αν χρειαστεί να κάνετε ένα "
+"γύρισμα πίσω, απλά αλλάξτε την τιμή του πεδίου αυτού."
 
 #: wiki/models/article.py
 msgid "modified"
-msgstr ""
+msgstr "τροποποιημένο"
 
 #: wiki/models/article.py
 msgid "Article properties last modified"
-msgstr ""
+msgstr "Ιδιότητες του άρθρου τελευταία τροποποημένες"
 
 #: wiki/models/article.py
 msgid "owner"
-msgstr ""
+msgstr "ιδιοκτήτης"
 
 #: wiki/models/article.py
 msgid ""
 "The owner of the article, usually the creator. The owner always has both "
 "read and write access."
 msgstr ""
+"Ο ιδιοκτήτης του άρθρου, συνήθως ο δημιουργός. Ο ιδιοκτήτης έχει πάντα "
+"πρόσβαση ανάγνωσης και εγγραφής."
 
 #: wiki/models/article.py
 msgid "group"
-msgstr ""
+msgstr "ομάδα"
 
 #: wiki/models/article.py
 msgid ""
 "Like in a UNIX file system, permissions can be given to a user according to "
 "group membership. Groups are handled through the Django auth system."
 msgstr ""
+"Σε ένα σύστημα αρχείων UNIX, τα δικαιώματα μπορεί να δοθούν στο χρήστη "
+"σύμφωνα με την ιδιότητα του μέλους της ομάδας. Οι ομάδες που διακινούνται "
+"μέσω του συστήματος Django auth."
 
 #: wiki/models/article.py
 msgid "group read access"
-msgstr ""
+msgstr "πρόσβαση ομάδας ανάγνωσης"
 
 #: wiki/models/article.py
 msgid "group write access"
-msgstr ""
+msgstr "πρόαβαση ομάδας εγγραφής"
 
 #: wiki/models/article.py
 msgid "others read access"
-msgstr ""
+msgstr "προσβαση ανάγνωσης άλλων"
 
 #: wiki/models/article.py
 msgid "others write access"
-msgstr ""
+msgstr "πρόσβαση εγγράφης άλλων"
 
 #: wiki/models/article.py
 msgid "Article without content (%(id)d)"
-msgstr ""
+msgstr "Άρθρο χωρίς περιεχόμενο (%(id)d)"
 
 #: wiki/models/article.py
 msgid "content type"
-msgstr ""
+msgstr "τύπος περιεχομένου"
 
 #: wiki/models/article.py
 msgid "object ID"
-msgstr ""
+msgstr "αντικείμενο ταυτοποίησης"
 
 #: wiki/models/article.py
 msgid "Article for object"
-msgstr ""
+msgstr "Άρθρο για αντικείμενο"
 
 #: wiki/models/article.py
 msgid "Articles for object"
-msgstr ""
+msgstr "Άρθρα για αντικείμενα"
 
 #: wiki/models/article.py
 msgid "revision number"
-msgstr ""
+msgstr "αριθμός αναθεώρησης"
 
 #: wiki/models/article.py
 msgid "IP address"
-msgstr ""
+msgstr "διεύθυνση IP"
 
 #: wiki/models/article.py
 msgid "user"
-msgstr ""
+msgstr "χρήστης"
 
 #: wiki/models/article.py
 msgid "locked"
-msgstr ""
+msgstr "κλειδομένο"
 
 #: wiki/models/article.py wiki/models/pluginbase.py
 msgid "article"
-msgstr ""
+msgstr "άρθρο"
 
 #: wiki/models/article.py
 msgid "article contents"
-msgstr ""
+msgstr "περιεχόμενα άρθρου"
 
 #: wiki/models/article.py
 msgid "article title"
-msgstr ""
+msgstr "τίτλος άρθρου"
 
 #: wiki/models/article.py
 msgid ""
 "Each revision contains a title field that must be filled out, even if the "
 "title has not changed"
 msgstr ""
+"Κάθε αναθεώρηση περιέχει ένα πεδίο τίτλου που πρέπει να συμπληρωθεί, έστω "
+"και αν ο τίτλος δεν έχει αλλάξει"
 
 #: wiki/models/pluginbase.py
 msgid "original article"
-msgstr ""
+msgstr "αρχικό άρθρο"
 
 #: wiki/models/pluginbase.py
 msgid "Permissions are inherited from this article"
-msgstr ""
+msgstr "Τα δικαιώματα κρηρονομούνται από αυτό το άρθρο"
 
 #: wiki/models/pluginbase.py
 msgid "A plugin was changed"
-msgstr ""
+msgstr "Ένα πρόσθετο άλλαξε"
 
 #: wiki/models/pluginbase.py
 msgid ""
 "The revision being displayed for this plugin.If you need to do a roll-back, "
 "simply change the value of this field."
 msgstr ""
+"Η αναθεώρηση που εμφανίζεται για αυτό το πρόσθετο. Εάν πρέπει να κάνετε "
+"γύρισμα πίσω απλά αλλάξτε την τιμή του πεδίου αυτού."
 
 #: wiki/models/urlpath.py
 msgid "Cache lookup value for articles"
-msgstr ""
+msgstr "Τιμή αναζήτησης cache για τα άρθρα"
 
 #: wiki/models/urlpath.py
 msgid "slug"
-msgstr ""
+msgstr "συντομία"
 
 #: wiki/models/urlpath.py
 msgid "(root)"
-msgstr ""
+msgstr "(διαδρομή)"
 
 #: wiki/models/urlpath.py
 msgid "URL path"
-msgstr ""
+msgstr "μονοπάτι URL"
 
 #: wiki/models/urlpath.py
 msgid "URL paths"
-msgstr ""
+msgstr "μονοπάτια URL"
 
 #: wiki/models/urlpath.py
 msgid "Sorry but you cannot have a root article with a slug."
-msgstr ""
+msgstr "Συγνωμη αλλά δεν μπορεί το άρθρο να κανει διαδρομη με συντομία."
 
 #: wiki/models/urlpath.py
 msgid "A non-root note must always have a slug."
-msgstr ""
+msgstr "Μια σημείωση μη διαδρομης πρέπει να εχει πάντα συντομία."
 
 #: wiki/models/urlpath.py
 msgid "There is already a root node on %s"
-msgstr ""
+msgstr "Υπάρχει ήδη ένας κόμβος ρίζας σε %s"
 
 #: wiki/models/urlpath.py
 msgid ""
@@ -12356,273 +12404,297 @@ msgid ""
 "\n"
 "The children of this article have had their parents deleted. You should probably find a new home for them."
 msgstr ""
+"Άρθρα που έχασαν τους γονείς τους.\n"
+"===============================\n"
+"\n"
+"Τα παιδιά αυτού του άρθρου είχαν διαγράψει τούς γονείς τούς. Θα πρέπει να βρείτε ένα νέο σπίτι για αυτούς."
 
 #: wiki/models/urlpath.py
 msgid "Lost and found"
-msgstr ""
+msgstr "Χάθηκε και βρέθηκε"
 
 #: wiki/plugins/attachments/forms.py
 msgid "A short summary of what the file contains"
-msgstr ""
+msgstr "Μια σύντομη περίληψη του τι περιέχει το αρχείο"
 
 #: wiki/plugins/attachments/forms.py
 msgid "Yes I am sure..."
-msgstr ""
+msgstr "Ναί είμαι σίγουρος..."
 
 #: wiki/plugins/attachments/markdown_extensions.py
 msgid "Click to download file"
-msgstr ""
+msgstr "Κάντε κλικ για να κατεβάσετε το αρχείο"
 
 #: wiki/plugins/attachments/models.py
 msgid ""
 "The revision of this attachment currently in use (on all articles using the "
 "attachment)"
 msgstr ""
+"Η αναθεώρηση αυτής της προσάρτησης που χρησιμοποιείτε σήμερα (σε όλα τα "
+"άρθρα χρησιμοποιώντας το συνημμένο)"
 
 #: wiki/plugins/attachments/models.py
 msgid "original filename"
-msgstr ""
+msgstr "αρχικό όνομα αρχείου"
 
 #: wiki/plugins/attachments/models.py
 msgid "attachment"
-msgstr ""
+msgstr "συνημμένο"
 
 #: wiki/plugins/attachments/models.py
 msgid "attachments"
-msgstr ""
+msgstr "συνημμένα"
 
 #: wiki/plugins/attachments/models.py
 msgid "file"
-msgstr ""
+msgstr "αρχείο"
 
 #: wiki/plugins/attachments/models.py
 msgid "attachment revision"
-msgstr ""
+msgstr "αναθεώρηση συνημμένου"
 
 #: wiki/plugins/attachments/models.py
 msgid "attachment revisions"
-msgstr ""
+msgstr "αναθεωρήσεις συνημμένου"
 
 #: wiki/plugins/attachments/views.py
 msgid "%s was successfully added."
-msgstr ""
+msgstr "%s προστέθηκε με επιτυχία."
 
 #: wiki/plugins/attachments/views.py wiki/plugins/attachments/views.py
 msgid "Your file could not be saved: %s"
-msgstr ""
+msgstr "Το αρχείο σας δεν θα μπορούσε να σωθεί: %s"
 
 #: wiki/plugins/attachments/views.py wiki/plugins/attachments/views.py
 msgid ""
 "Your file could not be saved, probably because of a permission error on the "
 "web server."
 msgstr ""
+"Το αρχείο σας δεν θα μπορούσε να σωθεί, ίσως εξαιτίας ενός σφάλματος "
+"δικαιωμάτων στον server διαδικτύου."
 
 #: wiki/plugins/attachments/views.py
 msgid "%s uploaded and replaces old attachment."
-msgstr ""
+msgstr "%s ανέβηκε και αντικατέστησε παλαιό συνημμένο."
 
 #: wiki/plugins/attachments/views.py
 msgid ""
 "Your new file will automatically be renamed to match the file already "
 "present. Files with different extensions are not allowed."
 msgstr ""
+"Το νέο αρχείο σας θα μετονομαστεί αυτόματα για να ταιριάζει με το ήδη "
+"υπάρχων αρχείο. Αρχεία με διαφορετικές επεκτάσεις δεν επιτρέπονται."
 
 #: wiki/plugins/attachments/views.py
 msgid "Current revision changed for %s."
-msgstr ""
+msgstr "Η τρέχουσα αναθεώρηση άλλαξε για %s"
 
 #: wiki/plugins/attachments/views.py
 msgid "Added a reference to \"%(att)s\" from \"%(art)s\"."
-msgstr ""
+msgstr "Προστέθηκε μια αναφορά στην ''%(att)s'' απο ''%(art)s''."
 
 #: wiki/plugins/attachments/views.py
 msgid "The file %s was deleted."
-msgstr ""
+msgstr "Το αρχείο %s διεγράφη."
 
 #: wiki/plugins/attachments/views.py
 msgid "This article is no longer related to the file %s."
-msgstr ""
+msgstr "Αυτό το άρθρο πλέον δεν σχετίζετε με το αρχείο %s."
 
 #: wiki/plugins/attachments/wiki_plugin.py
 msgid "A file was changed: %s"
-msgstr ""
+msgstr "Ενα αρχείο αλλαξε: %s"
 
 #: wiki/plugins/attachments/wiki_plugin.py
 msgid "A file was deleted: %s"
-msgstr ""
+msgstr "Ένα αρχείο διεγράφη: %s"
 
 #: wiki/plugins/images/forms.py
 msgid ""
 "New image %s was successfully uploaded. You can use it by selecting it from "
 "the list of available images."
 msgstr ""
+"Νέα εικόνα %s ανέβηκε με επιτυχία. Μπορείτε να τη χρησιμοποιήσετε "
+"επιλέγοντάς την από τη λίστα των διαθέσιμων εικόνων."
 
 #: wiki/plugins/images/forms.py
 msgid "Are you sure?"
-msgstr ""
+msgstr "Είστε σίγουρος;"
 
 #: wiki/plugins/images/models.py
 msgid "image"
-msgstr ""
+msgstr "εικόνα"
 
 #: wiki/plugins/images/models.py
 msgid "images"
-msgstr ""
+msgstr "εικόνες"
 
 #: wiki/plugins/images/models.py
 msgid "Image: %s"
-msgstr ""
+msgstr "Εικόνα: %s"
 
 #: wiki/plugins/images/models.py
 msgid "Current revision not set!!"
-msgstr ""
+msgstr "Η τρέχουσα αναθεώρηση δεν έχει γίνει!!"
 
 #: wiki/plugins/images/models.py
 msgid "image revision"
-msgstr ""
+msgstr "αναθεώρηση εικόνας"
 
 #: wiki/plugins/images/models.py
 msgid "image revisions"
-msgstr ""
+msgstr "αναθεωρήσείς εικόνων"
 
 #: wiki/plugins/images/models.py
 msgid "Image Revsion: %d"
-msgstr ""
+msgstr "έκδοση εικόνας: %d"
 
 #: wiki/plugins/images/views.py
 msgid "%s has been restored"
-msgstr ""
+msgstr "%s έχει αποκατασταθεί"
 
 #: wiki/plugins/images/views.py
 msgid "%s has been marked as deleted"
-msgstr ""
+msgstr "%s έχει επισημανθεί ως διαγραμμένες"
 
 #: wiki/plugins/images/views.py
 msgid "%(file)s has been changed to revision #%(revision)d"
-msgstr ""
+msgstr "%(file)s έχει αλλάξει σε αναθεώρηση #%(revision)d"
 
 #: wiki/plugins/images/views.py
 msgid "%(file)s has been saved."
-msgstr ""
+msgstr "%(file)s εχουν σωθει."
 
 #: wiki/plugins/images/wiki_plugin.py
 msgid "Images"
-msgstr ""
+msgstr "Εικόνες"
 
 #: wiki/plugins/images/wiki_plugin.py
 msgid "An image was added: %s"
-msgstr ""
+msgstr "Μια εικόνα προστέθηκε: %s"
 
 #: wiki/plugins/links/wiki_plugin.py
 msgid "Links"
-msgstr ""
+msgstr "Δεσμός"
 
 #: wiki/plugins/notifications/forms.py
 msgid "Notifications"
-msgstr ""
+msgstr "Ειδοποιήσεις"
 
 #: wiki/plugins/notifications/forms.py
 msgid "When this article is edited"
-msgstr ""
+msgstr "Όταν αυτό το άρθρο επεξεργαστεί"
 
 #: wiki/plugins/notifications/forms.py
 msgid "Also receive emails about article edits"
 msgstr ""
+"Επίσης, λάβετε μηνύματα ηλεκτρονικού ταχυδρομείου σχετικά με τις αλλαγές του"
+" άρθρου"
 
 #: wiki/plugins/notifications/forms.py
 msgid "Your notification settings were updated."
-msgstr ""
+msgstr "Οι ρυθμίσεις των ειδοποιήσεων σας ενημερώθηκαν."
 
 #: wiki/plugins/notifications/forms.py
 msgid "Your notification settings were unchanged, so nothing saved."
 msgstr ""
+"Οι ρυθμίσεις ειδοποίησης σας παρέμειναν αμετάβλητες, έτσι τίποτα δεν "
+"αποθηκεύτικε."
 
 #: wiki/plugins/notifications/models.py
 msgid "%(user)s subscribing to %(article)s (%(type)s)"
-msgstr ""
+msgstr "%(user)s συνδρομητική στο %(article)s (%(type)s)"
 
 #: wiki/plugins/notifications/models.py
 msgid "Article deleted: %s"
-msgstr ""
+msgstr "Άρθρο διεγράφη: %s"
 
 #: wiki/plugins/notifications/models.py
 msgid "Article modified: %s"
-msgstr ""
+msgstr "Άρθρο τροποποιήθηκε: %s"
 
 #: wiki/plugins/notifications/models.py
 msgid "New article created: %s"
-msgstr ""
+msgstr "Νέο άρθρο δημιουργήθηκε: %s"
 
 #: wiki/views/accounts.py
 msgid "You are now sign up... and now you can sign in!"
-msgstr ""
+msgstr "Έχετε κάνει εγγραφή... και τώρα μπορείτε να συνδεθείτε!"
 
 #: wiki/views/accounts.py
 msgid "You are no longer logged in. Bye bye!"
-msgstr ""
+msgstr "Δεν είστε πλέον συνδεδεμένος. Γεία σας!"
 
 #: wiki/views/accounts.py
 msgid "You are now logged in! Have fun!"
-msgstr ""
+msgstr "Συνδεθήκατε! Καλή διασκέδαση!"
 
 #: wiki/views/article.py
 msgid "New article '%s' created."
-msgstr ""
+msgstr "Νέο άρθρο '%s' δημιουργήθηκε."
 
 #: wiki/views/article.py
 msgid "There was an error creating this article: %s"
-msgstr ""
+msgstr "Υπήρξε ένα σφάλμα κατά τη δημιουργία αυτού του άρθρου: %s"
 
 #: wiki/views/article.py
 msgid "There was an error creating this article."
-msgstr ""
+msgstr "Υπήρξε ένα σφάλμα κατά τη δημιουργία αυτού του άρθρου."
 
 #: wiki/views/article.py
 msgid ""
 "This article cannot be deleted because it has children or is a root article."
 msgstr ""
+"Αυτό το άρθρο δεν μπορεί να διαγραφεί γιατί έχει παιδιά ή είναι άρθρο "
+"διαδρομής."
 
 #: wiki/views/article.py
 msgid ""
 "This article together with all its contents are now completely gone! Thanks!"
 msgstr ""
+"Το άρθρο αυτό, μαζί με όλα τα περιεχόμενά του έχουν τώρα εξαφανιστεί "
+"εντελώς! Ευχαριστώ!"
 
 #: wiki/views/article.py
 msgid ""
 "The article \"%s\" is now marked as deleted! Thanks for keeping the site "
 "free from unwanted material!"
 msgstr ""
+"Το άρθρο \"%s\" έχει επιλεχθεί ως διεγραμένο! Ευχαριστώ για τη διατήρηση της"
+" σελίδας απαλλαγμένη από ανεπιθύμητα υλικά!"
 
 #: wiki/views/article.py
 msgid "Your changes were saved."
-msgstr ""
+msgstr "Οι αλλαγές σας αποθηκεύτηκαν."
 
 #: wiki/views/article.py
 msgid "A new revision of the article was succesfully added."
-msgstr ""
+msgstr "Μια νέα αναθεώρηση του άρθρου προστέθηκε επιτυχώς."
 
 #: wiki/views/article.py
 msgid "Restoring article"
-msgstr ""
+msgstr "Αποκατάσταση άρθρου"
 
 #: wiki/views/article.py
 msgid "The article \"%s\" and its children are now restored."
-msgstr ""
+msgstr "Το άρθρο \"%s\" και τα παιδιά του έχουν τώρα αποκατασταθεί."
 
 #: wiki/views/article.py
 msgid "The article %s is now set to display revision #%d"
-msgstr ""
+msgstr "Το άρθρο %s καλείται τώρα να εμφανίση την αναθεώρηση #%d"
 
 #: wiki/views/article.py
 msgid "New title"
-msgstr ""
+msgstr "Νέος τίτλος"
 
 #: wiki/views/article.py
 msgid "Merge between Revision #%(r1)d and Revision #%(r2)d"
-msgstr ""
+msgstr "Συγχώνευση μεταξύ Αναθεώρησης #%(r1)d και αναθεώρηση #%(r2)d"
 
 #: wiki/views/article.py
 msgid ""
 "A new revision was created: Merge between Revision #%(r1)d and Revision "
 "#%(r2)d"
 msgstr ""
+"Μια νέα αναθεώρηση δημιουργήθηκε: Συγχώνευση μεταξύ Αναθεώρηση #%(r1)d και "
+"αναθεώρηση #%(r2)d"

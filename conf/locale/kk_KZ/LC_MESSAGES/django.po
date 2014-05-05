@@ -4,6 +4,7 @@
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # 
 # Translators:
+# Ablai <a.zhastalapov@ecc.kz>, 2014
 # aermek <aermek81@gmail.com>, 2014
 # #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
 # edX translation file.
@@ -46,7 +47,7 @@ msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
 "POT-Creation-Date: 2014-05-02 17:10-0400\n"
-"PO-Revision-Date: 2014-04-24 12:54+0000\n"
+"PO-Revision-Date: 2014-05-05 15:32+0000\n"
 "Last-Translator: Ablai <a.zhastalapov@ecc.kz>\n"
 "Language-Team: Kazakh (Kazakhstan) (http://www.transifex.com/projects/p/edx-platform/language/kk_KZ/)\n"
 "MIME-Version: 1.0\n"
@@ -62,31 +63,31 @@ msgstr ""
 #. needs to grade
 #: cms/djangoapps/contentstore/utils.py common/lib/xmodule/xmodule/tabs.py
 msgid "Open Ended Panel"
-msgstr ""
+msgstr "Панельдің құрамын ашу"
 
 #: common/djangoapps/course_modes/models.py
 msgid "Honor Code Certificate"
-msgstr ""
+msgstr "Ар-намыс кодексінің сертификаты"
 
 #: common/djangoapps/course_modes/views.py common/djangoapps/student/views.py
 msgid "Enrollment is closed"
-msgstr ""
+msgstr "Тіркеу жабық"
 
 #: common/djangoapps/course_modes/views.py
 msgid "Enrollment mode not supported"
-msgstr ""
+msgstr "Курсқа жазылу режимі қолдау таппайды"
 
 #: common/djangoapps/course_modes/views.py
 msgid "Invalid amount selected."
-msgstr ""
+msgstr "Қате сома таңдалды."
 
 #: common/djangoapps/course_modes/views.py
 msgid "No selected price or selected price is too low."
-msgstr ""
+msgstr "Баға таңдалмады немесе таңдалған баға өте төмен."
 
 #: common/djangoapps/django_comment_common/models.py
 msgid "Administrator"
-msgstr "Әкімгер"
+msgstr "Әкімші"
 
 #: common/djangoapps/django_comment_common/models.py
 msgid "Moderator"
@@ -94,89 +95,92 @@ msgstr "Модератор"
 
 #: common/djangoapps/django_comment_common/models.py
 msgid "Community TA"
-msgstr "Қауымның техникалық көмекшісі"
+msgstr "Қоғамдастықтың техникалық ассистенті"
 
 #: common/djangoapps/django_comment_common/models.py
 msgid "Student"
-msgstr "Оқушы"
+msgstr "Студент"
 
 #: common/djangoapps/student/middleware.py
 msgid ""
 "Your account has been disabled. If you believe this was done in error, "
 "please contact us at {link_start}{support_email}{link_end}"
 msgstr ""
+"Сіздің есептік жазбаңыз бұғатталған. Егер Сіз қате орын алды деп ойласаңыз, "
+"бізбен мынадай мекенжай бойынша хабарласыңызшы "
+"{link_start}{support_email}{link_end} "
 
 #: common/djangoapps/student/middleware.py
 msgid "Disabled Account"
-msgstr ""
+msgstr "Есептік жазба бұғатталды"
 
 #: common/djangoapps/student/models.py
 msgid "Male"
-msgstr ""
+msgstr "Еркек"
 
 #: common/djangoapps/student/models.py
 msgid "Female"
-msgstr ""
+msgstr "Әйел"
 
 #. Translators: 'Other' refers to the student's gender
 #. Translators: 'Other' refers to the student's level of education
 #: common/djangoapps/student/models.py common/djangoapps/student/models.py
 msgid "Other"
-msgstr ""
+msgstr "Басқа"
 
 #: common/djangoapps/student/models.py
 msgid "Doctorate"
-msgstr ""
+msgstr "Докторлық дәреже"
 
 #: common/djangoapps/student/models.py
 msgid "Master's or professional degree"
-msgstr ""
+msgstr "Магистратура немесе специалитет"
 
 #: common/djangoapps/student/models.py
 msgid "Bachelor's degree"
-msgstr ""
+msgstr "Бакалавриат"
 
 #: common/djangoapps/student/models.py
 msgid "Associate's degree"
-msgstr ""
+msgstr "Аяқталмаған жоғары білім"
 
 #: common/djangoapps/student/models.py
 msgid "Secondary/high school"
-msgstr ""
+msgstr "Орташа/Толық орташа"
 
 #: common/djangoapps/student/models.py
 msgid "Junior secondary/junior high/middle school"
-msgstr ""
+msgstr "Аяқталмаған орташа/жоғарғы сыныптар/орташа сыныптар"
 
 #: common/djangoapps/student/models.py
 msgid "Elementary/primary school"
-msgstr ""
+msgstr "Бастауыш"
 
 #. Translators: 'None' refers to the student's level of education
 #: common/djangoapps/student/models.py
 msgid "None"
-msgstr ""
+msgstr "Жоқ"
 
 #: common/djangoapps/student/views.py
 msgid "Course id not specified"
-msgstr ""
+msgstr "Курс сәйкестендіргіші көрсетілмеген"
 
 #: common/djangoapps/student/views.py
 msgid "Course id is invalid"
-msgstr ""
+msgstr "Курстың рұқсат етілмеген сәйкестендіргіші"
 
 #: common/djangoapps/student/views.py
 #: lms/templates/courseware/course_about.html
 msgid "Course is full"
-msgstr ""
+msgstr "Курсқа қабылдау аяқталды"
 
 #: common/djangoapps/student/views.py
 msgid "You are not enrolled in this course"
-msgstr ""
+msgstr "Сіз осы курсқа тіркелмегенсіз"
 
 #: common/djangoapps/student/views.py
 msgid "Enrollment action is invalid"
-msgstr ""
+msgstr "Тіркеу қол жетімсіз"
 
 #. Translators: provider_name is the name of an external, third-party user
 #. authentication service (like
@@ -190,13 +194,15 @@ msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid "There was an error receiving your login information. Please email us."
-msgstr ""
+msgstr "Тіркеу ақпаратын алу қатесі орын алды. Бізге жазыңыз."
 
 #: common/djangoapps/student/views.py
 msgid ""
 "This account has been temporarily locked due to excessive login failures. "
 "Try again later."
 msgstr ""
+"Осы есептік жазба жүйеге көптеген сәтсіз кіру әрекеттеріне байланысты "
+"уақытша бұғатталды. Кейінірек әрекет етіп көріңіз."
 
 #: common/djangoapps/student/views.py
 msgid ""
@@ -204,20 +210,26 @@ msgid ""
 "reset your password before you can log in again. Please click the Forgot "
 "Password\" link on this page to reset your password before logging in again."
 msgstr ""
+"Есептік жазбаға арналған парольді пайдалану ережесіне сәйкес Сіздің "
+"пароліңіздің қолдану мерзімі аяқталды. Сіз сайтқа қайта кірместен бұрын "
+"парольді ауыстыруыңыз қажет. Сайтқа қайта кірер алдында парольду ауыстыру "
+"үшін \\\"Ұмытылған Парольді Қалпына келтіру\\\" сілтемесін пайдаланыңыз."
 
 #: common/djangoapps/student/views.py
 msgid "Too many failed login attempts. Try again later."
-msgstr ""
+msgstr "Сәтсәз кіру әрекеттері тым көп. Кейінірек әрекет етіңіз"
 
 #: common/djangoapps/student/views.py lms/templates/provider_login.html
 msgid "Email or password is incorrect."
-msgstr ""
+msgstr "E-mail немесе пароль қате енгізілді."
 
 #: common/djangoapps/student/views.py
 msgid ""
 "This account has not been activated. We have sent another activation "
 "message. Please check your e-mail for the activation instructions."
 msgstr ""
+"Осы аккаунт белсендендірілмеген. Біз сізге басқа белсендендіру хатын "
+"жолдадық. Өз электрондық почтаңызды тексеріңізші."
 
 #: common/djangoapps/student/views.py
 msgid "Please enter a username"
@@ -225,171 +237,178 @@ msgstr "Қолданушы атын енгізіңіз"
 
 #: common/djangoapps/student/views.py
 msgid "Please choose an option"
-msgstr ""
+msgstr "Опцияны таңдаңыз"
 
 #: common/djangoapps/student/views.py
 msgid "User with username {} does not exist"
-msgstr ""
+msgstr "Аты {} пайдаланушы жоқ"
 
 #: common/djangoapps/student/views.py
 msgid "Successfully disabled {}'s account"
-msgstr ""
+msgstr "{} пайдаланушының есептік жазбасы ойдағыдай бұғатталды"
 
 #: common/djangoapps/student/views.py
 msgid "Successfully reenabled {}'s account"
-msgstr ""
+msgstr "{} пайдаланушының есептік жазбасы ойдағыдай бұғаттаудан шығарылды"
 
 #: common/djangoapps/student/views.py
 msgid "Unexpected account status"
-msgstr ""
+msgstr "Есептік жазбаның күтпеген мәртебесі"
 
 #: common/djangoapps/student/views.py
 msgid "An account with the Public Username '{username}' already exists."
-msgstr ""
+msgstr "Жария аты '{username}' аккаунт жоқ."
 
 #: common/djangoapps/student/views.py
 msgid "An account with the Email '{email}' already exists."
-msgstr ""
+msgstr "Электрондық мекенжайы '{email}' есептік жазба бар."
 
 #: common/djangoapps/student/views.py
 msgid "Error (401 {field}). E-mail us."
-msgstr ""
+msgstr "(401 {field}) қатесі. Бізге жазыңыз."
 
 #: common/djangoapps/student/views.py
 msgid "To enroll, you must follow the honor code."
-msgstr ""
+msgstr "Тіркелу үшін сіз Ар-намыс кодексін ұстануыңыз қажет."
 
 #: common/djangoapps/student/views.py
 msgid "You must accept the terms of service."
-msgstr "Сізге қызметті пайдалану шарттарымен келісу қажет."
+msgstr "Сіз қызметтер көрсету шарттарын қабылдауыңыз тиіс."
 
 #: common/djangoapps/student/views.py
 msgid "Username must be minimum of two characters long"
-msgstr ""
+msgstr "Пайдаланушының аты кемінде екі белгіден тұруы тиіс"
 
 #: common/djangoapps/student/views.py
 msgid "A properly formatted e-mail is required"
-msgstr ""
+msgstr "Белгіленген нысандағы электрондық мекенжай талап етіледі"
 
 #: common/djangoapps/student/views.py
 msgid "Your legal name must be a minimum of two characters long"
-msgstr ""
+msgstr "Сіздің құжаттар бойынша атыңыз кемінде екі белгіден тұруы тиіс"
 
 #: common/djangoapps/student/views.py
 msgid "A valid password is required"
-msgstr ""
+msgstr "Жарамды пароль талап етіледі"
 
 #: common/djangoapps/student/views.py
 msgid "Accepting Terms of Service is required"
-msgstr ""
+msgstr "Қызметтер Көрсету Шарттарын қабылдау қажет"
 
 #: common/djangoapps/student/views.py
 msgid "Agreeing to the Honor Code is required"
-msgstr ""
+msgstr "Ар-намыс кодексін ұстануға келісім – міндетті толтыруға арналған алап"
 
 #: common/djangoapps/student/views.py
 msgid "A level of education is required"
-msgstr ""
+msgstr "Білім  деңгейі – міндетті толтыруға арналған алап"
 
 #: common/djangoapps/student/views.py
 msgid "Your gender is required"
-msgstr ""
+msgstr "Сіздің жынысыңыз – міндетті толтыруға арналған алап"
 
 #: common/djangoapps/student/views.py
 msgid "Your year of birth is required"
-msgstr ""
+msgstr "Сіздің туған жылыңыз – міндетті толтыруға арналған алап"
 
 #: common/djangoapps/student/views.py
 msgid "Your mailing address is required"
-msgstr ""
+msgstr "Сіздің почталық мекенжайыңыз – міндетті толтыруға арналған алап"
 
 #: common/djangoapps/student/views.py
 msgid "A description of your goals is required"
 msgstr ""
+"Сіздің мақсаттарыңыздың сипаттамасы – міндетті толтыруға арналған алап"
 
 #: common/djangoapps/student/views.py
 msgid "A city is required"
-msgstr ""
+msgstr "Қала – міндетті толтыруға арналған алап"
 
 #: common/djangoapps/student/views.py
 msgid "A country is required"
-msgstr ""
+msgstr "Ел – міндетті толтыруға арналған алап"
 
 #: common/djangoapps/student/views.py
 msgid "Username cannot be more than {0} characters long"
-msgstr ""
+msgstr "Пайдаланушының аты {0} артық белгіден тұрмауы керек"
 
 #: common/djangoapps/student/views.py
 msgid "Email cannot be more than {0} characters long"
-msgstr ""
+msgstr "Электрондық мекенжай {0} артық белгіден тұрмауы керек"
 
 #: common/djangoapps/student/views.py
 msgid "Valid e-mail is required."
-msgstr "Дұрыс электронды пошта енгізу қажет."
+msgstr "Жарамды электрондық почта мекенжайы талап етіледі."
 
 #: common/djangoapps/student/views.py
 msgid "Username should only consist of A-Z and 0-9, with no spaces."
 msgstr ""
+"Пайдаланушының аты A-Z дейінгі әріптерді және 0-9 дейінгі цифрларды ғана, "
+"бос орынсыз, қамтуы тиіс"
 
 #: common/djangoapps/student/views.py common/djangoapps/student/views.py
 msgid "Password: "
-msgstr ""
+msgstr "Пароль:"
 
 #: common/djangoapps/student/views.py
 msgid "Could not send activation e-mail."
-msgstr ""
+msgstr "Есептік жазбаны белсендендіруге арналған хатты жолдау мүмкін болмады."
 
 #: common/djangoapps/student/views.py
 msgid "Unknown error. Please e-mail us to let us know how it happened."
-msgstr ""
+msgstr "Белгісіз қате. Бізге хабарласыңыз, бұның қалай болғанын білдіріңіз."
 
 #: common/djangoapps/student/views.py
 msgid ""
 "You are re-using a password that you have used recently. You must have {0} "
 "distinct password(s) before reusing a previous password."
 msgstr ""
+"Сіз жақында пайдаланған парольді қолданудасыз. Бұрынғы парольді пайдалану "
+"үшін Сіз {0} әртүрлі парольді(дар) ауыстыруыңыз қажет."
 
 #: common/djangoapps/student/views.py
 msgid ""
 "You are resetting passwords too frequently. Due to security policies, {0} "
 "day(s) must elapse between password resets"
 msgstr ""
+"Сіз парольдерді өте жиі ауыстырасыз. Қауіпсіздік ережелері бойынша "
+"парольдерді қайта орнату арасында {0} күн (күндер) өтуі тиіс."
 
 #: common/djangoapps/student/views.py
 msgid "Password reset unsuccessful"
-msgstr ""
+msgstr "Парольді шығарып тастау мүмкін болмады"
 
 #: common/djangoapps/student/views.py
 msgid "No inactive user with this e-mail exists"
-msgstr ""
+msgstr "Осындай электрондық мекенжайы бар белсенді емес пайдаланушылар жоқ."
 
 #: common/djangoapps/student/views.py
 msgid "Unable to send reactivation email"
-msgstr ""
+msgstr "Қайта белсендендіру хатын жолдау мүмкін болмады "
 
 #: common/djangoapps/student/views.py
 msgid "Invalid password"
-msgstr "Қате құпия сөз "
+msgstr "Қате пароль"
 
 #: common/djangoapps/student/views.py
 msgid "Valid e-mail address required."
-msgstr "Дұрыс электронды пошта енгізу қажет."
+msgstr "Жарамды электрондық почта мекенжайы талап етіледі."
 
 #: common/djangoapps/student/views.py
 msgid "An account with this e-mail already exists."
-msgstr "Бұл электронды поштаға сәйкес тіркелу жазбасы бар."
+msgstr "Осындай электрондық почта мекенжайы бар аккаунт бар."
 
 #: common/djangoapps/student/views.py
 msgid "Old email is the same as the new email."
-msgstr ""
+msgstr "Электрондық почтаның бұрынғы және жаңа мекенжайлары дәл келеді."
 
 #: common/djangoapps/student/views.py
 msgid "Name required"
-msgstr "Атты енгізу қажет"
+msgstr "Аты талап етіледі"
 
 #: common/djangoapps/student/views.py common/djangoapps/student/views.py
 msgid "Invalid ID"
-msgstr "Қате сәйкестендіргіш"
+msgstr "Қате ID"
 
 #. Translators: the translation for "LONG_DATE_FORMAT" must be a format
 #. string for formatting dates in a long form.  For example, the
@@ -397,7 +416,7 @@ msgstr "Қате сәйкестендіргіш"
 #. See http://strftime.org for details.
 #: common/djangoapps/util/date_utils.py
 msgid "LONG_DATE_FORMAT"
-msgstr ""
+msgstr "%d %m %Y "
 
 #. Translators: the translation for "DATE_TIME_FORMAT" must be a format
 #. string for formatting dates with times.  For example, the American
@@ -405,7 +424,7 @@ msgstr ""
 #. See http://strftime.org for details.
 #: common/djangoapps/util/date_utils.py
 msgid "DATE_TIME_FORMAT"
-msgstr ""
+msgstr "%d %m %Y %H:%M "
 
 #. Translators: the translation for "SHORT_DATE_FORMAT" must be a
 #. format string for formatting dates in a brief form.  For example,
@@ -413,14 +432,14 @@ msgstr ""
 #. See http://strftime.org for details.
 #: common/djangoapps/util/date_utils.py
 msgid "SHORT_DATE_FORMAT"
-msgstr ""
+msgstr "%d %m %Y "
 
 #. Translators: the translation for "TIME_FORMAT" must be a format
 #. string for formatting times.  For example, the American English
 #. form is "%H:%M:%S". See http://strftime.org for details.
 #: common/djangoapps/util/date_utils.py
 msgid "TIME_FORMAT"
-msgstr ""
+msgstr "%H:%M:%S "
 
 #. Translators: This is an AM/PM indicator for displaying times.  It is
 #. used for the %p directive in date-time formats. See http://strftime.org
@@ -428,7 +447,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "am/pm indicator"
 msgid "AM"
-msgstr ""
+msgstr "AM "
 
 #. Translators: This is an AM/PM indicator for displaying times.  It is
 #. used for the %p directive in date-time formats. See http://strftime.org
@@ -436,7 +455,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "am/pm indicator"
 msgid "PM"
-msgstr ""
+msgstr "PM "
 
 #. Translators: this is a weekday name that will be used when displaying
 #. dates, as in "Monday Februrary 10, 2014". It is used for the %A
@@ -444,7 +463,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "weekday name"
 msgid "Monday"
-msgstr ""
+msgstr "Дүйсенбі"
 
 #. Translators: this is a weekday name that will be used when displaying
 #. dates, as in "Tuesday Februrary 11, 2014". It is used for the %A
@@ -452,7 +471,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "weekday name"
 msgid "Tuesday"
-msgstr ""
+msgstr "Сейсенбі"
 
 #. Translators: this is a weekday name that will be used when displaying
 #. dates, as in "Wednesday Februrary 12, 2014". It is used for the %A
@@ -460,7 +479,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "weekday name"
 msgid "Wednesday"
-msgstr ""
+msgstr "Сәрсенбі"
 
 #. Translators: this is a weekday name that will be used when displaying
 #. dates, as in "Thursday Februrary 13, 2014". It is used for the %A
@@ -468,7 +487,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "weekday name"
 msgid "Thursday"
-msgstr ""
+msgstr "Бейсенбі"
 
 #. Translators: this is a weekday name that will be used when displaying
 #. dates, as in "Friday Februrary 14, 2014". It is used for the %A
@@ -476,7 +495,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "weekday name"
 msgid "Friday"
-msgstr ""
+msgstr "Жұма"
 
 #. Translators: this is a weekday name that will be used when displaying
 #. dates, as in "Saturday Februrary 15, 2014". It is used for the %A
@@ -484,7 +503,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "weekday name"
 msgid "Saturday"
-msgstr ""
+msgstr "Сенбі"
 
 #. Translators: this is a weekday name that will be used when displaying
 #. dates, as in "Sunday Februrary 16, 2014". It is used for the %A
@@ -492,7 +511,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "weekday name"
 msgid "Sunday"
-msgstr ""
+msgstr "Жексенбі"
 
 #. Translators: this is an abbreviated weekday name that will be used when
 #. displaying dates, as in "Mon Feb 10, 2014". It is used for the %a
@@ -500,7 +519,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated weekday name"
 msgid "Mon"
-msgstr ""
+msgstr "Дс"
 
 #. Translators: this is an abbreviated weekday name that will be used when
 #. displaying dates, as in "Tue Feb 11, 2014". It is used for the %a
@@ -508,7 +527,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated weekday name"
 msgid "Tue"
-msgstr ""
+msgstr "Сс"
 
 #. Translators: this is an abbreviated weekday name that will be used when
 #. displaying dates, as in "Wed Feb 12, 2014". It is used for the %a
@@ -516,7 +535,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated weekday name"
 msgid "Wed"
-msgstr ""
+msgstr "Ср"
 
 #. Translators: this is an abbreviated weekday name that will be used when
 #. displaying dates, as in "Thu Feb 13, 2014". It is used for the %a
@@ -524,7 +543,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated weekday name"
 msgid "Thu"
-msgstr ""
+msgstr "Бс"
 
 #. Translators: this is an abbreviated weekday name that will be used when
 #. displaying dates, as in "Fri Feb 14, 2014". It is used for the %a
@@ -532,7 +551,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated weekday name"
 msgid "Fri"
-msgstr ""
+msgstr "Жм"
 
 #. Translators: this is an abbreviated weekday name that will be used when
 #. displaying dates, as in "Sat Feb 15, 2014". It is used for the %a
@@ -540,7 +559,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated weekday name"
 msgid "Sat"
-msgstr ""
+msgstr "Сн"
 
 #. Translators: this is an abbreviated weekday name that will be used when
 #. displaying dates, as in "Sun Feb 16, 2014". It is used for the %a
@@ -548,7 +567,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated weekday name"
 msgid "Sun"
-msgstr ""
+msgstr "Жс"
 
 #. Translators: this is an abbreviated month name that will be used when
 #. displaying dates, as in "Jan 10, 2014". It is used for the %b
@@ -556,7 +575,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated month name"
 msgid "Jan"
-msgstr ""
+msgstr "қаң"
 
 #. Translators: this is an abbreviated month name that will be used when
 #. displaying dates, as in "Feb 10, 2014". It is used for the %b
@@ -564,7 +583,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated month name"
 msgid "Feb"
-msgstr ""
+msgstr "ақпа."
 
 #. Translators: this is an abbreviated month name that will be used when
 #. displaying dates, as in "Mar 10, 2014". It is used for the %b
@@ -572,7 +591,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated month name"
 msgid "Mar"
-msgstr ""
+msgstr "наурыз"
 
 #. Translators: this is an abbreviated month name that will be used when
 #. displaying dates, as in "Apr 10, 2014". It is used for the %b
@@ -580,7 +599,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated month name"
 msgid "Apr"
-msgstr ""
+msgstr "сәу"
 
 #. Translators: this is an abbreviated month name that will be used when
 #. displaying dates, as in "May 10, 2014". It is used for the %b
@@ -588,7 +607,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated month name"
 msgid "May"
-msgstr ""
+msgstr "мамыр"
 
 #. Translators: this is an abbreviated month name that will be used when
 #. displaying dates, as in "Jun 10, 2014". It is used for the %b
@@ -596,7 +615,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated month name"
 msgid "Jun"
-msgstr ""
+msgstr "маусым"
 
 #. Translators: this is an abbreviated month name that will be used when
 #. displaying dates, as in "Jul 10, 2014". It is used for the %b
@@ -604,7 +623,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated month name"
 msgid "Jul"
-msgstr ""
+msgstr "шілде"
 
 #. Translators: this is an abbreviated month name that will be used when
 #. displaying dates, as in "Aug 10, 2014". It is used for the %b
@@ -612,7 +631,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated month name"
 msgid "Aug"
-msgstr ""
+msgstr "там"
 
 #. Translators: this is an abbreviated month name that will be used when
 #. displaying dates, as in "Sep 10, 2014". It is used for the %b
@@ -620,7 +639,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated month name"
 msgid "Sep"
-msgstr ""
+msgstr "қырқ"
 
 #. Translators: this is an abbreviated month name that will be used when
 #. displaying dates, as in "Oct 10, 2014". It is used for the %b
@@ -628,7 +647,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated month name"
 msgid "Oct"
-msgstr ""
+msgstr "қаз."
 
 #. Translators: this is an abbreviated month name that will be used when
 #. displaying dates, as in "Nov 10, 2014". It is used for the %b
@@ -636,7 +655,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated month name"
 msgid "Nov"
-msgstr ""
+msgstr "қара."
 
 #. Translators: this is an abbreviated month name that will be used when
 #. displaying dates, as in "Dec 10, 2014". It is used for the %b
@@ -644,7 +663,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated month name"
 msgid "Dec"
-msgstr ""
+msgstr "желт."
 
 #. Translators: this is a month name that will be used when displaying
 #. dates, as in "January 10, 2014". It is used for the %B directive in
@@ -652,7 +671,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "month name"
 msgid "January"
-msgstr ""
+msgstr "қаңтар"
 
 #. Translators: this is a month name that will be used when displaying
 #. dates, as in "February 10, 2014". It is used for the %B directive in
@@ -660,7 +679,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "month name"
 msgid "February"
-msgstr ""
+msgstr "ақпан"
 
 #. Translators: this is a month name that will be used when displaying
 #. dates, as in "March 10, 2014". It is used for the %B directive in
@@ -668,7 +687,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "month name"
 msgid "March"
-msgstr ""
+msgstr "наурыз"
 
 #. Translators: this is a month name that will be used when displaying
 #. dates, as in "April 10, 2014". It is used for the %B directive in
@@ -676,7 +695,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "month name"
 msgid "April"
-msgstr ""
+msgstr "сәуір"
 
 #. Translators: this is a month name that will be used when displaying
 #. dates, as in "May 10, 2014". It is used for the %B directive in
@@ -684,7 +703,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "month name"
 msgid "May"
-msgstr ""
+msgstr "мамыр"
 
 #. Translators: this is a month name that will be used when displaying
 #. dates, as in "June 10, 2014". It is used for the %B directive in
@@ -692,7 +711,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "month name"
 msgid "June"
-msgstr ""
+msgstr "маусым"
 
 #. Translators: this is a month name that will be used when displaying
 #. dates, as in "July 10, 2014". It is used for the %B directive in
@@ -700,7 +719,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "month name"
 msgid "July"
-msgstr ""
+msgstr "шілде"
 
 #. Translators: this is a month name that will be used when displaying
 #. dates, as in "August 10, 2014". It is used for the %B directive in
@@ -708,7 +727,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "month name"
 msgid "August"
-msgstr ""
+msgstr "тамыз"
 
 #. Translators: this is a month name that will be used when displaying
 #. dates, as in "September 10, 2014". It is used for the %B directive in
@@ -716,7 +735,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "month name"
 msgid "September"
-msgstr ""
+msgstr "қыркүйек"
 
 #. Translators: this is a month name that will be used when displaying
 #. dates, as in "October 10, 2014". It is used for the %B directive in
@@ -724,7 +743,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "month name"
 msgid "October"
-msgstr ""
+msgstr "қазан"
 
 #. Translators: this is a month name that will be used when displaying
 #. dates, as in "November 10, 2014". It is used for the %B directive in
@@ -732,7 +751,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "month name"
 msgid "November"
-msgstr ""
+msgstr "қараша"
 
 #. Translators: this is a month name that will be used when displaying
 #. dates, as in "December 10, 2014". It is used for the %B directive in
@@ -740,71 +759,72 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "month name"
 msgid "December"
-msgstr ""
+msgstr "желтоқсан"
 
 #: common/djangoapps/util/password_policy_validators.py
 msgid "Invalid Length ({0})"
-msgstr ""
+msgstr "Рұқсат етілмеген ұзындық ({0})"
 
 #: common/djangoapps/util/password_policy_validators.py
 msgid "must be {0} characters or more"
-msgstr ""
+msgstr "{0} немесе одан артық белгіден тұруы тиіс"
 
 #: common/djangoapps/util/password_policy_validators.py
 msgid "must be {0} characters or less"
-msgstr ""
+msgstr "{0} немесе одан кем белгіден тұруы тиіс"
 
 #: common/djangoapps/util/password_policy_validators.py
 msgid "Must be more complex ({0})"
-msgstr ""
+msgstr "Анағұрлым күрделі болуы тиіс ({0})"
 
 #: common/djangoapps/util/password_policy_validators.py
 msgid "must contain {0} or more uppercase characters"
-msgstr ""
+msgstr "Жоғарғы регистрдің{0} немесе одан артық белгісінен тұруы тиіс"
 
 #: common/djangoapps/util/password_policy_validators.py
 msgid "must contain {0} or more lowercase characters"
-msgstr ""
+msgstr "Төменгі регистрдің{0} немесе одан артық белгісінен тұруы тиіс"
 
 #: common/djangoapps/util/password_policy_validators.py
 msgid "must contain {0} or more digits"
-msgstr ""
+msgstr "{0} немесе одан артық цифрлардан тұруы тиіс"
 
 #: common/djangoapps/util/password_policy_validators.py
 msgid "must contain {0} or more punctuation characters"
-msgstr ""
+msgstr "{0} немесе одан артық тыныс белгілерінен тұруы тиіс"
 
 #: common/djangoapps/util/password_policy_validators.py
 msgid "must contain {0} or more non ascii characters"
-msgstr ""
+msgstr "ascii кірмейтін {0} немесе одан артық белгілерді қамтуы тиіс "
 
 #: common/djangoapps/util/password_policy_validators.py
 msgid "must contain {0} or more unique words"
-msgstr ""
+msgstr "{0} немесе одан артық қайталанбайтын сөздерді қамтуы тиіс"
 
 #: common/djangoapps/util/password_policy_validators.py
 msgid "Too similar to a restricted dictionary word."
-msgstr ""
+msgstr "Жалпы қолданымдағы сөзге өте ұқсайды."
 
 #: common/lib/capa/capa/capa_problem.py
 msgid "Cannot rescore problems with possible file submissions"
 msgstr ""
+"Жіберіліп қойылуы мүмкін файлдары бар тапсырманы қайта бағалай алмаймын"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "correct"
-msgstr ""
+msgstr "дұрыс"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "incorrect"
-msgstr ""
+msgstr "қате"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "incomplete"
-msgstr ""
+msgstr "аяқталмаған"
 
 #: common/lib/capa/capa/inputtypes.py common/lib/capa/capa/inputtypes.py
 msgid "unanswered"
-msgstr "жауабы жоқ"
+msgstr "жауап жоқ"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "processing"
@@ -815,18 +835,24 @@ msgid ""
 "Your file(s) have been submitted. As soon as your submission is graded, this"
 " message will be replaced with the grader's feedback."
 msgstr ""
+"Сіздің файл (файлдарыңыз) қабылданды. Ол бағаланған бойдан осы хабардың "
+"орнына Сіздің бағаңыз пайда болады."
 
 #: common/lib/capa/capa/inputtypes.py
 msgid ""
 "Your answer has been submitted. As soon as your submission is graded, this "
 "message will be replaced with the grader's feedback."
 msgstr ""
+"Сіздің жауап қабылданды. Ол бағаланған бойдан осы хабардың орнына Сіздің "
+"бағаңыз пайда болады."
 
 #: common/lib/capa/capa/inputtypes.py
 msgid ""
 "Submitted. As soon as a response is returned, this message will be replaced "
 "by that feedback."
 msgstr ""
+"Қабылданды. Жауап алынған бойдан осы хабардың орнына жауаптың мазмұны пайда "
+"болады."
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "No response from Xqueue within {xqueue_timeout} seconds. Aborted."
@@ -834,15 +860,15 @@ msgstr ""
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "Error {err} in evaluating hint function {hintfn}."
-msgstr ""
+msgstr "{hintfn} еске түсіру функциясын бағалаудағы {err} қатесі."
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "(Source code line unavailable)"
-msgstr ""
+msgstr "(Бастапқы код жолы қол жетімді емес)"
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "See XML source line {sourcenum}."
-msgstr ""
+msgstr "XML {sourcenum} бастапқы жолын көрсету."
 
 #. Translators: 'unmask_name' is a method name and should not be translated.
 #: common/lib/capa/capa/responsetypes.py
@@ -868,47 +894,58 @@ msgstr ""
 
 #: common/lib/capa/capa/responsetypes.py common/lib/capa/capa/responsetypes.py
 msgid "There was a problem with the staff answer to this problem."
-msgstr ""
+msgstr "Осы тапсырмаға қызметкерлердің жауабы бар проблема анықталды"
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "Could not interpret '{student_answer}' as a number."
-msgstr ""
+msgstr "'{student_answer}' сандық мәнін анықтау мүмкін болмады."
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "You may not use variables ({bad_variables}) in numerical problems."
 msgstr ""
+"Сандық есептерде ({bad_variables}) айнымалыларын пайдалануға рұқсат "
+"етілмейді."
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "factorial function evaluated outside its domain:'{student_answer}'"
 msgstr ""
+"факториалдың мәні оның анықталу облысынан тыс орналасқан: '{student_answer}'"
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "Invalid math syntax: '{student_answer}'"
-msgstr ""
+msgstr "Рұқсат етілмеген математикалық белгі:'{student_answer}'"
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "You may not use complex numbers in range tolerance problems"
 msgstr ""
+"Сіз тапсырманың рұқсат етілген мәндері ауқымында комплексті сандарды "
+"пайдалана алмайсыз"
 
 #: common/lib/capa/capa/responsetypes.py
 msgid ""
 "There was a problem with the staff answer to this problem: complex boundary."
 msgstr ""
+"Курс қызметкерлерінің осы тапсырмаға жауабы бар проблема анықталды: "
+"жиынтықтың шекарасы."
 
 #: common/lib/capa/capa/responsetypes.py
 msgid ""
 "There was a problem with the staff answer to this problem: empty boundary."
 msgstr ""
+"Курс қызметкерлерінің осы тапсырмаға жауабы бар проблема анықталды: бос "
+"шекара."
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "CustomResponse: check function returned an invalid dictionary!"
-msgstr ""
+msgstr "Пікір: тексеру функциясы сөздіктің қате мәнін қайтарды"
 
 #: common/lib/capa/capa/responsetypes.py
 msgid ""
 "Unable to deliver your submission to grader (Reason: {error_msg}). Please "
 "try again later."
 msgstr ""
+"Сіздің бағаға жауабыңызды тапсыру мүмкін болмады (Себеп: {error_msg}). "
+"Кейінірек қайталап көріңіз."
 
 #. Translators: 'grader' refers to the edX automatic code grader.
 #. Translators: the `grader` refers to the grading service open response
@@ -918,39 +955,41 @@ msgstr ""
 #: common/lib/capa/capa/responsetypes.py
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/open_ended_module.py
 msgid "Invalid grader reply. Please contact the course staff."
-msgstr ""
+msgstr "Жауап алу мүмкін емес. Курс үшін жауаптылармен хабарласыңыз."
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "Invalid input: {bad_input} not permitted in answer."
-msgstr ""
+msgstr "Қате енгізу: {bad_input} жауап бола алмайды."
 
 #: common/lib/capa/capa/responsetypes.py
 msgid ""
 "factorial function not permitted in answer for this problem. Provided answer"
 " was: {bad_input}"
 msgstr ""
+"Осы тапсырмаға жауапта факториалды пайдалануға рұқсат етілмейді. Сіз берген "
+"жауап: {bad_input}"
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "Invalid input: Could not parse '{bad_input}' as a formula."
-msgstr ""
+msgstr "Қате енгізу: '{bad_input}' формула ретінде белгілеу мүмкін емес."
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "Invalid input: Could not parse '{bad_input}' as a formula"
-msgstr ""
+msgstr "Қате енгізу: '{bad_input}' формула ретінде белгілеу мүмкін емес."
 
 #. Translators: 'SchematicResponse' is a problem type and should not be
 #. translated.
 #: common/lib/capa/capa/responsetypes.py
 msgid "Error in evaluating SchematicResponse. The error was: {error_msg}"
-msgstr ""
+msgstr "Пікірді бағалаудағы қате. Мынай қате болып табылады: {error_msg}"
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "The Staff answer could not be interpreted as a number."
-msgstr ""
+msgstr "Қызметкердің жауабы сан ретінде қабылдана алмайды."
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "Could not interpret '{given_answer}' as a number."
-msgstr ""
+msgstr "'{given_answer}' сандық мәнін анықтау мүмкін болмады."
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Check"
@@ -958,15 +997,15 @@ msgstr "Тексеру"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Final Check"
-msgstr "Соңғы тексеру"
+msgstr "Қорытынды тексеру"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Checking..."
-msgstr ""
+msgstr "Тексеру..."
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Warning: The problem has been reset to its initial state!"
-msgstr ""
+msgstr "Назар аударыңыз: Тапсырма бастапқы жай-күйге шығарып тасталды!"
 
 #. Translators: Following this message, there will be a bulleted list of
 #. items.
@@ -975,10 +1014,14 @@ msgid ""
 "The problem's state was corrupted by an invalid submission. The submission "
 "consisted of:"
 msgstr ""
+"Тапсырма жарамсыз өтінімге байланысты зақымдалған болатын. Тапсырма "
+"мыналардан тұратын:"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "If this error persists, please contact the course staff."
 msgstr ""
+"Егер қате туралы осы хабар пайда бола берсе, курстың қызметкерлерімен "
+"хабарласыңыз."
 
 #. Translators: 'closed' means the problem's due date has passed. You may no
 #. longer attempt to solve the problem.
@@ -986,99 +1029,111 @@ msgstr ""
 #: common/lib/xmodule/xmodule/capa_base.py
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Problem is closed."
-msgstr ""
+msgstr "Тапсырманы тапсыру мерзімі өтіп кетті."
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Problem must be reset before it can be checked again."
-msgstr ""
+msgstr "Тапсырма тағы да бір рет тексерілместен бұрын шығарып тасталуы тиіс."
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "You must wait at least {wait} seconds between submissions."
-msgstr ""
+msgstr "Әрекеттер арасында ең болмағанда {wait} секунд күтіңіз."
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid ""
 "You must wait at least {wait_secs} between submissions. {remaining_secs} "
 "remaining."
 msgstr ""
+"Әрекеттер арасында ең болмағанда {wait_secs} секунд күтіңіз. "
+"{remaining_secs}қалды."
 
 #. Translators: {msg} will be replaced with a problem's error message.
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Error: {msg}"
-msgstr ""
+msgstr "Қате: {msg}"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "{num_hour} hour"
-msgstr ""
+msgstr "{num_hour} сағат "
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "{num_minute} minute"
-msgstr ""
+msgstr "{num_minute} минут "
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "{num_second} second"
-msgstr ""
+msgstr "{num_second} секунд "
 
 #. Translators: 'rescoring' refers to the act of re-submitting a student's
 #. solution so it can get a new score.
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Problem's definition does not support rescoring."
-msgstr ""
+msgstr "Тапсырманың шарттары оны қайта бағалауға мүмкіндік бермейді."
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Problem must be answered before it can be graded again."
-msgstr ""
+msgstr "Тапсырма қайта бағаланғанға дейін оған жауап берілуі тиіс."
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Problem needs to be reset prior to save."
-msgstr ""
+msgstr "Тапсырманы сақтамастан бұрын шығарып тастау керек."
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Your answers have been saved."
-msgstr ""
+msgstr "Сіздің жауаптарыңыз сақталды."
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid ""
 "Your answers have been saved but not graded. Click 'Check' to grade them."
 msgstr ""
+"Сіздің жауаптарыңыз сақталды, бірақ бағаланған жоқ. Бағаны алу үшін "
+"'Тексеру'-ді басыңыз."
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Refresh the page and make an attempt before resetting."
-msgstr ""
+msgstr "Бетті жаңартыңыз және шығарып тастаудың алдында әрекет етіңіз."
 
 #: common/lib/xmodule/xmodule/capa_module.py
 msgid ""
 "We're sorry, there was an error with processing your request. Please try "
 "reloading your page and trying again."
 msgstr ""
+"Өкінішке орай Сіздің сауалды өңдеу кезінде қате орын алды. Бетті қайта "
+"жүктеңіз және тағы да әрекет етіп көріңіз."
 
 #: common/lib/xmodule/xmodule/capa_module.py
 msgid ""
 "The state of this problem has changed since you loaded this page. Please "
 "refresh your page."
 msgstr ""
+"Сіз бетті жүктегеннен кейін осы тапсырманың мәртебесі өзгерді. Бетті қайта "
+"жүктеңіз."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "General"
-msgstr ""
+msgstr "Жалпы"
 
 #. Translators: TBD stands for 'To Be Determined' and is used when a course
 #. does not yet have an announced start date.
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "TBD"
-msgstr ""
+msgstr "Белгіленбеген күн"
 
 #: common/lib/xmodule/xmodule/lti_module.py
 msgid ""
 "Could not parse custom parameter: {custom_parameter}. Should be \"x=y\" "
 "string."
 msgstr ""
+"Арнайы параметрді тану мүмкін болмады:{custom_parameter}. \"x=y\" жолды "
+"пайдалану ұсынылады."
 
 #: common/lib/xmodule/xmodule/lti_module.py
 msgid ""
 "Could not parse LTI passport: {lti_passport}. Should be \"id:key:secret\" "
 "string."
 msgstr ""
+"LTI  кілтін тану мүмкін болмады:{lti_passport}. \"id:key:secret\" жолды "
+"пайдалану ұсынылады."
 
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'Courseware' refers to the tab in the courseware that leads to
@@ -1086,14 +1141,14 @@ msgstr ""
 #: common/lib/xmodule/xmodule/tabs.py
 #: lms/templates/courseware/courseware-error.html
 msgid "Courseware"
-msgstr ""
+msgstr "Курстың бағдарламасы"
 
 #. Translators: "Course Info" is the name of the course's information and
 #. updates page
 #: common/lib/xmodule/xmodule/tabs.py
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "Course Info"
-msgstr ""
+msgstr "Курс туралы ақпарат"
 
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: "Progress" is the name of the student's course progress page
@@ -1106,19 +1161,19 @@ msgstr "Ілгерілеу"
 #: common/lib/xmodule/xmodule/tabs.py lms/djangoapps/course_wiki/views.py
 #: lms/templates/wiki/base.html
 msgid "Wiki"
-msgstr ""
+msgstr "Вики"
 
 #. Translators: "Discussion" is the title of the course forum page
 #. Translators: 'Discussion' refers to the tab in the courseware that leads to
 #. the discussion forums
 #: common/lib/xmodule/xmodule/tabs.py common/lib/xmodule/xmodule/tabs.py
 msgid "Discussion"
-msgstr ""
+msgstr "Талқылау"
 
 #: common/lib/xmodule/xmodule/tabs.py cms/templates/textbooks.html
 #: cms/templates/textbooks.html cms/templates/widgets/header.html
 msgid "Textbooks"
-msgstr ""
+msgstr "Оқулықтар"
 
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: "Staff grading" appears on a tab that allows
@@ -1126,20 +1181,20 @@ msgstr ""
 #: common/lib/xmodule/xmodule/tabs.py
 #: lms/templates/instructor/staff_grading.html
 msgid "Staff grading"
-msgstr ""
+msgstr "Қызметкерлерді бағалау"
 
 #. Translators: "Peer grading" appears on a tab that allows
 #. students to view open-ended problems that require grading
 #: common/lib/xmodule/xmodule/tabs.py
 msgid "Peer grading"
-msgstr ""
+msgstr "Өзара бағалауларды қарау"
 
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: "Syllabus" appears on a tab that, when clicked, opens the
 #. syllabus of the course.
 #: common/lib/xmodule/xmodule/tabs.py lms/templates/courseware/syllabus.html
 msgid "Syllabus"
-msgstr ""
+msgstr "Оқыту бағдарламасы"
 
 #. Translators: 'Instructor' appears on the tab that leads to the instructor
 #. dashboard, which is
@@ -1147,52 +1202,52 @@ msgstr ""
 #. their course
 #: common/lib/xmodule/xmodule/tabs.py
 msgid "Instructor"
-msgstr ""
+msgstr "Оқытушы"
 
 #. Translators: "Self" is used to denote an openended response that is self-
 #. graded
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/combined_open_ended_modulev1.py
 msgid "Self"
-msgstr ""
+msgstr "Өз-өзін бағалау"
 
 #. Translators: "AI" is used to denote an openended response that is machine-
 #. graded
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/combined_open_ended_modulev1.py
 msgid "AI"
-msgstr ""
+msgstr "AI"
 
 #. Translators: "Peer" is used to denote an openended response that is peer-
 #. graded
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/combined_open_ended_modulev1.py
 msgid "Peer"
-msgstr ""
+msgstr "Өзара бағалау"
 
 #. Translators: "Not started" is used to communicate to a student that their
 #. response
 #. has not yet been graded
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/combined_open_ended_modulev1.py
 msgid "Not started."
-msgstr ""
+msgstr "Әлі бағаланбады."
 
 #. Translators: "Being scored." is used to communicate to a student that their
 #. response
 #. are in the process of being scored
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/combined_open_ended_modulev1.py
 msgid "Being scored."
-msgstr ""
+msgstr "Бағалау барысында."
 
 #. Translators: "Scoring finished" is used to communicate to a student that
 #. their response
 #. have been scored, but the full scoring process is not yet complete
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/combined_open_ended_modulev1.py
 msgid "Scoring finished."
-msgstr ""
+msgstr "Бағалау аяқталды."
 
 #. Translators: "Complete" is used to communicate to a student that their
 #. openended response has been fully scored
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/combined_open_ended_modulev1.py
 msgid "Complete."
-msgstr ""
+msgstr "Орындалды."
 
 #. Translators: "Scored rubric" appears to a user as part of a longer
 #. string that looks something like: "Scored rubric from grader 1".
@@ -1201,42 +1256,47 @@ msgstr ""
 #. returned from one of the graders of their openended response problem.
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/combined_open_ended_modulev1.py
 msgid "Scored rubric"
-msgstr ""
+msgstr "Бағаланған айдарлар."
 
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/combined_open_ended_modulev1.py
 msgid ""
 "You have attempted this question {number_of_student_attempts} times. You are"
 " only allowed to attempt it {max_number_of_attempts} times."
 msgstr ""
+"Сіз осы сұраққа жауап беру үшін {number_of_student_attempts} әрекет "
+"жасадыңыз. Сізге  барлығы {max_number_of_attempts} әрекет жасауға рұқсат "
+"етілген."
 
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/combined_open_ended_modulev1.py
 msgid "The problem state got out-of-sync. Please try reloading the page."
 msgstr ""
+"Тапсырма мәртебесін синхрондау бұзылған. Бетті қайта жүктеуге әрекет "
+"жасаңыз."
 
 #. Translators: "Self-Assessment" refers to the self-assessed mode of
 #. openended evaluation
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/combined_open_ended_rubric.py
 msgid "Self-Assessment"
-msgstr ""
+msgstr "Өз-өзін бағалау"
 
 #. Translators: "Peer-Assessment" refers to the peer-assessed mode of
 #. openended evaluation
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/combined_open_ended_rubric.py
 msgid "Peer-Assessment"
-msgstr ""
+msgstr "Қатысушылардың бағалауы"
 
 #. Translators: "Instructor-Assessment" refers to the instructor-assessed mode
 #. of openended evaluation
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/combined_open_ended_rubric.py
 msgid "Instructor-Assessment"
-msgstr ""
+msgstr "Нұсқаушының бағалауы"
 
 #. Translators: "AI-Assessment" refers to the machine-graded mode of openended
 #. evaluation
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/combined_open_ended_rubric.py
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/combined_open_ended_rubric.py
 msgid "AI-Assessment"
-msgstr ""
+msgstr "AI бағалауы"
 
 #. Translators: 'tag' is one of 'feedback', 'submission_id',
 #. 'grader_id', or 'score'. They are categories that a student
@@ -1247,26 +1307,32 @@ msgid ""
 "Could not find needed tag {tag_name} in the survey responses. Please try "
 "submitting again."
 msgstr ""
+"Сауалнама сұрақтарына берілген жауаптарда қажетті тегті {tag_name} табу "
+"мүмкін болмады. Тағы бір әрекет жасаңыз."
 
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/open_ended_module.py
 msgid "There was an error saving your feedback. Please contact course staff."
 msgstr ""
+"Сіздің пікіріңізді сақтау кезінде қате орын алды. Курстың қызметкерлерімен "
+"хабарласыңыз."
 
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/open_ended_module.py
 msgid "Couldn't submit feedback."
-msgstr ""
+msgstr "Пікірді жөнелту мүмкін болмады."
 
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/open_ended_module.py
 msgid "Successfully saved your feedback."
-msgstr ""
+msgstr "Сіздің пікіріңіз ойдағыдай сақталды."
 
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/open_ended_module.py
 msgid "Unable to save your feedback. Please try again later."
 msgstr ""
+"Сіздің пікіріңізді сақтау мүмкін болмады. Әрекетті кейінірек қайталап "
+"көріңіз."
 
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/open_ended_module.py
 msgid "Successfully saved your submission."
-msgstr ""
+msgstr "Сіздің жауабыңыз ойдағыдай сақталды. "
 
 #. Translators: the `grader` refers to the grading service open response
 #. problems
@@ -1276,6 +1342,8 @@ msgstr ""
 msgid ""
 "Unable to submit your submission to the grader. Please try again later."
 msgstr ""
+"Сіздің жауабыңызды бағалауға тапсыру мүмкін болмады. Әрекетті кейінірек "
+"қайталап көріңіз."
 
 #. Translators: the `grader` refers to the grading service open response
 #. problems
@@ -1284,7 +1352,7 @@ msgstr ""
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/open_ended_module.py
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/open_ended_module.py
 msgid "Error getting feedback from grader."
-msgstr ""
+msgstr "Бағалаушыдан жауап алу қатесі."
 
 #. Translators: the `grader` refers to the grading service open response
 #. problems
@@ -1292,11 +1360,11 @@ msgstr ""
 #. graded.
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/open_ended_module.py
 msgid "No feedback available from grader."
-msgstr ""
+msgstr "Бағалаушыдан қол жетімді жауаптар жоқ."
 
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/open_ended_module.py
 msgid "Error handling action. Please try again."
-msgstr ""
+msgstr "Команданы орындау кезіндегі қате. Тағы да әрекет етіп көріңіз."
 
 #. Translators: this string appears once an openended response
 #. is submitted but before it has been graded
@@ -1304,73 +1372,88 @@ msgstr ""
 msgid ""
 "Your response has been submitted. Please check back later for your grade."
 msgstr ""
+"Сіздің жауабыңыз қабылданды. Өз бағаңызды білу үшін осы бетке кейінірек "
+"оралыңыз."
 
 #. Translators: "Not started" communicates to a student that their response
 #. has not yet been graded
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/openendedchild.py
 msgid "Not started"
-msgstr ""
+msgstr "Әлі бағаланған жоқ"
 
 #. Translators: "In progress" communicates to a student that their response
 #. is currently in the grading process
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/openendedchild.py
 msgid "In progress"
-msgstr ""
+msgstr "Барысында "
 
 #. Translators: "Done" communicates to a student that their response
 #. has been fully graded
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/openendedchild.py
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/openendedchild.py
 msgid "Done"
-msgstr ""
+msgstr "Аяқталды"
 
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/openendedchild.py
 msgid ""
 "We could not find a file in your submission. Please try choosing a file or "
 "pasting a URL to your file into the answer box."
 msgstr ""
+"Сіздің өтінімде қоса тіркелген файл жоқ. Өз компьютеріңізде файлды таңдаңыз "
+"немесе жауапқа арналған алапта сілтемені кірістіріңіз."
 
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/openendedchild.py
 msgid ""
 "We are having trouble saving your file. Please try another file or paste a "
 "URL to your file into the answer box."
 msgstr ""
+"Біз сіздің файлды сақтай алмаймыз. Басқа файлды көрсетіңіз немесе жауапқа "
+"арналған алапта сілтемені кірістіріңіз."
 
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/self_assessment_module.py
 msgid "Error saving your score.  Please notify course staff."
 msgstr ""
+"Сіздің бағаны сақтау кезіндегі қате. Курстың қызметкерлеріне хабарлаңыз."
 
 #: common/lib/xmodule/xmodule/video_module/transcripts_utils.py
 msgid ""
 "Can't receive transcripts from Youtube for {youtube_id}. Status code: "
 "{status_code}."
 msgstr ""
+"Youtube сервисінен {youtube_id} үшін субтитрлер алу мүмкін емес. "
+"{status_code}."
 
 #: common/lib/xmodule/xmodule/video_module/transcripts_utils.py
 msgid "Can't find any transcripts on the Youtube service."
-msgstr ""
+msgstr "Youtube сервисінде субтитрлер табу мүмкін болмады."
 
 #: common/lib/xmodule/xmodule/video_module/transcripts_utils.py
 msgid "We support only SubRip (*.srt) transcripts format."
-msgstr ""
+msgstr "SubRip (*.srt) субтитрлерінің форматы ғана қолдау табады."
 
 #: common/lib/xmodule/xmodule/video_module/transcripts_utils.py
 msgid ""
 "Something wrong with SubRip transcripts file during parsing. Inner message "
 "is {error_message}"
 msgstr ""
+"SubRip субтитрлерін іске қосу кезінде әлдене дұрыс болмады. Ішкі "
+"хабар{error_message}"
 
 #: common/lib/xmodule/xmodule/video_module/transcripts_utils.py
 msgid "Something wrong with SubRip transcripts file during parsing."
-msgstr ""
+msgstr "SubRip субтитрлерін іске қосу кезінде әлдене дұрыс болмады."
 
 #: common/lib/xmodule/xmodule/video_module/transcripts_utils.py
 msgid "{exception_message}: Can't find uploaded transcripts: {user_filename}"
 msgstr ""
+"{exception_message}: Жүктелген стенограммаларды табу мүмкін болмады: "
+"{user_filename} "
 
 #: common/lib/xmodule/xmodule/video_module/video_module.py
 msgid "A YouTube URL or a link to a file hosted anywhere on the web."
 msgstr ""
+"YouTube сайтының  URL немесе интернет желісінің кез келген нүстесінде "
+"сақталған файлға сілтеме. "
 
 #. Translators: This is a type of file used for captioning in the video
 #. player.
@@ -1388,11 +1471,11 @@ msgstr "Навигация"
 
 #: common/static/js/vendor/mathjax-MathJax-c9db6ac/docs/source/mjtheme/layout.html
 msgid "About these documents"
-msgstr "Осы құжаттар жайлы"
+msgstr "Осы құжаттар туралы"
 
 #: common/static/js/vendor/mathjax-MathJax-c9db6ac/docs/source/mjtheme/layout.html
 msgid "Index"
-msgstr "Басты бет"
+msgstr "Мазмұны"
 
 #: common/static/js/vendor/mathjax-MathJax-c9db6ac/docs/source/mjtheme/layout.html
 #: lms/templates/wiki/plugins/attachments/index.html
@@ -1411,93 +1494,103 @@ msgid ""
 "{label} {problem_name} - {count_grade} {students} ({percent:.0f}%: "
 "{grade:.0f}/{max_grade:.0f} {questions})"
 msgstr ""
+"{label} {problem_name} - {count_grade} {students} ({percent:.0f}%: "
+"{grade:.0f}/{max_grade:.0f} {questions}) "
 
 #: lms/djangoapps/class_dashboard/dashboard_data.py
 #: lms/djangoapps/class_dashboard/dashboard_data.py
 msgid "students"
-msgstr ""
+msgstr "студенттер"
 
 #: lms/djangoapps/class_dashboard/dashboard_data.py
 #: lms/djangoapps/class_dashboard/dashboard_data.py
 msgid "questions"
-msgstr ""
+msgstr "сұрақтар"
 
 #: lms/djangoapps/class_dashboard/dashboard_data.py
 msgid ""
 "{num_students} student(s) opened Subsection {subsection_num}: "
 "{subsection_name}"
 msgstr ""
+"{num_students} студент(тер) {subsection_num}Кірі бөліміне кірген: "
+"{subsection_name}"
 
 #: lms/djangoapps/class_dashboard/dashboard_data.py
 msgid ""
 "{problem_info_x} {problem_info_n} - {count_grade} {students} "
 "({percent:.0f}%: {grade:.0f}/{max_grade:.0f} {questions})"
 msgstr ""
+"{problem_info_x} {problem_info_n} - {count_grade} {students} "
+"({percent:.0f}%: {grade:.0f}/{max_grade:.0f} {questions}) "
 
 #. Translators: this string includes wiki markup.  Leave the ** and the _
 #. alone.
 #: lms/djangoapps/course_wiki/views.py
 msgid "This is the wiki for **{organization}**'s _{course_name}_."
-msgstr ""
+msgstr "Бұл мыналарға арналған Вики**{organization}**'s _{course_name}_."
 
 #: lms/djangoapps/course_wiki/views.py
 msgid "Course page automatically created."
-msgstr ""
+msgstr "Курстың беті автоматты түрде құрылды."
 
 #: lms/djangoapps/course_wiki/views.py
 msgid "Welcome to the edX Wiki"
-msgstr ""
+msgstr "Вики edX хош келдіңіз"
 
 #: lms/djangoapps/course_wiki/views.py
 msgid "Visit a course wiki to add an article."
-msgstr ""
+msgstr "Бапты қосу үшін курстың вики бетіне кіріңіз."
 
 #: lms/djangoapps/courseware/views.py
 msgid "User {username} does not exist."
-msgstr ""
+msgstr "{username} пайдаланушы аты жоқ."
 
 #: lms/djangoapps/courseware/views.py
 msgid "User {username} has never accessed problem {location}"
-msgstr ""
+msgstr "{username} пайдаланушы {location} тапсырмасын қараған жоқ"
 
 #: lms/djangoapps/courseware/features/video.py lms/templates/video.html
 msgid "ERROR: No playable video sources found!"
-msgstr ""
+msgstr "ҚАТЕ: бейненің қалпына келтірілетін көздері табылмады!"
 
 #: lms/djangoapps/dashboard/git_import.py
 msgid ""
 "Path {0} doesn't exist, please create it, or configure a different path with"
 " GIT_REPO_DIR"
 msgstr ""
+"{0} бағдары жоқ. Оны құрыңыз немесе GIT_REPO_DIR көмегімен басқа жолды "
+"көрсетіңіз"
 
 #: lms/djangoapps/dashboard/git_import.py
 msgid ""
 "Non usable git url provided. Expecting something like: "
 "git@github.com:mitocw/edx4edx_lite.git"
 msgstr ""
+"Пайдаланылуы мүмкін емес сілтеме ұсынылған. Мынадай үлгідегі сілтеме қажет: "
+"git@github.com:mitocw/edx4edx_lite.git "
 
 #: lms/djangoapps/dashboard/git_import.py
 msgid "Unable to get git log"
-msgstr ""
+msgstr "Git жұмыс хаттамасын алу мүмкін емес"
 
 #: lms/djangoapps/dashboard/git_import.py
 msgid "git clone or pull failed!"
-msgstr ""
+msgstr "git clone немесе pull командалары сәтсіз аяқталды! "
 
 #: lms/djangoapps/dashboard/git_import.py
 msgid "Unable to run import command."
-msgstr ""
+msgstr "импорт командасын орындау мүмкін болмады. "
 
 #: lms/djangoapps/dashboard/git_import.py
 msgid "The underlying module store does not support import."
-msgstr ""
+msgstr "Модульді қолдайтын қойма импорттауды қолдамайды."
 
 #. Translators: This is an error message when they ask for a
 #. particular version of a git repository and that version isn't
 #. available from the remote source they specified
 #: lms/djangoapps/dashboard/git_import.py
 msgid "The specified remote branch is not available."
-msgstr ""
+msgstr "Көрсетілген алыстағы торап қол жетімді емес."
 
 #. Translators: Error message shown when they have asked for a git
 #. repository branch, a specific version within a repository, that
@@ -1505,123 +1598,130 @@ msgstr ""
 #: lms/djangoapps/dashboard/git_import.py
 msgid "Unable to switch to specified branch. Please check your branch name."
 msgstr ""
+"Көрсетілген торапқа ауысу мүмкін емес. Сіздің тораптың атын тексеріңіз."
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Failed in authenticating {0}, error {1}\n"
-msgstr ""
+msgstr "Қол жеткізуді бақылаудан өту мүмкін болмады {0}, қате {1}\n"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Failed in authenticating {0}\n"
-msgstr ""
+msgstr "Қол жеткізуді бақылаудан өту мүмкін болмады {0}\n"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 #: lms/djangoapps/dashboard/tests/test_sysadmin.py
 msgid "fixed password"
-msgstr ""
+msgstr "өзгертілмейтін "
 
 #: lms/djangoapps/dashboard/sysadmin.py
 #: lms/djangoapps/dashboard/tests/test_sysadmin.py
 msgid "All ok!"
-msgstr ""
+msgstr "Барлығы дұрыс!"
 
 #: lms/djangoapps/dashboard/sysadmin.py lms/djangoapps/dashboard/sysadmin.py
 #: lms/djangoapps/dashboard/tests/test_sysadmin.py
 #: lms/djangoapps/dashboard/tests/test_sysadmin.py
 msgid "Must provide username"
-msgstr ""
+msgstr "Пайдаланушының атын көрсету қажет"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 #: lms/djangoapps/dashboard/tests/test_sysadmin.py
 msgid "Must provide full name"
-msgstr ""
+msgstr "Толық атын көрсету қажет"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "email must end in"
-msgstr ""
+msgstr "электрондық почта хабары мынада аяқталуы тиіс"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Failed - email {0} already exists as external_id"
-msgstr ""
+msgstr "Сәтсіз  - электрондық почтаның {0} хабары external_id ретінде бар"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Password must be supplied if not using certificates"
-msgstr ""
+msgstr "Сертификаттар болмаған кезде пароль енгізілуі тиіс"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "email address required (not username)"
-msgstr ""
+msgstr "электрондық почтаның мекенжайы (пайдаланушының аты емес) қажет"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Oops, failed to create user {0}, IntegrityError"
-msgstr ""
+msgstr "{0} пайдаланушысын құру мүмкін болмады, Тұтастық Қатесі "
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "User {0} created successfully!"
-msgstr ""
+msgstr "{0} Пайдаланушы ойдағыдай құрылды! "
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Cannot find user with email address {0}"
-msgstr ""
+msgstr "Электрондық мекенжайы {0} пайдаланушы табу мүмкін болмады "
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Cannot find user with username {0} - {1}"
-msgstr ""
+msgstr "Пайдаланушының {0} - {1} атын табу мүмкін болмады"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Deleted user {0}"
-msgstr ""
+msgstr "Алыстағы пайдаланушы {0} "
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Statistic"
-msgstr ""
+msgstr "Статистикалық"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Value"
-msgstr ""
+msgstr "Мәні"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Site statistics"
-msgstr ""
+msgstr "Сайт статистикасы"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Total number of users"
-msgstr ""
+msgstr "Пайдаланушылардың жалпы саны"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Courses loaded in the modulestore"
-msgstr ""
+msgstr "Оқу курстары модульдер қоймасына жүктелген"
 
 #: lms/djangoapps/dashboard/sysadmin.py lms/djangoapps/dashboard/sysadmin.py
 #: lms/djangoapps/dashboard/tests/test_sysadmin.py
 #: lms/templates/tracking_log.html
+#, fuzzy
 msgid "username"
-msgstr "қолданушы аты"
+msgstr ""
+"#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#\n"
+"Пайдаланушының аты\n"
+"#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#\n"
+"қолданушы аты"
 
 #: lms/djangoapps/dashboard/sysadmin.py lms/djangoapps/dashboard/sysadmin.py
 #: lms/djangoapps/dashboard/tests/test_sysadmin.py
 msgid "email"
-msgstr ""
+msgstr "Электрондық почта "
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Repair Results"
-msgstr ""
+msgstr "Нәтижелердегі қателерді түзету"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Create User Results"
-msgstr ""
+msgstr "Пайдаланушының нәтижелерін құру"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Delete User Results"
-msgstr ""
+msgstr "Пайдаланушының нәтижелерін жою"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 #: lms/djangoapps/dashboard/tests/test_sysadmin.py
 msgid "The git repo location should end with '.git', and be a valid url"
 msgstr ""
+"git репозитарийінің мекенжайы  '.git' аяқталуы және шынайы url болуы тиіс"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Added Course"
-msgstr ""
+msgstr "Курс қосылды"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid ""
@@ -1630,12 +1730,17 @@ msgid ""
 "We recommend you enable the MongoDB based module store instead, unless this "
 "is a development environment."
 msgstr ""
+"Импорттаудан бас тарту. GIT_IMPORT_WITH_XMLMODULESTORE режимі қосылмаған "
+"және жалпы алғанда XMLModuleStore көп ағынды режимде импортау қауіпсіз емес."
+" Егер бұл әзірлеу жүйесі болмаса мұның орнына біз MongoDB базасындағы сақтау"
+" модулін қосуды ұсынамыз."
 
 #: lms/djangoapps/dashboard/sysadmin.py
 #: lms/djangoapps/dashboard/tests/test_sysadmin.py
 msgid ""
 "The course {0} already exists in the data directory! (reloading anyway)"
 msgstr ""
+"{0} оқыту курсы деректер каталогында бар! (кез келген жағдайда қайта жүктеу)"
 
 #. Translators: unable to download the course content from
 #. the source git repository. Clone occurs if this is brand
@@ -1645,64 +1750,72 @@ msgstr ""
 msgid ""
 "Unable to clone or pull repository. Please check your url. Output was: {0!r}"
 msgstr ""
+"Репозитарийді клондау мүмкін емес. Сіздің сілтемеңізді тексеріңіз. Шығыс "
+"деректері мыналар болған: {0!r}"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Failed to clone repository to {0}"
-msgstr ""
+msgstr "Репозитарийді {0} клондау мүмкін болмады"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Successfully switched to branch: {branch_name}"
-msgstr ""
+msgstr "Мына торапқа ойдағыдай ауыстырылды: {branch_name}"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Loaded course {0} {1}<br/>Errors:"
-msgstr ""
+msgstr "{0} {1}<br/>Қателер курсы жүктелді"
 
 #: lms/djangoapps/dashboard/sysadmin.py lms/djangoapps/dashboard/sysadmin.py
 #: cms/templates/index.html cms/templates/settings.html
+#, fuzzy
 msgid "Course Name"
-msgstr "Курс аты"
+msgstr ""
+"#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#\n"
+"Курстың аты\n"
+"#-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#\n"
+"Курс аты"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Directory/ID"
-msgstr ""
+msgstr "Каталог/ID"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Git Commit"
-msgstr ""
+msgstr "Git жазба"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Last Change"
-msgstr "Соңғы өзгеріс"
+msgstr "Соңғы Өзгерістер"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Last Editor"
-msgstr ""
+msgstr "Соңғы Редактор"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Information about all courses"
-msgstr ""
+msgstr "Барлық курстар туралы ақпарат"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Error - cannot get course with ID {0}<br/><pre>{1}</pre>"
 msgstr ""
+"Қате - {0}<br/><pre>{1}</pre> сәйкестендіргіші бар курсты ашу мүмкін болмады"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Deleted"
-msgstr ""
+msgstr "Жойылды"
 
 #: lms/djangoapps/dashboard/sysadmin.py lms/djangoapps/dashboard/sysadmin.py
 #: lms/djangoapps/dashboard/tests/test_sysadmin.py
 msgid "course_id"
-msgstr ""
+msgstr "course_id "
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "# enrolled"
-msgstr ""
+msgstr "# тіркелген студенттер "
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "# staff"
-msgstr ""
+msgstr "# қызметкерлер "
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "instructors"
@@ -1710,81 +1823,83 @@ msgstr "нұсқаушылар"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Enrollment information for all courses"
-msgstr ""
+msgstr "Барлық курстарға арналған қатысушылар үшін ақпарат"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 #: lms/djangoapps/dashboard/tests/test_sysadmin.py
 msgid "role"
-msgstr ""
+msgstr "рөл"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 #: lms/djangoapps/dashboard/tests/test_sysadmin.py
 msgid "full_name"
-msgstr ""
+msgstr "full_name"
 
 #: lms/djangoapps/dashboard/management/commands/git_add_course.py
 msgid ""
 "Import the specified git repository and optional branch into the modulestore"
 " and optionally specified directory."
 msgstr ""
+"Көрсетілген  git-репозиторийді және таңдау торабын модульдер қоймасына және "
+"көрсетілген бөлімге импорттау."
 
 #: lms/djangoapps/dashboard/tests/test_sysadmin.py
 msgid "Cannot find user with email address"
-msgstr ""
+msgstr "электрондық мекенжайы бар пайдаланушы табу мүмкін болмады"
 
 #: lms/djangoapps/dashboard/tests/test_sysadmin.py
 msgid "Cannot find user with username"
-msgstr ""
+msgstr "Осындай аты бар пайдаланушыларды табу мүмкін болмады"
 
 #: lms/djangoapps/dashboard/tests/test_sysadmin.py
 msgid "Failed in authenticating"
-msgstr ""
+msgstr "Қол жеткізуді бақылаудан өту мүмкін болмады"
 
 #: lms/djangoapps/dashboard/tests/test_sysadmin.py
 msgid "Unable to clone or pull repository"
-msgstr ""
+msgstr "Қойманы клондау немесе көшіріп жүктеу мүмкін емес"
 
 #: lms/djangoapps/dashboard/tests/test_sysadmin.py
 msgid "Error - cannot get course with ID"
-msgstr ""
+msgstr "Қате – сәйкестендіргіші бар курсты ашу мүмкін болмады"
 
 #: lms/djangoapps/django_comment_client/mustache_helpers.py
 msgid "Re-open thread"
-msgstr ""
+msgstr "Тақырыпты тағы ашу"
 
 #: lms/djangoapps/django_comment_client/mustache_helpers.py
 msgid "Close thread"
-msgstr ""
+msgstr "Тақырыпты жабу"
 
 #: lms/djangoapps/django_comment_client/base/views.py
 #: lms/djangoapps/django_comment_client/base/views.py
 msgid "Title can't be empty"
-msgstr ""
+msgstr "Тақырып бос бола алмайды"
 
 #: lms/djangoapps/django_comment_client/base/views.py
 #: lms/djangoapps/django_comment_client/base/views.py
 #: lms/djangoapps/django_comment_client/base/views.py
 #: lms/djangoapps/django_comment_client/base/views.py
 msgid "Body can't be empty"
-msgstr ""
+msgstr "Негізгі бөлік бос бола алмайды"
 
 #: lms/djangoapps/django_comment_client/base/views.py
 #: lms/djangoapps/django_comment_client/base/views.py
 msgid "Comment level too deep"
-msgstr ""
+msgstr "Түсініктемелер деңгейі өте терең"
 
 #: lms/djangoapps/django_comment_client/base/views.py
 msgid "allowed file types are '%(file_types)s'"
-msgstr ""
+msgstr "рұқсат етілген файлдар үлгісі '%(file_types)s'"
 
 #: lms/djangoapps/django_comment_client/base/views.py
 msgid "maximum upload file size is %(file_size)sK"
-msgstr ""
+msgstr "жүктелетін файлдың ең көп мөлшері %(file_size)sK"
 
 #: lms/djangoapps/django_comment_client/base/views.py
 msgid ""
 "Error uploading file. Please contact the site administrator. Thank you."
-msgstr ""
+msgstr "Файлды жүктеу қатесі. Сайттың әкімшісімен байнысыңыз. Рахмет."
 
 #: lms/djangoapps/django_comment_client/base/views.py
 msgid "Good"
@@ -1798,11 +1913,11 @@ msgstr "Барлық топтар"
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "User does not exist."
-msgstr ""
+msgstr "Пайдаланушы жоқ."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Task is already running."
-msgstr ""
+msgstr "Тапсырма орындалуда."
 
 #: lms/djangoapps/instructor/views/api.py
 #: lms/djangoapps/instructor/views/legacy.py
@@ -1811,8 +1926,13 @@ msgstr ""
 #: lms/djangoapps/instructor/views/tools.py
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
+#, fuzzy
 msgid "Username"
-msgstr "Қолданушы аты"
+msgstr ""
+"#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#\n"
+"Пайдаланушының аты\n"
+"#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#\n"
+"Қолданушы аты"
 
 #: lms/djangoapps/instructor/views/api.py lms/templates/help_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
@@ -1826,20 +1946,25 @@ msgstr "Аты"
 #: lms/templates/dashboard.html
 #: lms/templates/courseware/instructor_dashboard.html
 #: lms/templates/university_profile/edge.html
+#, fuzzy
 msgid "Email"
-msgstr "Электронды пошта"
+msgstr ""
+"#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#\n"
+"Электрондық почта \n"
+"#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#\n"
+"Электронды пошта"
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Language"
-msgstr ""
+msgstr "Тілі"
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Location"
-msgstr ""
+msgstr "Орналасқан орны"
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Birth Year"
-msgstr ""
+msgstr "Туған жылы"
 
 #: lms/djangoapps/instructor/views/api.py lms/templates/register.html
 #: lms/templates/signup_modal.html
@@ -1849,15 +1974,15 @@ msgstr "Жынысы"
 #: lms/djangoapps/instructor/views/api.py
 #: lms/templates/instructor/instructor_dashboard_2/analytics.html
 msgid "Level of Education"
-msgstr ""
+msgstr "Білім деңгейі"
 
 #: lms/djangoapps/instructor/views/api.py lms/templates/register.html
 msgid "Mailing Address"
-msgstr ""
+msgstr "Почталық мекенжайы"
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Goals"
-msgstr ""
+msgstr "Мақсаттары"
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Module does not exist."
@@ -1870,18 +1995,25 @@ msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
 #: lms/templates/verify_student/midcourse_reverify_dash.html
+#, fuzzy
 msgid "Complete"
-msgstr "Толық"
+msgstr ""
+"#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#\n"
+"Аяқталды\n"
+"#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#\n"
+"Толық"
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Incomplete"
-msgstr "Толық емес"
+msgstr "Аяқталған жоқ"
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
 "Your grade report is being generated! You can view the status of the "
 "generation task in the 'Pending Instructor Tasks' section."
 msgstr ""
+"Сіздің бағаларыңыз бар есеп өңделуде! Сіз орындалу мәртебесін 'Нұсқаушының "
+"міндеттерін күтішілер' бөлімінен қарай аласыз."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
@@ -1889,174 +2021,187 @@ msgid ""
 "Instructor Tasks' table for the status of the task. When completed, the "
 "report will be available for download in the table below."
 msgstr ""
+"Бағалар бойынша есеп құрылу барысында. Сіз орындалу мәртебесін 'Нұсқаушының "
+"міндеттерін күтішілер' бөлімінен қарай аласыз. Есеп аяқталғанда, ол "
+"төмендегі кестеде көшіріп жүктеу үшін қол жетімді болады."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Successfully changed due date for student {0} for {1} to {2}"
-msgstr ""
+msgstr "{0} студент үшін {1}мерзім{2} мерзімге ойдағыдай өзгертілді"
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Successfully reset due date for student {0} for {1} to {2}"
-msgstr ""
+msgstr "{0} студент үшін {1}мерзім{2} мерзімге ойдағыдай шығарып тасталды"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "Membership"
-msgstr ""
+msgstr "Мүшелік "
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "Student Admin"
-msgstr ""
+msgstr "Әкімші студент"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "Extensions"
-msgstr ""
+msgstr "Мерзімдерді ұзарту"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid "Data Download"
-msgstr ""
+msgstr "Деректерді көшіріп жүктеу"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 #: lms/templates/courseware/instructor_dashboard.html
 msgid "Analytics"
-msgstr ""
+msgstr "Талдау "
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Course Statistics At A Glance"
-msgstr ""
+msgstr "Курстың Қысқаша Статистикалық Деректері"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Found a single student.  "
-msgstr ""
+msgstr "Жеке студент табылды."
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Couldn't find student with that email or username."
 msgstr ""
+"Осындай электрондық мекенжайы немесе пайдаланушы аты бар студентті табу "
+"мүмкін болмады."
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "List of students enrolled in {course_id}"
-msgstr ""
+msgstr "{course_id} курсында тіркелген студенттер тізімі "
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Summary Grades of students enrolled in {course_id}"
-msgstr ""
+msgstr "{course_id} тіркелген студенттердің Жалпы Бағалары"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Raw Grades of students enrolled in {course_id}"
-msgstr ""
+msgstr "{course_id} тіркелген студенттердің Алдын ала Бағалары"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Failed to create a background task for rescoring \"{problem_url}\"."
-msgstr ""
+msgstr "\"{problem_url}\" қайта есептеу үшін фондық міндетті құру мүмкін емес. "
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid ""
 "Failed to create a background task for rescoring \"{problem_url}\": problem "
 "not found."
 msgstr ""
+"\"{problem_url}\" қайта есептеу үшін фондық міндетті құру мүмкін емес: "
+"тапсырма табылмады. "
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Failed to create a background task for rescoring \"{url}\": {message}."
-msgstr ""
+msgstr "\"{url}\" қайта есептеу үшін фондық міндетті құру мүмкін емес: {message}."
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Failed to create a background task for resetting \"{problem_url}\"."
-msgstr ""
+msgstr "\"{problem_url}\" қайта іске қосу үшін фондық міндетті құру мүмкін емес."
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid ""
 "Failed to create a background task for resetting \"{problem_url}\": problem "
 "not found."
 msgstr ""
+"\"{problem_url}\" қайта іске қосу үшін фондық міндетті құру мүмкін емес: "
+"тапсырма табылмады."
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Failed to create a background task for resetting \"{url}\": {message}."
 msgstr ""
+"\"{url}\" қайта іске қосу үшін фондық міндетті құру мүмкін емес: {message}."
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Found module.  "
-msgstr ""
+msgstr "Модуль табылды."
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Couldn't find module with that urlname: {url}. "
-msgstr ""
+msgstr "Осындай url бар модульді табу мүмкін болмады: {url}."
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Deleted student module state for {state}!"
-msgstr ""
+msgstr "{state} арналған студент модулінің алыстағы жай-күйі!"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Failed to delete module state for {id}/{url}. "
-msgstr ""
+msgstr "{id}/{url} арналған модульдің жай-күйін жою мүмкін болмады."
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Module state successfully reset!"
-msgstr ""
+msgstr "Модуль мәртебесі ойдағыдай шығарып тасталды!"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Couldn't reset module state for {id}/{url}. "
 msgstr ""
+"{id}/{url} арналған модульдің жай-күйін шығарып тастау мүмкін болмады."
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid ""
 "Failed to create a background task for rescoring \"{key}\" for student {id}."
 msgstr ""
+"\"{key}\" for student {id} қайта есептеу үшін фондық міндетті құру мүмкін "
+"емес."
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Failed to create a background task for rescoring \"{key}\": {id}."
-msgstr ""
+msgstr "\"{key}\": {id} қайта есептеу үшін фондық міндетті құру мүмкін емес: "
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Progress page for username: {username} with email address: {email}"
-msgstr ""
+msgstr "Электрондық мекенжайы: {email} пайдаланушының ілгерілеуі: {username} "
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Assignment Name"
-msgstr ""
+msgstr "Тапсырманың атауы"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Please enter an assignment name"
-msgstr ""
+msgstr "Тапсырманың атауын енгізіңіз"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Invalid assignment name '{name}'"
-msgstr ""
+msgstr "'{name}' атауының қате тағайындалуы"
 
 #: lms/djangoapps/instructor/views/legacy.py
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "External email"
-msgstr ""
+msgstr "Сыртқы электрондық мекенжай"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Grades for assignment \"{name}\""
-msgstr ""
+msgstr "\"{name}\" тапсырмасы үшін баға"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "List of Staff"
-msgstr ""
+msgstr "Қызметкерлер тізімі"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "List of Instructors"
-msgstr ""
+msgstr "Оқытушылар тізімі"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Student profile data for course {course_id}"
-msgstr ""
+msgstr "Студенттің {course_id} курсына арналған бейінінің деректері"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Found {num} records to dump."
-msgstr ""
+msgstr "Шығарып тастау үшін{num} жазбалар табылды."
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Couldn't find module with that urlname."
-msgstr ""
+msgstr "Осындай url бар модульді табу мүмкін болмады."
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Student state for problem {problem}"
-msgstr ""
+msgstr "Студенттің {problem} тапсырмасына арналған жай-күйі"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "List of Beta Testers"
-msgstr ""
+msgstr "Бета Тестерлер тізімі"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid ""
@@ -2064,6 +2209,10 @@ msgid ""
 "classes, it may take up to an hour (or more, if other courses are "
 "simultaneously sending email) to send all emails."
 msgstr ""
+"Сіздің электрондық хабарыңыз жөнелту кезегіне ойдағыдай қосылды. Егер сынып "
+"үлкен болса, барлық хабарларды жөнелту бір сағатқа дейінгі (немесе егер "
+"басқа курстар хабарларды дәл осы уақытта жөнелтсе, одан артық)  уақытты алуы"
+" мүмкін екендігіне назар аударыңыз"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Your email was successfully queued for sending."
@@ -2071,63 +2220,65 @@ msgstr "Сіздің электронды хатыңыз жіберу кезег
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Grades from {course_id}"
-msgstr ""
+msgstr "{course_id} курсының бағалары"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "No remote gradebook defined in course metadata"
-msgstr ""
+msgstr "Курстың метадеректерінде бағалардың алыстағы кітабы анықталмаған"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "No remote gradebook url defined in settings.FEATURES"
-msgstr ""
+msgstr "Баптауларда алыстағы кітаптың url анықталмаған.FEATURES"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "No gradebook name defined in course remote_gradebook metadata"
-msgstr ""
+msgstr "Курста remote_gradebook metadata бағалар кітабының аты анықталмаған"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Failed to communicate with gradebook server at {url}"
-msgstr ""
+msgstr "{url}бағалар кітабының серверімен хабарласу мүмкін болмады"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Error: {err}"
-msgstr ""
+msgstr "Қате: {err} "
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Remote gradebook response for {action}"
-msgstr ""
+msgstr "Алыстағы бағалар кітабының {action} жауабы "
 
 #: lms/djangoapps/instructor/views/legacy.py
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Full name"
-msgstr ""
+msgstr "Толық аты"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Roles"
-msgstr ""
+msgstr "Рөл"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "List of Forum {name}s in course {id}"
-msgstr ""
+msgstr "{id} курсындағы Форум Тізімі {name}s  "
 
 #: lms/djangoapps/instructor/views/legacy.py
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Error: unknown rolename \"{rolename}\""
-msgstr ""
+msgstr "Қате: белгісіз рөлдік аты \"{rolename}\" "
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Error: unknown username \"{username}\""
-msgstr ""
+msgstr "Қате: пайдаланушының белгісіз аты \"{username}\" "
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid ""
 "Error: user \"{username}\" does not have rolename \"{rolename}\", cannot "
 "remove"
 msgstr ""
+"Қате: \"{username}\" пайдаланушының \"{rolename}\" рөлдік аты жоқ, жою "
+"мүмкін емес "
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Removed \"{username}\" from \"{course_id}\" forum role = \"{rolename}\""
-msgstr ""
+msgstr "\"{username}\"  \"{course_id}\"-дан жойылды форумдық рөл = \"{rolename}\" "
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Error: user \"{username}\" already has rolename \"{rolename}\", cannot add"
@@ -2138,18 +2289,20 @@ msgid ""
 "Error: user \"{username}\" should first be added as staff before adding as a"
 " forum administrator, cannot add"
 msgstr ""
+"Қате: \"{username}\" пайдаланушы, оны әкімші етіп тағайындар алдында "
+"қызметкер ретінде қосылуы тиіс, қосу мүмкін емес "
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Added \"{username}\" to \"{course_id}\" forum role = \"{rolename}\""
-msgstr ""
+msgstr "\"{username}\" \"{course_id}\"-ға қосылды форумдық рөл = \"{rolename}\" "
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "{title} in course {course_id}"
-msgstr ""
+msgstr "{course_id} курсындағы {title}  "
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: lms/djangoapps/instructor/views/legacy.py
 #: lms/djangoapps/instructor/views/tools.py cms/templates/register.html
@@ -2163,203 +2316,215 @@ msgstr "Толық аты"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "edX email"
-msgstr ""
+msgstr "edX электрондық мекенжайы"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Enrollment of students"
-msgstr ""
+msgstr "Студенттерді тіркеу"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Un-enrollment of students"
-msgstr ""
+msgstr "Студенттерді тіркеуді болдырмау"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid ""
 "Failed to find any background tasks for course \"{course}\", module "
 "\"{problem}\" and student \"{student}\"."
 msgstr ""
+"\"{course}\" курсы, \"{problem}\" модулі және \"{student}\" студенті үшін "
+"фондық міндеттерді табу мүмкін емес. "
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid ""
 "Failed to find any background tasks for course \"{course}\" and module "
 "\"{problem}\"."
 msgstr ""
+"\"{course}\" курсы және \"{problem}\" модулі үшін фондық міндеттерді табу "
+"мүмкін емес. "
 
 #: lms/djangoapps/instructor/views/tools.py
 msgid "Unable to parse date: "
-msgstr ""
+msgstr "Күнді тану мүмкін болмады:"
 
 #: lms/djangoapps/instructor/views/tools.py
 msgid "Couldn't find module for url: {0}"
-msgstr ""
+msgstr "url: {0} сәйкес келетін модуль табылмады"
 
 #: lms/djangoapps/instructor/views/tools.py
 #: lms/djangoapps/instructor/views/tools.py
 msgid "Extended Due Date"
-msgstr ""
+msgstr "Ұзартылған Мерзім"
 
 #: lms/djangoapps/instructor/views/tools.py
 msgid "Users with due date extensions for {0}"
-msgstr ""
+msgstr "{0} арналған күн кеңейтулері бар пайдаланушы"
 
 #: lms/djangoapps/instructor/views/tools.py
 msgid "Unit"
-msgstr ""
+msgstr "Бірлік "
 
 #: lms/djangoapps/instructor/views/tools.py
 msgid "Due date extensions for {0} {1} ({2})"
-msgstr ""
+msgstr "{0} {1} ({2}) үшін мерзімдерді ұзарту"
 
 #. Translators: This is a past-tense verb that is inserted into task progress
 #. messages as {action}.
 #: lms/djangoapps/instructor_task/tasks.py
 msgid "rescored"
-msgstr ""
+msgstr "Қайта бағаланды"
 
 #. Translators: This is a past-tense verb that is inserted into task progress
 #. messages as {action}.
 #: lms/djangoapps/instructor_task/tasks.py
 msgid "reset"
-msgstr ""
+msgstr "Шығарып тасталды"
 
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This is a past-tense verb that is inserted into task progress
 #. messages as {action}.
 #: lms/djangoapps/instructor_task/tasks.py
 #: lms/templates/wiki/plugins/attachments/index.html wiki/models/article.py
+#, fuzzy
 msgid "deleted"
-msgstr "өшірілді"
+msgstr ""
+"#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#\n"
+"Жойылды\n"
+"#-#-#-#-#  wiki.po (edx-platform)  #-#-#-#-#\n"
+"өшірілді"
 
 #. Translators: This is a past-tense verb that is inserted into task progress
 #. messages as {action}.
 #: lms/djangoapps/instructor_task/tasks.py
 msgid "emailed"
-msgstr ""
+msgstr "Электрондық почтаға жіберілді"
 
 #: lms/djangoapps/instructor_task/tasks.py
 msgid "graded"
-msgstr "бағаланған"
+msgstr "Бағаланды"
 
 #: lms/djangoapps/instructor_task/views.py
 #: lms/djangoapps/instructor_task/views.py
 msgid "No status information available"
-msgstr ""
+msgstr "Мәртебе туралы қол жетімді ақпарат жоқ"
 
 #: lms/djangoapps/instructor_task/views.py
 msgid "No task_output information found for instructor_task {0}"
-msgstr ""
+msgstr "instructor_task {0} арналған task_output ақпарат жоқ "
 
 #: lms/djangoapps/instructor_task/views.py
 msgid "No parsable task_output information found for instructor_task {0}: {1}"
-msgstr ""
+msgstr "instructor_task {0}: {1} арналған task_output танылған ақпарат жоқ "
 
 #: lms/djangoapps/instructor_task/views.py
 msgid "No parsable status information available"
-msgstr ""
+msgstr "Мәртебенің танылған ақпараты жоқ"
 
 #: lms/djangoapps/instructor_task/views.py
 msgid "No message provided"
-msgstr ""
+msgstr "Хабарлар ұсынылмады"
 
 #: lms/djangoapps/instructor_task/views.py
 msgid "Invalid task_output information found for instructor_task {0}: {1}"
-msgstr ""
+msgstr "instructor_task {0}: {1} арналған task_output қате ақпарат табылды "
 
 #: lms/djangoapps/instructor_task/views.py
 msgid "No progress status information available"
-msgstr ""
+msgstr "Ілгерілеу мәртебесі туралы ақпарат қол жетімді емес"
 
 #: lms/djangoapps/instructor_task/views.py
 msgid "No parsable task_input information found for instructor_task {0}: {1}"
-msgstr ""
+msgstr "nstructor_task {0}: {1} арналған task_input ақпараты танылмады"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {attempted} and {succeeded} are counts.
 #: lms/djangoapps/instructor_task/views.py
 msgid "Progress: {action} {succeeded} of {attempted} so far"
-msgstr ""
+msgstr "Ілгерілеу: {attempted}-дан ойдағыдай {action} {succeeded}"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {student} is a student identifier.
 #: lms/djangoapps/instructor_task/views.py
 msgid "Unable to find submission to be {action} for student '{student}'"
 msgstr ""
+"'{student}' студенттің {action} болуы тиіс тапсырмасын табу мүмкін болмады "
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {student} is a student identifier.
 #: lms/djangoapps/instructor_task/views.py
 msgid "Problem failed to be {action} for student '{student}'"
-msgstr ""
+msgstr "'{student}' студенттің тапсырмасы {action} болмады"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {student} is a student identifier.
 #: lms/djangoapps/instructor_task/views.py
 msgid "Problem successfully {action} for student '{student}'"
-msgstr ""
+msgstr "'{student}' студенттің тапсырмасы  ойдағыдай {action} болды"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #: lms/djangoapps/instructor_task/views.py
 msgid "Unable to find any students with submissions to be {action}"
-msgstr ""
+msgstr "{action} өтінімі бар студентті табу мүмкін емес"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {attempted} is a count.
 #: lms/djangoapps/instructor_task/views.py
 msgid "Problem failed to be {action} for any of {attempted} students"
-msgstr ""
+msgstr "Бір де бір {attempted} студенттің тапсырмасы {action} болмады"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {attempted} is a count.
 #: lms/djangoapps/instructor_task/views.py
 msgid "Problem successfully {action} for {attempted} students"
-msgstr ""
+msgstr "{attempted} студенттердің тапсырмасы  ойдағыдай {action} болды"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {succeeded} and {attempted} are counts.
 #: lms/djangoapps/instructor_task/views.py
 msgid "Problem {action} for {succeeded} of {attempted} students"
 msgstr ""
+"{attempted} студенттерден алынған {succeeded} тапсырма ойдағыдай {action} "
+"болды"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #: lms/djangoapps/instructor_task/views.py
 msgid "Unable to find any recipients to be {action}"
-msgstr ""
+msgstr "Оларға хабар {action} болуы тиіс алушыларды табу мүмкін болмады"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {attempted} is a count.
 #: lms/djangoapps/instructor_task/views.py
 msgid "Message failed to be {action} for any of {attempted} recipients "
-msgstr ""
+msgstr "Хабар {attempted} алушылардың ешқайсысы үшін {action} болмады"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {attempted} is a count.
 #: lms/djangoapps/instructor_task/views.py
 msgid "Message successfully {action} for {attempted} recipients"
-msgstr ""
+msgstr "Хабар {attempted} алушылар үшін ойдағыдай {action}"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {succeeded} and {attempted} are counts.
 #: lms/djangoapps/instructor_task/views.py
 msgid "Message {action} for {succeeded} of {attempted} recipients"
-msgstr ""
+msgstr "{attempted} алушылардан хабар {action} {succeeded}"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {succeeded} and {attempted} are counts.
 #: lms/djangoapps/instructor_task/views.py
 msgid "Status: {action} {succeeded} of {attempted}"
-msgstr ""
+msgstr "Мәртебесі: {attempted}-тен {action} {succeeded}"
 
 #. Translators: {skipped} is a count.  This message is appended to task
 #. progress status messages.
 #: lms/djangoapps/instructor_task/views.py
 msgid " (skipping {skipped})"
-msgstr ""
+msgstr "(жіберілді {skipped}) "
 
 #. Translators: {total} is a count.  This message is appended to task progress
 #. status messages.
 #: lms/djangoapps/instructor_task/views.py
 msgid " (out of {total})"
-msgstr ""
+msgstr "({total}-дан) "
 
 #: lms/djangoapps/linkedin/templates/linkedin_email.html
 msgid ""
@@ -2367,6 +2532,8 @@ msgid ""
 "      Dear %(student_name)s,\n"
 "    "
 msgstr ""
+"\n"
+"Құрметті %(student_name)s,"
 
 #: lms/djangoapps/linkedin/templates/linkedin_email.html
 msgid ""
@@ -2377,16 +2544,21 @@ msgid ""
 "    certificate to your profile.\n"
 "    "
 msgstr ""
+"Құттықтаймыз Сіз  %(course_name)s! сертификатын алдыңыз\n"
+"Сіз зор еңбек арқасында қол жеткен өз жетістіктеріңіз туралы әріптестеріңізбен  LinkedIn  парақшасында бөлісе аласыз. \n"
+"сертификатты  LinkedIn. өз бейініңізге қосу үшін төмендегі батырманы басыңыз"
 
 #: lms/djangoapps/linkedin/templates/linkedin_email.html
 msgid "Add to profile"
-msgstr ""
+msgstr "Бейінге қосу"
 
 #: lms/djangoapps/open_ended_grading/staff_grading_service.py
 msgid ""
 "Could not contact the external grading server. Please contact the "
 "development team at {email}."
 msgstr ""
+"Баға алу үшін сыртқы сервермен хабарласу мүмкін болмады. {email} мекенжайы "
+"бойынша әзірлеушілер командасымен хабарласыңыз."
 
 #: lms/djangoapps/open_ended_grading/staff_grading_service.py
 msgid ""
@@ -2394,75 +2566,86 @@ msgid ""
 "answers to any open response assessment questions? If not, please do so and "
 "return to this page."
 msgstr ""
+"Осы курстағы тапсырмаларға қандай да болмасын пікірлер табу мүмкін емес. Сіз"
+" пікірдің қандай да болмасын сұрағына жауап бердіңіз бе? Егер жауап "
+"бермесеңіз, онда орындаңыз және осы бетке қайтып оралыңыз."
 
 #: lms/djangoapps/open_ended_grading/utils.py
 msgid "AI Assessment"
-msgstr ""
+msgstr "Автоматты түрде бағалау"
 
 #: lms/djangoapps/open_ended_grading/utils.py
 msgid "Peer Assessment"
-msgstr ""
+msgstr "Қатысушылардың бағалауы"
 
 #: lms/djangoapps/open_ended_grading/utils.py
 msgid "Not yet available"
-msgstr ""
+msgstr "Әлі қол жетімді емес"
 
 #: lms/djangoapps/open_ended_grading/utils.py
 msgid "Automatic Checker"
-msgstr ""
+msgstr "Автоматты түрде тексеру"
 
 #: lms/djangoapps/open_ended_grading/utils.py
 msgid "Instructor Assessment"
-msgstr ""
+msgstr "Оқытушылардың "
 
 #: lms/djangoapps/open_ended_grading/utils.py
 msgid ""
 "Error occurred while contacting the grading service.  Please notify course "
 "staff."
 msgstr ""
+"Бағалар сервисімен байланыс жасау кезінде қате орын алды. Курс үшін "
+"жауаптыларға хабарлаңыз."
 
 #: lms/djangoapps/open_ended_grading/utils.py
 msgid ""
 "Error occurred while contacting the grading service.  Please notify your edX"
 " point of contact."
 msgstr ""
+"Бағалар сервисімен байланыс жасау кезінде қате орын алды.  edX-тағы  сіздің "
+"байланыс жасайтын тұлғаңызға хабарлаңыз."
 
 #: lms/djangoapps/open_ended_grading/utils.py
 msgid "for course {0} and student {1}."
-msgstr ""
+msgstr "{0} курс және {1} студент үшін"
 
 #: lms/djangoapps/open_ended_grading/views.py
 msgid ""
 "View all problems that require peer assessment in this particular course."
 msgstr ""
+"Осы курстағы барлық қатысушылардың қарауын талап ететін барлық міндеттерді "
+"қарау."
 
 #: lms/djangoapps/open_ended_grading/views.py
 msgid ""
 "View ungraded submissions submitted by students for the open ended problems "
 "in the course."
 msgstr ""
+"Осы курста әлі шешілмеген міндеттер бойынша студенттердің әлі тексерілмеген "
+"материалдарын қарау."
 
 #: lms/djangoapps/open_ended_grading/views.py
 msgid ""
 "View open ended problems that you have previously submitted for grading."
-msgstr ""
+msgstr "Сіз тексеруге жолдаған, әлі шешілмеген міндеттерді қарау."
 
 #: lms/djangoapps/open_ended_grading/views.py
 msgid "View submissions that have been flagged by students as inappropriate."
-msgstr ""
+msgstr "Студенттер орынсыз ретінде белгілеген материалдарды қарау."
 
 #: lms/djangoapps/open_ended_grading/views.py
 #: lms/djangoapps/open_ended_grading/views.py
 msgid "New submissions to grade"
-msgstr ""
+msgstr "Тексеруге арналған жаңа материалдар"
 
 #: lms/djangoapps/open_ended_grading/views.py
 msgid "New grades have been returned"
-msgstr ""
+msgstr "Жаңа бағалар пайда болды"
 
 #: lms/djangoapps/open_ended_grading/views.py
 msgid "Submissions have been flagged for review"
-msgstr ""
+msgstr "Жіберілген материалдар қарау үшін белгіленген болатын"
 
 #: lms/djangoapps/open_ended_grading/views.py
 msgid ""
@@ -2472,14 +2655,17 @@ msgid ""
 "        Please check back later for this.\n"
 "        "
 msgstr ""
+"\n"
+"Басқа қатысушының. жұмысын бағалай бастауға әрекет жасаған кездегі қате\n"
+"Осы бағдарламалық қамтамасыз етуде мұны жасауға мүмкіндік беретін модуль жоқ. Кейінірек әрекет етіп көріңіз."
 
 #: lms/djangoapps/shoppingcart/models.py
 msgid "Order Payment Confirmation"
-msgstr ""
+msgstr "Төлемді растау"
 
 #: lms/djangoapps/shoppingcart/models.py
 msgid "Trying to add a different currency into the cart"
-msgstr ""
+msgstr "Қоржынға басқа валютаны қосу әрекеті"
 
 #: lms/djangoapps/shoppingcart/models.py
 msgid "Registration for Course: {course_name}"
@@ -2490,18 +2676,20 @@ msgid ""
 "Please visit your <a href=\"{dashboard_link}\">dashboard</a> to see your new"
 " enrollments."
 msgstr ""
+"Сіз жазылған жаңа курстарды көру үшін  <a href=\"{dashboard_link}\">бақылау "
+"панеліне </a> кіріңіз. "
 
 #: lms/djangoapps/shoppingcart/models.py
 msgid "[Refund] User-Requested Refund"
-msgstr ""
+msgstr "[Refund] пайдаланушының сауалы бойынша ақшаны қайтару "
 
 #: lms/djangoapps/shoppingcart/models.py
 msgid "Mode {mode} does not exist for {course_id}"
-msgstr ""
+msgstr "{course_id}үшін {mode} режимі жоқ "
 
 #: lms/djangoapps/shoppingcart/models.py
 msgid "Certificate of Achievement, {mode_name} for course {course}"
-msgstr ""
+msgstr "{course} курсының {mode_name}сертификаты "
 
 #: lms/djangoapps/shoppingcart/models.py
 msgid ""
@@ -2510,62 +2698,66 @@ msgid ""
 "contact {billing_email}. Please include your order number in your e-mail. "
 "Please do NOT include your credit card information."
 msgstr ""
+"Ескерту: сіздің расталған сертикатты алудан бас тарту және қаражаттардың "
+"толық өтемін алу үшін курс басталғаннан бастап 2 аптаға дейін уақытыңыз бар."
+" Ақшаны қайтаруды ресімдеу үшін {billing_email} хабарласыңыз. Сіздің банк "
+"картаңыздың деректерін ешбір жағдайда айтпаңыз."
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Order Number"
-msgstr ""
+msgstr "Тапсырыс нөмірі"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Customer Name"
-msgstr ""
+msgstr "Тапсырыс берушінің аты"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Date of Original Transaction"
-msgstr ""
+msgstr "Бастапқы Операция Күні"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Date of Refund"
-msgstr ""
+msgstr "Ақшалай Қаражатты Қайтару Күні"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Amount of Refund"
-msgstr ""
+msgstr "Қайтарылған Сома"
 
 #: lms/djangoapps/shoppingcart/reports.py
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Service Fees (if any)"
-msgstr ""
+msgstr "Сервистік шығыстар (бар болса)"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Purchase Time"
-msgstr ""
+msgstr "Төлем уақыты"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Order ID"
-msgstr ""
+msgstr "Тапсырыс ID"
 
 #: lms/djangoapps/shoppingcart/reports.py
 #: lms/templates/open_ended_problems/open_ended_problems.html
 #: lms/templates/shoppingcart/verified_cert_receipt.html
 msgid "Status"
-msgstr ""
+msgstr "Мәртебесі"
 
 #: lms/djangoapps/shoppingcart/reports.py lms/templates/shoppingcart/list.html
 msgid "Quantity"
-msgstr ""
+msgstr "Саны"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Unit Cost"
-msgstr ""
+msgstr "Бірлік үшін бағасы"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Total Cost"
-msgstr ""
+msgstr "Қорытынды Құны"
 
 #: lms/djangoapps/shoppingcart/reports.py lms/templates/shoppingcart/list.html
 #: lms/templates/shoppingcart/receipt.html
 msgid "Currency"
-msgstr ""
+msgstr "Валюта"
 
 #: lms/djangoapps/shoppingcart/reports.py lms/templates/shoppingcart/list.html
 #: lms/templates/shoppingcart/receipt.html
@@ -2573,138 +2765,140 @@ msgstr ""
 #: lms/templates/shoppingcart/verified_cert_receipt.html
 #: wiki/plugins/attachments/forms.py
 msgid "Description"
-msgstr ""
+msgstr "Сипаттамасы"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Comments"
-msgstr ""
+msgstr "Ескерту"
 
 #: lms/djangoapps/shoppingcart/reports.py
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "University"
-msgstr ""
+msgstr "Университет "
 
 #: lms/djangoapps/shoppingcart/reports.py
 #: lms/djangoapps/shoppingcart/reports.py cms/templates/widgets/header.html
 #: cms/templates/widgets/header.html
 #: lms/templates/shoppingcart/verified_cert_receipt.html
 msgid "Course"
-msgstr ""
+msgstr "Курс "
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Course Announce Date"
-msgstr ""
+msgstr "Курсты Жариялау Күні"
 
 #: lms/djangoapps/shoppingcart/reports.py cms/templates/settings.html
 msgid "Course Start Date"
-msgstr ""
+msgstr "Курстың басталу күні"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Course Registration Close Date"
-msgstr ""
+msgstr "Курста Тіркеуді Жабу Күні"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Course Registration Period"
-msgstr ""
+msgstr "Курста Тіркелу Мерзімі"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Total Enrolled"
-msgstr ""
+msgstr "Жиыны Тіркелгендер"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Audit Enrollment"
-msgstr ""
+msgstr "Тыңдаушылар Ретінде Тіркелгендер"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Honor Code Enrollment"
-msgstr ""
+msgstr "Ар-намыс Кодексін Тіркеу"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Verified Enrollment"
-msgstr ""
+msgstr "Расталған тіркеу"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Gross Revenue"
-msgstr ""
+msgstr "Жалпы Түсім"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Gross Revenue over the Minimum"
-msgstr ""
+msgstr "Ең аз жалпы түсім"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Number of Verified Students Contributing More than the Minimum"
-msgstr ""
+msgstr "Ең аздан артық қаражат енгізген расталған студенттер саны"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Number of Refunds"
-msgstr ""
+msgstr "Ақшаны қайтару саны"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Dollars Refunded"
-msgstr ""
+msgstr "Қайтарылған долларлар"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Number of Transactions"
-msgstr ""
+msgstr "Төлем Операцияларының Саны"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Total Payments Collected"
-msgstr ""
+msgstr "Жиыны Қабылданған Төлемдер"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Number of Successful Refunds"
-msgstr ""
+msgstr "Ақшаны ойдағыдай қайтару саны"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Total Amount of Refunds"
-msgstr ""
+msgstr "Жиыны Ақшалай Қаражат Қайтарылды"
 
 #: lms/djangoapps/shoppingcart/views.py
 msgid "You must be logged-in to add to a shopping cart"
-msgstr ""
+msgstr "Қоржынға заттарды қосу үшін Сіз сайтқа кіруіңіз керек"
 
 #: lms/djangoapps/shoppingcart/views.py
 #: lms/djangoapps/shoppingcart/tests/test_views.py
 msgid "The course you requested does not exist."
-msgstr ""
+msgstr "Сіз сұрау салған курс жоқ."
 
 #: lms/djangoapps/shoppingcart/views.py
 #: lms/djangoapps/shoppingcart/tests/test_views.py
 msgid "The course {0} is already in your cart."
-msgstr ""
+msgstr "{0} қоржында бар."
 
 #: lms/djangoapps/shoppingcart/views.py
 #: lms/djangoapps/shoppingcart/tests/test_views.py
 msgid "You are already registered in course {0}."
-msgstr ""
+msgstr "Сіз {0} курсқа тіркеліп қойғансыз."
 
 #: lms/djangoapps/shoppingcart/views.py
 msgid "Course added to cart."
-msgstr ""
+msgstr "Курс қоржынға қосылды."
 
 #: lms/djangoapps/shoppingcart/views.py
 msgid "You do not have permission to view this page."
-msgstr ""
+msgstr "Сіздің осы бетті қарауға рұқсатыңыз жоқ."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid "The payment processor did not return a required parameter: {0}"
-msgstr ""
+msgstr "Төлем сервисі керек параметрді бермеді: {0}"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid "The payment processor returned a badly-typed value {0} for param {1}."
-msgstr ""
+msgstr "Төлем сервисі {1} параметріне арналған {0} мәнді қате басып берді."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
 "The payment processor accepted an order whose number is not in our system."
-msgstr ""
+msgstr "Төлем сервисі біздің жүйеде жоқ тапсырысты қабылдады."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
 "The amount charged by the processor {0} {1} is different than the total cost"
 " of the order {2} {3}."
 msgstr ""
+"Төлем сервисі сұрау салған сома {0} {1} тапсырыстың қорытынды құнынан {2} "
+"{3} айрықшаланады."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
@@ -2718,6 +2912,13 @@ msgid ""
 "            </p>\n"
 "            "
 msgstr ""
+"\n"
+"<p class=\"error_msg\">\n"
+"Өкінішке орай біздің төлемдер жүйесі Сіздің төлемді қабылдамады.\n"
+"Алынған жауап: <span class=\"decision\">{decision}</span>, мынадай себеп бойынша <span class=\"reason\">{reason_code}:{reason_msg}</span>.\n"
+"Ақшалай қаражат Сіздің шоттан алынған болатын. Басқа төлем жүйесін пайдаланып көріңіз.\n"
+"Төлем жасау мәселелері бойынша бізге {email}. мекенжайы бойынша хабарласыңыз\n"
+"</p>"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
@@ -2730,6 +2931,12 @@ msgid ""
 "                </p>\n"
 "                "
 msgstr ""
+"\n"
+"<p class=\"error_msg\">\n"
+"Өкінішке орай біздің төлемдер жүйесі бізге деректері сәйкес келмейтін төлемнің растауын жіберді! Кешірім сұраймыз: біз төлемнің өткендігін  тексере алмаймыз және Сіздің тапсырысыңызбен байланысты бұдан әрі әрекеттерді қабылдай алмаймыз.\n"
+"Қате туралы хабардың мазмұны: <span class=\"exception_msg\">{msg}</span>.\n"
+"Мүмкін ақшалай қаражат Сіздің кредиттік картаңыздан алынған болар. Төлем жасау мәселелері бойынша бізге {email}. мекенжайы бойынша хабарласыңыз\n"
+"</p>"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
@@ -2741,6 +2948,10 @@ msgid ""
 "                </p>\n"
 "                "
 msgstr ""
+"\n"
+"<p class=\"error_msg\"> Өкінішке орай қате орын алды және Сіздің сатып алуыңыз үшін алынған сома Сіздің тапсырысыңыздың жиынтық сомасымен сәйкес келмейді! Қате туралы хабардың мазмұны: <span class=\"exception_msg\">{msg}</span>.\n"
+"Мүмкін ақшалай қаражат Сіздің кредиттік картаңыздан алынған болар. Төлем жасау мәселелері бойынша бізге {email}. мекенжайы бойынша хабарласыңыз \n"
+"</p>"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
@@ -2754,18 +2965,25 @@ msgid ""
 "                </p>\n"
 "                "
 msgstr ""
+"\n"
+"<p class=\"error_msg\">\n"
+"Өкінішке орай біз төлемдер жүйесінен Сіздің төлем туралы бұрмаланған хабар алдық, сондықтанхабарды төлемдер жүйесі жөнелтпегендігіне көз жеткізе алмаймыз.\n"
+"Қате туралы хабардың мазмұны: <span class=\"exception_msg\">{msg}</span>.\n"
+"Кешірім сұраймыз, себебі біз төлемнің өткендігін  тексере алмаймыз және Сіздің тапсырысыңызбен байланысты бұдан әрі әрекеттерді қабылдай алмаймыз.\n"
+"Мүмкін ақшалай қаражат Сіздің кредиттік картаңыздан алынған болар. Төлем жасау мәселелері бойынша бізге {email}. мекенжайы бойынша хабарласыңыз\n"
+"</p>"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid "Successful transaction."
-msgstr "Сәтті транзакция."
+msgstr "Транзакция ойдағыдай "
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid "The request is missing one or more required fields."
-msgstr ""
+msgstr "Сауалда кемінде бір міндетті алап толтырылмаған."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid "One or more fields in the request contains invalid data."
-msgstr ""
+msgstr "Алаптардың кемінде бірі қате деректерді қамтиды."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
@@ -2775,12 +2993,17 @@ msgid ""
 "            Possible fix: retry the payment after 15 minutes.\n"
 "            "
 msgstr ""
+"\n"
+"осы сауалмен жіберілген merchantReferenceCode сіз соңғы 15 минут барысында жіберген авторландырудың басқа сауалының merchantReferenceCode сәйкес келеді.\n"
+"Мүмкін болатын шешім: төлемді 15 минуттан кейін қайталаңыз."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
 "Error: General system failure. Possible fix: retry the payment after a few "
 "minutes."
 msgstr ""
+"Қате: жүйенің жалпы іркілісі. Мүмкін болатын шешім: бірнеше минуттар кейін "
+"төлемді тағы өткізіп көріңіз."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
@@ -2790,6 +3013,10 @@ msgid ""
 "            Possible fix: retry the payment after some time.\n"
 "            "
 msgstr ""
+"\n"
+"Қате: Төлем қабылданды, бірақ сервердің күту уақыты асып кетті.\n"
+"бұл қате клиент пен сервер арасындағы күту уақытын ескермейді.\n"
+"Мүмкін болатын жою әдісі: төлемді біраз уақыттан кейін өткізіп көріңізя."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
@@ -2798,12 +3025,17 @@ msgid ""
 "            Possible fix: retry the payment after some time.\n"
 "            "
 msgstr ""
+"\n"
+"Қате: сауал алынған болатын, бірақ сервер оны уақтылы өңдеп үлгірмеді\\n\n"
+"Мүмкін болатын шешім: біраз уақыттан кейін төлемді қайталаңыз."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
 "The issuing bank has questions about the request. Possible fix: retry with "
 "another form of payment"
 msgstr ""
+"Эмитент банктің сауалға сұрақтары туындады. Мүмкін болатын шешім: басқа "
+"тәсілмен төлеуге әрекет етіңіз."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
@@ -2813,6 +3045,10 @@ msgid ""
 "            Possible fix: retry with another form of payment\n"
 "            "
 msgstr ""
+"\n"
+"Карточканың қолданылу мерзімі аяқталды. Осы хабар\n"
+"Сіз енгізген қолдану мерзімі және банктің деректер қорындағы мерзім сәйкес келмеген жағдайда пайда болуы мүмкін.\n"
+"Мүмкін болатын жою әдісі: басқа тәсілмен төлеуге әрекет етіңіз"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
@@ -2821,12 +3057,17 @@ msgid ""
 "            Possible fix: retry with another form of payment\n"
 "            "
 msgstr ""
+"\n"
+"Картаның жалпы бас тартуы. Банк басқа ақпарат ұсынбады.\n"
+"Мүмкін болатын шешім: төлемнің басқа түрін пайдаланып көріңіз"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
 "Insufficient funds in the account. Possible fix: retry with another form of "
 "payment"
 msgstr ""
+"Шоттағы қаражат жеткіліксіз. Мүмкін болатын шешім: басқа тәсілмен төлеуге "
+"әрекет етіңіз."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
@@ -2837,6 +3078,8 @@ msgstr "Белгісіз себеп"
 msgid ""
 "Issuing bank unavailable. Possible fix: retry again after a few minutes"
 msgstr ""
+"Эмитент банк қол жетімді емес. Мүмкін болатын шешім: тағы бірнеше минуттан "
+"кейін әрекет етіп көріңіз"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
@@ -2845,23 +3088,32 @@ msgid ""
 "            Possible fix: retry with another form of payment\n"
 "            "
 msgstr ""
+"\n"
+"Карта белсенді емес немесе карта онлайн төлемдерге арналмаған.\n"
+"Мүмкін болатын шешім: төлемнің басқа түрін пайдаланып көріңіз"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
 "The card has reached the credit limit. Possible fix: retry with another form"
 " of payment"
 msgstr ""
+"Карта кредиттік лимитке жетті. Мүмкін болатын шешім: төлемнің басқа тәсілін "
+"пайдаланып көріңіз."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
 "Invalid card verification number. Possible fix: retry with another form of "
 "payment"
 msgstr ""
+"Қате CVC/CVV коды. Мүмкін болатын шешім: төлемнің басқа тәсілін пайдаланып "
+"көріңіз. "
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
 "Invalid account number. Possible fix: retry with another form of payment"
 msgstr ""
+"Қате шот нөмірі. Мүмкін болатын шешім: төлемнің басқа тәсілін пайдаланып "
+"көріңіз"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
@@ -2870,12 +3122,17 @@ msgid ""
 "            Possible fix: retry with another form of payment\n"
 "            "
 msgstr ""
+"\n"
+"Төлем картасының осы түрін төлемдер жүйесі қабылдамайды.\n"
+"Мүмкін болатын шешім: төлемнің басқа нысанын пайдаланып көріңіз"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
 "General decline by the processor.  Possible fix: retry with another form of "
 "payment"
 msgstr ""
+"Сервистің жалпы бас тартуы. Мүмкін болатын шешім: төлемнің басқа тәсілін "
+"пайдаланып көріңіз"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
@@ -2883,23 +3140,28 @@ msgid ""
 "            There is a problem with our CyberSource merchant configuration.  Please let us know at {0}\n"
 "            "
 msgstr ""
+"\n"
+"Біздің CyberSource жүйесімен проблема. Бізге{0}хабарлаңыз"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid "The requested amount exceeds the originally authorized amount."
-msgstr ""
+msgstr "Сұрау салынған сома бұрын авторланғаннан артық."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid "Processor Failure.  Possible fix: retry the payment"
 msgstr ""
+"Сервистің қатесі. Мүмкін болатын шешім: тағы бір рет әрекет етіп көріңіз"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid "The authorization has already been captured"
-msgstr ""
+msgstr "Авторланған сома қабылданып қойған"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
 "The requested transaction amount must match the previous transaction amount."
 msgstr ""
+"Транзакцияның сұрау салынған сомасы  транзакцияның өткен сомасымен сәйкес "
+"келуі тиіс."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
@@ -2908,10 +3170,13 @@ msgid ""
 "            Possible fix: retry with the same card or another form of payment\n"
 "            "
 msgstr ""
+"\n"
+"Картаның үлгісі қате немесе картаның нөміріне сәйкес келмейді.\n"
+"Мүмкін болатын шешім: осы картамен немесе төлемнің басқа түрімен тағы да әрекет етіп көріңіз"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid "The request ID is invalid."
-msgstr ""
+msgstr "Сауалдың жарамсыз ID"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
@@ -2919,10 +3184,12 @@ msgid ""
 "            You requested a capture through the API, but there is no corresponding, unused authorization record.\n"
 "            "
 msgstr ""
+"\n"
+"Сіз API арқылы қаражатты алуға сауал бердіңіз, бірақ байланыс жоқ, пайдаланылмайтын авторланған жазба."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid "The transaction has already been settled or reversed."
-msgstr ""
+msgstr "Транзакция жүргізілді немесе айналымға салынды."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
@@ -2931,10 +3198,14 @@ msgid ""
 "            submitted to your processor. Or, you requested a void for a type of transaction that cannot be voided.\n"
 "            "
 msgstr ""
+"\n"
+"кредиттің заңдық күші жоқ, себебі кредиттік ақпарат ұсынылып қойған\n"
+"сіздің процессингтік орталығыңызға."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid "You requested a credit for a capture that was previously voided"
 msgstr ""
+"Сіз бұдан бұрын жойылған жазба үшін қатысушылар тізіміне сұрау салдыңыз"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
@@ -2943,6 +3214,9 @@ msgid ""
 "            Possible fix: retry the payment.\n"
 "            "
 msgstr ""
+"\n"
+"Қате: Сауал алынды, бірақ төлем процессоры белгіленген уақытта төлем жүргізіп үлгірмеді.\n"
+"Мүмкін болатын шешім: төлемді қайталаңыз."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
@@ -2951,64 +3225,70 @@ msgid ""
 "            Possible fix: retry with a different form of payment.\n"
 "            "
 msgstr ""
+"\n"
+"Авторландыруға арналған сауалды банк мақұлдады, бірақ CyberSource жүйе бас тартты.'\n"
+"Мүмкін болатын шешім: төлемнің басқа нысанын пайдаланып көріңіз."
 
 #: lms/djangoapps/shoppingcart/tests/test_views.py
 #: lms/templates/shoppingcart/download_report.html
 msgid "Download CSV Reports"
-msgstr ""
+msgstr "CSV форматындағы есептерді көшіріп жүктеу"
 
 #: lms/djangoapps/shoppingcart/tests/test_views.py
 #: lms/templates/shoppingcart/download_report.html
 msgid ""
 "There was an error in your date input.  It should be formatted as YYYY-MM-DD"
 msgstr ""
+"Күнді енгізу кезіндегі қате. Күн мынадай форматта көрсетілуі тиіс  ЖЖЖЖ-АА-"
+"КК "
 
 #: lms/djangoapps/verify_student/models.py
 msgid "No photo ID was provided."
-msgstr ""
+msgstr "Құжаттың фотосуреті жоқ"
 
 #: lms/djangoapps/verify_student/models.py
 msgid "We couldn't read your name from your photo ID image."
-msgstr ""
+msgstr "Біз құжаттың фотосуретіндегі Сіздің атыңызды оқи алмадық"
 
 #: lms/djangoapps/verify_student/models.py
 msgid ""
 "The name associated with your account and the name on your ID do not match."
 msgstr ""
+"Сіздің аккаунтта көрсетілген ат Сіздің құжаттағы атпен сәйкес келмейді"
 
 #: lms/djangoapps/verify_student/models.py
 msgid "The image of your face was not clear."
-msgstr ""
+msgstr "Сіздің бетіңіздің бейнесі жеткілікті түрде анық емес"
 
 #: lms/djangoapps/verify_student/models.py
 msgid "Your face was not visible in your self-photo"
-msgstr ""
+msgstr "Фотосуретте Сіздің бетіңіз көрінбеді"
 
 #: lms/djangoapps/verify_student/models.py
 msgid "There was an error verifying your ID photos."
-msgstr ""
+msgstr "Сіздің құжаттың фотосуретін тексерген кезде қате орын алды"
 
 #: lms/djangoapps/verify_student/views.py
 msgid "Selected price is not valid number."
-msgstr ""
+msgstr "Таңдалған баға дұрыс сан болып табылмайды."
 
 #: lms/djangoapps/verify_student/views.py
 msgid "This course doesn't support verified certificates"
-msgstr ""
+msgstr "Осы курс расталған сертификаттарды қолдамайды"
 
 #: lms/djangoapps/verify_student/views.py
 msgid "No selected price or selected price is below minimum."
-msgstr ""
+msgstr "Баға таңдалмаған немесе таңдалған баға ең аз рұқсат етілгеннен төмен."
 
 #: lms/templates/main_django.html cms/templates/base.html
 #: lms/templates/main.html
 msgid "Skip to this view's content"
-msgstr ""
+msgstr "Осы ракурстың мазмұнына көшу"
 
 #: lms/templates/registration/password_reset_complete.html
 #: lms/templates/registration/password_reset_complete.html
 msgid "Your Password Reset is Complete"
-msgstr ""
+msgstr "Сіздің пароліңіз өзгертілген болатын"
 
 #: lms/templates/registration/password_reset_complete.html
 msgid ""
@@ -3016,6 +3296,8 @@ msgid ""
 "      Your password has been set.  You may go ahead and %(link_start)slog in%(link_end)s now.\n"
 "      "
 msgstr ""
+"\n"
+"Сіздің пароль сақталды. Енді сіз %(link_start)s мына сайтқа%(link_end)s кіре аласыз. "
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid ""
@@ -3023,6 +3305,8 @@ msgid ""
 "      Reset Your %(platform_name)s Password\n"
 "  "
 msgstr ""
+"\n"
+"Сіздің  %(platform_name)s арналған пароліңізді шығарып тастау"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid ""
@@ -3030,10 +3314,12 @@ msgid ""
 "          Reset Your %(platform_name)s Password\n"
 "          "
 msgstr ""
+"\n"
+"Сіздің %(platform_name)s арналған пароліңізді шығарып тастау "
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "Password Reset Form"
-msgstr ""
+msgstr "Парольді ауыстыру нысаны"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid ""
@@ -3041,24 +3327,30 @@ msgid ""
 "                We're sorry, %(platform_name)s enrollment is not available in your region\n"
 "            "
 msgstr ""
+"\n"
+"Кешіріңіз, бірақ  %(platform_name)s  қатысуға сіздің өңірде жол берілмейді"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "The following errors occurred while processing your registration: "
 msgstr ""
+"Сіздің тіркеуге арналған өтініміңізді өңдеу уақытында мынадай қателіктер "
+"туындады:"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "You must complete all fields."
-msgstr ""
+msgstr "Сіз барлық алаптарды толтыруыңыз керек."
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "The two password fields didn't match."
-msgstr ""
+msgstr "Енгізілген парольдер сәйкес келмейді."
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid ""
 "We're sorry, our systems seem to be having trouble processing your password "
 "reset"
 msgstr ""
+"Өкінішке орай біздің жүйеде сіздің парольді ауыстырумен байланысты "
+"қиындықтар туындады"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid ""
@@ -3066,6 +3358,8 @@ msgid ""
 "                Someone has been made aware of this issue. Please try again shortly. Please %(start_link)scontact us%(end_link)s about any concerns you have.\n"
 "            "
 msgstr ""
+"\n"
+"Осы проблема туралы әкімшіліктен біреуге хабарланды. Бірнеше минуттан кейін тағы әрекет етіп көріңіз. %(start_link)sБізбен хабарласыңыз%(end_link)s, егер сізде қандай да сұрақтар немесе қиындықтар туындаса."
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid ""
@@ -3078,23 +3372,23 @@ msgstr ""
 #: lms/templates/forgot_password_modal.html lms/templates/login.html
 #: lms/templates/register-shib.html lms/templates/register.html
 msgid "Required Information"
-msgstr ""
+msgstr "Қажетті ақпарат"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "Your New Password"
-msgstr "Сіздің жаңа құпия сөзіңіз"
+msgstr "Сіздің жаңа пароліңіз"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "Your New Password Again"
-msgstr "Сіздің жаңа құпия сөзіңіз, қайтадан"
+msgstr "Сіздің жаңа пароліңіз, тағы бір рет"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "Change My Password"
-msgstr "Құпия сөзді өзгерту"
+msgstr "Менің паролімді ауыстыру"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "Your Password Reset Was Unsuccessful"
-msgstr ""
+msgstr "Сіздің парольді ауыстыру мүмкін болмады"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid ""
@@ -3102,10 +3396,12 @@ msgid ""
 "            The password reset link was invalid, possibly because the link has already been used.  Please return to the %(start_link)slogin page%(end_link)s and start the password reset process again.\n"
 "        "
 msgstr ""
+"\n"
+"Парольді шығарып тастау сілтемесі жарамсыз. Ол бойынша бұрын өтуі әбден мүмкін. %(start_link)sкіру бетіне қайта оралыңыз%(end_link)s және парольді шығарып тастау процесін жаңадан бастаңыз."
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "Password Reset Help"
-msgstr ""
+msgstr "Парольді ауыстырудағы көмек"
 
 #: lms/templates/registration/password_reset_confirm.html
 #: cms/templates/login.html lms/templates/login-sidebar.html
@@ -3119,22 +3415,28 @@ msgid ""
 "              View our %(start_link)shelp section for contact information and answers to commonly asked questions%(end_link)s\n"
 "          "
 msgstr ""
+"\n"
+"Біздің %(start_link)sкөмек бөлімінде%(end_link)s байланыс жасау деректерін және жиі қойылатын сұрақтарға жауаптарды табуға болады"
 
 #: lms/templates/registration/password_reset_email.html
 msgid ""
 "You're receiving this e-mail because you requested a password reset for your"
 " user account at edx.org."
 msgstr ""
+"Сіз аккаунтыңыздағы парольді edx.org шығарып тастағандықтан осы хатты "
+"алдыңыз."
 
 #: lms/templates/registration/password_reset_email.html
 msgid "Please go to the following page and choose a new password:"
-msgstr ""
+msgstr "Келесі бетке өтіңіз және жаңа парольді таңдаңыз:"
 
 #: lms/templates/registration/password_reset_email.html
 msgid ""
 "If you didn't request this change, you can disregard this email - we have "
 "not yet reset your password."
 msgstr ""
+"Егер Сіз парольді ауыстыруға өтінім бермеген болсаңыз, Сіз осы хабарға назар"
+" аудармасаңыз болады – Сіздің пароль әлі өзгертілген жоқ."
 
 #: lms/templates/registration/password_reset_email.html
 msgid "Thanks for using our site!"
@@ -3142,37 +3444,37 @@ msgstr "Біздің сайтты пайдаланғаныңыз үшін рах
 
 #: lms/templates/registration/password_reset_email.html
 msgid "The edX Team"
-msgstr "edX Командасы"
+msgstr "edX командасы"
 
 #: lms/templates/wiki/article.html
 msgid "Last modified:"
-msgstr "Соңғы рет өзгертілген:"
+msgstr "Соңғы өзгерістер:"
 
 #: lms/templates/wiki/article.html
 msgid "See all children"
-msgstr ""
+msgstr "Барлық ұрпақтарын қарау"
 
 #: lms/templates/wiki/article.html
 msgid "This article was last modified:"
-msgstr "Бұл мақала соңғы рет өзгертілген:"
+msgstr "Осы бап соңғы рет редакцияланды:"
 
 #: lms/templates/wiki/create.html lms/templates/wiki/create.html.py
 msgid "Add new article"
-msgstr "Жаңа мақала қосу"
+msgstr "Жаңа бапты қосу"
 
 #: lms/templates/wiki/create.html
 msgid "Create article"
-msgstr "Мақала құру"
+msgstr "Бапты құру"
 
 #: lms/templates/wiki/create.html lms/templates/wiki/delete.html
 #: lms/templates/wiki/delete.html.py
 msgid "Go back"
-msgstr "Артқа қайту"
+msgstr "Кері қарай"
 
 #: lms/templates/wiki/delete.html lms/templates/wiki/delete.html.py
 #: lms/templates/wiki/edit.html
 msgid "Delete article"
-msgstr "Мақаланы алып тастау"
+msgstr "Бапты жою"
 
 #: lms/templates/wiki/delete.html
 #: lms/templates/wiki/plugins/attachments/index.html
@@ -3181,36 +3483,46 @@ msgstr "Мақаланы алып тастау"
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/mustache/_inline_thread_show.mustache
+#, fuzzy
 msgid "Delete"
-msgstr "Алып тастау"
+msgstr ""
+"#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#\n"
+"Жою \n"
+"#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#\n"
+"Алып тастау"
 
 #: lms/templates/wiki/delete.html
 msgid "You cannot delete a root article."
-msgstr ""
+msgstr "Сіз түбір бапты жоя алмайсыз."
 
 #: lms/templates/wiki/delete.html
 msgid ""
 "You cannot delete this article because you do not have permission to delete "
 "articles with children. Try to remove the children manually one-by-one."
 msgstr ""
+"Сіз осы бапты жоя алмайсыз, себебі сіздің тәуелділіктері бар баптарды жоюға "
+"құқығыңыз жоқ.  Еншілес баптарды бірінен соң бірін қолмен жоюға әрекет етіп "
+"көріңіз."
 
 #: lms/templates/wiki/delete.html
 msgid ""
 "You are deleting an article. This means that its children will be deleted as"
 " well. If you choose to purge, children will also be purged!"
 msgstr ""
+"Сіз бапты жоюдасыз. Бұл еншілес баптардың да жойылатындығын білдіреді. Егер "
+"сіз жоюды таңдасаңыз, еншілес баптар да жойылатын болады!"
 
 #: lms/templates/wiki/delete.html
 msgid "Articles that will be deleted"
-msgstr ""
+msgstr "Жойылатын баптар"
 
 #: lms/templates/wiki/delete.html
 msgid "...and more!"
-msgstr ""
+msgstr "...және көптеген басқа!"
 
 #: lms/templates/wiki/delete.html
 msgid "You are deleting an article. Please confirm."
-msgstr ""
+msgstr "Сіз бапты жойғыңыз келеді. Растаңыз."
 
 #: lms/templates/wiki/edit.html cms/templates/component.html
 #: cms/templates/studio_xblock_wrapper.html
@@ -3220,16 +3532,26 @@ msgstr ""
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/mustache/_inline_thread_show.mustache
 #: lms/templates/wiki/includes/article_menu.html
+#, fuzzy
 msgid "Edit"
-msgstr "Түзеу"
+msgstr ""
+"#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#\n"
+"Редакциялау\n"
+"#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#\n"
+"Түзеу"
 
 #: lms/templates/wiki/edit.html lms/templates/wiki/edit.html.py
 msgid "Save changes"
-msgstr "Өзгертулерді сақтау"
+msgstr "Өзгерістерді сақтау"
 
 #: lms/templates/wiki/edit.html cms/templates/unit.html
+#, fuzzy
 msgid "Preview"
-msgstr "Алдын-ала көру"
+msgstr ""
+"#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#\n"
+"Алдын ала қарау\n"
+"#-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#\n"
+"Алдын-ала көру"
 
 #. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a control to allow users to exit out of this modal
@@ -3252,7 +3574,7 @@ msgstr "Жабу"
 
 #: lms/templates/wiki/edit.html
 msgid "Wiki Preview"
-msgstr ""
+msgstr "Викиді Алдын ала Қарау"
 
 #. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
 #. Translators: this text gives status on if the modal interface (a menu or
@@ -3264,11 +3586,11 @@ msgstr ""
 #: lms/templates/dashboard.html
 #: lms/templates/modal/_modal-settings-language.html
 msgid "window open"
-msgstr ""
+msgstr "терезені ашу"
 
 #: lms/templates/wiki/edit.html
 msgid "Back to editor"
-msgstr "Редакторға қайту"
+msgstr "Редакторға оралу"
 
 #: lms/templates/wiki/history.html
 msgid "History"
@@ -3281,18 +3603,22 @@ msgid ""
 " can change to a particular revision or merge an old revision with the "
 "current one."
 msgstr ""
+"Әрбір ревизияны басу онда өзгертілген жолдар тізімін шақырады. Баптың "
+"ағымдағы түрін көру үшін «Алдын ала қарау»-ды басыңыз. Беттің төменгі "
+"бөлігінде сіз белгілі бір ревизияны жүктей немесе көне нұсқаны жаңасымен "
+"біріктіре аласыз."
 
 #: lms/templates/wiki/history.html
 msgid "(no log message)"
-msgstr ""
+msgstr "(лог-хабарлар жоқ)"
 
 #: lms/templates/wiki/history.html
 msgid "Preview this revision"
-msgstr ""
+msgstr "Ревизияны алдын ала қарау"
 
 #: lms/templates/wiki/history.html
 msgid "Auto log:"
-msgstr ""
+msgstr "Автоматты журнал:"
 
 #: lms/templates/wiki/history.html
 msgid "Change"
@@ -3300,61 +3626,65 @@ msgstr "Өзгерту"
 
 #: lms/templates/wiki/history.html lms/templates/wiki/history.html
 msgid "Merge selected with current..."
-msgstr ""
+msgstr "Таңдалғанды ағымдағымен біріктіру..."
 
 #: lms/templates/wiki/history.html
 msgid "Switch to selected version"
-msgstr ""
+msgstr "Таңдалған нұсқаға өту"
 
 #: lms/templates/wiki/history.html
 msgid "Wiki Revision Preview"
-msgstr ""
+msgstr "Вики бетіндегі Түзетулерді Алдын ала Қарау"
 
 #: lms/templates/wiki/history.html lms/templates/wiki/history.html
 msgid "Back to history view"
-msgstr ""
+msgstr "Қарау тарихына оралу"
 
 #: lms/templates/wiki/history.html lms/templates/wiki/history.html
 msgid "Switch to this version"
-msgstr ""
+msgstr "Осы нұсқаға өту"
 
 #: lms/templates/wiki/history.html
 msgid "Merge Revision"
-msgstr ""
+msgstr "Түзетулерді біріктіру"
 
 #: lms/templates/wiki/history.html
 msgid "Merge with current"
-msgstr ""
+msgstr "Ағымдағымен біріктіру"
 
 #: lms/templates/wiki/history.html
 msgid ""
 "When you merge a revision with the current, all data will be retained from "
 "both versions and merged at its approximate location from each revision."
 msgstr ""
+"Ревизия ағымдағымен қосылған кезде  екі нұсқаның барлық деректері  әрбір "
+"ревизияның шамамен орналасқан орнында сақталатын және біріктірілетін болады"
 
 #: lms/templates/wiki/history.html
 msgid "After this, it's important to do a manual review."
-msgstr ""
+msgstr "Осыдан кейін қолмен тексеруді жүргізген маңызды."
 
 #: lms/templates/wiki/history.html lms/templates/wiki/history.html
 msgid "Create new merged version"
-msgstr ""
+msgstr "Жаңа біріктірілген нұсқаны құру"
 
 #: lms/templates/wiki/preview_inline.html
 msgid "Previewing revision:"
-msgstr ""
+msgstr "Ревизияны алдын ала қарау"
 
 #: lms/templates/wiki/preview_inline.html
 msgid "Previewing a merge between two revisions:"
-msgstr ""
+msgstr "Екі нұсқаның қосылуын алдын ала қарау:"
 
 #: lms/templates/wiki/preview_inline.html
 msgid "This revision has been deleted."
-msgstr ""
+msgstr "Осы нұсқа жойылған болатын."
 
 #: lms/templates/wiki/preview_inline.html
 msgid "Restoring to this revision will mark the article as deleted."
 msgstr ""
+"Егер осы нұсқаға шегіну жүргізілсе, бап жойылған ретінде белгіленетін "
+"болады."
 
 #: lms/templates/wiki/includes/anonymous_blocked.html
 msgid ""
@@ -3362,101 +3692,108 @@ msgid ""
 "  You need to <a href=\"%(login_url)s\">log in</a> or <a href=\"%(signup_url)s\">sign up</a> to use this function.\n"
 "  "
 msgstr ""
+"\n"
+"Осы функцияны пайдалану үшін сізге <a href=\"%(login_url)s\">кіру</a> немесе <a href=\"%(signup_url)s\">тіркелу</a>керек. "
 
 #: lms/templates/wiki/includes/anonymous_blocked.html
 msgid "You need to log in or sign up to use this function."
-msgstr ""
+msgstr "Осы функцияны пайдалану үшін Сізге кіру немесе тіркелу керек."
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "Wiki Cheatsheet"
-msgstr ""
+msgstr "Викиді Редакциялау бойынша жадынама"
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "Wiki Syntax Help"
-msgstr ""
+msgstr "Вики-синтакспен көмек"
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid ""
 "This wiki uses <strong>Markdown</strong> for styling. There are several "
 "useful guides online. See any of the links below for in-depth details:"
 msgstr ""
+"Осы вики-бет <strong>Markdown</strong>форматтауды пайдаланады. Интернетте "
+"бірнеше пайдалы басшылықтар бар. Егер сіз жай-жапсарын білгіңіз келсе, "
+"төменде келтірілген сілтемелердің кез келгенін қараңыз: "
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "Markdown: Basics"
-msgstr ""
+msgstr "Маркдаун: негіздер"
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "Quick Markdown Syntax Guide"
-msgstr ""
+msgstr "Markdown синтаксисі бойынша жылдам басшылық"
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "Miniature Markdown Guide"
-msgstr ""
+msgstr "Markdown бойынша мини-басшылық"
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid ""
 "To create a new wiki article, create a link to it. Clicking the link gives "
 "you the creation page."
 msgstr ""
+"Жаңа вики-бапты құру үшін оған сілтеме құрыңыз. Бапты құру беті осы сілтеме "
+"бойынша ашылады."
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "[Article Name](wiki:ArticleName)"
-msgstr ""
+msgstr "[Баптың Атауы](wiki:БаптыңАтауы) "
 
 #. Translators: Do not translate "edX"
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "edX Additions:"
-msgstr ""
+msgstr "edX толықтырулар: "
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "Math Expression"
-msgstr ""
+msgstr "Математикалық Өрнек"
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "Useful examples:"
-msgstr ""
+msgstr "Пайдалы мысалдар:"
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "Wikipedia"
-msgstr ""
+msgstr "Википедия "
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "edX Wiki"
-msgstr ""
+msgstr "Вики edX "
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "Huge Header"
-msgstr ""
+msgstr "Үлкен тақырып"
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "Smaller Header"
-msgstr ""
+msgstr "Кіші тақырып"
 
 #. Translators: Leave the punctuation, but translate "emphasis"
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "*emphasis* or _emphasis_"
-msgstr ""
+msgstr "*бөліп көрсету* немесе _ бөліп көрсету _ "
 
 #. Translators: Leave the punctuation, but translate "strong"
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "**strong** or __strong__"
-msgstr ""
+msgstr "** қатты бөліп көрсету ** немесе __ қатты бөліп көрсету __ "
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "Unordered List"
-msgstr "Реттелмеген тізім"
+msgstr "Ретке келтірілмеген тізім"
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "Sub Item 1"
-msgstr ""
+msgstr "Қосымша зат 1"
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "Sub Item 2"
-msgstr ""
+msgstr "Қосымша зат 2"
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "Ordered"
-msgstr "Реттелген"
+msgstr "Ретке келтірілген"
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "List"
@@ -3464,7 +3801,7 @@ msgstr "Тізім"
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "Quotes"
-msgstr ""
+msgstr "Дәйексөздер"
 
 #: lms/templates/wiki/includes/editor_widget.html
 msgid ""
@@ -3472,75 +3809,82 @@ msgid ""
 "        Markdown syntax is allowed. See the %(start_link)scheatsheet%(end_link)s for help.\n"
 "    "
 msgstr ""
+"\n"
+"Маркдаун тілінің синтаксисін пайдалануға рұқсат етіледі. Анықтама үшін %(start_link)sеске түсірулерін%(end_link)sқараңыз."
 
 #: lms/templates/wiki/plugins/attachments/index.html
 #: wiki/plugins/attachments/wiki_plugin.py
 msgid "Attachments"
-msgstr ""
+msgstr "Қойындылар"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Upload new file"
-msgstr ""
+msgstr "Жаңа файлды жүктеу"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Search and add file"
-msgstr ""
+msgstr "Файлды іздеу және қосу"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Upload File"
-msgstr ""
+msgstr "Файлды жүктеу"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Upload file"
-msgstr ""
+msgstr "Файлды жүктеу"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Search files and articles"
-msgstr ""
+msgstr "Файлдар және баптар бойынша іздеу"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid ""
 "You can reuse files from other articles. These files are subject to updates "
 "on other articles which may or may not be a good thing."
 msgstr ""
+"Сіз басқа баптардан алынған файлдарды пайдалана аласыз. Бұл файлдар басқа "
+"баптарда жаңартылуы мүмкін, бұл әрі жағымды, әрі жағымсыз жаңалық болуы "
+"мүмкін."
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid ""
 "The following files are available for this article. Copy the markdown tag to"
 " directly refer to a file from the article text."
 msgstr ""
+"Осы бап үшін мынадай файлдар қол жетімді. Файлға тікелей сілтеме үшін бап "
+"мәтінен тэгилерді көшіріп алыңыз."
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Markdown tag"
-msgstr ""
+msgstr "Белгілеу тег маркдауны"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Uploaded by"
-msgstr ""
+msgstr "Жүктелді"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Size"
-msgstr "Көлемі"
+msgstr "Мөлшері"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "File History"
-msgstr "Файл тарихы"
+msgstr "Файлдың тарихы"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Detach"
-msgstr ""
+msgstr "Ажыратып алу"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Replace"
-msgstr ""
+msgstr "Ауыстыру"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Restore"
-msgstr ""
+msgstr "Қалпына келтіру"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "anonymous (IP logged)"
-msgstr ""
+msgstr "Аноним (IP-мекенжай жасырылған)"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "File history"
@@ -3548,11 +3892,11 @@ msgstr "Файл тарихы"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "revisions"
-msgstr ""
+msgstr "ревизиялар"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "There are no attachments for this article."
-msgstr ""
+msgstr "Осы бап үшін қосымшалар жоқ."
 
 #: cms/djangoapps/contentstore/course_info_model.py
 #: cms/djangoapps/contentstore/course_info_model.py
@@ -4431,7 +4775,7 @@ msgstr "Деңгей"
 #: lms/templates/folditbasic.html
 #: lms/templates/courseware/instructor_dashboard.html
 msgid "Submitted"
-msgstr ""
+msgstr "Қарау үшін салынғаны"
 
 #: lms/templates/folditchallenge.html
 msgid "Puzzle Leaderboard"
@@ -4982,7 +5326,7 @@ msgstr "Жауапты көрсету"
 
 #: lms/templates/problem.html
 msgid "Reveal Answer"
-msgstr ""
+msgstr "Жауапты ашу"
 
 #: lms/templates/problem.html
 msgid "You have used {num_used} of {num_total} submissions"
@@ -6464,11 +6808,11 @@ msgstr ""
 
 #: lms/templates/courseware/instructor_dashboard.html
 msgid "Task Type"
-msgstr ""
+msgstr "Тапсырма үлгісі"
 
 #: lms/templates/courseware/instructor_dashboard.html
 msgid "Task inputs"
-msgstr ""
+msgstr "Тапсырманы енгізу"
 
 #: lms/templates/courseware/instructor_dashboard.html
 msgid "Task Id"
@@ -6476,7 +6820,7 @@ msgstr ""
 
 #: lms/templates/courseware/instructor_dashboard.html
 msgid "Requester"
-msgstr ""
+msgstr "Сұрау салушы"
 
 #: lms/templates/courseware/instructor_dashboard.html
 msgid "Task State"
@@ -6484,11 +6828,11 @@ msgstr ""
 
 #: lms/templates/courseware/instructor_dashboard.html
 msgid "Duration (sec)"
-msgstr ""
+msgstr "Ұзақтығы (сек)"
 
 #: lms/templates/courseware/instructor_dashboard.html
 msgid "Task Progress"
-msgstr ""
+msgstr "Тапсырманың алға басуы"
 
 #: lms/templates/courseware/instructor_dashboard.html
 #: lms/templates/courseware/instructor_dashboard.html
@@ -7051,7 +7395,7 @@ msgstr ""
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Report Misuse"
-msgstr ""
+msgstr "Қате пайдалану туралы хабарлаңыз"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Pin Thread"

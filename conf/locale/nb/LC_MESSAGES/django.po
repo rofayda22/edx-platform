@@ -5055,7 +5055,7 @@ msgstr "for å få tilgang til din konto og kurs"
 
 #: lms/templates/login.html
 msgid "We're Sorry, {platform_name} accounts are unavailable currently"
-msgstr ""
+msgstr "Vi beklager, {platform_name}-kontoer er utilgjengelige for øyeblikket"
 
 #: lms/templates/login.html
 msgid "The following errors occurred while logging you in:"
@@ -7225,7 +7225,7 @@ msgstr "Gjør synlig for:"
 
 #: lms/templates/discussion/_inline_new_post.html
 msgid "My Cohort"
-msgstr ""
+msgstr "Min kohort"
 
 #: lms/templates/discussion/_inline_new_post.html
 #: lms/templates/discussion/_new_post.html
@@ -8549,7 +8549,7 @@ msgstr ""
 
 #: lms/templates/open_ended_problems/open_ended_flagged_problems.html
 msgid "Ban"
-msgstr ""
+msgstr "Ban"
 
 #: lms/templates/open_ended_problems/open_ended_problems.html
 msgid "{course_number} Open Ended Problems"
@@ -8636,7 +8636,7 @@ msgstr ""
 
 #: lms/templates/peer_grading/peer_grading_problem.html
 msgid "Please include some written feedback as well."
-msgstr ""
+msgstr "Vennligst inkluder skriftlig tilbakemelding"
 
 #: lms/templates/peer_grading/peer_grading_problem.html
 msgid ""
@@ -8886,7 +8886,7 @@ msgstr ""
 
 #: lms/templates/shoppingcart/verified_cert_receipt.html
 msgid "You are now registered for: "
-msgstr ""
+msgstr "Du er nå registrert på:"
 
 #: lms/templates/shoppingcart/verified_cert_receipt.html
 msgid "Registered as: "
@@ -8966,7 +8966,7 @@ msgstr ""
 
 #: lms/templates/shoppingcart/verified_cert_receipt.html
 msgid "You are registered for:"
-msgstr ""
+msgstr "Du er nå registrert på:"
 
 #: lms/templates/shoppingcart/verified_cert_receipt.html
 msgid "A list of courses you have just registered for as a verified student"

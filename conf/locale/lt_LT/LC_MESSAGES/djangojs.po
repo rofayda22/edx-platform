@@ -1113,6 +1113,8 @@ msgid ""
 "Success! Problem attempts reset for problem '<%= problem_id %>' and student "
 "'<%= student_id %>'."
 msgstr ""
+"Pavyko! Nustatyta, kad kurso dalyvis <%= student_id %> galėtų iš naujo "
+"spręsti <%= problem_id %> uždavinį."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
@@ -1120,6 +1122,9 @@ msgid ""
 " '<%= student_id %>'. Check that the problem and student identifiers are "
 "spelled correctly."
 msgstr ""
+"Klaida nustatant, kad kurso dalyvis <%= student_id %> galėtų iš naujo "
+"spręsti <%= problem_id %> uždavinį. Patikrinkite, ar teisingai parašyti "
+"uždavinio ir kurso dalyvio identifikatoriai."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
@@ -1147,6 +1152,9 @@ msgid ""
 "'<%= student_id %>'. Click the 'Show Background Task History for Student' "
 "button to see the status of the task."
 msgstr ""
+"Pradėtas kurso dalyvio <%= student_id %> <%= problem_id %> uždavinio "
+"įvertinimo perskaičiavimas. Norėdami pamatyti užduoties būseną, "
+"spragtelėkite mygtuką \"Rodyti pirminę kurso dalyvio užduoties istoriją\"."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
@@ -1171,6 +1179,8 @@ msgstr ""
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid "Reset attempts for all students on problem '<%= problem_id %>'?"
 msgstr ""
+"Nustatyti, kad visi kurso dalyviai galėtų iš naujo spręsti <%= problem_id %>"
+" uždavinį?"
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
@@ -1178,12 +1188,18 @@ msgid ""
 " Click the 'Show Background Task History for Problem' button to see the "
 "status of the task."
 msgstr ""
+"Sėkmingai pradėtas nustatymas, kad būtų galima iš naujo spręsti <%= "
+"problem_id %> uždavinį. Norėdami pamatyti užduoties būseną, spragtelėkite "
+"mygtuką \"Rodyti pirminę užduoties istoriją\"."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
 "Error starting a task to reset attempts for all students on problem '<%= "
 "problem_id %>'. Check that the problem identifier is spelled correctly."
 msgstr ""
+"Klaida pradedant nustatymą, kad visi kurso dalyviai galėtų iš naujo spręsti "
+"<%= problem_id %> uždavinį. Patikrinkite, ar teisingai parašytas uždavinio "
+"identifikatorius."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid "Rescore problem '<%= problem_id %>' for all students?"

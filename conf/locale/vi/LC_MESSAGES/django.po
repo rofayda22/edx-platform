@@ -10181,7 +10181,7 @@ msgstr ""
 
 #: cms/templates/500.html
 msgid "If the problem persists, please email us at {email_link}."
-msgstr ""
+msgstr "Nếu vẫn gặp vấn đề, vui lòng email tới: {email_link}."
 
 #: cms/templates/activation_active.html cms/templates/activation_complete.html
 #: cms/templates/activation_invalid.html
@@ -10352,19 +10352,23 @@ msgstr "Biểu Kiểm Tra Hiện Hành"
 
 #: cms/templates/checklists.html
 msgid "What are course checklists?"
-msgstr ""
+msgstr "Biểu kiểm tra Khóa học là gì?"
 
 #: cms/templates/checklists.html
 msgid ""
 "Course checklists are tools to help you understand and keep track of all the"
 " steps necessary to get your course ready for students."
 msgstr ""
+"Biểu kiểm tra Khóa học là công cụ giúp bạn biết và theo dõi các bước cần "
+"thiết để soạn nên khóa học cho sinh viên."
 
 #: cms/templates/checklists.html
 msgid ""
 "Any changes you make to these checklists are saved automatically and are "
 "immediately visible to other course team members."
 msgstr ""
+"Bất kì thay đổi nào của bạn trên Biểu kiểm tra này cũng được lưu tự động và "
+"lập tức hiển thị trước những thành viên khác trong khóa học"
 
 #: cms/templates/component.html cms/templates/studio_xblock_wrapper.html
 #: cms/templates/studio_xblock_wrapper.html
@@ -10678,26 +10682,29 @@ msgid ""
 " the course structure and content. You can also re-import courses that "
 "you've exported."
 msgstr ""
+"Bạn có thể xuất các khóa học và chỉnh sửa chúng ngoài Studio. File được xuất"
+" là file .tar.gz (tức file .tar được nén bằng GNU Zip) chứa cấu trúc và nội "
+"dung khóa học. Bạn cũng có thể tái nhập các khóa học vừa được xuất."
 
 #: cms/templates/export.html
 msgid "Export My Course Content"
-msgstr ""
+msgstr "Xuất nội dung khóa học của tôi"
 
 #: cms/templates/export.html
 msgid "Export Course Content"
-msgstr ""
+msgstr "Xuất nội dung khóa học"
 
 #: cms/templates/export.html
 msgid "Data {em_start}exported with{em_end} your course:"
-msgstr ""
+msgstr "Dữ liệu {em_start}được xuất với{em_end} khóa học của bạn:"
 
 #: cms/templates/export.html
 msgid "Course Content (all Sections, Sub-sections, and Units)"
-msgstr ""
+msgstr "Nội dung Khóa học (tất cả các Mục, Phụ Mục và Bài học)"
 
 #: cms/templates/export.html
 msgid "Course Structure"
-msgstr ""
+msgstr "Cấu trúc Khóa học"
 
 #: cms/templates/export.html
 msgid "Individual Problems"
@@ -10709,19 +10716,19 @@ msgstr "Thành Phần Khóa Học"
 
 #: cms/templates/export.html
 msgid "Course Settings"
-msgstr ""
+msgstr "Thiết lập Khóa học"
 
 #: cms/templates/export.html
 msgid "Data {em_start}not exported{em_end} with your course:"
-msgstr ""
+msgstr "Dữ liệu {em_start}không được xuất{em_end} cùng khóa học của bạn:"
 
 #: cms/templates/export.html
 msgid "User Data"
-msgstr ""
+msgstr "Dữ liệu của Người dùng"
 
 #: cms/templates/export.html
 msgid "Course Team Data"
-msgstr ""
+msgstr "Dữ liệu Nhóm Khóa học"
 
 #: cms/templates/export.html
 msgid "Forum/discussion Data"
@@ -10729,11 +10736,11 @@ msgstr "Dữ liệu diễn đàn/thảo luận"
 
 #: cms/templates/export.html
 msgid "Certificates"
-msgstr ""
+msgstr "Chứng chỉ"
 
 #: cms/templates/export.html
 msgid "Why export a course?"
-msgstr ""
+msgstr "Tại sao lại xuất khóa học?"
 
 #: cms/templates/export.html
 msgid ""
@@ -10742,10 +10749,14 @@ msgid ""
 " a copy of your course that you can later import into another course "
 "instance and customize."
 msgstr ""
+"Có thể bạn muốn trực tiếp chỉnh sửa XML trong khóa học của mình ở ngoài "
+"Studio. Có thể bạn muốn tạo một bản sao dự phòng cho khóa học của mình. Hoặc"
+" có thể, bạn muốn tạo một bản sao khóa học để sau này có thể tức thì và tùy "
+"biến, nhập nó vào một khóa học khác."
 
 #: cms/templates/export.html
 msgid "What content is exported?"
-msgstr ""
+msgstr "Nội dung nào được xuất?"
 
 #: cms/templates/export.html
 msgid ""
@@ -10754,10 +10765,14 @@ msgid ""
 "information, discussion forum data, course settings, and course team "
 "information, is not exported."
 msgstr ""
+"Chỉ nội dung và cấu trúc khóa học (bao gồm các Mục, Phụ Mục và Bài Học) được"
+" xuất. Những dữ liệu khác, bao gồm dữ liệu về sinh viên, thông tin chấm "
+"điểm, dữ liệu trong diễn đàn thảo luận, các thiết lập khóa học và thông tin "
+"nhóm khóa học đều không được xuất."
 
 #: cms/templates/export.html
 msgid "Opening the downloaded file"
-msgstr ""
+msgstr "Đang mở file được tải xuống"
 
 #. Translators: ".tar.gz" is a file extension, and should not be translated
 #: cms/templates/export.html
@@ -10766,6 +10781,9 @@ msgid ""
 "data includes the course.xml file, as well as subfolders that contain course"
 " content."
 msgstr ""
+"Dùng một chương trình nén để giải nén dữ liệu trong file chứa đuôi .tar.gz. "
+"Giải nén các dữ liệu gồm file khóa học chứa đuôi .xml và các tệp con chứa "
+"nội dung khóa học."
 
 #: cms/templates/export_git.html
 msgid "Export Course to Git"

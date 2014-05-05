@@ -1892,7 +1892,7 @@ msgstr ""
 #: lms/djangoapps/instructor/views/api.py lms/templates/register.html
 #: lms/templates/signup_modal.html
 msgid "Gender"
-msgstr ""
+msgstr "Стать"
 
 #: lms/djangoapps/instructor/views/api.py
 #: lms/templates/instructor/instructor_dashboard_2/analytics.html
@@ -4412,7 +4412,7 @@ msgstr ""
 
 #: lms/templates/contact.html
 msgid "Universities"
-msgstr ""
+msgstr "Університети"
 
 #: lms/templates/contact.html
 msgid ""
@@ -4455,7 +4455,7 @@ msgstr ""
 #: lms/templates/dashboard.html lms/templates/dashboard.html
 #: lms/templates/dashboard/_dashboard_info_language.html
 msgid "edit"
-msgstr ""
+msgstr "редагувати"
 
 #. Translators: this section lists all the third-party authentication
 #. providers
@@ -4527,7 +4527,7 @@ msgstr ""
 
 #: lms/templates/dashboard.html lms/templates/dashboard.html
 msgid "Change Email"
-msgstr ""
+msgstr "Змінити Email"
 
 #: lms/templates/dashboard.html
 msgid "Please enter your new email address:"
@@ -4535,7 +4535,7 @@ msgstr ""
 
 #: lms/templates/dashboard.html
 msgid "Please confirm your password:"
-msgstr ""
+msgstr "Будь ласка, підтвердіть свій пароль."
 
 #: lms/templates/dashboard.html
 msgid ""
@@ -4545,7 +4545,7 @@ msgstr ""
 
 #: lms/templates/dashboard.html
 msgid "Change your name"
-msgstr ""
+msgstr "Змінити ваше ім'я"
 
 #. Translators: note that {platform} {cert_name_short} will look something
 #. like: "edX certificate". Please do not change the order of these
@@ -4616,7 +4616,7 @@ msgstr ""
 
 #: lms/templates/email_exists.html
 msgid "An account with the new e-mail address already exists."
-msgstr ""
+msgstr "Обліковий запис з новою електронною адресою вже існує."
 
 #: lms/templates/enroll_students.html
 msgid "Student Enrollment Form"
@@ -4624,7 +4624,7 @@ msgstr ""
 
 #: lms/templates/enroll_students.html
 msgid "Course: "
-msgstr ""
+msgstr "Курс:"
 
 #: lms/templates/enroll_students.html
 msgid "Add new students"
@@ -4656,15 +4656,15 @@ msgstr ""
 
 #: lms/templates/folditbasic.html
 msgid "Status:"
-msgstr ""
+msgstr "Статус:"
 
 #: lms/templates/folditbasic.html
 msgid "You have successfully gotten to level {goal_level}."
-msgstr ""
+msgstr "Ви успішно дійшли до рівня  {goal_level}."
 
 #: lms/templates/folditbasic.html
 msgid "You have not yet gotten to level {goal_level}."
-msgstr ""
+msgstr "Ви ще не дійшли до рівня  {goal_level}."
 
 #: lms/templates/folditbasic.html
 msgid "Completed puzzles"
@@ -4672,7 +4672,7 @@ msgstr ""
 
 #: lms/templates/folditbasic.html
 msgid "Level"
-msgstr ""
+msgstr "Рівень"
 
 #: lms/templates/folditbasic.html
 #: lms/templates/courseware/instructor_dashboard.html
@@ -4685,7 +4685,7 @@ msgstr ""
 
 #: lms/templates/folditchallenge.html
 msgid "User"
-msgstr ""
+msgstr "Користувач"
 
 #: lms/templates/folditchallenge.html
 msgid "Score"
@@ -4787,7 +4787,7 @@ msgstr ""
 
 #: lms/templates/help_modal.html
 msgid "Ask a question"
-msgstr ""
+msgstr "Поставити Запитання"
 
 #: lms/templates/help_modal.html
 msgid ""
@@ -4832,7 +4832,7 @@ msgstr "Підтвердити"
 
 #: lms/templates/help_modal.html
 msgid "Thank You!"
-msgstr ""
+msgstr "Дякуємо!"
 
 #: lms/templates/help_modal.html
 msgid ""
@@ -4877,7 +4877,7 @@ msgstr ""
 #: lms/templates/help_modal.html lms/templates/help_modal.html
 #: lms/templates/module-error.html
 msgid "Details"
-msgstr ""
+msgstr "Деталі"
 
 #: lms/templates/help_modal.html
 msgid "question"
@@ -4885,7 +4885,7 @@ msgstr ""
 
 #: lms/templates/help_modal.html
 msgid "Ask a Question"
-msgstr ""
+msgstr "Поставити Запитання"
 
 #: lms/templates/help_modal.html
 msgid "Brief summary of your question"
@@ -4893,7 +4893,7 @@ msgstr ""
 
 #: lms/templates/help_modal.html
 msgid "An error has occurred."
-msgstr ""
+msgstr "Сталася помилка."
 
 #: lms/templates/help_modal.html
 msgid "Please {link_start}send us e-mail{link_end}."
@@ -4901,7 +4901,7 @@ msgstr ""
 
 #: lms/templates/help_modal.html
 msgid "Please try again later."
-msgstr ""
+msgstr "Будь ласка, спробуйте ще раз пізніше."
 
 #: lms/templates/index.html
 msgid "Free courses from <strong>{university_name}</strong>"
@@ -4913,7 +4913,7 @@ msgstr ""
 
 #: lms/templates/index.html
 msgid "For anyone, anywhere, anytime"
-msgstr ""
+msgstr "Для будь-кого, будь-де, будь-коли"
 
 #: lms/templates/index.html
 msgid "Stay up to date with all {platform_name} has to offer!"
@@ -5017,7 +5017,7 @@ msgstr ""
 #: lms/templates/login.html lms/templates/register-shib.html
 #: lms/templates/register.html lms/templates/register.html
 msgid "example: username@domain.com"
-msgstr ""
+msgstr "приклад: username@domain.com"
 
 #: lms/templates/login.html
 msgid "Account Preferences"
@@ -5083,7 +5083,7 @@ msgstr ""
 
 #: lms/templates/manage_user_standing.html
 msgid "Username:"
-msgstr ""
+msgstr "Ім'я Користувача"
 
 #: lms/templates/manage_user_standing.html
 msgid "Disable Account"
@@ -5142,7 +5142,7 @@ msgstr ""
 #: lms/templates/name_changes.html lms/templates/name_changes.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 msgid "Error"
-msgstr ""
+msgstr "Помилка"
 
 #: lms/templates/name_changes.html
 msgid "Rejected"
@@ -5288,7 +5288,7 @@ msgstr ""
 #: lms/templates/register-shib.html lms/templates/register.html
 #: lms/templates/register.html
 msgid "example: JaneDoe"
-msgstr ""
+msgstr "приклад: JaneDoe"
 
 #: lms/templates/register-shib.html lms/templates/register.html
 #: lms/templates/register.html
@@ -5380,7 +5380,7 @@ msgstr ""
 
 #: lms/templates/register.html
 msgid "Welcome!"
-msgstr ""
+msgstr "Ласкаво просимо!"
 
 #: lms/templates/register.html
 msgid "Register below to create your {platform_name} account"
@@ -5424,7 +5424,7 @@ msgstr ""
 
 #: lms/templates/register.html
 msgid "Welcome {username}"
-msgstr ""
+msgstr "Ласкаво просимо, {username}"
 
 #: lms/templates/register.html
 msgid "Enter a Public Display Name:"
@@ -5457,7 +5457,7 @@ msgstr ""
 #: lms/templates/register.html
 #: lms/templates/instructor/instructor_dashboard_2/analytics.html
 msgid "Year of Birth"
-msgstr ""
+msgstr "Рік Народження"
 
 #: lms/templates/register.html
 msgid "Please share with us your reasons for registering with {platform_name}"
@@ -5465,7 +5465,7 @@ msgstr ""
 
 #: lms/templates/register.html lms/templates/university_profile/edge.html
 msgid "Register"
-msgstr ""
+msgstr "Зареєструватися"
 
 #: lms/templates/register.html lms/templates/signup_modal.html
 msgid "Create My Account"
@@ -5517,7 +5517,7 @@ msgstr ""
 
 #: lms/templates/signup_modal.html
 msgid "Full Name *"
-msgstr ""
+msgstr "Повне Ім'я *"
 
 #: lms/templates/signup_modal.html
 msgid "Ed. Completed"
@@ -5525,11 +5525,11 @@ msgstr ""
 
 #: lms/templates/signup_modal.html
 msgid "Year of birth"
-msgstr ""
+msgstr "Рік народження"
 
 #: lms/templates/signup_modal.html
 msgid "Mailing address"
-msgstr ""
+msgstr "Поштова адреса"
 
 #: lms/templates/signup_modal.html
 msgid "Goals in signing up for {platform_name}"
@@ -5603,7 +5603,7 @@ msgstr ""
 
 #: lms/templates/staff_problem_info.html
 msgid "User:"
-msgstr ""
+msgstr "Користувач:"
 
 #: lms/templates/staff_problem_info.html
 msgid "View History"
@@ -5635,7 +5635,7 @@ msgstr ""
 #: lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 msgid "Users"
-msgstr ""
+msgstr "Користувачі"
 
 #: lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
@@ -5882,7 +5882,7 @@ msgstr ""
 
 #: lms/templates/word_cloud.html
 msgid "Total number of words:"
-msgstr ""
+msgstr "Загальна кількість слів:"
 
 #: lms/templates/combinedopenended/combined_open_ended.html
 msgid "Open Response"
@@ -6269,7 +6269,7 @@ msgstr ""
 
 #: lms/templates/courseware/courseware.html
 msgid "speed of light"
-msgstr ""
+msgstr "швидкість світла"
 
 #: lms/templates/courseware/courseware.html
 msgid "freezing point of water in degrees Kelvin"
@@ -6696,7 +6696,7 @@ msgstr ""
 
 #: lms/templates/courseware/instructor_dashboard.html
 msgid "Number of students"
-msgstr ""
+msgstr "Кількість студентів"
 
 #: lms/templates/courseware/instructor_dashboard.html
 msgid ""
@@ -6734,7 +6734,7 @@ msgstr ""
 
 #: lms/templates/courseware/instructor_dashboard.html
 msgid "Duration (sec)"
-msgstr ""
+msgstr "Тривалість (сек)"
 
 #: lms/templates/courseware/instructor_dashboard.html
 msgid "Task Progress"
@@ -6775,11 +6775,11 @@ msgstr ""
 
 #: lms/templates/courseware/mktg_course_about.html
 msgid "Registration Is Closed"
-msgstr ""
+msgstr "Реєстрація Завершена"
 
 #: lms/templates/courseware/news.html
 msgid "News - MITx 6.002x"
-msgstr ""
+msgstr "Новини - MITx 6.002x"
 
 #: lms/templates/courseware/news.html
 msgid "Updates to Discussion Posts You Follow"
@@ -6839,7 +6839,7 @@ msgstr ""
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Your final grade:"
-msgstr ""
+msgstr "Ваша остаточна оцінка:"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Grade required for a {cert_name_short}:"
@@ -6918,19 +6918,19 @@ msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Course Completed - {end_date}"
-msgstr ""
+msgstr "Курс Закінчився - {end_date}"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Course Started - {start_date}"
-msgstr ""
+msgstr "Курс Розпочався - {start_date}"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Course has not yet started"
-msgstr ""
+msgstr "Курс ще не розпочався"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Course Starts - {start_date}"
-msgstr ""
+msgstr "Курс Розпочинається - {start_date}"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Document your accomplishment!"
@@ -7081,7 +7081,7 @@ msgstr ""
 
 #: lms/templates/debug/run_python_form.html
 msgid "Results:"
-msgstr ""
+msgstr "Результати:"
 
 #: lms/templates/discussion/_blank_slate.html
 msgid ""
@@ -7236,23 +7236,23 @@ msgstr ""
 
 #: lms/templates/discussion/_thread_list_template.html
 msgid "date"
-msgstr ""
+msgstr "дата"
 
 #: lms/templates/discussion/_thread_list_template.html
 msgid "votes"
-msgstr ""
+msgstr "голоси"
 
 #: lms/templates/discussion/_thread_list_template.html
 msgid "comments"
-msgstr ""
+msgstr "коментарі"
 
 #: lms/templates/discussion/_thread_list_template.html
 msgid "Show:"
-msgstr ""
+msgstr "Показати:"
 
 #: lms/templates/discussion/_thread_list_template.html
 msgid "View All"
-msgstr ""
+msgstr "Переглянути Все"
 
 #: lms/templates/discussion/_thread_list_template.html
 msgid "View as {name}"
@@ -7351,7 +7351,7 @@ msgstr ""
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Delete Comment"
-msgstr ""
+msgstr "Видалити коментар"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "-posted %(time_ago)s by"
@@ -7468,7 +7468,7 @@ msgstr ""
 
 #: lms/templates/discussion/user_profile.html
 msgid "User Profile"
-msgstr ""
+msgstr "Профіль користувача"
 
 #: lms/templates/discussion/mustache/_inline_thread.mustache
 #: lms/templates/discussion/mustache/_inline_thread_cohorted.mustache
@@ -7654,7 +7654,7 @@ msgstr ""
 
 #: lms/templates/emails/order_confirmation_email.txt
 msgid "Hi {name}"
-msgstr ""
+msgstr "Привіт, {name}"
 
 #: lms/templates/emails/order_confirmation_email.txt
 msgid ""
@@ -7692,7 +7692,7 @@ msgstr ""
 
 #: lms/templates/emails/order_confirmation_email.txt
 msgid "Quantity - Description - Price"
-msgstr ""
+msgstr "Кількість - Опис - Ціна"
 
 #: lms/templates/emails/order_confirmation_email.txt
 msgid "Total billed to credit/debit card: {currency_symbol}{total_cost}"
@@ -7810,7 +7810,7 @@ msgstr ""
 
 #: lms/templates/instructor/staff_grading.html
 msgid "Skip"
-msgstr ""
+msgstr "Пропустити"
 
 #: lms/templates/instructor/instructor_dashboard_2/analytics.html
 msgid "Score Distribution"
@@ -7850,7 +7850,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Course Name:"
-msgstr ""
+msgstr "Назва Курсу"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Course Display Name:"
@@ -7863,12 +7863,12 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Yes"
-msgstr ""
+msgstr "Так"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "No"
-msgstr ""
+msgstr "Ні"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Has the course ended?"
@@ -8302,7 +8302,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid "Message:"
-msgstr ""
+msgstr "Повідомлення:"
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid ""
@@ -8708,11 +8708,11 @@ msgstr ""
 
 #: lms/templates/shoppingcart/download_report.html
 msgid "Start Date: "
-msgstr ""
+msgstr "Дата Початку:"
 
 #: lms/templates/shoppingcart/download_report.html
 msgid "End Date: "
-msgstr ""
+msgstr "Дата Закінчення:"
 
 #: lms/templates/shoppingcart/download_report.html
 msgid ""
@@ -8788,7 +8788,7 @@ msgstr ""
 
 #: lms/templates/shoppingcart/receipt.html
 msgid "Date:"
-msgstr ""
+msgstr "Дата:"
 
 #: lms/templates/shoppingcart/receipt.html
 msgid "Items ordered:"
@@ -9075,7 +9075,7 @@ msgstr ""
 
 #: lms/templates/verify_student/_modal_editname.html
 msgid "Change my name"
-msgstr ""
+msgstr "Змінити моє ім'я"
 
 #: lms/templates/verify_student/_reverification_support.html
 msgid "Why Do I Need to Re-Verify?"
@@ -9929,7 +9929,7 @@ msgstr ""
 
 #: lms/templates/wiki/includes/article_menu.html
 msgid "Changes"
-msgstr ""
+msgstr "Зміни"
 
 #: lms/templates/wiki/includes/article_menu.html
 msgid "{span_start}active{span_end}"

@@ -61,6 +61,7 @@
 # 
 # Translators:
 # AriannaT <arianna.tamanini@yahoo.it>, 2014
+# CarlaGratta <Carla.gratta@gmail.com>, 2014
 # lillith, 2014
 # eevidal, 2014
 # caesar2164, 2014
@@ -70,8 +71,8 @@ msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
 "POT-Creation-Date: 2014-05-02 17:10-0400\n"
-"PO-Revision-Date: 2014-04-30 09:42+0000\n"
-"Last-Translator: AriannaT <arianna.tamanini@yahoo.it>\n"
+"PO-Revision-Date: 2014-05-05 15:24+0000\n"
+"Last-Translator: CarlaGratta <Carla.gratta@gmail.com>\n"
 "Language-Team: Italian (Italy) (http://www.transifex.com/projects/p/edx-platform/language/it_IT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -12124,8 +12125,8 @@ msgstr "Sommario"
 msgid ""
 "Give a short reason for your edit, which will be stated in the revision log."
 msgstr ""
-"Spiega brevemente il motivo della tua modifica, il quale sarà dichiarato nel"
-" log di revisione."
+"Spiega brevemente il motivo della tua modifica, che sarà aggiunto al "
+"resoconto della revisione."
 
 #: wiki/forms.py
 msgid ""
@@ -12147,7 +12148,7 @@ msgstr "Seleziona un'opzione"
 
 #: wiki/forms.py
 msgid "Slug"
-msgstr ""
+msgstr "Identificativo"
 
 #: wiki/forms.py
 msgid ""
@@ -12155,22 +12156,25 @@ msgid ""
 "alphanumeric characters and - or _. Note that you cannot change the slug "
 "after creating the article."
 msgstr ""
+"Questo sarà l'indirizzo dove si può trovare il tuo articolo. Usa solo "
+"caratteri alfanumerici e - o _. Nota che non potrai cambiare "
+"l'identificativo dopo avere creato l'articolo."
 
 #: wiki/forms.py
 msgid "Write a brief message for the article's history log."
-msgstr ""
+msgstr "Scrivi un breve messaggio per il resoconto storico dell'articolo."
 
 #: wiki/forms.py
 msgid "A slug may not begin with an underscore."
-msgstr ""
+msgstr "L'identificativo non può cominciare con _."
 
 #: wiki/forms.py
 msgid "A deleted article with slug \"%s\" already exists."
-msgstr ""
+msgstr "Esiste già un articolo cancellato con identificativo \"%s\"."
 
 #: wiki/forms.py
 msgid "A slug named \"%s\" already exists."
-msgstr ""
+msgstr "Un identificativo \"%s\" esiste già."
 
 #: wiki/forms.py
 msgid "Yes, I am sure"
@@ -12178,7 +12182,7 @@ msgstr "Sì, sono sicuro"
 
 #: wiki/forms.py
 msgid "Purge"
-msgstr ""
+msgstr "Oblitera"
 
 #: wiki/forms.py
 msgid ""
@@ -12186,6 +12190,10 @@ msgid ""
 " Purging is a good idea if you want to free the slug such that users can "
 "create new articles in its place."
 msgstr ""
+"Oblitera l'articolo: lo cancella definitivamente (compreso tutto il "
+"contenuto)  senza ritorno. Obliterare è una buona idea se si vuole liberare "
+"l'identificativo così che gli utenti possano creare nuovi articoli al suo "
+"posto."
 
 #: wiki/forms.py wiki/plugins/attachments/forms.py
 #: wiki/plugins/images/forms.py
@@ -12204,11 +12212,11 @@ msgstr "Blocca l'articolo"
 
 #: wiki/forms.py
 msgid "Deny all users access to edit this article."
-msgstr ""
+msgstr "Nega a tutti gli utenti l'accesso per modificare l'articolo."
 
 #: wiki/forms.py
 msgid "Permissions"
-msgstr "Permessi"
+msgstr "Autorizzazioni"
 
 #: wiki/forms.py
 msgid "Owner"
@@ -12224,21 +12232,24 @@ msgstr "(nessuno)"
 
 #: wiki/forms.py
 msgid "Inherit permissions"
-msgstr ""
+msgstr "Autorizzazioni ereditate"
 
 #: wiki/forms.py
 msgid ""
 "Check here to apply the above permissions recursively to articles under this"
 " one."
 msgstr ""
+"Marca qui per applicare le autorizzazioni qui sopra in modo ricorsivo agli "
+"articoli sotto a questo."
 
 #: wiki/forms.py
 msgid "Permission settings for the article were updated."
-msgstr ""
+msgstr "Le autorizzazioni impostate per l'articolo sono state aggiornate."
 
 #: wiki/forms.py
 msgid "Your permission settings were unchanged, so nothing saved."
 msgstr ""
+"Le tue autorizzazioni impostate non sono cambiate, così niente è salvato."
 
 #: wiki/forms.py
 msgid "No user with that username"
@@ -12246,15 +12257,15 @@ msgstr "Nessun utente con quel username"
 
 #: wiki/forms.py
 msgid "Article locked for editing"
-msgstr ""
+msgstr "Articolo bloccato per modifiche."
 
 #: wiki/forms.py
 msgid "Article unlocked for editing"
-msgstr ""
+msgstr "Articolo sbloccato per modifiche."
 
 #: wiki/forms.py
 msgid "Filter..."
-msgstr ""
+msgstr "Filtro..."
 
 #: wiki/core/plugins/base.py
 msgid "Settings for plugin"
@@ -12263,7 +12274,7 @@ msgstr "Impostazioni di plug in"
 #: wiki/models/article.py wiki/models/pluginbase.py
 #: wiki/plugins/attachments/models.py
 msgid "current revision"
-msgstr ""
+msgstr "revisione corrente"
 
 #: wiki/models/article.py
 msgid ""
@@ -12361,13 +12372,15 @@ msgstr "contenuto dell'articolo"
 
 #: wiki/models/article.py
 msgid "article title"
-msgstr "titolo articolo"
+msgstr "titolo dell'articolo"
 
 #: wiki/models/article.py
 msgid ""
 "Each revision contains a title field that must be filled out, even if the "
 "title has not changed"
 msgstr ""
+"Ogni revisione contiene un campo per il titolo che deve essere riempito "
+"anche se il titolo non è cambiato."
 
 #: wiki/models/pluginbase.py
 msgid "original article"
@@ -12375,7 +12388,7 @@ msgstr "articolo originale"
 
 #: wiki/models/pluginbase.py
 msgid "Permissions are inherited from this article"
-msgstr ""
+msgstr "Le autorizzazioni sono ereditate per questo articolo."
 
 #: wiki/models/pluginbase.py
 msgid "A plugin was changed"
@@ -12475,7 +12488,7 @@ msgstr ""
 
 #: wiki/plugins/attachments/views.py
 msgid "%s was successfully added."
-msgstr ""
+msgstr "%s è stato aggiunto con successo."
 
 #: wiki/plugins/attachments/views.py wiki/plugins/attachments/views.py
 msgid "Your file could not be saved: %s"

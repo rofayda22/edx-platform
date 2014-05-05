@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
 "POT-Creation-Date: 2014-05-02 17:09-0400\n"
-"PO-Revision-Date: 2014-05-02 22:10+0000\n"
+"PO-Revision-Date: 2014-05-02 22:40+0000\n"
 "Last-Translator: J.14 <jithinchman@gmail.com>\n"
 "Language-Team: Thai (http://www.transifex.com/projects/p/edx-platform/language/th/)\n"
 "MIME-Version: 1.0\n"
@@ -1472,51 +1472,54 @@ msgstr "หลักสูตรต้องมีการกำหนดวั
 
 #: cms/static/js/models/settings/course_details.js
 msgid "The course end date cannot be before the course start date."
-msgstr ""
+msgstr "วันสุดท้ายของหลักสูตรไม่สามารถมาก่อนวันที่เริ่มต้นหลักสูตร"
 
 #: cms/static/js/models/settings/course_details.js
 msgid "The course start date cannot be before the enrollment start date."
-msgstr ""
+msgstr "วันที่เริ่มต้นการเรียนการสอนไม่สามารถมาก่อนวันเริ่มลงทะเบียน"
 
 #: cms/static/js/models/settings/course_details.js
 msgid "The enrollment start date cannot be after the enrollment end date."
 msgstr ""
+"วันที่เริ่มลงทะเบียนเรียนต้องไม่สามารถเป็นวันหลังจากวันสิ้นสุดการลงทะเบียนเรียน"
 
 #: cms/static/js/models/settings/course_details.js
 msgid "The enrollment end date cannot be after the course end date."
-msgstr ""
+msgstr "วันที่สิ้นสุดการลงทะเบียนเรียนต้องไม่อยู่หลังวันปิดหลักสูตร"
 
 #: cms/static/js/models/settings/course_details.js
 msgid "Key should only contain letters, numbers, _, or -"
-msgstr ""
+msgstr "คีย์ควรประกอบด้วยตัวอักษร ตัวเลข, _,หรือ - เท่านั้น"
 
 #: cms/static/js/models/settings/course_grader.js
 msgid "There's already another assignment type with this name."
-msgstr ""
+msgstr "มีการบ้านหรืองานที่มอบหมายประเภทอื่นที่มีชื่อนี้อยู่แล้ว"
 
 #: cms/static/js/models/settings/course_grader.js
 msgid "Please enter an integer between 0 and 100."
-msgstr ""
+msgstr "กรุณาใส่จำนวนเต็มระหว่าง 0 และ 100"
 
 #: cms/static/js/models/settings/course_grader.js
 msgid "Please enter an integer greater than 0."
-msgstr ""
+msgstr "กรุณากรอกตัวเลขมากกว่า 0"
 
 #: cms/static/js/models/settings/course_grader.js
 msgid "Please enter non-negative integer."
-msgstr ""
+msgstr "กรุณากรอกตัวเลขที่ไม่ใช่เชิงลบ"
 
 #: cms/static/js/models/settings/course_grader.js
 msgid "Cannot drop more <% attrs.types %> than will assigned."
-msgstr ""
+msgstr "ไม่สามารถวางเพิ่ม <% attrs.types%> เกินกว่าที่ได้รับมอบหมาย"
 
 #: cms/static/js/models/settings/course_grading_policy.js
 msgid "Grace period must be specified in HH:MM format."
 msgstr ""
+"ระยะเวลาผ่อนผันจะต้องมีการระบุใน รูปแบบ HH: MM หรือ รูปแบบ ชั่วโมง ชั่วโมง :"
+" นาทีนาที"
 
 #: cms/static/js/views/asset.js
 msgid "Delete File Confirmation"
-msgstr ""
+msgstr "ยืนยันการลบไฟล์"
 
 #: cms/static/js/views/asset.js
 msgid ""

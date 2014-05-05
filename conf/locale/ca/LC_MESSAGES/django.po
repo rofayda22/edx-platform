@@ -4,6 +4,7 @@
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # 
 # Translators:
+# ariadna.lawyer.23 <ari2332@hotmail.com>, 2014
 # claudi <claudix.kernel@gmail.com>, 2014
 # mcolomer <mcmlilhity@gmail.com>, 2014
 # sarina <sarina@edx.org>, 2014
@@ -2522,6 +2523,8 @@ msgid ""
 "Please visit your <a href=\"{dashboard_link}\">dashboard</a> to see your new"
 " enrollments."
 msgstr ""
+"Siusplau visiti el seu <a href=\"{dashboard_link}\"> quadre de comandaments "
+"</a> per veure les noves inscripcions"
 
 #: lms/djangoapps/shoppingcart/models.py
 msgid "[Refund] User-Requested Refund"
@@ -2529,11 +2532,11 @@ msgstr ""
 
 #: lms/djangoapps/shoppingcart/models.py
 msgid "Mode {mode} does not exist for {course_id}"
-msgstr ""
+msgstr "El mode {mode} no existeix per a {course_id}"
 
 #: lms/djangoapps/shoppingcart/models.py
 msgid "Certificate of Achievement, {mode_name} for course {course}"
-msgstr ""
+msgstr "Certificat d'Exit, {mode_name} per al curs {course}"
 
 #: lms/djangoapps/shoppingcart/models.py
 msgid ""
@@ -2542,6 +2545,11 @@ msgid ""
 "contact {billing_email}. Please include your order number in your e-mail. "
 "Please do NOT include your credit card information."
 msgstr ""
+"Nota - tens fins a 2 setmanes del curs per apuntar-te a l'opció de "
+"Certificat Verificat i rebre un reemborsament complet. Per rebre el "
+"reemborsament, contacta {billing_email}. Siusplai incou el teu número "
+"d'ordre al teu e-mail. Siusplau NOT incloguis informació sobre la teva "
+"targeta de crèdit."
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Order Number"

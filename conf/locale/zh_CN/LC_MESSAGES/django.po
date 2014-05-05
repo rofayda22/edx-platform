@@ -56,9 +56,11 @@
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # 
 # Translators:
+# perypery <410224186@qq.com>, 2014
 # vingte <411029240@qq.com>, 2014
 # alphaf52 <alphaf52@gmail.com>, 2013
 # Bookman <bookman@vip.163.com>, 2013
+# PeterWang.Dut <peterwang.dut@gmail.com>, 2014
 # cmouse <cmouse@163.com>, 2013
 # focusheart <focusheart@gmail.com>, 2014
 # focusheart <focusheart@gmail.com>, 2014
@@ -302,8 +304,8 @@ msgid ""
 "account. Please use your {platform_name} credentials or pick another "
 "provider."
 msgstr ""
-"未找到与您{provider_name}账户相关联的 {platform_name}账户，请使用您的 {platform_name} "
-"证书或选用其他供应商。"
+"未找到与{provider_name}相关联的 {platform_name}账户，请使用您在 {platform_name} "
+"的正确身份或选用其他身份提供方。"
 
 #: common/djangoapps/student/views.py
 msgid "There was an error receiving your login information. Please email us."
@@ -1030,7 +1032,7 @@ msgstr "客户端响应：检查函数返回无效字典！"
 msgid ""
 "Unable to deliver your submission to grader (Reason: {error_msg}). Please "
 "try again later."
-msgstr "无法给您的提交提供分数（原因：{ 错误信息 }）. 请重试 ."
+msgstr "无法将您的提交发送给评分者 (原因：{error_msg})。 请稍后重试。"
 
 #. Translators: 'grader' refers to the edX automatic code grader.
 #. Translators: the `grader` refers to the grading service open response
@@ -4201,7 +4203,7 @@ msgstr "更新您的注册到 {} | 选择你的轨迹"
 
 #: common/templates/course_modes/choose.html
 msgid "Register for {} | Choose Your Track"
-msgstr "注册到 {} | 选择你的轨迹"
+msgstr "注册到 {} | 选择学习轨道"
 
 #: common/templates/course_modes/choose.html
 msgid "Sorry, there was an error when trying to register you"
@@ -4209,11 +4211,11 @@ msgstr "对不起，当尝试注册时发生错误"
 
 #: common/templates/course_modes/choose.html
 msgid "Select your track:"
-msgstr "选择你的轨迹"
+msgstr "选择学习轨道"
 
 #: common/templates/course_modes/choose.html
 msgid "Certificate of Achievement (ID Verified)"
-msgstr "完成证书(ID 已经查证)"
+msgstr "完成证书(ID 认证)"
 
 #: common/templates/course_modes/choose.html
 msgid "Upgrade and work toward a verified Certificate of Achievement."
@@ -4221,20 +4223,20 @@ msgstr "更新并进入了证书查证工作。"
 
 #: common/templates/course_modes/choose.html
 msgid "Sign up and work toward a verified Certificate of Achievement."
-msgstr "登记并进入了证书查证工作。"
+msgstr "注册并完成身份认证证书。"
 
 #: common/templates/course_modes/choose.html
 msgid "Select your contribution for this course (min. $"
-msgstr "选择关于这门课程的款项 (最少. $"
+msgstr "选择课程捐款 (最少 $"
 
 #: common/templates/course_modes/choose.html
 #: lms/templates/verify_student/photo_verification.html
 msgid "):"
-msgstr "):"
+msgstr ")："
 
 #: common/templates/course_modes/choose.html
 msgid "Why do I have to pay? What if I don't meet all the requirements?"
-msgstr "为什么我要付费？为什么我不满足所有要求？"
+msgstr "为什么需要付费？不满足所有要求将如何？"
 
 #: common/templates/course_modes/choose.html
 msgid "Why do I have to pay?"
@@ -4247,18 +4249,18 @@ msgid ""
 "learning through research. While we have established a minimum fee, we ask "
 "that you contribute as much as you can."
 msgstr ""
-"作为一个非赢利组织，edx使用你的投入来支持我们的使命：为世界上所有人提供高质量的教育，研究如何增进学习。虽然我们已经尽可能的节约经费了，但我们还是请你尽可能的提供帮助。"
+"作为一个非赢利组织，edX使用您的捐助来支持我们的使命：为世界上所有人提供高质量的教育，研究如何增进学习。尽管设置了最低收费，但是我们希望您能提供更多力所能及的捐助。"
 
 #: common/templates/course_modes/choose.html
 msgid ""
 "I'd like to pay more than the minimum.  Is my contribution tax deductible?"
-msgstr "如果我付费超过最小值，是否可以作为我的捐赠税？"
+msgstr "如果付费超过最低收费，我的捐赠是否可以抵扣税款？"
 
 #: common/templates/course_modes/choose.html
 msgid ""
 "Please check with your tax advisor to determine whether your contribution is"
 " tax deductible."
-msgstr "请向你的税务咨询人员确认是否可以作为捐赠税。"
+msgstr "请向你的税务咨询人员确认是否可以抵扣税款。"
 
 #: common/templates/course_modes/choose.html
 msgid "What if I can't afford it or don't have the necessary equipment?"
@@ -4315,7 +4317,7 @@ msgstr "为了完成一个认证证书，你需要有一个视频头，一个信
 
 #: common/templates/course_modes/choose.html
 msgid "What is an ID Verified Certificate?"
-msgstr "什么是ID验证证书"
+msgstr "什么是ID认证证书？"
 
 #: common/templates/course_modes/choose.html
 msgid ""
@@ -4481,6 +4483,8 @@ msgid ""
 "{platform_name} account. Please {link_start}log out{link_end}, then log in "
 "with your {provider_name} account."
 msgstr ""
+"所选择的账号 {provider_name} 已经链接到 "
+"{platform_name}的账号。请{link_start}退出{link_end}，然后使用账号 {provider_name}重新登录。"
 
 #: lms/templates/dashboard.html lms/templates/dashboard.html
 #: lms/templates/dashboard/_dashboard_info_language.html
@@ -5077,7 +5081,7 @@ msgstr "记住我"
 #. to the site.
 #: lms/templates/login.html
 msgid "or, if you have connected one of these providers, log in below."
-msgstr ""
+msgstr "或者，如果您有使用所列服务之一，请登录。"
 
 #. Translators: provider_name is the name of an external, third-party user
 #. authentication provider (like Google or LinkedIn).
@@ -5097,13 +5101,13 @@ msgstr "外部资源"
 #. "total_points" is the maximum number of points achievable.
 #: lms/templates/lti.html
 msgid "{points} / {total_points} points"
-msgstr ""
+msgstr "{points} / {total_points} 分"
 
 #. Translators: "total_points" is the maximum number of points achievable on
 #. this LTI unit
 #: lms/templates/lti.html
 msgid "{total_points} points possible"
-msgstr ""
+msgstr "总分{total_points} "
 
 #: lms/templates/lti.html
 msgid "View resource in a new window"
@@ -5537,7 +5541,7 @@ msgid ""
 "You have re-enabled forum notification emails from {platform_name}. Click "
 "{dashboard_link_start}here{link_end} to return to your dashboard. "
 msgstr ""
-"您已经同意接收{dashboard_link_start}论坛邮件提醒，请单击{dashboard_link_start}此处{link_end}返回您的控制面板。"
+"您已经同意接收{platform_name}论坛邮件提醒，请单击{dashboard_link_start}此处{link_end}返回您的控制面板。"
 
 #: lms/templates/seq_module.html lms/templates/seq_module.html
 #: lms/templates/discussion/mustache/_pagination.mustache
@@ -5839,7 +5843,7 @@ msgid ""
 "you did not mean to do this, click {undo_link_start}here{link_end} to re-"
 "subscribe."
 msgstr ""
-"您不将再接收到{dashboard_link_start}论坛邮件提醒，请单击{dashboard_link_start}此处{link_end}返回您的控制面板。如果您不是有意取消，请单击{undo_link_start}此处{link_end}重新订阅消息。"
+"您不将再接收到{platform_name}论坛邮件提醒，请单击{dashboard_link_start}此处{link_end}返回您的控制面板。如果您不是有意取消，请单击{undo_link_start}此处{link_end}重新订阅消息。"
 
 #: lms/templates/using.html
 msgid "Using the system"
@@ -5901,7 +5905,7 @@ msgstr "音量"
 
 #: lms/templates/video.html
 msgid "Fill browser"
-msgstr "填写浏览器"
+msgstr "填充浏览器"
 
 #: lms/templates/video.html
 msgid "HD off"
@@ -6145,7 +6149,9 @@ msgid ""
 "this course. You may need to {start_logout_tag}log out{end_tag} then try the"
 " register button again. Please visit the {start_help_tag}help page{end_tag} "
 "for a possible solution."
-msgstr "当前登录用户的账号没有参加此课程的权限，建议您登出后尝试重新注册，请访问帮助页面查找解决方法。"
+msgstr ""
+"当前登录用户的账号没有参加此课程的权限，建议您登出{start_logout_tag}log "
+"out{end_tag}后尝试重新注册，请访问{start_help_tag}help page{end_tag}帮助页面查找解决方法。"
 
 #: lms/templates/courseware/course_about.html
 msgid "About {course.display_number_with_default}"
@@ -6354,7 +6360,7 @@ msgid ""
 " fix it as soon as possible. Please email us at {link_to_support_email} to "
 "report any problems or downtime."
 msgstr ""
-"非常抱歉，该模块暂时无法使用，我们的教员正在努力尽快修复问题。要报告您发现的任何问题或遇到网站停摆，请向{tech_support_email}发送邮件"
+"非常抱歉，该模块暂时无法使用，我们的教员正在努力尽快修复问题。要报告您发现的任何问题或遇到网站停摆，请向{link_to_support_email}发送邮件"
 
 #: lms/templates/courseware/grade_summary.html
 #: lms/templates/courseware/instructor_dashboard.html
@@ -6593,7 +6599,7 @@ msgstr "大批次注册"
 msgid ""
 "Enroll or un-enroll one or many students: enter emails, separated by new "
 "lines or commas;"
-msgstr "注册或未注册的一个或多个学生：输入电子邮件地址，用逗号或隔行来分隔；"
+msgstr "一个或多个学生注册或取消注册：输入电子邮件地址，用逗号或重启一行来分隔；"
 
 #: lms/templates/courseware/instructor_dashboard.html
 msgid "Notify students by email"
@@ -6966,7 +6972,7 @@ msgstr "此链接会打开或下载您验证过的PDF{cert_name_long}证书。"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Download Your ID Verified {cert_name_short} (PDF)"
-msgstr "载您已经通过身份认证的 {cert_name_short} (PDF)证书"
+msgstr "下载您已经通过身份认证的 {cert_name_short} (PDF)证书"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Complete our course feedback survey"
@@ -7024,8 +7030,8 @@ msgid ""
 "your achievement. {link_start}Learn more about the verified "
 "{cert_name_long}{link_end}."
 msgstr ""
-"您仍然可以选修该课程，虽然该课程曾经是您的身份验证付费课程{cert_name_long} "
-"。如果您计划完成整个课程，这是一种体现您成就感的极好方式。点击{a_start}了解更多关于验证证书{cert_name_long}的信息{a_end}。"
+"您仍然可以选修该课程，虽然该课程曾经是您的身份验证付费课程{cert_name_long} 。如果您计划完成整个课程，这是一种体现您成就感的极好方式。点击{link_start\n"
+"}了解更多关于验证证书{cert_name_long}的信息{link_end}。"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Upgrade to Verified Track"
@@ -7555,7 +7561,7 @@ msgstr "折叠论坛话题"
 
 #: lms/templates/discussion/mustache/_inline_thread_show.mustache
 msgid "This thread has been pinned by course staff."
-msgstr "课程教员已经钉住该帖子。"
+msgstr "该帖已被工作人员置顶。"
 
 #: lms/templates/discussion/mustache/_pagination.mustache
 #: lms/templates/discussion/mustache/_pagination.mustache
@@ -7920,7 +7926,7 @@ msgstr "下图显示的是您的班级中每个问答的成绩分布，问答由
 msgid ""
 "Scores are shown without weighting applied, so if your problem contains 2 "
 "questions, it will display as having a total of 2 points."
-msgstr "所显示的成绩尚未加权，所以，如果您的问答包含2个为题，系统显示的总分为2分。"
+msgstr "所显示的成绩尚未加权，所以，如果您的问答包含2个问题，系统显示的总分为2分。"
 
 #: lms/templates/instructor/instructor_dashboard_2/analytics.html
 msgid "Loading problem list..."
@@ -7952,7 +7958,7 @@ msgstr "课程显示名称："
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Has the course started?"
-msgstr "课程开始吗？"
+msgstr "课程开始了吗？"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
@@ -8481,7 +8487,7 @@ msgstr "对学生的提交记录重新评分"
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid ""
 "You may also delete the entire state of a student for the specified problem:"
-msgstr "您也可以删除一个有特定问题学生的全部状态"
+msgstr "您也可以删除有特定问题学生的全部状态"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Delete Student State for Problem"
@@ -9160,7 +9166,7 @@ msgstr " 目前{platform_name}平台的服务器已经超负荷"
 #: lms/templates/university_profile/edge.html
 #: lms/templates/university_profile/edge.html
 msgid "edX edge"
-msgstr "edX边缘"
+msgstr "edX edge"
 
 #: lms/templates/university_profile/edge.html
 msgid "Log in to your courses"
@@ -9500,7 +9506,7 @@ msgstr "是的！您可以通过这些信息确定我的身份。"
 
 #: lms/templates/verify_student/midcourse_photo_reverification.html
 msgid "Submit photos &amp; re-verify"
-msgstr "提交照片与amp；重现验证"
+msgstr "提交照片与amp；重新验证"
 
 #: lms/templates/verify_student/midcourse_reverification_confirmation.html
 #: lms/templates/verify_student/reverification_confirmation.html
@@ -9621,7 +9627,7 @@ msgid ""
 " be able to correct a failed verification</strong>. If you think there was "
 "an error in the review, please contact us at {email}"
 msgstr ""
-"由于重新认证的开放时间很短，你<strong>可能无法修正失败失败<strong>。如果你认为审核可能存在问题，请通过{email}联系我们"
+"由于重新认证的开放时间很短，你<strong>可能无法修正失败失败</strong>。如果你认为审核可能存在问题，请通过{email}联系我们"
 
 #: lms/templates/verify_student/photo_reverification.html
 msgid "Re-Verification"
@@ -9810,7 +9816,7 @@ msgstr "再次拍摄照片"
 msgid ""
 "Make sure your full name on your edX account ({full_name}) matches your ID. "
 "We will also use this as the name on your certificate."
-msgstr "确认你edX账户中的全面 ({full_name})匹配你的ID材料。我们也将把这个名字用在你的证书中。"
+msgstr "确认你edX账户中的名字 ({full_name})匹配你的ID材料。我们也将把这个名字用在你的证书中。"
 
 #: lms/templates/verify_student/photo_reverification.html
 msgid ""

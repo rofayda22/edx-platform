@@ -8,6 +8,7 @@
 # anantvima <anant.vima@anu.edu.au>, 2014
 # Chandra Shekhar Sharma <shekharsharma041@gmail.com>, 2014
 # ria1234 <contactpayal@yahoo.com.au>, 2014
+# gvidushiin <gvidushiin@gmail.com>, 2014
 # ria1234 <contactpayal@yahoo.com.au>, 2014
 # sarina <sarina@edx.org>, 2014
 # Chandra Shekhar Sharma <shekharsharma041@gmail.com>, 2014
@@ -19,6 +20,7 @@
 # Translators:
 # anantvima <anant.vima@anu.edu.au>, 2014
 # ria1234 <contactpayal@yahoo.com.au>, 2014
+# gvidushiin <gvidushiin@gmail.com>, 2014
 # ria1234 <contactpayal@yahoo.com.au>, 2014
 # Chandra Shekhar Sharma <shekharsharma041@gmail.com>, 2014
 msgid ""
@@ -26,8 +28,8 @@ msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
 "POT-Creation-Date: 2014-05-02 17:09-0400\n"
-"PO-Revision-Date: 2014-04-26 15:31+0000\n"
-"Last-Translator: Chandra Shekhar Sharma <shekharsharma041@gmail.com>\n"
+"PO-Revision-Date: 2014-05-03 09:31+0000\n"
+"Last-Translator: gvidushiin <gvidushiin@gmail.com>\n"
 "Language-Team: Hindi (http://www.transifex.com/projects/p/edx-platform/language/hi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -102,7 +104,7 @@ msgstr[1] "(%(num_points)s संभव अंक)"
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
 msgid "Answer:"
-msgstr ""
+msgstr "जवाब "
 
 #. Translators: the word Answer here refers to the answer to a problem the
 #. student must solve.;
@@ -1658,7 +1660,7 @@ msgstr "“<%= name %>” पर नयी पीडीऍफ़ अपलोड �
 
 #: cms/static/js/views/edit_chapter.js
 msgid "Please select a PDF file to upload."
-msgstr ""
+msgstr "कृपया एक पीडीएफ फाइल अपलोड करने के लिये  चुनिए"
 
 #: cms/static/js/views/edit_textbook.js
 #: cms/static/js/views/overview_assignment_grader.js
@@ -1749,7 +1751,7 @@ msgstr "नष्ट हो रहा है"
 
 #: cms/static/js/views/uploads.js
 msgid "Upload"
-msgstr ""
+msgstr "अपलोड "
 
 #: cms/static/js/views/uploads.js
 msgid "We're sorry, there was an error"

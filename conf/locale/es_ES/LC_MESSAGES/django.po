@@ -10,6 +10,7 @@
 # juanan <juanan@diariolinux.com>, 2013-2014
 # juanan <juanan@diariolinux.com>, 2014
 # mcolomer <mcmlilhity@gmail.com>, 2014
+# RUTHQUINTANA <muchosabina@hotmail.com>, 2014
 # valenciaupv <valenciaupv@gmail.com>, 2014
 # #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
 # edX translation file.
@@ -889,7 +890,7 @@ msgstr "sin responder"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "processing"
-msgstr ""
+msgstr "procesando"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid ""
