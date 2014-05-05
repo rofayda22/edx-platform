@@ -35,6 +35,8 @@ def import_static_content(
         policy = {}
 
     verbose = True
+
+    mimetypes.add_type('application/json', '.sjson')
     mimetypes_list = mimetypes.types_map.values()
 
     for dirname, _, filenames in os.walk(static_dir):
