@@ -4,7 +4,11 @@
 Tracking Logs
 ######################
 
-This chapter provides reference information about the event data that is delivered in data packages. Events are initiated by interactions with the courseware and the Instructor Dashboard in the LMS, and are stored in JSON documents. In the data package, event data is delivered in a log file. 
+This chapter provides reference information about the event data that is
+delivered in data packages. Events are emitted by the server or the browser to
+capture information about interactions with the courseware and the Instructor
+Dashboard in the LMS, and are stored in JSON documents. In the data package,
+event data is delivered in a log file.
 
 The sections in this chapter describe:
 
@@ -155,9 +159,9 @@ This section describes the JSON fields that are common to the schema definitions
 ``context`` Field
 ===================
 
-**Type:** string/JSON 
+**Type:** dict
 
-**Details:** For all event types, this dict type field includes member fields
+**Details:** For all event types, this field includes member fields
 that identify the course that generated the event, the organization that lists
 the course, and the individual who is performing the action.
 ``course_user_tags`` contains a dictionary with the key(s) and value(s) from the
@@ -182,9 +186,9 @@ may duplicate this data. ``course_user_tags`` added 12 Mar 2014.
 ``event`` Field
 ===================
 
-**Type:** string/JSON
+**Type:** dict
 
-**Details:** For all event types, this dict type field includes member fields
+**Details:** For all event types, this field includes member fields
 that identify specifics of the triggered event. Different member fields are
 supplied for different types of events: see the description for each event type.
 
@@ -229,7 +233,7 @@ on the server.
 
 **Type:** string
 
-**Details:** Page user was visiting when the event was fired. 
+**Details:** Page user was visiting when the event was emitted. 
 
 **Values/Format/Member Fields:** '$URL'
 
@@ -249,7 +253,7 @@ on the server.
 
 **Type:** string
 
-**Details:** Gives the UTC time at which the event was fired.
+**Details:** Gives the UTC time at which the event was emitted.
 
 **Values/Format/Member Fields:** 'YYYY-MM-DDThh:mm:ss.xxxxxx'
 
@@ -257,7 +261,7 @@ on the server.
 ``username`` Field
 ===================
 
-**Type:** The username of the user who caused the event to fire. This string is
+**Type:** The username of the user who caused the event to be emitted. This string is
 empty for anonymous events, such as when the user is not logged in.
 
 **Details:** string
@@ -297,15 +301,15 @@ processing of a request).
 Enrollment Event Types
 =========================
 
-These event types are fired by the server in response to course enrollment
+The server emits these event types in response to course enrollment
 activities completed by a student.
 
-* ``edx.course.enrollment.activated`` is fired when a student enrolls in a
-  course. On edx.org, this is typically the result of a student clicking 
-  **Register** for the course. 
+* When a student enrolls in a course, ``edx.course.enrollment.activated`` is
+  emitted. On edx.org, this is typically the result of a student clicking
+  **Register** for the course.
 
-* ``edx.course.enrollment.deactivated`` is fired when a student unenrolls from a
-  course. On edx.org, this is typically the result of a student clicking
+* When a student unenrolls from a course, ``edx.course.enrollment.deactivated``
+  is emitted. On edx.org, this is typically the result of a student clicking
   **Unregister** for the course.
 
 In addition, actions by instructors and course staff members also generate
@@ -316,7 +320,19 @@ result in these events, see :ref:`instructor_enrollment`.
 
 **History**: The enrollment event types were added on 03 Dec 2013.
 
-.. Alison: move other tables to this format, and identify these event and context fields as member fields.
+``context`` **Member Fields**: 
+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details and Member Fields
+   * - ``path``
+     - string
+     - The URL path that generated the event: '/change_enrollment'.
+       **History**: Added 07 May 2014.
 
 ``event`` **Member Fields**: 
 
@@ -347,20 +363,6 @@ result in these events, see :ref:`instructor_enrollment`.
      - string
      - The Django session ID, if available. Can be used to identify events for a
        specific user within a session. **History**: Added 07 May 2014.
-
-``context`` **Member Fields**: 
-
-.. list-table::
-   :widths: 15 15 60
-   :header-rows: 1
-
-   * - Field
-     - Type
-     - Details and Member Fields
-   * - ``path``
-     - string
-     - The URL path that generated the event: '/change_enrollment'.
-       **History**: Added 07 May 2014.
 
 Example
 --------
@@ -399,13 +401,13 @@ Example
 Navigational Event Types   
 ==============================
 
-These event types are fired when a user selects a navigational control. 
+The browser emits these event types when a user selects a navigational control. 
 
-* ``seq_goto`` fires when a user jumps between units in a sequence. 
+* ``seq_goto`` is emitted when a user jumps between units in a sequence. 
 
-* ``seq_next`` fires when a user navigates to the next unit in a sequence. 
+* ``seq_next`` is emitted when a user navigates to the next unit in a sequence. 
 
-* ``seq_prev`` fires when a user navigates to the previous unit in a sequence. 
+* ``seq_prev`` is emitted when a user navigates to the previous unit in a sequence. 
 
 **Component**: Sequence 
 
@@ -413,21 +415,27 @@ These event types are fired when a user selects a navigational control.
 
 **Event Source**: Browser
 
-``event`` **Fields**: The navigational event types listed above have the same fields.
+``event`` **Member Fields**: The navigational event types listed above have the same fields in the ``event`` dict field..
 
-+--------------------+---------------+---------------------------------------------------------------------+
-| Field              | Type          | Details                                                             |
-+====================+===============+=====================================================================+
-| ``old``            | integer       | For ``seq_goto``, the index of the unit being jumped from.          |
-|                    |               | For ``seq_next`` and ``seq_prev``, the index of the unit being      |
-|                    |               | navigated away from.                                                |
-+--------------------+---------------+---------------------------------------------------------------------+
-| ``new``            | integer       | For ``seq_goto``, the index of the unit being jumped to.            |
-|                    |               | For ``seq_next`` and ``seq_prev``, the index of the unit being      |
-|                    |               | navigated to.                                                       |
-+--------------------+---------------+---------------------------------------------------------------------+
-| ``id``             | integer       | The edX ID of the sequence.                                         |
-+--------------------+---------------+---------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``old``
+     - integer
+     - For ``seq_goto``, the index of the unit being jumped from. For
+       ``seq_next`` and ``seq_prev``, the index of the unit being navigated away
+       from.
+   * - ``new``
+     - integer
+     - For ``seq_goto``, the index of the unit being jumped to. For ``seq_next``
+       and ``seq_prev``, the index of the unit being navigated to. 
+   * - ``id``
+     - integer
+     - The edX ID of the sequence. 
 
 ``page_close``
 ---------------
@@ -438,7 +446,7 @@ An additional event type, ``page_close``, originates from within the Logger itse
 
 **Event Source**: Browser
 
-``event`` **Fields**: None
+``event`` **Member Fields**: None
 
 .. _video:
 
@@ -446,7 +454,7 @@ An additional event type, ``page_close``, originates from within the Logger itse
 Video Interaction Event Types   
 ==============================
 
-These event types can fire when a user works with a video.
+The browser emits these event types when a user works with a video.
 
 **Component**: Video
 
@@ -455,62 +463,107 @@ These event types can fire when a user works with a video.
 ``pause_video``, ``play_video``
 ---------------------------------
 
-* The ``pause_video`` event type fires on video pause. 
+* The ``pause_video`` event type is emitted on video pause. 
 
-* The ``play_video`` event type fires on video play. 
+* The ``play_video`` event type is emitted on video play. 
 
-``event`` **Fields**: These event types have the same ``event`` fields.
+``event`` **Member Fields**: These event types have the same ``event`` fields.
 
-+-----------------+--------+----------------------------------------------------+
-| Field           | Type   | Details                                            |
-+=================+========+====================================================+
-| ``id``          | string | EdX ID of the video being watched (for example,    |
-|                 |        | i4x-HarvardX-PH207x-video-Simple_Random_Sample).   |
-+-----------------+--------+----------------------------------------------------+
-| ``code``        | string | YouTube ID of the video being watched (for         |
-|                 |        | example, FU3fCJNs94Y).                             |
-+-----------------+--------+----------------------------------------------------+
-| ``currentTime`` | float  | Time the video was played at, in seconds.          |
-+-----------------+--------+----------------------------------------------------+
-| ``speed``       | string | Video speed in use: '0.75', '1.0', '1.25', '1.50'. |
-+-----------------+--------+----------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``id``
+     - string
+     - EdX ID of the video being watched (for example, i4x-HarvardX-PH207x-video-Simple_Random_Sample).
+   * - ``code``
+     - string
+     - YouTube ID of the video being watched (for example, FU3fCJNs94Y).
+   * - ``currentTime``
+     - float
+     - Time the video was played at, in seconds. 
+   * - ``speed``
+     - string
+     - Video speed in use: '0.75', '1.0', '1.25', '1.50'.
 
 ``seek_video``
 -----------------
 
-The ``seek_video`` event fires when the user clicks the playback bar or transcript to go to a different point in the video file.
+The browser emits ``seek_video`` events when a user clicks the playback bar or
+transcript to go to a different point in the video file.
 
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``old_time``        |               | The time in the video that the user is coming from.                 |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``new_time``        |               | The time in the video that the user is going to.                    |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``type``            |               | The navigational method used to change position within the video.   |
-+---------------------+---------------+---------------------------------------------------------------------+
+``event`` **Member Fields**: 
+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``old_time``
+     - 
+     - The time in the video that the user is coming from.
+   * - ``new_time``
+     - 
+     - The time in the video that the user is going to.
+   * - ``type``
+     - 
+     - The navigational method used to change position within the video.
+
+.. need types
+
 
 ``speed_change_video`` 
 ------------------------
 
-The ``speed_change_video`` event fires when a user selects a different playing speed for the video. 
+The browser emits ``speed_change_video`` events when a user selects a different playing speed for the video. 
 
-**History**: Prior to 12 Feb 2014, this event fired when the user selected either the same speed or a different speed.  
+**History**: Prior to 12 Feb 2014, this event was emitted when the user selected either the same speed or a different speed.  
 
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``current_time``    |               | The time in the video that the user chose to change the             |
-|                     |               | playing speed.                                                      |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``old_speed``       |               | The speed at which the video was playing.                           |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``new_speed``       |               | The speed that the user selected for the video to play.             |
-+---------------------+---------------+---------------------------------------------------------------------+
+``event`` **Member Fields**: 
+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``current_time``
+     - 
+     - The time in the video that the user chose to change the playing speed.  
+   * - ``old_speed``
+     - 
+     - The speed at which the video was playing. 
+   * - ``new_speed``
+     - 
+     - The speed that the user selected for the video to play. 
 
 .. types needed
 
 .. additional missing video event types TBD
+
+
+
+``load_video``
+-----------------
+
+.. %%TBD
+
+``hide_transcript``
+-------------------
+
+.. %%TBD
+
+``show_transcript``
+--------------------
+
+.. %%TBD
+
 
 .. _pdf:
 
@@ -521,8 +574,8 @@ Textbook Interaction Event Types
 ``book``
 ----------
 
-The ``book`` event type fires when a user navigates within the PDF Viewer or the
-PNG Viewer.
+The browser emits ``book`` events when a user navigates within the PDF Viewer or
+the PNG Viewer.
 
 * For textbooks in PDF format, the URL in the common ``page`` field contains
   '/pdfbook/'.
@@ -536,38 +589,50 @@ PNG Viewer.
 **History**: This event type changed on 16 Apr 2014 to include the ``name`` and
 ``chapter`` fields.
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
-+-------------+---------+----------------------------------------------------------------------------------+
-| Field       | Type    | Details                                                                          |
-+=============+=========+==================================================================================+
-| ``type``    | string  | 'gotopage' fires when a page loads after the student manually enters its number. |
-|             |         +----------------------------------------------------------------------------------+
-|             |         | 'prevpage' fires when the next page button is clicked.                           |
-|             |         +----------------------------------------------------------------------------------+
-|             |         | 'nextpage' fires when the previous page button is clicked.                       |
-+-------------+---------+----------------------------------------------------------------------------------+
-| ``name``    | string  | For 'gotopage', set to ``textbook.pdf.page.loaded``.                             |
-|             |         +----------------------------------------------------------------------------------+
-|             |         | For 'prevpage', set to ``textbook.pdf.page.navigatedprevious``.                  |
-|             |         +----------------------------------------------------------------------------------+
-|             |         | For 'nextpage', set to ``textbook.pdf.page.navigatednext``.                      |
-|             |         +----------------------------------------------------------------------------------+
-|             |         | **History**: Added for events produced by the PDF Viewer on 16 Apr 2014.         |
-+-------------+---------+----------------------------------------------------------------------------------+
-| ``chapter`` | string  | The name of the PDF file.                                                        |
-|             |         +----------------------------------------------------------------------------------+
-|             |         | **History**: Added for events produced by the PDF Viewer on 16 Apr 2014.         |
-+-------------+---------+----------------------------------------------------------------------------------+
-| ``old``     | integer | The original page number. Applies to 'gotopage' event types only.                |
-+-------------+---------+----------------------------------------------------------------------------------+
-| ``new``     | integer | Destination page number.                                                         |
-+-------------+---------+----------------------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``type``
+     - string
+     - 'gotopage' is emitted when a page loads after the student manually enters its number.
+   * - 
+     -  
+     - 'prevpage' is emitted when the next page button is clicked.
+   * - 
+     - 
+     - 'nextpage' is emitted when the previous page button is clicked.
+   * - ``name``
+     - string
+     - For 'gotopage', set to ``textbook.pdf.page.loaded``.
+   * - 
+     - 
+     - For 'prevpage', set to ``textbook.pdf.page.navigatedprevious``. 
+   * - 
+     - 
+     - For 'nextpage', set to ``textbook.pdf.page.navigatednext``. 
+   * - 
+     - 
+     - **History**: Added for events produced by the PDF Viewer on 16 Apr 2014.
+   * - ``chapter``
+     - string
+     - The name of the PDF file. **History**: Added for events produced by the PDF Viewer on 16 Apr 2014.
+   * - ``old``
+     - integer
+     - The original page number. Applies to 'gotopage' event types only.   
+   * - ``new``
+     - integer
+     - Destination page number.
 
 ``textbook.pdf.thumbnails.toggled``
 ------------------------------------
 
-The ``textbook.pdf.thumbnails.toggled`` event type fires when a user clicks
+The browser emits ``textbook.pdf.thumbnails.toggled`` events when a user clicks
 on the icon to show or hide page thumbnails.
 
 **Component**: PDF Viewer 
@@ -576,22 +641,29 @@ on the icon to show or hide page thumbnails.
 
 **History**: This event type was added on 16 Apr 2014.
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
-+-------------+---------+---------------------------------------------------------------------+
-| Field       | Type    | Details                                                             |
-+=============+=========+=====================================================================+
-| ``name``    | string  | ``textbook.pdf.thumbnails.toggled``                                 |
-+-------------+---------+---------------------------------------------------------------------+
-| ``chapter`` | string  | The name of the PDF file.                                           |
-+-------------+---------+---------------------------------------------------------------------+
-| ``page``    | integer | The number of the page that is open when the user clicks this icon. |
-+-------------+---------+---------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``name``
+     - string
+     - ``textbook.pdf.thumbnails.toggled``
+   * - ``chapter``
+     -  string
+     -  The name of the PDF file.
+   * -  ``page``
+     -  integer
+     -  The number of the page that is open when the user clicks this icon. 
 
 ``textbook.pdf.thumbnail.navigated``
 ------------------------------------
 
-The ``textbook.pdf.thumbnail.navigated`` event type fires when a user clicks
+The browser emits ``textbook.pdf.thumbnail.navigated`` events when a user clicks
 on a thumbnail image to navigate to a page.
 
 **Component**: PDF Viewer 
@@ -600,26 +672,33 @@ on a thumbnail image to navigate to a page.
 
 **History**: This event type was added on 16 Apr 2014.
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
-+---------------------+---------+-------------------------------------------------+
-| Field               | Type    | Details                                         |
-+=====================+=========+=================================================+
-| ``name``            | string  | ``textbook.pdf.thumbnail.navigated``            |
-+---------------------+---------+-------------------------------------------------+
-| ``chapter``         | string  | The name of the PDF file.                       |
-+---------------------+---------+-------------------------------------------------+
-| ``page``            | integer | The page number of the thumbnail clicked.       |
-+---------------------+---------+-------------------------------------------------+
-| ``thumbnail_title`` | string  | The identifying name for the destination of the |
-|                     |         | thumbnail. For example, Page 2.                 |
-+---------------------+---------+-------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``name``
+     - string
+     - ``textbook.pdf.thumbnail.navigated``
+   * - ``chapter`` 
+     - string
+     - The name of the PDF file. 
+   * - ``page``
+     - integer
+     - The page number of the thumbnail clicked.
+   * - ``thumbnail_title``
+     - string
+     - The identifying name for the destination of the thumbnail. For example, Page 2. 
 
 ``textbook.pdf.outline.toggled``
 ------------------------------------
 
-The ``textbook.pdf.outline.toggled`` event type fires when a user clicks the
-outline icon to show or hide a list of the book's chapters. 
+The browser emits ``textbook.pdf.outline.toggled`` events when a user clicks the
+outline icon to show or hide a list of the book's chapters.
 
 **Component**: PDF Viewer 
 
@@ -627,23 +706,30 @@ outline icon to show or hide a list of the book's chapters.
 
 **History**: This event type was added on 16 Apr 2014.
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
-+-------------+---------+---------------------------------------------------------------------+
-| Field       | Type    | Details                                                             |
-+=============+=========+=====================================================================+
-| ``name``    | string  | ``textbook.pdf.outline.toggled``                                    |
-+-------------+---------+---------------------------------------------------------------------+
-| ``chapter`` | string  | The name of the PDF file.                                           |
-+-------------+---------+---------------------------------------------------------------------+
-| ``page``    | integer | The number of the page that is open when the user clicks this link. |
-+-------------+---------+---------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``name``
+     - string
+     - ``textbook.pdf.outline.toggled``
+   * - ``chapter`` 
+     - string
+     - The name of the PDF file.
+   * - ``page`` 
+     - integer
+     - The number of the page that is open when the user clicks this link.
 
 ``textbook.pdf.chapter.navigated``
 ------------------------------------
 
-The ``textbook.pdf.chapter.navigated`` event type fires when a user clicks on
-a link in the outline to navigate to a chapter.
+The browser emits ``textbook.pdf.chapter.navigated`` events when a user clicks
+on a link in the outline to navigate to a chapter.
 
 **Component**: PDF Viewer 
 
@@ -651,23 +737,29 @@ a link in the outline to navigate to a chapter.
 
 **History**: This event type was added on 16 Apr 2014.
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
-+-------------------+---------+-------------------------------------------------+
-| Field             | Type    | Details                                         |
-+===================+=========+=================================================+
-| ``name``          | string  | ``textbook.pdf.chapter.navigated``              |
-+-------------------+---------+-------------------------------------------------+
-| ``chapter``       | string  | The name of the PDF file.                       |
-+-------------------+---------+-------------------------------------------------+
-| ``chapter_title`` | string  | The identifying name for the destination of the |
-|                   |         | outline link.                                   |
-+-------------------+---------+-------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
 
+   * - Field
+     - Type
+     - Details
+   * - ``name``
+     - string
+     - ``textbook.pdf.chapter.navigated``
+   * - ``chapter``
+     - string
+     - The name of the PDF file.
+   * - ``chapter_title``
+     - string
+     - The identifying name for the destination of the outline link. 
+     
 ``textbook.pdf.page.navigated``
 ------------------------------------
 
-The ``textbook.pdf.page.navigated`` event type fires when a user manually enters
+The browser emits ``textbook.pdf.page.navigated`` events when a user manually enters
 a page number.
 
 **Component**: PDF Viewer 
@@ -676,22 +768,29 @@ a page number.
 
 **History**: This event type was added on 16 Apr 2014.
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
-+-------------+---------+--------------------------------------------------+
-| Field       | Type    | Details                                          |
-+=============+=========+==================================================+
-| ``name``    | string  | ``textbook.pdf.page.navigated``                  |
-+-------------+---------+--------------------------------------------------+
-| ``chapter`` | string  | The name of the PDF file.                        |
-+-------------+---------+--------------------------------------------------+
-| ``page``    | integer | The destination page number entered by the user. |
-+-------------+---------+--------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``name``
+     - string
+     - ``textbook.pdf.page.navigated``
+   * - ``chapter``
+     - string
+     - The name of the PDF file.
+   * - ``page``
+     - integer
+     - The destination page number entered by the user.
 
 ``textbook.pdf.zoom.buttons.changed``
 --------------------------------------
 
-The ``textbook.pdf.zoom.buttons.changed`` event type fires when a user clicks
+The browser emits ``textbook.pdf.zoom.buttons.changed`` events when a user clicks
 either the Zoom In or Zoom Out icon.
 
 **Component**: PDF Viewer 
@@ -700,24 +799,32 @@ either the Zoom In or Zoom Out icon.
 
 **History**: This event type was added on 16 Apr 2014.
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
-+---------------+---------+--------------------------------------------------------------------+
-| Field         | Type    | Details                                                            |
-+===============+=========+====================================================================+
-| ``name``      | string  | ``textbook.pdf.zoom.buttons.changed``                              |
-+---------------+---------+--------------------------------------------------------------------+
-| ``direction`` | string  | 'in', 'out'                                                        |
-+---------------+---------+--------------------------------------------------------------------+
-| ``chapter``   | string  | The name of the PDF file.                                          |
-+---------------+---------+--------------------------------------------------------------------+
-| ``page``      | integer | The number of the page that is open when the user clicks the icon. |
-+---------------+---------+--------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``name``
+     - string
+     - ``textbook.pdf.zoom.buttons.changed``
+   * - ``direction``
+     -  string
+     -  'in', 'out'
+   * - ``chapter``
+     - string
+     - The name of the PDF file.
+   * - ``page``
+     - integer
+     - The number of the page that is open when the user clicks the icon.
 
 ``textbook.pdf.zoom.menu.changed``
 ------------------------------------
 
-The ``textbook.pdf.zoom.menu.changed`` event type fires when a user selects a
+The browser emits ``textbook.pdf.zoom.menu.changed`` events when a user selects a
 magnification setting.
 
 **Component**: PDF Viewer 
@@ -726,24 +833,32 @@ magnification setting.
 
 **History**: This event type was added on 16 Apr 2014.
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
-+-------------+---------+--------------------------------------------------------------------------------+
-| Field       | Type    | Details                                                                        |
-+=============+=========+================================================================================+
-| ``name``    | string  | ``textbook.pdf.zoom.menu.changed``                                             |
-+-------------+---------+--------------------------------------------------------------------------------+
-| ``amount``  | string  | '1', '0.75', '1.5', 'custom', 'page_actual', 'auto', 'page_width', 'page_fit'. |
-+-------------+---------+--------------------------------------------------------------------------------+
-| ``chapter`` | string  | The name of the PDF file.                                                      |
-+-------------+---------+--------------------------------------------------------------------------------+
-| ``page``    | integer | The number of the page that is open when the user selects this value.          |
-+-------------+---------+--------------------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``name``
+     - string
+     - ``textbook.pdf.zoom.menu.changed``
+   * - ``amount``
+     - string
+     - '1', '0.75', '1.5', 'custom', 'page_actual', 'auto', 'page_width', 'page_fit'.
+   * - ``chapter``
+     - string
+     - The name of the PDF file.
+   * - ``page``
+     - integer
+     - The number of the page that is open when the user selects this value.
 
 ``textbook.pdf.display.scaled``
 ------------------------------------
 
-The ``textbook.pdf.display.scaled`` event type fires when the display
+The browser emits ``textbook.pdf.display.scaled`` events when the display
 magnification changes. These changes occur after a student selects a
 magnification setting from the zoom menu or resizes the browser window.
 
@@ -753,24 +868,32 @@ magnification setting from the zoom menu or resizes the browser window.
 
 **History**: This event type was added on 16 Apr 2014.
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
-+-------------+---------+-------------------------------------------------------------------+
-| Field       | Type    | Details                                                           |
-+=============+=========+===================================================================+
-| ``name``    | string  | ``textbook.pdf.display.scaled``                                   |
-+-------------+---------+-------------------------------------------------------------------+
-| ``amount``  | string  | The magnification setting; for example, 0.95 or 1.25.             |
-+-------------+---------+-------------------------------------------------------------------+
-| ``chapter`` | string  | The name of the PDF file.                                         |
-+-------------+---------+-------------------------------------------------------------------+
-| ``page``    | integer | The number of the page that is open when the scaling takes place. |
-+-------------+---------+-------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``name``
+     - string
+     - ``textbook.pdf.display.scaled``
+   * - ``amount``
+     - string
+     - The magnification setting; for example, 0.95 or 1.25.
+   * - ``chapter``
+     - string
+     - The name of the PDF file. 
+   * - ``page`` 
+     - integer
+     - The number of the page that is open when the scaling takes place.
 
 ``textbook.pdf.display.scrolled``
 ------------------------------------
 
-The ``textbook.pdf.display.scrolled`` event type fires each time the displayed
+The browser emits ``textbook.pdf.display.scrolled`` events each time the displayed
 page changes while a user scrolls up or down.
 
 **Component**: PDF Viewer 
@@ -779,27 +902,35 @@ page changes while a user scrolls up or down.
 
 **History**: This event type was added on 16 Apr 2014.
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
-+---------------+---------+---------------------------------------------------------------------+
-| Field         | Type    | Details                                                             |
-+===============+=========+=====================================================================+
-| ``name``      | string  | ``textbook.pdf.display.scrolled``                                   |
-+---------------+---------+---------------------------------------------------------------------+
-| ``chapter``   | string  | The name of the PDF file.                                           |
-+---------------+---------+---------------------------------------------------------------------+
-| ``page``      | integer | The number of the page that is open when the scrolling takes place. |
-+---------------+---------+---------------------------------------------------------------------+
-| ``direction`` | string  | 'up', 'down'                                                        |
-+---------------+---------+---------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``name``
+     - string
+     - ``textbook.pdf.display.scrolled``
+   * - ``chapter``
+     - string
+     - The name of the PDF file. 
+   * - ``page``
+     - integer
+     - The number of the page that is open when the scrolling takes place.
+   * - ``direction``
+     - string
+     - 'up', 'down' 
 
 ``textbook.pdf.search.executed``
 ------------------------------------
 
-The ``textbook.pdf.search.executed`` event type fires when a user searches for a
+The browser emits ``textbook.pdf.search.executed`` events when a user searches for a
 text value in the file. To reduce the number of events produced, instead of
 producing one event per entered character this event type defines a search
-string as the set of characters that are consecutively entered in the search
+string as the set of characters that is consecutively entered in the search
 field within 500ms of each other.
 
 **Component**: PDF Viewer 
@@ -808,33 +939,42 @@ field within 500ms of each other.
 
 **History**: This event type was added on 16 Apr 2014.
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
-+-------------------+---------+------------------------------------------------------------------+
-| Field             | Type    | Details                                                          |
-+===================+=========+==================================================================+
-| ``name``          | string  | ``textbook.pdf.search.executed``                                 |
-+-------------------+---------+------------------------------------------------------------------+
-| ``query``         | string  | The value in the search field.                                   |
-+-------------------+---------+------------------------------------------------------------------+
-| ``caseSensitive`` | boolean | 'true' if the case sensitive option is selected,                 |
-|                   |         | 'false' if this option is not selected.                          |
-+-------------------+---------+------------------------------------------------------------------+
-| ``highlightAll``  | boolean | 'true' if the option to highlight all matches is selected,       |
-|                   |         | 'false' if this option is not selected.                          |
-+-------------------+---------+------------------------------------------------------------------+
-| ``status``        | string  | A "not found" status phrase for a search string that             |
-|                   |         | is unsuccessful. Blank for successful search strings.            |
-+-------------------+---------+------------------------------------------------------------------+
-| ``chapter``       | string  | The name of the PDF file.                                        |
-+-------------------+---------+------------------------------------------------------------------+
-| ``page``          | integer | The number of the page that is open when the search takes place. |
-+-------------------+---------+------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+
+   * - Field
+     - Type
+     - Details
+   * - ``name``
+     - string
+     - ``textbook.pdf.search.executed``
+   * - ``query``
+     - string
+     - The value in the search field.
+   * - ``caseSensitive``
+     - boolean
+     - 'true' if the case sensitive option is selected, 'false' if this option is not selected.
+   * - ``highlightAll``
+     - boolean
+     - 'true' if the option to highlight all matches is selected, 'false' if this option is not selected.
+   * - ``status``
+     - string
+     - A "not found" status phrase for a search string that is unsuccessful. Blank for successful search strings.
+   * - ``chapter``
+     - string
+     - The name of the PDF file. 
+   * - ``page``
+     - integer
+     - The number of the page that is open when the search takes place.
 
 ``textbook.pdf.search.navigatednext``
 ---------------------------------------------
 
-The ``textbook.pdf.search.navigatednext`` event type fires when a user clicks
+The browser emits ``textbook.pdf.search.navigatednext`` events when a user clicks
 on the Find Next or Find Previous icons for an entered search string.
 
 **Component**: PDF Viewer 
@@ -843,36 +983,44 @@ on the Find Next or Find Previous icons for an entered search string.
 
 **History**: This event type was added on 16 Apr 2014.
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
-+-------------------+---------+------------------------------------------------------------------+
-| Field             | Type    | Details                                                          |
-+===================+=========+==================================================================+
-| ``name``          | string  | ``textbook.pdf.search.navigatednext``                            |
-+-------------------+---------+------------------------------------------------------------------+
-| ``findprevious``  | string  | 'true' if the user clicks the Find Previous icon, 'false'        |
-|                   |         | if the user clicks the Find Next icon.                           |
-+-------------------+---------+------------------------------------------------------------------+
-| ``query``         | string  | The value in the search field.                                   |
-+-------------------+---------+------------------------------------------------------------------+
-| ``caseSensitive`` | boolean | 'true' if the case sensitive option is selected,                 |
-|                   |         | 'false' if this option is not selected.                          |
-+-------------------+---------+------------------------------------------------------------------+
-| ``highlightAll``  | boolean | 'true' if the option to highlight all matches is selected,       |
-|                   |         | 'false' if this option is not selected.                          |
-+-------------------+---------+------------------------------------------------------------------+
-| ``status``        | string  | A "not found" status phrase for a search string that             |
-|                   |         | is unsuccessful. Blank for successful search strings.            |
-+-------------------+---------+------------------------------------------------------------------+
-| ``chapter``       | string  | The name of the PDF file.                                        |
-+-------------------+---------+------------------------------------------------------------------+
-| ``page``          | integer | The number of the page that is open when the search takes place. |
-+-------------------+---------+------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``name``
+     - string
+     - ``textbook.pdf.search.navigatednext`` 
+   * - ``findprevious``
+     - boolean
+     - 'true' if the user clicks the Find Previous icon, 'false' if the user clicks the Find Next icon.
+   * - ``query``
+     - string
+     - The value in the search field.
+   * - ``caseSensitive``
+     - boolean
+     - 'true' if the case sensitive option is selected, 'false' if this option is not selected.  
+   * - ``highlightAll``
+     - boolean
+     - 'true' if the option to highlight all matches is selected, 'false' if this option is not selected. 
+   * - ``status``
+     -  string
+     - A "not found" status phrase for a search string that is unsuccessful. Blank for successful search strings.   
+   * - ``chapter``
+     - string
+     - The name of the PDF file. 
+   * - ``page``
+     - integer
+     - The number of the page that is open when the search takes place.
 
 ``textbook.pdf.search.highlight.toggled``
 ---------------------------------------------
 
-The ``textbook.pdf.search.highlight.toggled`` event type fires when a user
+The browser emits ``textbook.pdf.search.highlight.toggled`` events when a user
 selects or clears the **Highlight All** option for a search.
 
 **Component**: PDF Viewer 
@@ -881,33 +1029,41 @@ selects or clears the **Highlight All** option for a search.
 
 **History**: This event type was added on 16 Apr 2014.
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
-+-------------------+---------+------------------------------------------------------------------+
-| Field             | Type    | Details                                                          |
-+===================+=========+==================================================================+
-| ``name``          | string  | ``textbook.pdf.search.highlight.toggled``                        |
-+-------------------+---------+------------------------------------------------------------------+
-| ``query``         | string  | The value in the search field.                                   |
-+-------------------+---------+------------------------------------------------------------------+
-| ``caseSensitive`` | boolean | 'true' if the case sensitive option is selected,                 |
-|                   |         | 'false' if this option is not selected.                          |
-+-------------------+---------+------------------------------------------------------------------+
-| ``highlightAll``  | boolean | 'true' if the option to highlight all matches is selected,       |
-|                   |         | 'false' if this option is not selected.                          |
-+-------------------+---------+------------------------------------------------------------------+
-| ``status``        | string  | A "not found" status phrase for a search string that is          |
-|                   |         | unsuccessful. Blank for successful search strings.               |
-+-------------------+---------+------------------------------------------------------------------+
-| ``chapter``       | string  | The name of the PDF file.                                        |
-+-------------------+---------+------------------------------------------------------------------+
-| ``page``          | integer | The number of the page that is open when the search takes place. |
-+-------------------+---------+------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``name``
+     - string
+     - ``textbook.pdf.search.highlight.toggled``
+   * - ``query``
+     - string
+     - The value in the search field. 
+   * - ``caseSensitive``
+     - boolean
+     - 'true' if the case sensitive option is selected, false' if this option is not selected. 
+   * - ``highlightAll``
+     - boolean
+     - 'true' if the option to highlight all matches is selected, 'false' if this option is not selected.
+   * - ``status``
+     - string
+     - A "not found" status phrase for a search string that is unsuccessful. Blank for successful search strings.
+   * - ``chapter``
+     - string
+     - The name of the PDF file. 
+   * - ``page``
+     - integer
+     - The number of the page that is open when the search takes place.
 
 ``textbook.pdf.search.casesensitivity.toggled``
 ------------------------------------------------------
 
-The ``textbook.pdf.search.casesensitivity.toggled`` event type fires when a
+The browser emits ``textbook.pdf.search.casesensitivity.toggled`` events when a
 user selects or clears the **Match Case** option for a search.
 
 **Component**: PDF Viewer 
@@ -916,28 +1072,36 @@ user selects or clears the **Match Case** option for a search.
 
 **History**: This event type was added on 16 Apr 2014.
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
-+-------------------+---------+------------------------------------------------------------------+
-| Field             | Type    | Details                                                          |
-+===================+=========+==================================================================+
-| ``name``          | string  | ``textbook.pdf.search.casesensitivity.toggled``                  |
-+-------------------+---------+------------------------------------------------------------------+
-| ``query``         | string  | The value in the search field.                                   |
-+-------------------+---------+------------------------------------------------------------------+
-| ``caseSensitive`` | boolean | 'true' if the case sensitive option is selected,                 |
-|                   |         | 'false' if this option is not selected.                          |
-+-------------------+---------+------------------------------------------------------------------+
-| ``highlightAll``  | boolean | 'true' if the option to highlight all matches is selected,       |
-|                   |         | 'false' if this option is not selected.                          |
-+-------------------+---------+------------------------------------------------------------------+
-| ``status``        | string  | A "not found" status phrase for a search string that             |
-|                   |         | is unsuccessful. Blank for successful search strings.            |
-+-------------------+---------+------------------------------------------------------------------+
-| ``chapter``       | string  | The name of the PDF file.                                        |
-+-------------------+---------+------------------------------------------------------------------+
-| ``page``          | integer | The number of the page that is open when the search takes place. |
-+-------------------+---------+------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``name``
+     - string
+     - ``textbook.pdf.search.casesensitivity.toggled``
+   * - ``query``
+     - string
+     - The value in the search field.
+   * - ``caseSensitive``
+     - boolean
+     - 'true' if the case sensitive option is selected, 'false' if this option is not selected.
+   * - ``highlightAll``
+     - boolean
+     - 'true' if the option to highlight all matches is selected, 'false' if this option is not selected. 
+   * - ``status``
+     -  string
+     - A "not found" status phrase for a search string that is unsuccessful. Blank for successful search strings.
+   * - ``chapter``
+     - string
+     - The name of the PDF file. 
+   * - ``page``
+     - integer
+     - The number of the page that is open when the search takes place.
 
 .. _problem:
 
@@ -948,18 +1112,20 @@ Problem Interaction Event Types
 ``problem_check`` (Browser)
 ----------------------------
 
-``problem_check`` events are produced by both browser interactions and server requests. A browser fires ``problem_check`` events when a user wants to check a problem.  
+Both browser interactions and server requests produce ``problem_check`` events.
+The browser emits ``problem_check`` events when a user wants to check a problem.
 
 **Component**: Capa Module
 
 **Event Source**: Browser
 
-``event`` **Fields**: The ``event`` field contains the values of all input fields from the problem being checked, styled as GET parameters.
+``event`` **Member Fields**: The ``event`` field contains the values of all
+input fields from the problem being checked, styled as GET parameters.
 
 ``problem_check`` (Server)
 -----------------------------
 
-The server fires ``problem_check`` events when a problem is successfully checked.  
+The server emits ``problem_check`` events when a problem is successfully checked.  
 
 **Component**: Capa Module
 
@@ -971,9 +1137,11 @@ The server fires ``problem_check`` events when a problem is successfully checked
 
 * Prior to 15 Oct 2013, this event type was named ``save_problem_check``.
 
-* Prior to 15 Jul 2013, this event was fired twice for the same action.
+* Prior to 15 Jul 2013, this event was emitted twice for the same action.
 
-``context`` **Fields**: 
+.. %%context before event? or after?
+
+``context`` **Member Fields**: 
 
 +---------------------+---------------+---------------------------------------------------------------------+
 | Field               | Type          | Details and Member Fields                                           |
@@ -986,18 +1154,18 @@ The server fires ``problem_check`` events when a problem is successfully checked
 |                     |               |                                                                     | 
 +---------------------+---------------+---------------------------------------------------------------------+
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
 +---------------------+---------------+---------------------------------------------------------------------+
 | Field               | Type          | Details and Member Fields                                           |
 +=====================+===============+=====================================================================+
 | ``answers``         | dict          | The problem ID and the internal answer identifier in a name:value   |
-|                     |               | pair. For a component with multiple problems, every problem and     |
-|                     |               | answer are listed.                                                  |
+|                     |               | pair. For a component with multiple problems, lists every problem and     |
+|                     |               | answer.                                                  |
 +---------------------+---------------+---------------------------------------------------------------------+
 | ``attempts``        | integer       | The number of times the user attempted to answer the problem.       |
 +---------------------+---------------+---------------------------------------------------------------------+
-| ``correct_map``     | string / JSON | For each problem ID value listed by ``answers``, provides:          |
+| ``correct_map``     | dict | For each problem ID value listed by ``answers``, provides:          |
 |                     |               +-------------------+---------+---------------------------------------+ 
 |                     |               | ``correctness``   | string  | 'correct', 'incorrect'                |
 |                     |               +-------------------+---------+---------------------------------------+  
@@ -1025,10 +1193,10 @@ The server fires ``problem_check`` events when a problem is successfully checked
 +---------------------+---------------+---------------------------------------------------------------------+
 | ``problem_id``      | string        | ID of the problem that was checked.                                 |
 +---------------------+---------------+---------------------------------------------------------------------+
-| ``state``           | string / JSON | Current problem state.                                              |
+| ``state``           | dict | Current problem state.                                              |
 +---------------------+---------------+---------------------------------------------------------------------+
 | ``submission``      | object        | Provides data about the response made. For components that include  |
-|                     |               | multiple problems, separate submission objects are provided for     |
+|                     |               | multiple problems, a separate submission object is provided for     |
 |                     |               | each one.                                                           |
 |                     |               +-------------------+---------+---------------------------------------+ 
 |                     |               | ``answer``        | string  | The value that the student entered,   |
@@ -1066,7 +1234,7 @@ The server fires ``problem_check`` events when a problem is successfully checked
 ``problem_check_fail``
 -----------------------------
 
-The server fires ``problem_check_fail`` events when a problem cannot be checked successfully.
+The server emits ``problem_check_fail`` events when a problem cannot be checked successfully.
 
 **Component**: Capa Module
 
@@ -1074,12 +1242,12 @@ The server fires ``problem_check_fail`` events when a problem cannot be checked 
 
 **History**: Prior to 15 Oct 2013, this event type was named ``save_problem_check_fail``.
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
 +---------------------+---------------+---------------------------------------------------------------------+
 | Field               | Type          | Details                                                             |
 +=====================+===============+=====================================================================+
-| ``state``           | string / JSON | Current problem state.                                              |
+| ``state``           | dict | Current problem state.                                              |
 +---------------------+---------------+---------------------------------------------------------------------+
 | ``problem_id``      | string        | ID of the problem being checked.                                    |
 +---------------------+---------------+---------------------------------------------------------------------+
@@ -1091,29 +1259,30 @@ The server fires ``problem_check_fail`` events when a problem cannot be checked 
 ``problem_reset``
 -----------------------------
 
-``problem_reset`` events fire when a user resets a problem.
+The browser emits ``problem_reset`` events when a user resets a problem.
+.. %%is this an instructor initiated event?
 
 **Component**: Capa Module
 
 **Event Source**: Browser
 
-``event`` **Fields**: None
+``event`` **Member Fields**: None
 
 ``problem_rescore``
 -----------------------------
 
-The server fires ``problem_rescore`` events when a problem is successfully rescored.  
+The server emits ``problem_rescore`` events when a problem is successfully rescored.  
 
 **Component**: Capa Module
 
 **Event Source**: Server
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
 +---------------------+---------------+---------------------------------------------------------------------+
 | Field               | Type          | Details                                                             |
 +=====================+===============+=====================================================================+
-| ``state``           | string / JSON | Current problem state.                                              |
+| ``state``           | dict | Current problem state.                                              |
 +---------------------+---------------+---------------------------------------------------------------------+
 | ``problem_id``      | string        | ID of the problem being rescored.                                   |
 +---------------------+---------------+---------------------------------------------------------------------+
@@ -1125,7 +1294,7 @@ The server fires ``problem_rescore`` events when a problem is successfully resco
 +---------------------+---------------+---------------------------------------------------------------------+
 | ``new_total``       | integer       |                                                                     |
 +---------------------+---------------+---------------------------------------------------------------------+
-| ``correct_map``     | string / JSON | See the fields for the ``problem_check`` server event type above.   |
+| ``correct_map``     | dict | See the fields for the ``problem_check`` server event type above.   |
 +---------------------+---------------+---------------------------------------------------------------------+
 | ``success``         | string        | 'correct', 'incorrect'                                              |
 +---------------------+---------------+---------------------------------------------------------------------+
@@ -1135,18 +1304,18 @@ The server fires ``problem_rescore`` events when a problem is successfully resco
 ``problem_rescore_fail``
 -----------------------------
 
-The server fires ``problem_rescore_fail`` events when a problem cannot be successfully rescored.  
+The server emits ``problem_rescore_fail`` events when a problem cannot be successfully rescored.  
 
 **Component**: Capa Module
 
 **Event Source**: Server
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
 +---------------------+---------------+---------------------------------------------------------------------+
 | Field               | Type          | Details                                                             |
 +=====================+===============+=====================================================================+
-| ``state``           | string / JSON | Current problem state.                                              |
+| ``state``           | dict | Current problem state.                                              |
 +---------------------+---------------+---------------------------------------------------------------------+
 | ``problem_id``      | string        | ID of the problem being checked.                                    |
 +---------------------+---------------+---------------------------------------------------------------------+
@@ -1156,24 +1325,24 @@ The server fires ``problem_rescore_fail`` events when a problem cannot be succes
 ``problem_save``
 -----------------------------
 
-``problem_save`` fires when a problem is saved.
+``problem_save`` is emitted when a problem is saved.
 
 **Component**: Capa Module
 
 **Event Source**: Browser
 
-``event`` **Fields**: None
+``event`` **Member Fields**: None
 
 ``problem_show``
 -----------------------------
 
-``problem_show`` fires when a problem is shown.  
+``problem_show`` is emitted when a problem is shown.  
 
 **Component**: Capa Module
 
 **Event Source**: Browser
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
 +---------------------+---------------+---------------------------------------------------------------------+
 | Field               | Type          | Details                                                             |
@@ -1185,39 +1354,40 @@ The server fires ``problem_rescore_fail`` events when a problem cannot be succes
 ``reset_problem``
 ------------------------------------------------
 
-``reset_problem`` fires when a problem has been reset successfully. 
+``reset_problem`` is emitted when a problem has been reset successfully. 
+.. %%what is the difference between reset_problem and problem_reset?
 
 **Component**: Capa Module
 
 **Event Source**: Server
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
 +---------------------+---------------+---------------------------------------------------------------------+
 | Field               | Type          | Details                                                             |
 +=====================+===============+=====================================================================+
-| ``old_state``       | string / JSON | The state of the problem before the reset was performed.            |
+| ``old_state``       | dict | The state of the problem before the reset was performed.            |
 +---------------------+---------------+---------------------------------------------------------------------+
 | ``problem_id``      | string        | ID of the problem being reset.                                      |
 +---------------------+---------------+---------------------------------------------------------------------+
-| ``new_state``       | string / JSON | New problem state.                                                  |
+| ``new_state``       | dict | New problem state.                                                  |
 +---------------------+---------------+---------------------------------------------------------------------+
 
 ``reset_problem_fail`` 
 ------------------------------------------------
 
-``reset_problem_fail`` fires when a problem cannot be reset successfully. 
+``reset_problem_fail`` is emitted when a problem cannot be reset successfully. 
 
 **Component**: Capa Module
 
 **Event Source**: Server
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
 +---------------------+---------------+---------------------------------------------------------------------+
 | Field               | Type          | Details                                                             |
 +=====================+===============+=====================================================================+
-| ``old_state``       | string / JSON | The state of the problem before the reset was requested.            |
+| ``old_state``       | dict | The state of the problem before the reset was requested.            |
 +---------------------+---------------+---------------------------------------------------------------------+
 | ``problem_id``      | string        | ID of the problem being reset.                                      |
 +---------------------+---------------+---------------------------------------------------------------------+
@@ -1237,7 +1407,7 @@ Server-side event which displays the answer to a problem.
 
 .. **Question** is this renaming info correct?
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
 +---------------------+---------------+---------------------------------------------------------------------+
 | Field               | Type          | Details                                                             |
@@ -1248,18 +1418,18 @@ Server-side event which displays the answer to a problem.
 ``save_problem_fail`` 
 ------------------------------------------------
 
-``save_problem_fail``  fires when a problem cannot be saved successfully. 
+``save_problem_fail``  is emitted when a problem cannot be saved successfully. 
 
 **Component**: Capa Module
 
 **Event Source**: Server
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
 +---------------------+---------------+---------------------------------------------------------------------+
 | Field               | Type          | Details                                                             |
 +=====================+===============+=====================================================================+
-| ``state``           | string / JSON | Current problem state.                                              |
+| ``state``           | dict | Current problem state.                                              |
 +---------------------+---------------+---------------------------------------------------------------------+
 | ``problem_id``      | string        | ID of the problem being saved.                                      |
 +---------------------+---------------+---------------------------------------------------------------------+
@@ -1271,23 +1441,35 @@ Server-side event which displays the answer to a problem.
 ``save_problem_success`` 
 ------------------------------------------------
 
-``save_problem_success`` fires when a problem is saved successfully. 
+``save_problem_success`` is emitted when a problem is saved successfully. 
 
 **Component**: Capa Module
 
 **Event Source**: Server
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
 +---------------------+---------------+---------------------------------------------------------------------+
 |  Field              | Type          | Details                                                             |
 +=====================+===============+=====================================================================+
-| ``state``           | string / JSON | Current problem state.                                              |
+| ``state``           | dict | Current problem state.                                              |
 +---------------------+---------------+---------------------------------------------------------------------+
 | ``problem_id``      | string        | ID of the problem being saved.                                      |
 +---------------------+---------------+---------------------------------------------------------------------+
 | ``answers``         | dict          |                                                                     |
 +---------------------+---------------+---------------------------------------------------------------------+
+
+
+``problem_graded``
+-------------------
+
+.. %%TBD
+
+
+
+
+
+
 
 .. _ora:
 
@@ -1295,10 +1477,16 @@ Server-side event which displays the answer to a problem.
 Open Response Assessment Event Types 
 ======================================
 
+**History**: The events in this section are emitted to record interactions with
+the initial implementation of open response assessment (ORA) problem types.
+While the initial ORA design is not yet deprecated, a complete redesign of this
+feature is in limited release for testing. The revised ORA design does not use
+these event types.
+
 ``oe_hide_question`` and ``oe_show_question``
 ---------------------------------------------------------------------------
 
-The ``oe_hide_question`` and ``oe_show_question`` event types fire when the user hides or redisplays a combined open-ended problem.
+The ``oe_hide_question`` and ``oe_show_question`` event types are emitted when the user hides or redisplays a combined open-ended problem.
 
 **History**: These event types were previously named ``oe_hide_problem`` and ``oe_show_problem``.
 
@@ -1306,7 +1494,7 @@ The ``oe_hide_question`` and ``oe_show_question`` event types fire when the user
 
 **Event Source**: Browser
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
 +---------------------+---------------+---------------------------------------------------------------------+
 | Field               | Type          | Details                                                             |
@@ -1322,7 +1510,7 @@ The ``oe_hide_question`` and ``oe_show_question`` event types fire when the user
 
 **Event Source**: Browser
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
 +---------------------+---------------+---------------------------------------------------------------------+
 | Field               | Type          | Details                                                             |
@@ -1342,7 +1530,7 @@ The ``oe_hide_question`` and ``oe_show_question`` event types fire when the user
 
 **Event Source**: Browser
 
-``event`` **Fields**: None.
+``event`` **Member Fields**: None.
 
 
 ``oe_feedback_response_selected`` 
@@ -1352,7 +1540,7 @@ The ``oe_hide_question`` and ``oe_show_question`` event types fire when the user
 
 **Event Source**: Browser
 
-``event`` **Fields**:
+``event`` **Member Fields**:
 
 +---------------------+---------------+---------------------------------------------------------------------+
 | Field               | Type          | Details                                                             |
@@ -1364,7 +1552,7 @@ The ``oe_hide_question`` and ``oe_show_question`` event types fire when the user
 ``peer_grading_hide_question`` and ``peer_grading_show_question``
 ---------------------------------------------------------------------
 
-The ``peer_grading_hide_question`` and ``peer_grading_show_question`` event types fire when the user hides or redisplays a problem that is peer graded.
+The ``peer_grading_hide_question`` and ``peer_grading_show_question`` event types are emitted when the user hides or redisplays a problem that is peer graded.
 
 **History**: These event types were previously named ``peer_grading_hide_problem`` and ``peer_grading_show_problem``.
 
@@ -1372,7 +1560,7 @@ The ``peer_grading_hide_question`` and ``peer_grading_show_question`` event type
 
 **Event Source**: Browser
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
 +---------------------+---------------+---------------------------------------------------------------------+
 | Field               | Type          | Details                                                             |
@@ -1384,7 +1572,7 @@ The ``peer_grading_hide_question`` and ``peer_grading_show_question`` event type
 ``staff_grading_hide_question`` and ``staff_grading_show_question``
 -----------------------------------------------------------------------
 
-The ``staff_grading_hide_question`` and ``staff_grading_show_question`` event types fire when the user hides or redisplays a problem that is staff graded.
+The ``staff_grading_hide_question`` and ``staff_grading_show_question`` event types are emitted when the user hides or redisplays a problem that is staff graded.
 
 **History**: These event types were previously named ``staff_grading_hide_problem`` and ``staff_grading_show_problem``.
 
@@ -1392,7 +1580,7 @@ The ``staff_grading_hide_question`` and ``staff_grading_show_question`` event ty
 
 **Event Source**: Browser
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
 +---------------------+---------------+---------------------------------------------------------------------+
 | Field               | Type          | Details                                                             |
@@ -1418,15 +1606,15 @@ The event types that follow apply to modules that are set up to randomly assign 
 ``assigned_user_to_partition``
 ----------------------------------
 
-When a student views a module that is set up to test different child modules, the server checks the ``user_api_usercoursetag`` table for the student's assignment to the relevant partition, and to a group for that partition. The partition ID is the ``user_api_usercoursetag.key`` and the group ID is the ``user_api_usercoursetag.value``. If the student does not yet have an assignment, the server fires an ``assigned_user_to_partition`` event and adds a row to the ``user_api_usercoursetag`` table for the student. See :ref:`user_api_usercoursetag`. 
+When a student views a module that is set up to test different child modules, the server checks the ``user_api_usercoursetag`` table for the student's assignment to the relevant partition, and to a group for that partition. The partition ID is the ``user_api_usercoursetag.key`` and the group ID is the ``user_api_usercoursetag.value``. If the student does not yet have an assignment, the server emits an ``assigned_user_to_partition`` event and adds a row to the ``user_api_usercoursetag`` table for the student. See :ref:`user_api_usercoursetag`. 
 
-.. note:: After this event fires, the common ``context`` field in all subsequent events includes a ``course_user_tags`` member field with the student's assigned partition and group.
+.. note:: After this event is emitted, the common ``context`` field in all subsequent events includes a ``course_user_tags`` member field with the student's assigned partition and group.
 
 **Component**: Split Test
 
 **Event Source**: Browser
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
 +---------------------+---------------+---------------------------------------------------------------------+
 | Field               | Type          | Details                                                             |
@@ -1444,13 +1632,13 @@ When a student views a module that is set up to test different child modules, th
 ``child_render``
 ----------------------------------
 
-When a student views a module that is set up to test different content using child modules, a ``child_render`` event fires to identify the child module that is shown to the student. 
+When a student views a module that is set up to test different content using child modules, a ``child_render`` event is emitted to identify the child module that is shown to the student. 
 
 **Component**: Split Test
 
 **Event Source**: Server
 
-``event`` **Fields**: 
+``event`` **Member Fields**: 
 
 +---------------------+---------------+---------------------------------------------------------------------+
 | Field               | Type          | Details                                                             |
@@ -1549,17 +1737,17 @@ enroll in or unenroll from a course, actions by instructors and course staff
 members also generate enrollment events.
 
 * When a course author creates a course, his or her user account is enrolled in
-  the course and the server fires an ``edx.course.enrollment.activated`` event.
+  the course and the server emits an ``edx.course.enrollment.activated`` event.
 
 * When a user with the Instructor or Course Staff role enrolls in a course, the
-  server fires ``edx.course.enrollment.activated``. The server fires
+  server emits ``edx.course.enrollment.activated``. The server emits
   ``edx.course.enrollment.deactivated`` events when these users unenroll from a
   course.
 
 * When a user with the Instructor or Course Staff role uses the **Batch
   Enrollment** feature to enroll students or other staff members in a course,
-  the server fires an ``edx.course.enrollment.activated`` event for each
+  the server emits an ``edx.course.enrollment.activated`` event for each
   enrollment. When this feature is used to unenroll students from a course, the
-  server fires a ``edx.course.enrollment.deactivated`` for each unenrollment.
+  server emits a ``edx.course.enrollment.deactivated`` for each unenrollment.
 
 For details about the enrollment events, see :ref:`enrollment`.
