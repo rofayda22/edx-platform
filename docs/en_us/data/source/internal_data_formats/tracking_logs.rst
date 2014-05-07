@@ -460,14 +460,14 @@ The browser emits these event types when a user works with a video.
 
 **Event Source**: Browser
 
-``pause_video``, ``play_video``
+``play_video``, ``pause_video``
 ---------------------------------
 
-* The ``pause_video`` event type is emitted on video pause. 
+* The browser emits ``play_video`` events on video play. 
 
-* The ``play_video`` event type is emitted on video play. 
+* The browser emits  ``pause_video`` events on video pause. 
 
-``event`` **Member Fields**: These event types have the same ``event`` fields.
+``event`` **Member Fields**: These events have the same ``event`` fields.
 
 .. list-table::
    :widths: 15 15 60
@@ -552,17 +552,25 @@ The browser emits ``speed_change_video`` events when a user selects a different 
 ``load_video``
 -----------------
 
-.. %%TBD
+.. %%TBD 
+
+The browser emits  ``load_video`` events when . 
+
 
 ``hide_transcript``
 -------------------
 
 .. %%TBD
 
+The browser emits  ``hide_transcript`` events when . 
+
 ``show_transcript``
 --------------------
 
 .. %%TBD
+
+
+The browser emits  ``show_transcript`` events when . 
 
 
 .. _pdf:
