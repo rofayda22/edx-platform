@@ -143,7 +143,8 @@ If you use a JSON formatter to "pretty print" this event, a version that is more
 Common Fields
 ********************
 
-This section describes the JSON fields that are common to the schema definitions of all events.
+This section describes the JSON fields that are common to the schema definitions
+of all events.
 
 =====================
 ``agent`` Field
@@ -161,23 +162,20 @@ This section describes the JSON fields that are common to the schema definitions
 
 **Type:** dict
 
-**Details:** For all event types, this field includes member fields
-that identify the course that generated the event, the organization that lists
-the course, and the individual who is performing the action.
-``course_user_tags`` contains a dictionary with the key(s) and value(s) from the
-``user_api_usercoursetag`` table for the user. See
+**Details:** For all event types, this field includes member fields that
+identify:
+
+* The ``course_id`` of the course that generated the event.
+* The ``org_id`` of the organization that lists the course. 
+* The ``user_id`` of the individual who is performing the action. 
+  
+When included, ``course_user_tags`` contains a dictionary with the key(s) and
+value(s) from the ``user_api_usercoursetag`` table for the user. See
 :ref:`user_api_usercoursetag`.
 
-**Values/Format/Member Fields:** Contains these common member fields:
-
-* ``course_id``
-* ``org_id``
-* ``user_id``
-* ``course_user_tags``
-
-These fields are blank if values cannot be determined. Also contains member
-fields that apply to specific event types only: see the description for each
-event type.
+The member fields are blank if values cannot be determined. The ``context``
+field can also contain additional member fields that apply to specific events
+only: see the description for each type of event.
 
 **History**: Added 23 Oct 2013; ``user_id`` added 6 Nov 2013. Other event fields
 may duplicate this data. ``course_user_tags`` added 12 Mar 2014.
@@ -188,9 +186,9 @@ may duplicate this data. ``course_user_tags`` added 12 Mar 2014.
 
 **Type:** dict
 
-**Details:** For all event types, this field includes member fields
-that identify specifics of the triggered event. Different member fields are
-supplied for different types of events: see the description for each event type.
+**Details:** This field includes member fields that identify specifics of each
+triggered event. Different member fields are supplied for different events: see
+the description for each type of event.
 
 ========================
 ``event_source`` Field
@@ -199,9 +197,11 @@ supplied for different types of events: see the description for each event type.
 **Type:** string
 
 **Details:** Specifies whether the triggered event originated in the browser or
-on the server.
+on the server. The values in this field are:
 
-**Values/Format/Member Fields:** 'browser', 'server', or 'task'
+* 'browser'
+* 'server'
+* 'task'
 
 =====================
 ``event_type`` Field
@@ -233,9 +233,8 @@ on the server.
 
 **Type:** string
 
-**Details:** Page user was visiting when the event was emitted. 
-
-**Values/Format/Member Fields:** '$URL'
+**Details:** The '$URL' of the page the user was visiting when the event was
+emitted.
 
 ===================
 ``session`` Field
@@ -243,9 +242,8 @@ on the server.
 
 **Type:** string
 
-**Details:** This key identifies the user's session. May be undefined. 
-
-**Values/Format/Member Fields:** 32 digits 
+**Details:** This 32-character value is a key that identifies the user's
+session. Can be undefined.
 
 ===================
 ``time`` Field
@@ -253,9 +251,8 @@ on the server.
 
 **Type:** string
 
-**Details:** Gives the UTC time at which the event was emitted.
-
-**Values/Format/Member Fields:** 'YYYY-MM-DDThh:mm:ss.xxxxxx'
+**Details:** Gives the UTC time at which the event was emitted in 'YYYY-MM-
+DDThh:mm:ss.xxxxxx' format.
 
 ===================
 ``username`` Field
@@ -269,10 +266,11 @@ empty for anonymous events, such as when the user is not logged in.
 .. _Student_Event_Types:
 
 ****************************************
-Student Event Types
+Student Events
 ****************************************
 
-This section lists the event types that are logged for interactions with the LMS outside the Instructor Dashboard.
+This section lists the events that are logged for interactions with the LMS
+outside the Instructor Dashboard.
 
 * :ref:`enrollment`
 
@@ -288,20 +286,21 @@ This section lists the event types that are logged for interactions with the LMS
 
 * :ref:`AB_Event_Types`
 
-The descriptions that follow include what each event type represents, which
-component it originates from, and what member fields the ``event`` and
-``context`` dict fields contain. The value in the ``event_source`` field (see
-the :ref:`common` section above) distinguishes between events that originate in
-the browser (in JavaScript) and events that originate on the server (during the
-processing of a request).
+The descriptions that follow include what each event type represents, the system
+component it originates from, and what member fields the ``context`` and
+``event`` dict fields contain.
+
+The value in the ``event_source`` field (see the :ref:`common` section above)
+distinguishes between events that originate in the browser (in JavaScript) and
+events that originate on the server (during the processing of a request).
 
 .. _enrollment:
 
 =========================
-Enrollment Event Types
+Enrollment Events
 =========================
 
-The server emits these event types in response to course enrollment
+The server emits these events in response to course enrollment
 activities completed by a student.
 
 * When a student enrolls in a course, ``edx.course.enrollment.activated`` is
@@ -401,7 +400,7 @@ Example
 Navigational Event Types   
 ==============================
 
-The browser emits these event types when a user selects a navigational control. 
+The browser emits these events when a user selects a navigational control. 
 
 * ``seq_goto`` is emitted when a user jumps between units in a sequence. 
 
@@ -415,7 +414,8 @@ The browser emits these event types when a user selects a navigational control.
 
 **Event Source**: Browser
 
-``event`` **Member Fields**: The navigational event types listed above have the same fields in the ``event`` dict field..
+``event`` **Member Fields**: All of the navigational events have the same fields
+in the ``event`` dict field.
 
 .. list-table::
    :widths: 15 15 60
@@ -440,7 +440,7 @@ The browser emits these event types when a user selects a navigational control.
 ``page_close``
 ---------------
 
-An additional event type, ``page_close``, originates from within the Logger itself.  
+An additional type of event, ``page_close``, originates from within the Logger itself.  
 
 **Component**: Logger
 
@@ -451,10 +451,10 @@ An additional event type, ``page_close``, originates from within the Logger itse
 .. _video:
 
 ==============================
-Video Interaction Event Types   
+Video Interaction Events   
 ==============================
 
-The browser emits these event types when a user works with a video.
+The browser emits these events when a user works with a video.
 
 **Component**: Video
 
@@ -520,7 +520,8 @@ transcript to go to a different point in the video file.
 ``speed_change_video`` 
 ------------------------
 
-The browser emits ``speed_change_video`` events when a user selects a different playing speed for the video. 
+The browser emits ``speed_change_video`` events when a user selects a different
+playing speed for the video.
 
 **History**: Prior to 12 Feb 2014, this event was emitted when the user selected either the same speed or a different speed.  
 
@@ -545,10 +546,6 @@ The browser emits ``speed_change_video`` events when a user selects a different 
 
 .. types needed
 
-.. additional missing video event types TBD
-
-
-
 ``load_video``
 -----------------
 
@@ -556,6 +553,7 @@ The browser emits ``speed_change_video`` events when a user selects a different 
 
 The browser emits  ``load_video`` events when . 
 
+``event`` **Member Fields**: None
 
 ``hide_transcript``
 -------------------
@@ -563,6 +561,8 @@ The browser emits  ``load_video`` events when .
 .. %%TBD
 
 The browser emits  ``hide_transcript`` events when . 
+
+``event`` **Member Fields**: 
 
 ``show_transcript``
 --------------------
@@ -572,11 +572,12 @@ The browser emits  ``hide_transcript`` events when .
 
 The browser emits  ``show_transcript`` events when . 
 
+``event`` **Member Fields**: 
 
 .. _pdf:
 
 =================================
-Textbook Interaction Event Types   
+Textbook Interaction Events   
 =================================
 
 ``book``
@@ -594,8 +595,8 @@ the PNG Viewer.
 
 **Event Source**: Browser
 
-**History**: This event type changed on 16 Apr 2014 to include the ``name`` and
-``chapter`` fields.
+**History**: This event changed on 16 Apr 2014 to include ``event`` member
+fields ``name`` and ``chapter``.
 
 ``event`` **Member Fields**: 
 
@@ -647,7 +648,7 @@ on the icon to show or hide page thumbnails.
 
 **Event Source**: Browser
 
-**History**: This event type was added on 16 Apr 2014.
+**History**: This event was added on 16 Apr 2014.
 
 ``event`` **Member Fields**: 
 
@@ -937,7 +938,7 @@ page changes while a user scrolls up or down.
 
 The browser emits ``textbook.pdf.search.executed`` events when a user searches for a
 text value in the file. To reduce the number of events produced, instead of
-producing one event per entered character this event type defines a search
+producing one event per entered character this event defines a search
 string as the set of characters that is consecutively entered in the search
 field within 500ms of each other.
 
@@ -1114,163 +1115,157 @@ user selects or clears the **Match Case** option for a search.
 .. _problem:
 
 =================================
-Problem Interaction Event Types 
+Problem Interaction Events 
 =================================
+%%
+Capa Module
+
+Browser or server
 
 ``problem_check`` (Browser)
 ----------------------------
-
+.. no sample to check
 Both browser interactions and server requests produce ``problem_check`` events.
-The browser emits ``problem_check`` events when a user wants to check a problem.
+The browser emits ``problem_check`` events when a user checks a problem.
 
-**Component**: Capa Module
+**Event Source**: Browser ``event`` 
 
-**Event Source**: Browser
-
-``event`` **Member Fields**: The ``event`` field contains the values of all
-input fields from the problem being checked, styled as GET parameters.
+**Member Fields**: For browser-emitted ``problem_check`` events, the ``event``
+field contains the values of all input fields from the problem being checked,
+styled as GET parameters.
 
 ``problem_check`` (Server)
------------------------------
+----------------------------
+.. no sample to check
+Both browser interactions and server requests produce ``problem_check`` events.
 
-The server emits ``problem_check`` events when a problem is successfully checked.  
-
-**Component**: Capa Module
-
+The server emits ``problem_check`` events when a problem is successfully checked. 
+  
 **Event Source**: Server
 
 **History**: 
 
-* On 5 Mar 2014, the ``submission`` dictionary was added to the ``event`` field and  ``module`` was added to the ``context`` field.
+* On 5 Mar 2014, the ``submission`` dictionary was added to the ``event`` field
+  and  ``module`` was added to the ``context`` field.
 
-* Prior to 15 Oct 2013, this event type was named ``save_problem_check``.
+* Prior to 15 Oct 2013, this server-emitted event was named ``save_problem_check``.
 
 * Prior to 15 Jul 2013, this event was emitted twice for the same action.
 
-.. %%context before event? or after?
-
 ``context`` **Member Fields**: 
 
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details and Member Fields                                           |
-+=====================+===============+=====================================================================+
-| ``module``          | dict          | Provides the specific problem component as part of the context.     |
-|                     |               +-------------------+---------+---------------------------------------+ 
-|                     |               | ``display_name``  | string  | The **Display Name** given to the     |
-|                     |               |                   |         | problem component.                    |
-|                     |               +-------------------+---------+---------------------------------------+ 
-|                     |               |                                                                     | 
-+---------------------+---------------+---------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``module``
+     - dict
+     - Provides the specific problem component as part of the context. Contains the member field ``display_name``, which is the string value for the **Display Name** given to the problem component. 
 
 ``event`` **Member Fields**: 
 
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details and Member Fields                                           |
-+=====================+===============+=====================================================================+
-| ``answers``         | dict          | The problem ID and the internal answer identifier in a name:value   |
-|                     |               | pair. For a component with multiple problems, lists every problem and     |
-|                     |               | answer.                                                  |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``attempts``        | integer       | The number of times the user attempted to answer the problem.       |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``correct_map``     | dict | For each problem ID value listed by ``answers``, provides:          |
-|                     |               +-------------------+---------+---------------------------------------+ 
-|                     |               | ``correctness``   | string  | 'correct', 'incorrect'                |
-|                     |               +-------------------+---------+---------------------------------------+  
-|                     |               | ``hint``          | string  | Gives optional hint. Nulls allowed.   |
-|                     |               +-------------------+---------+---------------------------------------+  
-|                     |               | ``hintmode``      | string  | None, 'on_request', 'always'. Nulls   |
-|                     |               |                   |         | allowed.                              |
-|                     |               +-------------------+---------+---------------------------------------+ 
-|                     |               | ``msg``           | string  | Gives extra message response.         | 
-|                     |               +-------------------+---------+---------------------------------------+  
-|                     |               | ``npoints``       | integer | Points awarded for this               | 
-|                     |               |                   |         | ``answer_id``. Nulls allowed.         |
-|                     |               +-------------------+---------+---------------------------------------+ 
-|                     |               | ``queuestate``    | dict    | None when not queued, else            |
-|                     |               |                   |         | ``{key:'', time:''}`` where ``key``   |
-|                     |               |                   |         | is a secret string dump of a DateTime |
-|                     |               |                   |         | object in the form '%Y%m%d%H%M%S'.    |
-|                     |               |                   |         | Nulls allowed.                        |
-|                     |               +-------------------+---------+---------------------------------------+ 
-|                     |               |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``grade``           | integer       | Current grade value.                                                |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``max_grade``       | integer       | Maximum possible grade value.                                       |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``problem_id``      | string        | ID of the problem that was checked.                                 |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``state``           | dict | Current problem state.                                              |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``submission``      | object        | Provides data about the response made. For components that include  |
-|                     |               | multiple problems, a separate submission object is provided for     |
-|                     |               | each one.                                                           |
-|                     |               +-------------------+---------+---------------------------------------+ 
-|                     |               | ``answer``        | string  | The value that the student entered,   |
-|                     |               |                   |         | or the display name of the value      |
-|                     |               |                   |         | selected.                             |
-|                     |               +-------------------+---------+---------------------------------------+ 
-|                     |               | ``correct``       | Boolean | 'true', 'false'                       |
-|                     |               +-------------------+---------+---------------------------------------+ 
-|                     |               | ``input_type``    | string  | The type of value that the student    |
-|                     |               |                   |         | supplies for the ``response_type``.   | 
-|                     |               |                   |         | Based on the XML element names used   | 
-|                     |               |                   |         | in the Advanced Editor. Examples      | 
-|                     |               |                   |         | include 'checkboxgroup', 'radiogroup',| 
-|                     |               |                   |         | 'choicegroup', and 'textline'.        |
-|                     |               +-------------------+---------+---------------------------------------+ 
-|                     |               | ``question``      | string  | Provides the text of the question.    |
-|                     |               +-------------------+---------+---------------------------------------+ 
-|                     |               | ``response_type`` | string  | The type of problem. Based on the XML | 
-|                     |               |                   |         | element names used in the Advanced    | 
-|                     |               |                   |         | Editor. Examples include              |
-|                     |               |                   |         | 'choiceresponse', 'optionresponse',   |
-|                     |               |                   |         | and 'multiplechoiceresponse'.         |
-|                     |               +-------------------+---------+---------------------------------------+ 
-|                     |               | ``variant``       | integer | For problems that use problem         |
-|                     |               |                   |         | randomization features such as answer |
-|                     |               |                   |         | pools or choice shuffling, contains   |
-|                     |               |                   |         | the unique ID of the variant that was |
-|                     |               |                   |         | presented to this user.               |
-|                     |               +-------------------+---------+---------------------------------------+ 
-|                     |               |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``success``         | string        | 'correct', 'incorrect'                                              |
-+---------------------+---------------+---------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``answers``
+     - dict
+     - The problem ID and the internal answer identifier in a name:value pair.
+       For a component with multiple problems, lists every problem and
+       answer.
+   * - ``attempts``
+     - integer
+     - The number of times the user attempted to answer the problem.
+   * - ``correct_map``
+     - dict
+     - For each problem ID value listed by ``answers``, provides:
+       
+       * ``correctness``: string; 'correct', 'incorrect'
+       * ``hint``: string; Gives optional hint. Nulls allowed. 
+       * ``hintmode``: string; None, 'on_request', 'always'. Nulls allowed. 
+       * ``msg``: string; Gives extra message response.
+       * ``npoints``: integer; Points awarded for this ``answer_id``. Nulls allowed.
+       * ``queuestate``: dict; None when not queued, else ``{key:'', time:''}``
+         where ``key`` is a secret string dump of a DateTime object in the form
+         '%Y%m%d%H%M%S'. Nulls allowed. 
+
+   * - ``grade``
+     - integer
+     - Current grade value. 
+   * - ``max_grade``
+     - integer
+     - Maximum possible grade value.
+   * - ``problem_id``
+     - string
+     - ID of the problem that was checked.
+   * - ``state``
+     - dict
+     - Current problem state.
+   * - ``submission``
+     - object
+     - Provides data about the response made. For components that include
+       multiple problems, a separate submission object is provided for each one.
+
+       * ``answer``: string; The value that the student entered, or the display name of the value selected.
+       * ``correct``: Boolean; 'true', 'false'
+       * ``input_type``: string; The type of value that the student supplies for
+         the ``response_type``. Based on the XML element names used in the
+         Advanced Editor. Examples include 'checkboxgroup', 'radiogroup',
+         'choicegroup', and 'textline'.
+       * ``question``: string; Provides the text of the question.
+       * ``response_type``: string; The type of problem. Based on the XML
+         element names used in the Advanced  Editor. Examples include
+         'choiceresponse', 'optionresponse', and 'multiplechoiceresponse'.
+       * ``variant``: integer; For problems that use problem randomization
+         features such as answer pools or choice shuffling, contains the unique
+         ID of the variant that was presented to this user. 
+
+   * - ``success``
+     - string
+     - 'correct', 'incorrect' 
 
 ``problem_check_fail``
 -----------------------------
-
+.. no sample to check
 The server emits ``problem_check_fail`` events when a problem cannot be checked successfully.
-
-**Component**: Capa Module
 
 **Event Source**: Server
 
-**History**: Prior to 15 Oct 2013, this event type was named ``save_problem_check_fail``.
+**History**: Prior to 15 Oct 2013, this event was named ``save_problem_check_fail``.
 
 ``event`` **Member Fields**: 
 
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``state``           | dict | Current problem state.                                              |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``problem_id``      | string        | ID of the problem being checked.                                    |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``answers``         | dict          |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``failure``         | string        | 'closed', 'unreset'                                                 |
-+---------------------+---------------+---------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``state``  
+     - dict
+     - Current problem state.
+   * - ``problem_id``
+     - string
+     - ID of the problem being checked.
+   * - ``answers`` 
+     - dict
+     - 
+   * - ``failure`` 
+     - string
+     - 'closed', 'unreset'
 
 ``problem_reset``
 -----------------------------
-
+.. no sample to check
 The browser emits ``problem_reset`` events when a user resets a problem.
 .. %%is this an instructor initiated event?
-
-**Component**: Capa Module
 
 **Event Source**: Browser
 
@@ -1278,64 +1273,78 @@ The browser emits ``problem_reset`` events when a user resets a problem.
 
 ``problem_rescore``
 -----------------------------
-
+.. no sample to check
 The server emits ``problem_rescore`` events when a problem is successfully rescored.  
-
-**Component**: Capa Module
 
 **Event Source**: Server
 
 ``event`` **Member Fields**: 
 
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``state``           | dict | Current problem state.                                              |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``problem_id``      | string        | ID of the problem being rescored.                                   |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``orig_score``      | integer       |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``orig_total``      | integer       |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``new_score``       | integer       |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``new_total``       | integer       |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``correct_map``     | dict | See the fields for the ``problem_check`` server event type above.   |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``success``         | string        | 'correct', 'incorrect'                                              |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``attempts``        | integer       |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``state``
+     - dict
+     - Current problem state.
+   * - ``problem_id``
+     - string
+     - ID of the problem being rescored.
+   * - ``orig_score``
+     - integer
+     - 
+   * - ``orig_total``
+     - integer
+     - 
+   * - ``new_score`` 
+     - integer
+     - 
+   * - ``new_total``
+     - integer
+     - 
+   * - ``correct_map``
+     - dict
+     - See the fields for the ``problem_check`` server event above.
+   * - ``success``
+     - string
+     - 'correct', 'incorrect'
+   * - ``attempts``
+     - integer
+     - 
 
 ``problem_rescore_fail``
 -----------------------------
-
+.. no sample to check
 The server emits ``problem_rescore_fail`` events when a problem cannot be successfully rescored.  
-
-**Component**: Capa Module
 
 **Event Source**: Server
 
 ``event`` **Member Fields**: 
 
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``state``           | dict | Current problem state.                                              |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``problem_id``      | string        | ID of the problem being checked.                                    |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``failure``         | string        | 'unsupported', 'unanswered', 'input_error', 'unexpected'            |
-+---------------------+---------------+---------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``state``
+     - dict
+     - Current problem state. 
+   * - ``problem_id``
+     - string
+     - ID of the problem being checked.
+   * - ``failure`` 
+     - string
+     - 'unsupported', 'unanswered', 'input_error', 'unexpected'
 
 ``problem_save``
 -----------------------------
-
-``problem_save`` is emitted when a problem is saved.
-
-**Component**: Capa Module
+.. no sample to check
+The browser emits ``problem_save`` events when a user saves a problem.
 
 **Event Source**: Browser
 
@@ -1343,160 +1352,187 @@ The server emits ``problem_rescore_fail`` events when a problem cannot be succes
 
 ``problem_show``
 -----------------------------
-
-``problem_show`` is emitted when a problem is shown.  
-
-**Component**: Capa Module
+.. no sample to check
+The browser emits ``problem_show`` events when a problem is shown.  
 
 **Event Source**: Browser
 
 ``event`` **Member Fields**: 
 
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``problem``         | string        | ID of the problem being shown. For example,                         |
-|                     |               | i4x://MITx/6.00x/problem/L15:L15_Problem_2).                        |
-+---------------------+---------------+---------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``problem``
+     - string
+     - ID of the problem being shown. For example, i4x://MITx/6.00x/problem/L15:L15_Problem_2).
 
 ``reset_problem``
 ------------------------------------------------
-
-``reset_problem`` is emitted when a problem has been reset successfully. 
+.. no sample to check
+The server emits ``reset_problem`` events when a problem has been reset successfully. 
 .. %%what is the difference between reset_problem and problem_reset?
-
-**Component**: Capa Module
 
 **Event Source**: Server
 
 ``event`` **Member Fields**: 
 
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``old_state``       | dict | The state of the problem before the reset was performed.            |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``problem_id``      | string        | ID of the problem being reset.                                      |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``new_state``       | dict | New problem state.                                                  |
-+---------------------+---------------+---------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``old_state``
+     - dict
+     - The state of the problem before the reset was performed. 
+   * - ``problem_id``
+     - string
+     - ID of the problem being reset.
+   * - ``new_state``
+     - dict
+     - New problem state.  
 
 ``reset_problem_fail`` 
 ------------------------------------------------
-
-``reset_problem_fail`` is emitted when a problem cannot be reset successfully. 
-
-**Component**: Capa Module
+.. no sample to check
+The server emits ``reset_problem_fail`` events when a problem cannot be reset successfully. 
 
 **Event Source**: Server
 
 ``event`` **Member Fields**: 
 
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``old_state``       | dict | The state of the problem before the reset was requested.            |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``problem_id``      | string        | ID of the problem being reset.                                      |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``failure``         | string        | 'closed', 'not_done'                                                |
-+---------------------+---------------+---------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``old_state``
+     - dict
+     - The state of the problem before the reset was requested.
+   * - ``problem_id``
+     - string
+     - ID of the problem being reset.  
+   * - ``failure``
+     - string
+     - 'closed', 'not_done'
 
 ``show_answer`` 
 ------------------------------------------------
-
-Server-side event which displays the answer to a problem. 
-
-**Component**: Capa Module
+.. no sample to check
+The server emits ``show_answer`` events when the answer to a problem is shown. 
 
 **Event Source**: Server
 
-**History**: The original name for this event type was ``showanswer``. 
+**History**: The original name for this event was ``showanswer``. 
 
 .. **Question** is this renaming info correct?
 
 ``event`` **Member Fields**: 
 
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``problem_id``      | string        | EdX ID of the problem being shown.                                  |
-+---------------------+---------------+---------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``problem_id``
+     - string
+     - EdX ID of the problem being shown. 
 
 ``save_problem_fail`` 
 ------------------------------------------------
+.. no sample to check
 
-``save_problem_fail``  is emitted when a problem cannot be saved successfully. 
-
-**Component**: Capa Module
+The server emits ``save_problem_fail``  events when a problem cannot be saved successfully. 
 
 **Event Source**: Server
 
 ``event`` **Member Fields**: 
 
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``state``           | dict | Current problem state.                                              |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``problem_id``      | string        | ID of the problem being saved.                                      |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``failure``         | string        | 'closed', 'done'                                                    |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``answers``         | dict          |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``state``
+     - dict
+     - Current problem state.
+   * - ``problem_id``
+     - string
+     - ID of the problem being saved. 
+   * - ``failure`` 
+     - string
+     - 'closed', 'done' 
+   * - ``answers`` 
+     - dict
+     - 
 
 ``save_problem_success`` 
 ------------------------------------------------
-
-``save_problem_success`` is emitted when a problem is saved successfully. 
-
-**Component**: Capa Module
+.. no sample to check
+The server emits ``save_problem_success`` events when a problem is saved successfully. 
 
 **Event Source**: Server
 
 ``event`` **Member Fields**: 
 
-+---------------------+---------------+---------------------------------------------------------------------+
-|  Field              | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``state``           | dict | Current problem state.                                              |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``problem_id``      | string        | ID of the problem being saved.                                      |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``answers``         | dict          |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
 
+   * - Field
+     - Type
+     - Details
+   * - ``state``
+     - dict
+     - Current problem state. 
+   * - ``problem_id``
+     - string
+     - ID of the problem being saved. 
+   * - ``answers``
+     -  dict
+     -  
 
 ``problem_graded``
 -------------------
 
 .. %%TBD
 
+The server emits a ``problem_graded`` event %%%
 
-
-
-
-
+``event`` **Member Fields**: The ``event`` field delivers the values entered
+for the problem component in Studio as a string. The display name, problem
+text, and choices or response field labels are included.
 
 .. _ora:
 
 ======================================
-Open Response Assessment Event Types 
+Open Response Assessment Events 
 ======================================
 
-**History**: The events in this section are emitted to record interactions with
-the initial implementation of open response assessment (ORA) problem types.
-While the initial ORA design is not yet deprecated, a complete redesign of this
-feature is in limited release for testing. The revised ORA design does not use
-these event types.
+**History**: The events in this section record interactions with the initial
+implementation of open response assessment (ORA) problem types. As of May 2014,
+new courses are no longer using this implementation of ORA, and a complete
+redesign of this feature is in limited release for testing. The revised ORA
+design does not use these event types.
 
 ``oe_hide_question`` and ``oe_show_question``
 ---------------------------------------------------------------------------
 
-The ``oe_hide_question`` and ``oe_show_question`` event types are emitted when the user hides or redisplays a combined open-ended problem.
+The browser emits ``oe_hide_question`` and ``oe_show_question`` events when the
+user hides or redisplays a combined open-ended problem.
 
-**History**: These event types were previously named ``oe_hide_problem`` and ``oe_show_problem``.
+**History**: These events were previously named ``oe_hide_problem`` and ``oe_show_problem``.
 
 **Component**: Combined Open-Ended
 
@@ -1504,13 +1540,17 @@ The ``oe_hide_question`` and ``oe_show_question`` event types are emitted when t
 
 ``event`` **Member Fields**: 
 
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``location``        | string        | The location of the question whose prompt is being shown or hidden. |
-+---------------------+---------------+---------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
 
-----------------------
+   * - Field
+     - Type
+     - Details
+   * - ``location``
+     - string
+     - The location of the question whose prompt is being shown or hidden.
+
 ``rubric_select`` 
 ----------------------
 
@@ -1520,16 +1560,22 @@ The ``oe_hide_question`` and ``oe_show_question`` event types are emitted when t
 
 ``event`` **Member Fields**: 
 
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``location``        | string        | The location of the question whose rubric is                        |
-|                     |               | being selected.                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``selection``       | integer       | Value selected on rubric.                                           |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``category``        | integer       | Rubric category selected.                                           |
-+-----------------------------------+-------------------------------+---------------------+-----------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``location``
+     - string
+     - The location of the question whose rubric is being selected. 
+   * - ``selection``
+     - integer
+     - Value selected on rubric. 
+   * - ``category``
+     - integer
+     - Rubric category selected.
 
 ``oe_show_full_feedback`` and ``oe_show_respond_to_feedback``
 ------------------------------------------------------------------
@@ -1540,7 +1586,6 @@ The ``oe_hide_question`` and ``oe_show_question`` event types are emitted when t
 
 ``event`` **Member Fields**: None.
 
-
 ``oe_feedback_response_selected`` 
 --------------------------------------------
 
@@ -1550,19 +1595,25 @@ The ``oe_hide_question`` and ``oe_show_question`` event types are emitted when t
 
 ``event`` **Member Fields**:
 
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``value``           | integer       | Value selected in the feedback response form.                       |
-+---------------------+---------------+---------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
 
+   * - Field
+     - Type
+     - Details
+   * - ``value``
+     - integer
+     - Value selected in the feedback response form.
 
 ``peer_grading_hide_question`` and ``peer_grading_show_question``
 ---------------------------------------------------------------------
 
-The ``peer_grading_hide_question`` and ``peer_grading_show_question`` event types are emitted when the user hides or redisplays a problem that is peer graded.
+The browser emits ``peer_grading_hide_question`` and
+``peer_grading_show_question`` events when the user hides or redisplays a
+problem that is peer graded.
 
-**History**: These event types were previously named ``peer_grading_hide_problem`` and ``peer_grading_show_problem``.
+**History**: These events were previously named ``peer_grading_hide_problem`` and ``peer_grading_show_problem``.
 
 **Component**: Peer Grading
 
@@ -1570,19 +1621,25 @@ The ``peer_grading_hide_question`` and ``peer_grading_show_question`` event type
 
 ``event`` **Member Fields**: 
 
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``location``        | string        | The location of the question whose prompt is being shown or hidden. |
-+---------------------+---------------+---------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
 
+   * - Field
+     - Type
+     - Details
+   * - ``location``
+     - string
+     - The location of the question whose prompt is being shown or hidden.
 
 ``staff_grading_hide_question`` and ``staff_grading_show_question``
 -----------------------------------------------------------------------
 
-The ``staff_grading_hide_question`` and ``staff_grading_show_question`` event types are emitted when the user hides or redisplays a problem that is staff graded.
+The browser emits ``staff_grading_hide_question`` and
+``staff_grading_show_question`` events when the user hides or redisplays a
+problem that is staff graded.
 
-**History**: These event types were previously named ``staff_grading_hide_problem`` and ``staff_grading_show_problem``.
+**History**: These events were previously named ``staff_grading_hide_problem`` and ``staff_grading_show_problem``.
 
 **Component**: Staff Grading
 
@@ -1590,31 +1647,58 @@ The ``staff_grading_hide_question`` and ``staff_grading_show_question`` event ty
 
 ``event`` **Member Fields**: 
 
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``location``        | string        | The location of the question whose prompt is being shown or hidden. |
-+---------------------+---------------+---------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``location``
+     - string
+     - The location of the question whose prompt is being shown or hidden.
 
 .. _AB_Event_Types:
 
 ==========================
-A/B Testing Event Types
+A/B Testing Events
 ==========================
 
-Course authors can configure course content to present modules that contain other modules. For example, a parent module can include two child modules with content that differs in some way for comparison testing. When a student navigates to a module that is set up for A/B testing in this way, the student is randomly assigned to a group and shown only one of the child modules. 
+Course authors can configure course content to present modules that contain
+other modules. For example, a parent module can include two child modules with
+content that differs in some way for comparison testing. When a student
+navigates to a module that is set up for A/B testing in this way, the student is
+randomly assigned to a group and shown only one of the child modules.
 
-* Internally, a *partition* defines the type of experiment: between video and text, for example. A course can include any number of modules with the same partition, or experiment type.
-* For each partition, students are randomly assigned to a *group*. The group determines which content, either video or text in this example, is shown by every module with that partitioning. 
+* Internally, a *partition* defines the type of experiment: between video and
+  text, for example. A course can include any number of modules with the same
+  partition, or experiment type.
 
-The event types that follow apply to modules that are set up to randomly assign students to groups so that different content can be shown to the different groups. 
+* For each partition, students are randomly assigned to a *group*. The group
+  determines which content, either video or text in this example, is shown by
+  every module with that partitioning.
 
-**History**: These event types were added on 12 Mar 2014.
+The events that follow apply to modules that are set up to randomly assign
+students to groups so that different content can be shown to the different
+groups.
+
+**History**: These events were added on 12 Mar 2014.
 
 ``assigned_user_to_partition``
 ----------------------------------
 
-When a student views a module that is set up to test different child modules, the server checks the ``user_api_usercoursetag`` table for the student's assignment to the relevant partition, and to a group for that partition. The partition ID is the ``user_api_usercoursetag.key`` and the group ID is the ``user_api_usercoursetag.value``. If the student does not yet have an assignment, the server emits an ``assigned_user_to_partition`` event and adds a row to the ``user_api_usercoursetag`` table for the student. See :ref:`user_api_usercoursetag`. 
+When a student views a module that is set up to test different child modules,
+the server checks the ``user_api_usercoursetag`` table for the student's
+assignment to the relevant partition, and to a group for that partition. 
+
+* The partition ID is the ``user_api_usercoursetag.key``.
+
+* The group ID is the ``user_api_usercoursetag.value``.
+
+If the student does not yet have an assignment, the server emits an
+``assigned_user_to_partition`` event and adds a row to the
+``user_api_usercoursetag`` table for the student. See
+:ref:`user_api_usercoursetag`.
 
 .. note:: After this event is emitted, the common ``context`` field in all subsequent events includes a ``course_user_tags`` member field with the student's assigned partition and group.
 
@@ -1624,23 +1708,32 @@ When a student views a module that is set up to test different child modules, th
 
 ``event`` **Member Fields**: 
 
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``group_id``        | integer       | Identifier of the group.                                            |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``group_name``      | string        | Name of the group.                                                  |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``partition_id``    | integer       | Identifier for the partition, in the format                         |
-|                     |               | ``xblock.partition_service.partition_ID`` where ID is an integer.   |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``partition_name``  | string        | Name of the partition.                                              |
-+---------------------+---------------+---------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``group_id``
+     - integer
+     - Identifier of the group.
+   * - ``group_name``
+     - string
+     - Name of the group. 
+   * - ``partition_id``
+     - integer
+     - Identifier for the partition, in the format ``xblock.partition_service.partition_ID`` where ID is an integer.
+   * - ``partition_name``
+     - string
+     - Name of the partition.
 
 ``child_render``
 ----------------------------------
 
-When a student views a module that is set up to test different content using child modules, a ``child_render`` event is emitted to identify the child module that is shown to the student. 
+When a student views a module that is set up to test different content using
+child modules, the server emits a ``child_render`` event to identify
+the child module that was shown to the student.
 
 **Component**: Split Test
 
@@ -1648,13 +1741,16 @@ When a student views a module that is set up to test different content using chi
 
 ``event`` **Member Fields**: 
 
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``child-id``        | string        | ID of the module that displays to the student.                      |
-+---------------------+---------------+---------------------------------------------------------------------+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
 
-.. this might be renamed to child_id
+   * - Field
+     - Type
+     - Details
+   * - ``child-id``
+     - string
+     - ID of the module that displays to the student. 
 
 .. _Instructor_Event_Types:
 
@@ -1662,77 +1758,77 @@ When a student views a module that is set up to test different content using chi
 Instructor Event Types
 *************************
 
-The Instructor Event Type table lists the event types logged for course team
+The Instructor Event Type table lists the events that the server emits as a result of course team
 interaction with the Instructor Dashboard in the LMS. 
 
-.. need a description for each of these
+.. need to verify and get a description for each of these%%
 
-+----------------------------------------+----------------------+-----------------+---------------------+---------------+
-| Event Type                             | Component            | Event Source    | ``event`` Fields    | Type          |
-+----------------------------------------+----------------------+-----------------+---------------------+---------------+
-| ``list-students``,                     | Instructor Dashboard | Server          |                     |               |
-| ``dump-grades``,                       |                      |                 |                     |               |
-| ``dump-grades-raw``,                   |                      |                 |                     |               |
-| ``dump-grades-csv``,                   |                      |                 |                     |               |
-| ``dump-grades-csv-raw``,               |                      |                 |                     |               |
-| ``dump-answer-dist-csv``,              |                      |                 |                     |               |
-| ``dump-graded-assignments-config``     |                      |                 |                     |               |
-+----------------------------------------+----------------------+-----------------+---------------------+---------------+
-| ``rescore-all-submissions``,           | Instructor Dashboard | Server          | ``problem``         | string        |
-| ``reset-all-attempts``                 |                      |                 +---------------------+---------------+
-|                                        |                      |                 | ``course``          | string        |
-+----------------------------------------+----------------------+-----------------+---------------------+---------------+
-| ``delete-student-module-state``,       | Instructor Dashboard | Server          | ``problem``         | string        |
-| ``rescore-student-submission``         |                      |                 +---------------------+---------------+
-|                                        |                      |                 | ``student``         | string        |
-|                                        |                      |                 +---------------------+---------------+
-|                                        |                      |                 | ``course``          | string        |
-+----------------------------------------+----------------------+-----------------+---------------------+---------------+
-| ``reset-student-attempts``             | Instructor Dashboard | Server          | ``old_attempts``    | string        |
-|                                        |                      |                 +---------------------+---------------+
-|                                        |                      |                 | ``student``         | string        |
-|                                        |                      |                 +---------------------+---------------+
-|                                        |                      |                 | ``problem``         | string        |
-|                                        |                      |                 +---------------------+---------------+
-|                                        |                      |                 | ``instructor``      | string        |
-|                                        |                      |                 +---------------------+---------------+
-|                                        |                      |                 | ``course``          | string        |
-+----------------------------------------+----------------------+-----------------+---------------------+---------------+
-| ``get-student-progress-page``          | Instructor Dashboard | Server          | ``student``         | string        |
-|                                        |                      |                 +---------------------+---------------+
-|                                        |                      |                 | ``instructor``      | string        |
-|                                        |                      |                 +---------------------+---------------+
-|                                        |                      |                 | ``course``          | string        |
-+----------------------------------------+----------------------+-----------------+---------------------+---------------+
-| ``list-staff``,                        | Instructor Dashboard | Server          |                     |               |
-| ``list-instructors``,                  |                      |                 |                     |               |
-| ``list-beta-testers``                  |                      |                 |                     |               |
-+----------------------------------------+----------------------+-----------------+---------------------+---------------+
-| ``add-instructor``,                    | Instructor Dashboard | Server          | ``instructor``      | string        |
-| ``remove-instructor``                  |                      |                 |                     |               |
-|                                        |                      |                 |                     |               |
-+----------------------------------------+----------------------+-----------------+---------------------+---------------+
-| ``list-forum-admins``,                 | Instructor Dashboard | Server          | ``course``          | string        |
-| ``list-forum-mods``,                   |                      |                 |                     |               |
-| ``list-forum-community-TAs``           |                      |                 |                     |               |
-+----------------------------------------+----------------------+-----------------+---------------------+---------------+
-| ``remove-forum-admin``,                | Instructor Dashboard | Server          | ``username``        | string        |
-| ``add-forum-admin``,                   |                      |                 |                     |               |
-| ``remove-forum-mod``,                  |                      |                 |                     |               |
-| ``add-forum-mod``,                     |                      |                 +---------------------+---------------+
-| ``remove-forum-community-TA``,         |                      |                 | ``course``          | string        |
-| ``add-forum-community-TA``             |                      |                 |                     |               |
-+----------------------------------------+----------------------+-----------------+---------------------+---------------+
-| ``psychometrics-histogram-generation`` | Instructor Dashboard | Server          | ``problem``         | string        |
-|                                        |                      |                 |                     |               |
-|                                        |                      |                 |                     |               |
-+----------------------------------------+----------------------+-----------------+---------------------+---------------+
-| ``add-or-remove-user-group``           | Instructor Dashboard | Server          | ``event_name``      | string        |
-|                                        |                      |                 +---------------------+---------------+
-|                                        |                      |                 | ``user``            | string        |
-|                                        |                      |                 +---------------------+---------------+
-|                                        |                      |                 | ``event``           | string        |
-+----------------------------------------+----------------------+-----------------+---------------------+---------------+
++----------------------------------------+---------------------+---------------+
+| Event Type                             | ``event`` Fields    | Type          |
++----------------------------------------+---------------------+---------------+
+| ``list-students``,                     |                     |               |
+| ``dump-grades``,                       |                     |               |
+| ``dump-grades-raw``,                   |                     |               |
+| ``dump-grades-csv``,                   |                     |               |
+| ``dump-grades-csv-raw``,               |                     |               |
+| ``dump-answer-dist-csv``,              |                     |               |
+| ``dump-graded-assignments-config``     |                     |               |
++----------------------------------------+---------------------+---------------+
+| ``rescore-all-submissions``,           | ``problem``         | string        |
+| ``reset-all-attempts``                 +---------------------+---------------+
+|                                        | ``course``          | string        |
++----------------------------------------+---------------------+---------------+
+| ``delete-student-module-state``,       | ``problem``         | string        |
+| ``rescore-student-submission``         +---------------------+---------------+
+|                                        | ``student``         | string        |
+|                                        +---------------------+---------------+
+|                                        | ``course``          | string        |
++----------------------------------------+---------------------+---------------+
+| ``reset-student-attempts``             | ``old_attempts``    | string        |
+|                                        +---------------------+---------------+
+|                                        | ``student``         | string        |
+|                                        +---------------------+---------------+
+|                                        | ``problem``         | string        |
+|                                        +---------------------+---------------+
+|                                        | ``instructor``      | string        |
+|                                        +---------------------+---------------+
+|                                        | ``course``          | string        |
++----------------------------------------+---------------------+---------------+
+| ``get-student-progress-page``          | ``student``         | string        |
+|                                        +---------------------+---------------+
+|                                        | ``instructor``      | string        |
+|                                        +---------------------+---------------+
+|                                        | ``course``          | string        |
++----------------------------------------+---------------------+---------------+
+| ``list-staff``,                        |                     |               |
+| ``list-instructors``,                  |                     |               |
+| ``list-beta-testers``                  |                     |               |
++----------------------------------------+---------------------+---------------+
+| ``add-instructor``,                    | ``instructor``      | string        |
+| ``remove-instructor``                  |                     |               |
+|                                        |                     |               |
++----------------------------------------+---------------------+---------------+
+| ``list-forum-admins``,                 | ``course``          | string        |
+| ``list-forum-mods``,                   |                     |               |
+| ``list-forum-community-TAs``           |                     |               |
++----------------------------------------+---------------------+---------------+
+| ``remove-forum-admin``,                | ``username``        | string        |
+| ``add-forum-admin``,                   |                     |               |
+| ``remove-forum-mod``,                  |                     |               |
+| ``add-forum-mod``,                     +---------------------+---------------+
+| ``remove-forum-community-TA``,         | ``course``          | string        |
+| ``add-forum-community-TA``             |                     |               |
++----------------------------------------+---------------------+---------------+
+| ``psychometrics-histogram-generation`` | ``problem``         | string        |
+|                                        |                     |               |
+|                                        |                     |               |
++----------------------------------------+---------------------+---------------+
+| ``add-or-remove-user-group``           | ``event_name``      | string        |
+|                                        +---------------------+---------------+
+|                                        | ``user``            | string        |
+|                                        +---------------------+---------------+
+|                                        | ``event``           | string        |
++----------------------------------------+---------------------+---------------+
 
 .. _instructor_enrollment:
 
