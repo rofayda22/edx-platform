@@ -299,7 +299,7 @@ events that originate on the server (during the processing of a request).
 =========================
 Enrollment Events
 =========================
-
+.. tracked_command.py
 The server emits these events in response to course enrollment
 activities completed by a student.
 
@@ -399,7 +399,7 @@ Example
 ==============================
 Navigational Event Types   
 ==============================
-
+.. display_spec.coffee
 The browser emits these events when a user selects a navigational control. 
 
 * ``seq_goto`` is emitted when a user jumps between units in a sequence. 
@@ -440,9 +440,10 @@ in the ``event`` dict field.
 ``page_close``
 ---------------
 
-An additional type of event, ``page_close``, originates from within the Logger itself.  
+An additional type of event, ``page_close``, originates from within the JavaScript Logger itself.  
+.. what is the function of the Logger? what value do the events that it logs have?
 
-**Component**: Logger
+**Component**: JavaScript Logger
 
 **Event Source**: Browser
 
@@ -453,7 +454,7 @@ An additional type of event, ``page_close``, originates from within the Logger i
 ==============================
 Video Interaction Events   
 ==============================
-
+.. video_player_spec.js, lms-modules.js
 The browser emits these events when a user works with a video.
 
 **Component**: Video
@@ -579,7 +580,7 @@ The browser emits  ``show_transcript`` events when .
 =================================
 Textbook Interaction Events   
 =================================
-
+.. pdf-analytics.js
 ``book``
 ----------
 
@@ -1117,10 +1118,13 @@ user selects or clears the **Match Case** option for a search.
 =================================
 Problem Interaction Events 
 =================================
+.. lms-modules.js
 %%
+These events are 
 Capa Module
 
-Browser or server
+Problem interaction events are emitted by the server or the browser to
+capture information about interactions with problems, specifically, problems defined in the edX Capa module.
 
 ``problem_check`` (Browser)
 ----------------------------
@@ -1128,9 +1132,9 @@ Browser or server
 Both browser interactions and server requests produce ``problem_check`` events.
 The browser emits ``problem_check`` events when a user checks a problem.
 
-**Event Source**: Browser ``event`` 
+**Event Source**: Browser 
 
-**Member Fields**: For browser-emitted ``problem_check`` events, the ``event``
+``event`` **Member Fields**: For browser-emitted ``problem_check`` events, the ``event``
 field contains the values of all input fields from the problem being checked,
 styled as GET parameters.
 
@@ -1266,6 +1270,8 @@ The server emits ``problem_check_fail`` events when a problem cannot be checked 
 .. no sample to check
 The browser emits ``problem_reset`` events when a user resets a problem.
 .. %%is this an instructor initiated event?
+.. return Logger.log('problem_reset', [_this.answers, response.contents], _this.id);
+
 
 **Event Source**: Browser
 
@@ -1353,7 +1359,7 @@ The browser emits ``problem_save`` events when a user saves a problem.
 ``problem_show``
 -----------------------------
 .. no sample to check
-The browser emits ``problem_show`` events when a problem is shown.  
+The browser emits ``problem_show`` events when a problem is shown.  %%
 
 **Event Source**: Browser
 
@@ -1510,6 +1516,9 @@ The server emits ``save_problem_success`` events when a problem is saved success
 
 The server emits a ``problem_graded`` event %%%
 
+.. return Logger.log('problem_graded', [_this.answers, response.contents], _this.id);
+
+
 ``event`` **Member Fields**: The ``event`` field delivers the values entered
 for the problem component in Studio as a string. The display name, problem
 text, and choices or response field labels are included.
@@ -1520,11 +1529,11 @@ text, and choices or response field labels are included.
 Open Response Assessment Events 
 ======================================
 
-**History**: The events in this section record interactions with the initial
+**History**: The events in this section record interactions with the prototype
 implementation of open response assessment (ORA) problem types. As of May 2014,
-new courses are no longer using this implementation of ORA, and a complete
-redesign of this feature is in limited release for testing. The revised ORA
-design does not use these event types.
+new courses are not using this implementation of ORA, and a complete redesign of
+this feature is in limited release. The redesigned ORA design does not use these
+event types.
 
 ``oe_hide_question`` and ``oe_show_question``
 ---------------------------------------------------------------------------
@@ -1608,7 +1617,7 @@ user hides or redisplays a combined open-ended problem.
 
 ``peer_grading_hide_question`` and ``peer_grading_show_question``
 ---------------------------------------------------------------------
-
+.. I couldn't find these names in any js file. peer_grading_problem.js includes oe_hide or show_question.
 The browser emits ``peer_grading_hide_question`` and
 ``peer_grading_show_question`` events when the user hides or redisplays a
 problem that is peer graded.
@@ -1634,7 +1643,7 @@ problem that is peer graded.
 
 ``staff_grading_hide_question`` and ``staff_grading_show_question``
 -----------------------------------------------------------------------
-
+.. staff_grading.js
 The browser emits ``staff_grading_hide_question`` and
 ``staff_grading_show_question`` events when the user hides or redisplays a
 problem that is staff graded.
@@ -1758,10 +1767,201 @@ the child module that was shown to the student.
 Instructor Event Types
 *************************
 
-The Instructor Event Type table lists the events that the server emits as a result of course team
-interaction with the Instructor Dashboard in the LMS. 
+The Instructor Event Type table lists the events that the server emits as a
+result of course team interaction with the Instructor Dashboard in the LMS.
 
 .. need to verify and get a description for each of these%%
+
+=================
+``modify_access``
+=================
+
+when the course staff or instructor role is assigned to a user or revoked
+
+
+=================================
+``update_forum_role_membership``
+=================================
+
+emitted when these roles are assigned or revoked
+
+====================================================================
+``get_students_features``, ``get_students_features/csv``
+====================================================================
+
+student demographic “profile” report: get_students_features/csv (for downloadable file) or get_students_features (for display)
+
+
+===================================================
+``calculate_grades_csv``, ``dump-grades``
+===================================================
+
+grade report: calculate_grades_csv (when generate report) or dump-grades when
+display report. (I could not verify that an event is emitted when the link to
+the downloadable file is clicked. - Alison)
+
+==================================
+``get_student_progress_url``
+==================================
+
+course progress chart: get_student_progress_url
+
+=================
+``list-students``
+=================
+
+report of enrolled students: list-students
+
+=================
+``get_anon_ids``
+=================
+
+report of anonymized student IDs: get_anon_ids
+
+=================
+``instructor``
+=================
+
+responses to a specific problem: instructor (with an event value that identifies
+the button clicked) 
+
+report of students who can enroll: instructor (with an event
+value that identifies the button clicked)
+
+
+.. code-block:: python
+
+ def _section_course_info(course_id, access):
+    """ Provide data for the corresponding dashboard section """
+    course = get_course_by_id(course_id, depth=None)
+
+    course_id_dict = Location.parse_course_id(course_id)
+
+    section_data = {
+        'section_key': 'course_info',
+        'section_display_name': _('Course Info'),
+        'access': access,
+        'course_id': course_id,
+        'course_org': course_id_dict['org'],
+        'course_num': course_id_dict['course'],
+        'course_name': course_id_dict['name'],
+        'course_display_name': course.display_name,
+        'enrollment_count': CourseEnrollment.num_enrolled_in(course_id),
+        'has_started': course.has_started(),
+        'has_ended': course.has_ended(),
+        'list_instructor_tasks_url': reverse('list_instructor_tasks', kwargs={'course_id': course_id}),
+    }
+
+ def _section_membership(course_id, access):
+    """ Provide data for the corresponding dashboard section """
+    section_data = {
+        'section_key': 'membership',
+        'section_display_name': _('Membership'),
+        'access': access,
+        'enroll_button_url': reverse('students_update_enrollment', kwargs={'course_id': course_id}),
+        'unenroll_button_url': reverse('students_update_enrollment', kwargs={'course_id': course_id}),
+        'modify_beta_testers_button_url': reverse('bulk_beta_modify_access', kwargs={'course_id': course_id}),
+        'list_course_role_members_url': reverse('list_course_role_members', kwargs={'course_id': course_id}),
+        'modify_access_url': reverse('modify_access', kwargs={'course_id': course_id}),
+        'list_forum_members_url': reverse('list_forum_members', kwargs={'course_id': course_id}),
+        'update_forum_role_membership_url': reverse('update_forum_role_membership', kwargs={'course_id': course_id}),
+    }
+    return section_data
+
+
+ def _section_student_admin(course_id, access):
+    """ Provide data for the corresponding dashboard section """
+    section_data = {
+        'section_key': 'student_admin',
+        'section_display_name': _('Student Admin'),
+        'access': access,
+        'get_student_progress_url_url': reverse('get_student_progress_url', kwargs={'course_id': course_id}),
+        'enrollment_url': reverse('students_update_enrollment', kwargs={'course_id': course_id}),
+        'reset_student_attempts_url': reverse('reset_student_attempts', kwargs={'course_id': course_id}),
+        'rescore_problem_url': reverse('rescore_problem', kwargs={'course_id': course_id}),
+        'list_instructor_tasks_url': reverse('list_instructor_tasks', kwargs={'course_id': course_id}),
+    }
+    return section_data
+
+
+ def _section_extensions(course):
+    """ Provide data for the corresponding dashboard section """
+    section_data = {
+        'section_key': 'extensions',
+        'section_display_name': _('Extensions'),
+        'units_with_due_dates': [(title_or_url(unit), unit.location.url())
+                                 for unit in get_units_with_due_date(course)],
+        'change_due_date_url': reverse('change_due_date', kwargs={'course_id': course.id}),
+        'reset_due_date_url': reverse('reset_due_date', kwargs={'course_id': course.id}),
+        'show_unit_extensions_url': reverse('show_unit_extensions', kwargs={'course_id': course.id}),
+        'show_student_extensions_url': reverse('show_student_extensions', kwargs={'course_id': course.id}),
+    }
+    return section_data
+
+
+ def _section_data_download(course_id, access):
+    """ Provide data for the corresponding dashboard section """
+    section_data = {
+        'section_key': 'data_download',
+        'section_display_name': _('Data Download'),
+        'access': access,
+        'get_grading_config_url': reverse('get_grading_config', kwargs={'course_id': course_id}),
+        'get_students_features_url': reverse('get_students_features', kwargs={'course_id': course_id}),
+        'get_anon_ids_url': reverse('get_anon_ids', kwargs={'course_id': course_id}),
+        'list_instructor_tasks_url': reverse('list_instructor_tasks', kwargs={'course_id': course_id}),
+        'list_report_downloads_url': reverse('list_report_downloads', kwargs={'course_id': course_id}),
+        'calculate_grades_csv_url': reverse('calculate_grades_csv', kwargs={'course_id': course_id}),
+    }
+    return section_data
+
+
+ def _section_send_email(course_id, access, course):
+    """ Provide data for the corresponding bulk email section """
+    html_module = HtmlDescriptor(
+        course.system,
+        DictFieldData({'data': ''}),
+        ScopeIds(None, None, None, 'i4x://dummy_org/dummy_course/html/dummy_name')
+    )
+    fragment = course.system.render(html_module, 'studio_view')
+    fragment = wrap_xblock('LmsRuntime', html_module, 'studio_view', fragment, None, extra_data={"course-id": course_id})
+    email_editor = fragment.content
+    section_data = {
+        'section_key': 'send_email',
+        'section_display_name': _('Email'),
+        'access': access,
+        'send_email': reverse('send_email', kwargs={'course_id': course_id}),
+        'editor': email_editor,
+        'list_instructor_tasks_url': reverse('list_instructor_tasks', kwargs={'course_id': course_id}),
+        'email_background_tasks_url': reverse('list_background_email_tasks', kwargs={'course_id': course_id}),
+    }
+    return section_data
+
+
+ def _section_analytics(course_id, access):
+    """ Provide data for the corresponding dashboard section """
+    section_data = {
+        'section_key': 'analytics',
+        'section_display_name': _('Analytics'),
+        'access': access,
+        'get_distribution_url': reverse('get_distribution', kwargs={'course_id': course_id}),
+        'proxy_legacy_analytics_url': reverse('proxy_legacy_analytics', kwargs={'course_id': course_id}),
+    }
+    return section_data
+
+
+ def _section_metrics(course_id, access):
+    """Provide data for the corresponding dashboard section """
+    section_data = {
+        'section_key': 'metrics',
+        'section_display_name': ('Metrics'),
+        'access': access,
+        'sub_section_display_name': get_section_display_name(course_id),
+        'section_has_problem': get_array_section_has_problem(course_id),
+        'get_students_opened_subsection_url': reverse('get_students_opened_subsection'),
+        'get_students_problem_grades_url': reverse('get_students_problem_grades'),
+    }
+
+
 
 +----------------------------------------+---------------------+---------------+
 | Event Type                             | ``event`` Fields    | Type          |
