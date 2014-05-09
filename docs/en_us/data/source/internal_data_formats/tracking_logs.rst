@@ -13,9 +13,15 @@ event data is delivered in a log file.
 The sections in this chapter describe:
 
 * A :ref:`sample_events`.
-* :ref:`common` that are included in the JSON document of every event type.
-* :ref:`Student_Event_Types` for interactions with the LMS outside of the Instructor Dashboard.
-* :ref:`Instructor_Event_Types` for interactions with the Instructor Dashboard in the LMS.
+* :ref:`common` that are included in the JSON document of every Event.
+* :ref:`Student_Event_Types` for interactions with the LMS outside of the
+  Instructor Dashboard. 
+* :ref:`Instructor_Event_Types` for interactions with the Instructor Dashboard
+  in the LMS.
+
+Student and instructor events are grouped into categories in this chapter. For
+an alphabetical list of events, see the :ref:`event_list`.
+
 
 .. _sample_events:
 
@@ -162,7 +168,7 @@ of all events.
 
 **Type:** dict
 
-**Details:** For all event types, this field includes member fields that
+**Details:** For all Events, this field includes member fields that
 identify:
 
 * The ``course_id`` of the course that generated the event.
@@ -286,7 +292,7 @@ outside the Instructor Dashboard.
 
 * :ref:`AB_Event_Types`
 
-The descriptions that follow include what each event type represents, the system
+The descriptions that follow include what each Event represents, the system
 component it originates from, and what member fields the ``context`` and
 ``event`` dict fields contain.
 
@@ -317,7 +323,7 @@ result in these events, see :ref:`instructor_enrollment`.
 
 **Event Source**: Server
 
-**History**: The enrollment event types were added on 03 Dec 2013.
+**History**: The enrollment Events were added on 03 Dec 2013.
 
 ``context`` **Member Fields**: 
 
@@ -397,7 +403,7 @@ Example
 .. _navigational:
 
 ==============================
-Navigational Event Types   
+Navigational Events   
 ==============================
 .. display_spec.coffee
 The browser emits these events when a user selects a navigational control. 
@@ -550,7 +556,7 @@ playing speed for the video.
 ``load_video``
 -----------------
 
-.. %%TBD 
+.. %%New documentation, please review.
 
 The browser emits  ``load_video`` events when . 
 
@@ -559,7 +565,7 @@ The browser emits  ``load_video`` events when .
 ``hide_transcript``
 -------------------
 
-.. %%TBD
+.. %%New documentation, please review.
 
 The browser emits  ``hide_transcript`` events when . 
 
@@ -568,7 +574,7 @@ The browser emits  ``hide_transcript`` events when .
 ``show_transcript``
 --------------------
 
-.. %%TBD
+.. %%New documentation, please review.
 
 
 The browser emits  ``show_transcript`` events when . 
@@ -680,7 +686,7 @@ on a thumbnail image to navigate to a page.
 
 **Event Source**: Browser
 
-**History**: This event type was added on 16 Apr 2014.
+**History**: This event was added on 16 Apr 2014.
 
 ``event`` **Member Fields**: 
 
@@ -714,7 +720,7 @@ outline icon to show or hide a list of the book's chapters.
 
 **Event Source**: Browser
 
-**History**: This event type was added on 16 Apr 2014.
+**History**: This event was added on 16 Apr 2014.
 
 ``event`` **Member Fields**: 
 
@@ -745,7 +751,7 @@ on a link in the outline to navigate to a chapter.
 
 **Event Source**: Browser
 
-**History**: This event type was added on 16 Apr 2014.
+**History**: This event was added on 16 Apr 2014.
 
 ``event`` **Member Fields**: 
 
@@ -776,7 +782,7 @@ a page number.
 
 **Event Source**: Browser
 
-**History**: This event type was added on 16 Apr 2014.
+**History**: This event was added on 16 Apr 2014.
 
 ``event`` **Member Fields**: 
 
@@ -807,7 +813,7 @@ either the Zoom In or Zoom Out icon.
 
 **Event Source**: Browser
 
-**History**: This event type was added on 16 Apr 2014.
+**History**: This event was added on 16 Apr 2014.
 
 ``event`` **Member Fields**: 
 
@@ -841,7 +847,7 @@ magnification setting.
 
 **Event Source**: Browser
 
-**History**: This event type was added on 16 Apr 2014.
+**History**: This event was added on 16 Apr 2014.
 
 ``event`` **Member Fields**: 
 
@@ -876,7 +882,7 @@ magnification setting from the zoom menu or resizes the browser window.
 
 **Event Source**: Browser
 
-**History**: This event type was added on 16 Apr 2014.
+**History**: This event was added on 16 Apr 2014.
 
 ``event`` **Member Fields**: 
 
@@ -910,7 +916,7 @@ page changes while a user scrolls up or down.
 
 **Event Source**: Browser
 
-**History**: This event type was added on 16 Apr 2014.
+**History**: This Event was added on 16 Apr 2014.
 
 ``event`` **Member Fields**: 
 
@@ -947,7 +953,7 @@ field within 500ms of each other.
 
 **Event Source**: Browser
 
-**History**: This event type was added on 16 Apr 2014.
+**History**: This Event was added on 16 Apr 2014.
 
 ``event`` **Member Fields**: 
 
@@ -991,7 +997,7 @@ on the Find Next or Find Previous icons for an entered search string.
 
 **Event Source**: Browser
 
-**History**: This event type was added on 16 Apr 2014.
+**History**: This Event was added on 16 Apr 2014.
 
 ``event`` **Member Fields**: 
 
@@ -1037,7 +1043,7 @@ selects or clears the **Highlight All** option for a search.
 
 **Event Source**: Browser
 
-**History**: This event type was added on 16 Apr 2014.
+**History**: This Event was added on 16 Apr 2014.
 
 ``event`` **Member Fields**: 
 
@@ -1080,7 +1086,7 @@ user selects or clears the **Match Case** option for a search.
 
 **Event Source**: Browser
 
-**History**: This event type was added on 16 Apr 2014.
+**History**: This Event was added on 16 Apr 2014.
 
 ``event`` **Member Fields**: 
 
@@ -1167,7 +1173,9 @@ The server emits ``problem_check`` events when a problem is successfully checked
      - Details
    * - ``module``
      - dict
-     - Provides the specific problem component as part of the context. Contains the member field ``display_name``, which is the string value for the **Display Name** given to the problem component. 
+     - Provides the specific problem component as part of the context. Contains
+       the member field ``display_name``, which is the string value for the
+       **Display Name** given to the problem component.
 
 ``event`` **Member Fields**: 
 
@@ -1512,7 +1520,7 @@ The server emits ``save_problem_success`` events when a problem is saved success
 ``problem_graded``
 -------------------
 
-.. %%TBD
+.. %%New documentation, please review.
 
 The server emits a ``problem_graded`` event %%%
 
@@ -1528,12 +1536,12 @@ text, and choices or response field labels are included.
 ======================================
 Open Response Assessment Events 
 ======================================
-
+.. reviewers: I did not spend much editing time on these descriptions, I only
+.. changed the presentation. Please review for accuracy only.
 **History**: The events in this section record interactions with the prototype
 implementation of open response assessment (ORA) problem types. As of May 2014,
-new courses are not using this implementation of ORA, and a complete redesign of
-this feature is in limited release. The redesigned ORA design does not use these
-event types.
+new courses are not using this implementation of ORA and a complete redesign of
+this feature is in limited release.
 
 ``oe_hide_question`` and ``oe_show_question``
 ---------------------------------------------------------------------------
@@ -1541,7 +1549,8 @@ event types.
 The browser emits ``oe_hide_question`` and ``oe_show_question`` events when the
 user hides or redisplays a combined open-ended problem.
 
-**History**: These events were previously named ``oe_hide_problem`` and ``oe_show_problem``.
+**History**: These events were previously named ``oe_hide_problem`` and
+``oe_show_problem``.
 
 **Component**: Combined Open-Ended
 
@@ -1764,10 +1773,10 @@ the child module that was shown to the student.
 .. _Instructor_Event_Types:
 
 *************************
-Instructor Event Types
+Instructor Events
 *************************
 
-The Instructor Event Type table lists the events that the server emits as a
+The Instructor Event table lists the events that the server emits as a
 result of course team interaction with the Instructor Dashboard in the LMS.
 
 .. need to verify and get a description for each of these%%
@@ -1823,10 +1832,245 @@ report of anonymized student IDs: get_anon_ids
 =================
 
 responses to a specific problem: instructor (with an event value that identifies
-the button clicked) 
+the button clicked as prefix) 
 
 report of students who can enroll: instructor (with an event
 value that identifies the button clicked)
+
+
+.. _rescore_all:
+
+``rescore-all-submissions`` and ``reset-all-attempts`` Event Types   
+-----------------------------------------------------------------------
+
+**Description**: 
+
+**Component**: Instructor Dashboard
+
+**Event Source**: Server
+
+``event`` **Fields**: 
+
++---------------------+---------------+---------------------------------------------------------------------+
+| Field               | Type          | Details                                                             |
++=====================+===============+=====================================================================+
+| ``problem``         | string        |                                                                     |
++---------------------+---------------+---------------------------------------------------------------------+
+| ``course``          | string        |                                                                     |
++---------------------+---------------+---------------------------------------------------------------------+
+
+.. _rescore_student:
+
+ ``delete-student-module-state`` and ``rescore-student-submission`` Event Types   
+-----------------------------------------------------------------------------------
+.. previously a comma-separated list; "Rows identical after the second column" (which means the name and description columns) were combined
+**Description**: 
+
+**Component**: Instructor Dashboard
+
+**Event Source**: Server
+
+``event`` **Fields**: 
+
++---------------------+---------------+---------------------------------------------------------------------+
+| Field               | Type          | Details                                                             |
++=====================+===============+=====================================================================+
+| ``problem``         | string        |                                                                     |
++---------------------+---------------+---------------------------------------------------------------------+
+| ``student``         | string        |                                                                     |
++---------------------+---------------+---------------------------------------------------------------------+
+| ``course``          | string        |                                                                     |
++---------------------+---------------+---------------------------------------------------------------------+
+
+.. _reset_attempts:
+
+``reset-student-attempts`` Event Type
+-----------------------------------------------------------------------------------
+
+**Description**: 
+
+**Component**: Instructor Dashboard
+
+**Event Source**: Server
+
+``event`` **Fields**: 
+
++---------------------+---------------+---------------------------------------------------------------------+
+| Field               | Type          | Details                                                             |
++=====================+===============+=====================================================================+
+| ``old_attempts``    | string        |                                                                     |
++---------------------+---------------+---------------------------------------------------------------------+
+| ``student``         | string        |                                                                     |
++---------------------+---------------+---------------------------------------------------------------------+
+| ``problem``         | string        |                                                                     |
++---------------------+---------------+---------------------------------------------------------------------+
+| ``instructor``      | string        |                                                                     |
++---------------------+---------------+---------------------------------------------------------------------+
+
+.. _progress:
+
+``get-student-progress-page`` Event Type
+-----------------------------------------------------------------------------------
+
+**Description**: 
+
+**Component**: Instructor Dashboard
+
+**Event Source**: Server
+
+``event`` **Fields**: 
+
++---------------------+---------------+---------------------------------------------------------------------+
+| Field               | Type          | Details                                                             |
++=====================+===============+=====================================================================+
+| ``student``         | string        |                                                                     |
++---------------------+---------------+---------------------------------------------------------------------+
+| ``instructor``      | string        |                                                                     |
++---------------------+---------------+---------------------------------------------------------------------+
+| ``course``          | string        |                                                                     |
++---------------------+---------------+---------------------------------------------------------------------+
+
+.. _list_staff:
+
+``list-staff`` Event Types   
+------------------------------------------------
+.. previously a comma-separated list; "Rows identical after the second column" (which means the name and description columns) were combined
+**Description**: 
+
+* ``list-staff``
+
+* ``list-instructors``
+
+* ``list-beta-testers``
+
+**Component**: Instructor Dashboard
+
+**Event Source**: Server
+
+``event`` **Fields**: None
+
+.. _instructor:
+
+``*_instructor`` Event Types   
+------------------------------------------------
+.. previously a comma-separated list; "Rows identical after the second column" (which means the name and description columns) were combined
+**Description**: 
+
+* ``add-instructor``
+
+* ``remove-instructor``
+
+**Component**: Instructor Dashboard
+
+**Event Source**: Server
+
+``event`` **Fields**: 
+
++---------------------+---------------+---------------------------------------------------------------------+
+| Field               | Type          | Details                                                             |
++=====================+===============+=====================================================================+
+| ``instructor``      | string        |                                                                     |
++---------------------+---------------+---------------------------------------------------------------------+
+
+.. _list_forum:
+
+``list_forum_*`` Event Types   
+------------------------------------------------
+.. previously a comma-separated list; "Rows identical after the second column" (which means the name and description columns) were combined
+**Description**: 
+
+* ``list-forum-admins``
+
+* ``list-forum-mods``
+
+* ``list-forum-community-TAs``
+
+**Component**: Instructor Dashboard
+
+**Event Source**: Server
+
+``event`` **Fields**: 
+
++---------------------+---------------+---------------------------------------------------------------------+
+| Field               | Type          | Details                                                             |
++=====================+===============+=====================================================================+
+| ``course``          | string        |                                                                     |
++---------------------+---------------+---------------------------------------------------------------------+
+
+.. _forum:
+
+Managing Discussion Staff Event Types   
+------------------------------------------------
+.. previously a comma-separated list; "Rows identical after the second column" (which means the name and description columns) were combined
+**Description**: 
+
+* ``remove-forum-admin``
+
+* ``add-forum-admin``
+
+* ``remove-forum-mod``
+
+* ``add-forum-mod``
+
+* ``remove-forum-community-TA``
+
+* ``add-forum-community-TA``
+
+**Component**: Instructor Dashboard
+
+**Event Source**: Server
+
+``event`` **Fields**: 
+
++---------------------+---------------+---------------------------------------------------------------------+
+| Field               | Type          | Details                                                             |
++=====================+===============+=====================================================================+
+| ``username``        | string        |                                                                     |
++---------------------+---------------+---------------------------------------------------------------------+
+| ``course``          | string        |                                                                     |
++---------------------+---------------+---------------------------------------------------------------------+
+
+.. _histogram:
+
+``psychometrics-histogram-generation`` Event Type  
+------------------------------------------------------
+
+**Description**: 
+
+**Component**: Instructor Dashboard
+
+**Event Source**: Server
+
+``event`` **Fields**: 
+
++---------------------+---------------+---------------------------------------------------------------------+
+| Field               | Type          | Details                                                             |
++=====================+===============+=====================================================================+
+| ``problem``         | string        |                                                                     |
++---------------------+---------------+---------------------------------------------------------------------+
+
+.. _user_group:
+
+``add-or-remove-user-group`` Event Type  
+------------------------------------------------------
+
+**Description**: 
+
+**Component**: Instructor Dashboard
+
+**Event Source**: Server
+
+``event`` **Fields**: 
+
++---------------------+---------------+---------------------------------------------------------------------+
+| Field               | Type          | Details                                                             |
++=====================+===============+=====================================================================+
+| ``event_name``      | string        |                                                                     |
++---------------------+---------------+---------------------------------------------------------------------+
+| ``user``            | string        |                                                                     |
++---------------------+---------------+---------------------------------------------------------------------+
+| ``event``           | string        |                                                                     |
++---------------------+---------------+---------------------------------------------------------------------+
 
 
 .. code-block:: python
@@ -1964,7 +2208,7 @@ value that identifies the button clicked)
 
 
 +----------------------------------------+---------------------+---------------+
-| Event Type                             | ``event`` Fields    | Type          |
+| Event                                  | ``event`` Fields    | Type          |
 +----------------------------------------+---------------------+---------------+
 | ``list-students``,                     |                     |               |
 | ``dump-grades``,                       |                     |               |
