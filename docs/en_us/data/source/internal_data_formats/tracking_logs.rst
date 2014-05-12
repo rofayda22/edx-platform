@@ -513,10 +513,10 @@ transcript to go to a different point in the video file.
      - Details
    * - ``old_time``
      - 
-     - The time in the video that the user is coming from.
+     - The time in the video that the user chose to go to a different point in the file.
    * - ``new_time``
      - 
-     - The time in the video that the user is going to.
+     - The time in the video that the user selected as the destination point.
    * - ``type``
      - 
      - The navigational method used to change position within the video.
@@ -553,33 +553,32 @@ playing speed for the video.
 
 .. types needed
 
-``load_video``
------------------
+.. ``load_video``
+.. -----------------
 
-.. %%New documentation, please review.
+.. %%TBD
 
-The browser emits  ``load_video`` events when . 
+.. The browser emits  ``load_video`` events when . 
 
-``event`` **Member Fields**: None
+.. ``event`` **Member Fields**: None
 
-``hide_transcript``
--------------------
+.. ``hide_transcript``
+.. -------------------
 
-.. %%New documentation, please review.
+.. %%TBD
 
-The browser emits  ``hide_transcript`` events when . 
+.. The browser emits  ``hide_transcript`` events when . 
 
-``event`` **Member Fields**: 
+.. ``event`` **Member Fields**: 
 
-``show_transcript``
---------------------
+.. ``show_transcript``
+.. --------------------
 
-.. %%New documentation, please review.
+.. %%TBD
 
+.. The browser emits  ``show_transcript`` events when . 
 
-The browser emits  ``show_transcript`` events when . 
-
-``event`` **Member Fields**: 
+.. ``event`` **Member Fields**: 
 
 .. _pdf:
 
@@ -1273,17 +1272,16 @@ The server emits ``problem_check_fail`` events when a problem cannot be checked 
      - string
      - 'closed', 'unreset'
 
-``problem_reset``
------------------------------
+.. ``problem_reset``
+.. -----------------------------
 .. no sample to check
-The browser emits ``problem_reset`` events when a user resets a problem.
+.. The browser emits ``problem_reset`` events when a user resets a problem.
 .. %%is this an instructor initiated event?
 .. return Logger.log('problem_reset', [_this.answers, response.contents], _this.id);
 
+.. **Event Source**: Browser
 
-**Event Source**: Browser
-
-``event`` **Member Fields**: None
+.. ``event`` **Member Fields**: None
 
 ``problem_rescore``
 -----------------------------
@@ -1517,19 +1515,16 @@ The server emits ``save_problem_success`` events when a problem is saved success
      -  dict
      -  
 
-``problem_graded``
--------------------
+.. ``problem_graded``
+.. -------------------
 
-.. %%New documentation, please review.
+.. %%TBD
 
-The server emits a ``problem_graded`` event %%%
+.. The server emits a ``problem_graded`` event %%%
 
 .. return Logger.log('problem_graded', [_this.answers, response.contents], _this.id);
 
-
-``event`` **Member Fields**: The ``event`` field delivers the values entered
-for the problem component in Studio as a string. The display name, problem
-text, and choices or response field labels are included.
+.. ``event`` **Member Fields**: The ``event`` field delivers the values entered for the problem component in Studio as a string. The display name, problem text, and choices or response field labels are included.
 
 .. _ora:
 
@@ -1778,434 +1773,6 @@ Instructor Events
 
 The Instructor Event table lists the events that the server emits as a
 result of course team interaction with the Instructor Dashboard in the LMS.
-
-.. need to verify and get a description for each of these%%
-
-=================
-``modify_access``
-=================
-
-when the course staff or instructor role is assigned to a user or revoked
-
-
-=================================
-``update_forum_role_membership``
-=================================
-
-emitted when these roles are assigned or revoked
-
-====================================================================
-``get_students_features``, ``get_students_features/csv``
-====================================================================
-
-student demographic “profile” report: get_students_features/csv (for downloadable file) or get_students_features (for display)
-
-
-===================================================
-``calculate_grades_csv``, ``dump-grades``
-===================================================
-
-grade report: calculate_grades_csv (when generate report) or dump-grades when
-display report. (I could not verify that an event is emitted when the link to
-the downloadable file is clicked. - Alison)
-
-==================================
-``get_student_progress_url``
-==================================
-
-course progress chart: get_student_progress_url
-
-=================
-``list-students``
-=================
-
-report of enrolled students: list-students
-
-=================
-``get_anon_ids``
-=================
-
-report of anonymized student IDs: get_anon_ids
-
-=================
-``instructor``
-=================
-
-responses to a specific problem: instructor (with an event value that identifies
-the button clicked as prefix) 
-
-report of students who can enroll: instructor (with an event
-value that identifies the button clicked)
-
-
-.. _rescore_all:
-
-``rescore-all-submissions`` and ``reset-all-attempts`` Event Types   
------------------------------------------------------------------------
-
-**Description**: 
-
-**Component**: Instructor Dashboard
-
-**Event Source**: Server
-
-``event`` **Fields**: 
-
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``problem``         | string        |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``course``          | string        |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-
-.. _rescore_student:
-
- ``delete-student-module-state`` and ``rescore-student-submission`` Event Types   
------------------------------------------------------------------------------------
-.. previously a comma-separated list; "Rows identical after the second column" (which means the name and description columns) were combined
-**Description**: 
-
-**Component**: Instructor Dashboard
-
-**Event Source**: Server
-
-``event`` **Fields**: 
-
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``problem``         | string        |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``student``         | string        |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``course``          | string        |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-
-.. _reset_attempts:
-
-``reset-student-attempts`` Event Type
------------------------------------------------------------------------------------
-
-**Description**: 
-
-**Component**: Instructor Dashboard
-
-**Event Source**: Server
-
-``event`` **Fields**: 
-
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``old_attempts``    | string        |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``student``         | string        |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``problem``         | string        |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``instructor``      | string        |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-
-.. _progress:
-
-``get-student-progress-page`` Event Type
------------------------------------------------------------------------------------
-
-**Description**: 
-
-**Component**: Instructor Dashboard
-
-**Event Source**: Server
-
-``event`` **Fields**: 
-
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``student``         | string        |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``instructor``      | string        |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``course``          | string        |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-
-.. _list_staff:
-
-``list-staff`` Event Types   
-------------------------------------------------
-.. previously a comma-separated list; "Rows identical after the second column" (which means the name and description columns) were combined
-**Description**: 
-
-* ``list-staff``
-
-* ``list-instructors``
-
-* ``list-beta-testers``
-
-**Component**: Instructor Dashboard
-
-**Event Source**: Server
-
-``event`` **Fields**: None
-
-.. _instructor:
-
-``*_instructor`` Event Types   
-------------------------------------------------
-.. previously a comma-separated list; "Rows identical after the second column" (which means the name and description columns) were combined
-**Description**: 
-
-* ``add-instructor``
-
-* ``remove-instructor``
-
-**Component**: Instructor Dashboard
-
-**Event Source**: Server
-
-``event`` **Fields**: 
-
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``instructor``      | string        |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-
-.. _list_forum:
-
-``list_forum_*`` Event Types   
-------------------------------------------------
-.. previously a comma-separated list; "Rows identical after the second column" (which means the name and description columns) were combined
-**Description**: 
-
-* ``list-forum-admins``
-
-* ``list-forum-mods``
-
-* ``list-forum-community-TAs``
-
-**Component**: Instructor Dashboard
-
-**Event Source**: Server
-
-``event`` **Fields**: 
-
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``course``          | string        |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-
-.. _forum:
-
-Managing Discussion Staff Event Types   
-------------------------------------------------
-.. previously a comma-separated list; "Rows identical after the second column" (which means the name and description columns) were combined
-**Description**: 
-
-* ``remove-forum-admin``
-
-* ``add-forum-admin``
-
-* ``remove-forum-mod``
-
-* ``add-forum-mod``
-
-* ``remove-forum-community-TA``
-
-* ``add-forum-community-TA``
-
-**Component**: Instructor Dashboard
-
-**Event Source**: Server
-
-``event`` **Fields**: 
-
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``username``        | string        |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``course``          | string        |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-
-.. _histogram:
-
-``psychometrics-histogram-generation`` Event Type  
-------------------------------------------------------
-
-**Description**: 
-
-**Component**: Instructor Dashboard
-
-**Event Source**: Server
-
-``event`` **Fields**: 
-
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``problem``         | string        |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-
-.. _user_group:
-
-``add-or-remove-user-group`` Event Type  
-------------------------------------------------------
-
-**Description**: 
-
-**Component**: Instructor Dashboard
-
-**Event Source**: Server
-
-``event`` **Fields**: 
-
-+---------------------+---------------+---------------------------------------------------------------------+
-| Field               | Type          | Details                                                             |
-+=====================+===============+=====================================================================+
-| ``event_name``      | string        |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``user``            | string        |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-| ``event``           | string        |                                                                     |
-+---------------------+---------------+---------------------------------------------------------------------+
-
-
-.. code-block:: python
-
- def _section_course_info(course_id, access):
-    """ Provide data for the corresponding dashboard section """
-    course = get_course_by_id(course_id, depth=None)
-
-    course_id_dict = Location.parse_course_id(course_id)
-
-    section_data = {
-        'section_key': 'course_info',
-        'section_display_name': _('Course Info'),
-        'access': access,
-        'course_id': course_id,
-        'course_org': course_id_dict['org'],
-        'course_num': course_id_dict['course'],
-        'course_name': course_id_dict['name'],
-        'course_display_name': course.display_name,
-        'enrollment_count': CourseEnrollment.num_enrolled_in(course_id),
-        'has_started': course.has_started(),
-        'has_ended': course.has_ended(),
-        'list_instructor_tasks_url': reverse('list_instructor_tasks', kwargs={'course_id': course_id}),
-    }
-
- def _section_membership(course_id, access):
-    """ Provide data for the corresponding dashboard section """
-    section_data = {
-        'section_key': 'membership',
-        'section_display_name': _('Membership'),
-        'access': access,
-        'enroll_button_url': reverse('students_update_enrollment', kwargs={'course_id': course_id}),
-        'unenroll_button_url': reverse('students_update_enrollment', kwargs={'course_id': course_id}),
-        'modify_beta_testers_button_url': reverse('bulk_beta_modify_access', kwargs={'course_id': course_id}),
-        'list_course_role_members_url': reverse('list_course_role_members', kwargs={'course_id': course_id}),
-        'modify_access_url': reverse('modify_access', kwargs={'course_id': course_id}),
-        'list_forum_members_url': reverse('list_forum_members', kwargs={'course_id': course_id}),
-        'update_forum_role_membership_url': reverse('update_forum_role_membership', kwargs={'course_id': course_id}),
-    }
-    return section_data
-
-
- def _section_student_admin(course_id, access):
-    """ Provide data for the corresponding dashboard section """
-    section_data = {
-        'section_key': 'student_admin',
-        'section_display_name': _('Student Admin'),
-        'access': access,
-        'get_student_progress_url_url': reverse('get_student_progress_url', kwargs={'course_id': course_id}),
-        'enrollment_url': reverse('students_update_enrollment', kwargs={'course_id': course_id}),
-        'reset_student_attempts_url': reverse('reset_student_attempts', kwargs={'course_id': course_id}),
-        'rescore_problem_url': reverse('rescore_problem', kwargs={'course_id': course_id}),
-        'list_instructor_tasks_url': reverse('list_instructor_tasks', kwargs={'course_id': course_id}),
-    }
-    return section_data
-
-
- def _section_extensions(course):
-    """ Provide data for the corresponding dashboard section """
-    section_data = {
-        'section_key': 'extensions',
-        'section_display_name': _('Extensions'),
-        'units_with_due_dates': [(title_or_url(unit), unit.location.url())
-                                 for unit in get_units_with_due_date(course)],
-        'change_due_date_url': reverse('change_due_date', kwargs={'course_id': course.id}),
-        'reset_due_date_url': reverse('reset_due_date', kwargs={'course_id': course.id}),
-        'show_unit_extensions_url': reverse('show_unit_extensions', kwargs={'course_id': course.id}),
-        'show_student_extensions_url': reverse('show_student_extensions', kwargs={'course_id': course.id}),
-    }
-    return section_data
-
-
- def _section_data_download(course_id, access):
-    """ Provide data for the corresponding dashboard section """
-    section_data = {
-        'section_key': 'data_download',
-        'section_display_name': _('Data Download'),
-        'access': access,
-        'get_grading_config_url': reverse('get_grading_config', kwargs={'course_id': course_id}),
-        'get_students_features_url': reverse('get_students_features', kwargs={'course_id': course_id}),
-        'get_anon_ids_url': reverse('get_anon_ids', kwargs={'course_id': course_id}),
-        'list_instructor_tasks_url': reverse('list_instructor_tasks', kwargs={'course_id': course_id}),
-        'list_report_downloads_url': reverse('list_report_downloads', kwargs={'course_id': course_id}),
-        'calculate_grades_csv_url': reverse('calculate_grades_csv', kwargs={'course_id': course_id}),
-    }
-    return section_data
-
-
- def _section_send_email(course_id, access, course):
-    """ Provide data for the corresponding bulk email section """
-    html_module = HtmlDescriptor(
-        course.system,
-        DictFieldData({'data': ''}),
-        ScopeIds(None, None, None, 'i4x://dummy_org/dummy_course/html/dummy_name')
-    )
-    fragment = course.system.render(html_module, 'studio_view')
-    fragment = wrap_xblock('LmsRuntime', html_module, 'studio_view', fragment, None, extra_data={"course-id": course_id})
-    email_editor = fragment.content
-    section_data = {
-        'section_key': 'send_email',
-        'section_display_name': _('Email'),
-        'access': access,
-        'send_email': reverse('send_email', kwargs={'course_id': course_id}),
-        'editor': email_editor,
-        'list_instructor_tasks_url': reverse('list_instructor_tasks', kwargs={'course_id': course_id}),
-        'email_background_tasks_url': reverse('list_background_email_tasks', kwargs={'course_id': course_id}),
-    }
-    return section_data
-
-
- def _section_analytics(course_id, access):
-    """ Provide data for the corresponding dashboard section """
-    section_data = {
-        'section_key': 'analytics',
-        'section_display_name': _('Analytics'),
-        'access': access,
-        'get_distribution_url': reverse('get_distribution', kwargs={'course_id': course_id}),
-        'proxy_legacy_analytics_url': reverse('proxy_legacy_analytics', kwargs={'course_id': course_id}),
-    }
-    return section_data
-
-
- def _section_metrics(course_id, access):
-    """Provide data for the corresponding dashboard section """
-    section_data = {
-        'section_key': 'metrics',
-        'section_display_name': ('Metrics'),
-        'access': access,
-        'sub_section_display_name': get_section_display_name(course_id),
-        'section_has_problem': get_array_section_has_problem(course_id),
-        'get_students_opened_subsection_url': reverse('get_students_opened_subsection'),
-        'get_students_problem_grades_url': reverse('get_students_problem_grades'),
-    }
-
-
 
 +----------------------------------------+---------------------+---------------+
 | Event                                  | ``event`` Fields    | Type          |

@@ -48,12 +48,8 @@ Event List
      - :ref:`Instructor_Event_Types`
    * - ``get_students_features/csv``
      - :ref:`Instructor_Event_Types`
-   * - ``hide_transcript``
-     - :ref:`video`
    * - ``instructor``
      - :ref:`Instructor_Event_Types`
-   * - ``load_video``
-     - :ref:`video`
    * - ``list-beta-testers``
      - :ref:`Instructor_Event_Types`
    * - ``list-forum-admins``
@@ -94,13 +90,9 @@ Event List
      - :ref:`problem`
    * - ``problem_check_fail``
      - :ref:`problem`
-   * - ``problem_graded``
-     - :ref:`problem`
    * - ``problem_rescore``
      - :ref:`problem`
    * - ``problem_rescore_fail``
-     - :ref:`problem`
-   * - ``problem_reset``
      - :ref:`problem`
    * - ``problem_save``
      - :ref:`problem`
@@ -144,8 +136,6 @@ Event List
      - :ref:`navigational`
    * - ``show_answer``
      - :ref:`problem`
-   * - ``show_transcript``
-     - :ref:`video`
    * - ``speed_change_video``
      - :ref:`video`
    * - ``staff_grading_hide_question``
@@ -180,3 +170,15 @@ Event List
      - :ref:`pdf`
    * - ``update_forum_role_membership``
      - :ref:`Instructor_Event_Types`
+       
+
+..   * - ``hide_transcript``
+..     - :ref:`video`
+..   * - ``load_video``
+..     - :ref:`video`      
+..   * - ``problem_graded``
+..     - :ref:`problem`
+..   * - ``problem_reset``
+..     - :ref:`problem`
+..   * - ``show_transcript``
+..     - :ref:`video`
