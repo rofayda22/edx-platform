@@ -12,13 +12,12 @@ for working with students, grades, and other members of the staff.
 
 * Instructors
 
-.. **Question**: how does this team, set up on the Instructor Dashboard, differ from the "Course Team Members" that you add in Studio (Settings > Course Team)?
-
-The administrative team that helps you run your course in the LMS can include
-some, all, or none of the people who help you set up the course in Studio. You
-assign these administrative roles in the LMS, separately from the roles you
-assign in Studio. For more information on setting up a team in Studio, see
+You can assign these privileged roles when you work in either the LMS or in
+Studio: the users who have these roles can work on your course in both the LMS
+and Studio. For more information on setting up a team in Studio, see
 :ref:`Add Course Team Members`.
+
+.. note:: In Studio, the "Admin" role is the same as the LMS "Instructor" role, and the "Staff" role is the same as "Course Staff".
 
 You can also designate teams of people to beta test your course and to
 moderate and manage its discussions by assigning other LMS roles. The beta
