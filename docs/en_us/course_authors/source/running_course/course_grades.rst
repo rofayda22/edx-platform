@@ -285,17 +285,35 @@ When you create a problem, you can limit the number of times that a student can 
 
 For information about modifying a released problem, including other workarounds, see :ref:`Modifying a Released Problem`.
 
-**Note**: To reset the number of attempts for a problem, you need its unique identifier. See :ref:`find_URL`.
 
-To reset student attempts for a problem:
+Reset Attempts for an Individual Student
+---------------------------------------------
+
+To reset the number of attempts for a student, you need the student's username or email address.
+
+To reset a single student's attempts for a problem:
+
+#. View the live version of your course.
+
+#. Click **Courseware** and navigate to the component that contains the problem you want to review.
+
+#. Display the problem, and click **Staff Debug Info**.
+#. %%%
+
+
+Reset Attempts for All Students
+------------------------------------
+
+To reset the number of attempts that all enrolled students have for a problem,
+you need the unique identifier of the problem. See :ref:`find_URL`.
+
+To reset attempts for all students:
 
 #. View the live version of your course.
 
 #. Click **Instructor** > **Try New Beta Dashboard**.
 
 #. Click **Student Admin**. 
-
-#. To reset the number of attempts for one student, you work in the Student-Specific Grade Adjustment section of the page. Enter the student's email address or username and the unique problem identifier, then click **Reset Student Attempts**.
 
 #. To reset the number of attempts for all enrolled students, you work in the Course-Specific Grade Adjustment section of the page. Enter the unique problem identifier then click **Reset ALL students' attempts**. 
 
