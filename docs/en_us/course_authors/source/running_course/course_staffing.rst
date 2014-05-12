@@ -17,7 +17,7 @@ Studio: the users who have these roles can work on your course in both the LMS
 and Studio. For more information on setting up a team in Studio, see
 :ref:`Add Course Team Members`.
 
-.. note:: In Studio, the "Admin" role is the same as the LMS "Instructor" role, and the "Staff" role is the same as "Course Staff".
+.. note:: The LMS "Course Staff" role is the same as the Studio "Staff" role, and the LMS "Instructors" role is the same as the Studio "Admin" role.
 
 You can also designate teams of people to beta test your course and to
 moderate and manage its discussions by assigning other LMS roles. The beta
