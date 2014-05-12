@@ -35,9 +35,9 @@ Event List
    * - ``dump_grades``
      - :ref:`Instructor_Event_Types`
    * - ``edx.course.enrollment.activated``
-     - :ref:`Enrollment Events` and :ref:`instructor_enrollment`
+     - :ref:`enrollment` and :ref:`instructor_enrollment`
    * - ``edx.course.enrollment.deactivated`` 
-     - :ref:`Enrollment Events` and :ref:`instructor_enrollment`
+     - :ref:`enrollment` and :ref:`instructor_enrollment`
    * - ``get_anon_ids``
      - :ref:`Instructor_Event_Types`
    * - ``get_student_progress_page``

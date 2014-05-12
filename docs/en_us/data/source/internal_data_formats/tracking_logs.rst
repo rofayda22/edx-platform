@@ -13,7 +13,7 @@ event data is delivered in a log file.
 The sections in this chapter describe:
 
 * A :ref:`sample_events`.
-* :ref:`common` that are included in the JSON document of every Event.
+* :ref:`common` that are included in the JSON document of every event.
 * :ref:`Student_Event_Types` for interactions with the LMS outside of the
   Instructor Dashboard. 
 * :ref:`Instructor_Event_Types` for interactions with the Instructor Dashboard
@@ -168,7 +168,7 @@ of all events.
 
 **Type:** dict
 
-**Details:** For all Events, this field includes member fields that
+**Details:** For all events, this field includes member fields that
 identify:
 
 * The ``course_id`` of the course that generated the event.
@@ -292,9 +292,10 @@ outside the Instructor Dashboard.
 
 * :ref:`AB_Event_Types`
 
-The descriptions that follow include what each Event represents, the system
-component it originates from, and what member fields the ``context`` and
-``event`` dict fields contain.
+The descriptions that follow include what each event represents, the system
+component it originates from, the history of any changes made to the event over
+time, and what additional member fields the ``context`` and ``event`` fields
+contain.
 
 The value in the ``event_source`` field (see the :ref:`common` section above)
 distinguishes between events that originate in the browser (in JavaScript) and
@@ -446,7 +447,9 @@ in the ``event`` dict field.
 ``page_close``
 ---------------
 
-An additional type of event, ``page_close``, originates from within the JavaScript Logger itself.  
+An additional type of event, ``page_close``, originates from within the
+JavaScript Logger itself.
+
 .. what is the function of the Logger? what value do the events that it logs have?
 
 **Component**: JavaScript Logger
@@ -915,7 +918,7 @@ page changes while a user scrolls up or down.
 
 **Event Source**: Browser
 
-**History**: This Event was added on 16 Apr 2014.
+**History**: This event was added on 16 Apr 2014.
 
 ``event`` **Member Fields**: 
 
@@ -952,7 +955,7 @@ field within 500ms of each other.
 
 **Event Source**: Browser
 
-**History**: This Event was added on 16 Apr 2014.
+**History**: This event was added on 16 Apr 2014.
 
 ``event`` **Member Fields**: 
 
@@ -996,7 +999,7 @@ on the Find Next or Find Previous icons for an entered search string.
 
 **Event Source**: Browser
 
-**History**: This Event was added on 16 Apr 2014.
+**History**: This event was added on 16 Apr 2014.
 
 ``event`` **Member Fields**: 
 
@@ -1042,7 +1045,7 @@ selects or clears the **Highlight All** option for a search.
 
 **Event Source**: Browser
 
-**History**: This Event was added on 16 Apr 2014.
+**History**: This event was added on 16 Apr 2014.
 
 ``event`` **Member Fields**: 
 
@@ -1085,7 +1088,7 @@ user selects or clears the **Match Case** option for a search.
 
 **Event Source**: Browser
 
-**History**: This Event was added on 16 Apr 2014.
+**History**: This event was added on 16 Apr 2014.
 
 ``event`` **Member Fields**: 
 
@@ -1124,12 +1127,13 @@ user selects or clears the **Match Case** option for a search.
 Problem Interaction Events 
 =================================
 .. lms-modules.js
-%%
-These events are 
-Capa Module
+.. %%
+.. These events are 
+.. Capa Module
 
-Problem interaction events are emitted by the server or the browser to
-capture information about interactions with problems, specifically, problems defined in the edX Capa module.
+Problem interaction events are emitted by the server or the browser to capture
+information about interactions with problems, specifically, problems defined in
+the edX Capa module.
 
 ``problem_check`` (Browser)
 ----------------------------
@@ -1139,9 +1143,9 @@ The browser emits ``problem_check`` events when a user checks a problem.
 
 **Event Source**: Browser 
 
-``event`` **Member Fields**: For browser-emitted ``problem_check`` events, the ``event``
-field contains the values of all input fields from the problem being checked,
-styled as GET parameters.
+``event`` **Member Fields**: For browser-emitted ``problem_check`` events, the
+``event`` field contains the values of all input fields from the problem being
+checked, styled as GET parameters.
 
 ``problem_check`` (Server)
 ----------------------------
@@ -1365,7 +1369,8 @@ The browser emits ``problem_save`` events when a user saves a problem.
 ``problem_show``
 -----------------------------
 .. no sample to check
-The browser emits ``problem_show`` events when a problem is shown.  %%
+The browser emits ``problem_show`` events when a problem is shown.  
+.. %%
 
 **Event Source**: Browser
 
@@ -1771,75 +1776,253 @@ the child module that was shown to the student.
 Instructor Events
 *************************
 
-The Instructor Event table lists the events that the server emits as a
-result of course team interaction with the Instructor Dashboard in the LMS.
+This section lists the events that the server emits as a result of course team
+interaction with the Instructor Dashboard in the LMS.
 
-+----------------------------------------+---------------------+---------------+
-| Event                                  | ``event`` Fields    | Type          |
-+----------------------------------------+---------------------+---------------+
-| ``list-students``,                     |                     |               |
-| ``dump-grades``,                       |                     |               |
-| ``dump-grades-raw``,                   |                     |               |
-| ``dump-grades-csv``,                   |                     |               |
-| ``dump-grades-csv-raw``,               |                     |               |
-| ``dump-answer-dist-csv``,              |                     |               |
-| ``dump-graded-assignments-config``     |                     |               |
-+----------------------------------------+---------------------+---------------+
-| ``rescore-all-submissions``,           | ``problem``         | string        |
-| ``reset-all-attempts``                 +---------------------+---------------+
-|                                        | ``course``          | string        |
-+----------------------------------------+---------------------+---------------+
-| ``delete-student-module-state``,       | ``problem``         | string        |
-| ``rescore-student-submission``         +---------------------+---------------+
-|                                        | ``student``         | string        |
-|                                        +---------------------+---------------+
-|                                        | ``course``          | string        |
-+----------------------------------------+---------------------+---------------+
-| ``reset-student-attempts``             | ``old_attempts``    | string        |
-|                                        +---------------------+---------------+
-|                                        | ``student``         | string        |
-|                                        +---------------------+---------------+
-|                                        | ``problem``         | string        |
-|                                        +---------------------+---------------+
-|                                        | ``instructor``      | string        |
-|                                        +---------------------+---------------+
-|                                        | ``course``          | string        |
-+----------------------------------------+---------------------+---------------+
-| ``get-student-progress-page``          | ``student``         | string        |
-|                                        +---------------------+---------------+
-|                                        | ``instructor``      | string        |
-|                                        +---------------------+---------------+
-|                                        | ``course``          | string        |
-+----------------------------------------+---------------------+---------------+
-| ``list-staff``,                        |                     |               |
-| ``list-instructors``,                  |                     |               |
-| ``list-beta-testers``                  |                     |               |
-+----------------------------------------+---------------------+---------------+
-| ``add-instructor``,                    | ``instructor``      | string        |
-| ``remove-instructor``                  |                     |               |
-|                                        |                     |               |
-+----------------------------------------+---------------------+---------------+
-| ``list-forum-admins``,                 | ``course``          | string        |
-| ``list-forum-mods``,                   |                     |               |
-| ``list-forum-community-TAs``           |                     |               |
-+----------------------------------------+---------------------+---------------+
-| ``remove-forum-admin``,                | ``username``        | string        |
-| ``add-forum-admin``,                   |                     |               |
-| ``remove-forum-mod``,                  |                     |               |
-| ``add-forum-mod``,                     +---------------------+---------------+
-| ``remove-forum-community-TA``,         | ``course``          | string        |
-| ``add-forum-community-TA``             |                     |               |
-+----------------------------------------+---------------------+---------------+
-| ``psychometrics-histogram-generation`` | ``problem``         | string        |
-|                                        |                     |               |
-|                                        |                     |               |
-+----------------------------------------+---------------------+---------------+
-| ``add-or-remove-user-group``           | ``event_name``      | string        |
-|                                        +---------------------+---------------+
-|                                        | ``user``            | string        |
-|                                        +---------------------+---------------+
-|                                        | ``event``           | string        |
-+----------------------------------------+---------------------+---------------+
+The schema definitions of each of these events include only the JSON fields that
+are common to all events.
+
+* ``dump-answer-dist-csv``
+* ``dump-graded-assignments-config``
+* ``dump-grades``
+* ``dump-grades-csv``
+* ``dump-grades-csv-raw``
+* ``dump-grades-raw``
+* ``list-beta-testers``
+* ``list-instructors``
+* ``list-staff``
+* ``list-students``
+
+.. _rescore_all:
+
+======================================================
+``rescore-all-submissions`` and ``reset-all-attempts``
+======================================================
+
+**Component**: Instructor Dashboard
+
+**Event Source**: Server
+
+``event`` **Fields**: 
+
+.. list-table::
+   :widths: 40 40
+   :header-rows: 1
+
+   * - Field
+     - Type
+   * - ``problem`` 
+     - string
+   * - ``course``
+     - string
+
+.. _rescore_student:
+
+===================================================================
+ ``delete-student-module-state`` and ``rescore-student-submission``
+===================================================================
+.. previously a comma-separated list; "Rows identical after the second column" (which means the name and description columns) were combined
+
+**Component**: Instructor Dashboard
+
+**Event Source**: Server
+
+``event`` **Fields**: 
+
+.. list-table::
+   :widths: 40 40
+   :header-rows: 1
+
+   * - Field
+     - Type
+   * - ``problem``
+     - string
+   * - ``student``
+     - string
+   * - ``course``
+     - string
+
+.. _reset_attempts:
+
+======================================================
+``reset-student-attempts``
+======================================================
+
+**Component**: Instructor Dashboard
+
+**Event Source**: Server
+
+``event`` **Fields**: 
+
+.. list-table::
+   :widths: 40 40
+   :header-rows: 1
+
+   * - Field
+     - Type
+   * - ``old_attempts``
+     - string
+   * - ``student``
+     - string
+   * - ``problem``
+     - string 
+   * - ``course``
+     - string
+
+.. _progress:
+
+======================================================
+``get-student-progress-page`` 
+======================================================
+
+**Component**: Instructor Dashboard
+
+**Event Source**: Server
+
+``event`` **Fields**: 
+
+.. list-table::
+   :widths: 40 40
+   :header-rows: 1
+
+   * - Field
+     - Type
+   * - ``student``
+     - string
+   * - ``instructor``
+     - string
+   * - ``course``
+     - string
+
+======================================================
+``add_instructor`` and ``remove_instructor`` 
+======================================================
+.. previously a comma-separated list; "Rows identical after the second column" (which means the name and description columns) were combined
+
+**Component**: Instructor Dashboard
+
+**Event Source**: Server
+
+``event`` **Fields**: 
+
+.. list-table::
+   :widths: 40 40
+   :header-rows: 1
+
+   * - Field
+     - Type
+   * - ``instructor``
+     - string
+
+.. _list_forum:
+
+======================================================
+List Discussion Staff Events
+======================================================
+.. previously a comma-separated list; "Rows identical after the second column" (which means the name and description columns) were combined
+
+* ``list-forum-admins``
+
+* ``list-forum-mods``
+
+* ``list-forum-community-TAs``
+
+**Component**: Instructor Dashboard
+
+**Event Source**: Server
+
+``event`` **Fields**: 
+
+.. list-table::
+   :widths: 40 40
+   :header-rows: 1
+
+   * - Field
+     - Type
+   * - ``course``
+     - string
+
+.. _forum:
+
+======================================================
+Manage Discussion Staff Events   
+======================================================
+.. previously a comma-separated list; "Rows identical after the second column" (which means the name and description columns) were combined
+
+* ``add-forum-admin``
+
+* ``remove-forum-admin``
+
+* ``add-forum-mod``
+
+* ``remove-forum-mod``
+
+* ``add-forum-community-TA``
+
+* ``remove-forum-community-TA``
+
+**Component**: Instructor Dashboard
+
+**Event Source**: Server
+
+``event`` **Fields**: 
+
+.. list-table::
+   :widths: 40 40
+   :header-rows: 1
+
+   * - Field
+     - Type
+   * - ``username``
+     - string
+   * - ``course``
+     - string
+
+.. _histogram:
+
+======================================================
+``psychometrics-histogram-generation``
+======================================================
+
+**Component**: Instructor Dashboard
+
+**Event Source**: Server
+
+``event`` **Fields**: 
+
+.. list-table::
+   :widths: 40 40
+   :header-rows: 1
+
+   * - Field
+     - Type
+   * - ``problem``
+     - string
+
+.. _user_group:
+
+======================================================
+``add-or-remove-user-group``   
+======================================================
+
+**Component**: Instructor Dashboard
+
+**Event Source**: Server
+
+``event`` **Fields**: 
+
+.. list-table::
+   :widths: 40 40
+   :header-rows: 1
+
+   * - Field
+     - Type
+   * - ``event_name``
+     - string
+   * - ``user``
+     - string
+   * - ``event``
+     - string
 
 .. _instructor_enrollment:
 
