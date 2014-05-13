@@ -13,8 +13,8 @@ for working with students, grades, and other members of the staff.
 * Instructors
 
 You can assign these privileged roles when you work in either the LMS or in
-Studio: the users who have these roles can work on your course in both the LMS
-and Studio. For more information on setting up a team in Studio, see
+Studio, and the users who have these roles can work on your course in both the
+LMS and Studio. For more information on setting up a team in Studio, see
 :ref:`Add Course Team Members`.
 
 .. note:: The LMS "Course Staff" role is the same as the Studio "Staff" role, and the LMS "Instructors" role is the same as the Studio "Admin" role.
