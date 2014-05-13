@@ -1279,18 +1279,23 @@ class TestInstructorAPILevelsDataDump(ModuleStoreTestCase, LoginEnrollmentTestCa
             self.assertEqual(student_json['username'], student.username)
             self.assertEqual(student_json['email'], student.email)
 
-    def test_get_anon_ids(self):
+    @patch.object(instructor.views.api, 'anonymous_id_for_user')
+    @patch.object(instructor.views.api, 'unique_id_for_user')
+    def test_get_anon_ids(self, mock_anon_id_for_user, mock_unique):
         """
         Test the CSV output for the anonymized user ids.
         """
         url = reverse('get_anon_ids', kwargs={'course_id': self.course.id})
-        with patch('instructor.views.api.unique_id_for_user') as mock_unique:
-            mock_unique.return_value = '42'
-            response = self.client.get(url, {})
+        mock_unique.return_value = '41'
+        mock_anon_id_for_user.return_value = '42'
+        response = self.client.get(url, {})
         self.assertEqual(response['Content-Type'], 'text/csv')
         body = response.content.replace('\r', '')
-        self.assertTrue(body.startswith('"User ID","Anonymized user ID"\n"2","42"\n'))
-        self.assertTrue(body.endswith('"7","42"\n'))
+        self.assertTrue(body.startswith(
+            '"User ID","Anonymized user ID","Course Specific Anonymized user ID"'
+            ',"Course ID"\n"2","42","{}"\n'.format(self.course.id)
+        ))
+        self.assertTrue(body.endswith('"7","41","42","{}"\n'.format(self.course.id)))
 
     def test_list_report_downloads(self):
         url = reverse('list_report_downloads', kwargs={'course_id': self.course.id})

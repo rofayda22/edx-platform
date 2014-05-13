@@ -17,6 +17,7 @@ from django.core.urlresolvers import reverse
 
 from courseware.tests.helpers import LoginEnrollmentTestCase
 from courseware.tests.modulestore_config import TEST_DATA_MIXED_MODULESTORE
+import instructor.views.legacy
 from student.roles import CourseStaffRole
 from xmodule.modulestore.tests.django_utils import ModuleStoreTestCase
 from xmodule.modulestore.django import modulestore, clear_existing_modulestores
@@ -50,14 +51,19 @@ class TestInstructorDashboardAnonCSV(ModuleStoreTestCase, LoginEnrollmentTestCas
         self.login(self.instructor, self.password)
         self.enroll(self.toy)
 
-    def test_download_anon_csv(self):
+    @patch.object(instructor.views.legacy, 'anonymous_id_for_user')
+    @patch.object(instructor.views.legacy, 'unique_id_for_user')
+    def test_download_anon_csv(self, mock_anon_id_for_user, mock_unique):
         course = self.toy
         url = reverse('instructor_dashboard_legacy', kwargs={'course_id': course.id})
-
-        with patch('instructor.views.legacy.unique_id_for_user') as mock_unique:
-            mock_unique.return_value = 42
-            response = self.client.post(url, {'action': 'Download CSV of all student anonymized IDs'})
+        mock_unique.return_value = 41
+        mock_anon_id_for_user.return_value = 42
+        response = self.client.post(url, {'action': 'Download CSV of all student anonymized IDs'})
 
         self.assertEqual(response['Content-Type'], 'text/csv')
         body = response.content.replace('\r', '')
-        self.assertEqual(body, '"User ID","Anonymized user ID"\n"2","42"\n')
+        self.assertEqual(
+            body,
+            ('"User ID","Anonymized user ID","Course Specific Anonymized user ID"'
+             ',"Course ID"\n"2","41","42","{}"\n'.format(course.id))
+        )
