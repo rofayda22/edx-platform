@@ -4,7 +4,7 @@
 Grade and Answer Data
 ############################
 
-You can review information about how grading is configured for your course, and access student grades, at any time after you create the course. You can also make adjustments to how a problem is graded, for a single student or all students. For information about the grading data that you can access and the changes you can make, see the following topics:
+You can review information about how grading is configured for your course, and access student grades, at any time after you create the course. You can also make adjustments to student grading for a problem, for a single student or all students. For information about the grading data that you can access and the changes you can make, see the following topics:
 
 * :ref:`Review_grades`
 
@@ -16,7 +16,7 @@ To review student answers to the problems in your course, you can download data 
 
 For information about how you establish a grading policy and work with the Problem components in your course, see :ref:`Establish a Grading Policy` or :ref:`Working with Problem Components`.
 
-.. important:: If you make changes to your grading policy after a course starts, students can see the effect of your changes on their **Progress** pages. Be sure to announce any changes on your Course Info page.
+.. important:: If you make changes to your grading policy after a course starts, students can see the effect of your changes on their **Progress** pages. Be sure to announce any changes on your **Course Info** page.
 
 .. _Review_grades:
 
@@ -153,7 +153,7 @@ To view the **Progress** page for a student:
 
    Below the chart, subsections are listed on the left and the units that contain assignments are listed on the right. The student's individual problem scores display.
 
-.. image:: ../Images/Student_Progress_list.png
+   .. image:: ../Images/Student_Progress_list.png
      :alt: Bottom portion of a Progress page for the same student with the score acheived for each problem in the first course subsection 
 
 =============================================
@@ -196,10 +196,9 @@ To review a response submitted by a student:
 
 #. Enter the username for the student whose work you want to review, then click **View History** at the end of the page.
 
-  Information about the response or responses provided by the student displays. 
+  Information about the response or responses provided by the student displays.
 
 To close the Submission History Viewer, click on the browser page outside of the viewer.
-
 
 .. _Adjust_grades:
 
@@ -207,15 +206,21 @@ To close the Submission History Viewer, click on the browser page outside of the
 Adjust Grades
 ***********************************
 
-You can adjust grades for one student at a time, or for all of the enrolled students in the course. For example, your course beta testers can evaluate numerous different correct and incorrect responses to verify that your course is set up as you intend. Students can also report errors while a course is running. 
+You can adjust grades for one student at a time, or for all of the enrolled students in the course. For example, your course beta testers can evaluate numerous different correct and incorrect responses to verify that your course is set up as you intend. Students can also report errors while a course is running. When an error is discovered or corrected, or if you decide that you must modify a problem after students or beta testers have attempted to answer it, you can either:
 
-When an error is discovered or corrected, or if you decide that you must modify a problem after students or beta testers have attempted to answer it, you can either:
+* Rescore the submitted answers to reevaluate the work. See :ref:`rescore`.
 
-* Rescore the submitted answers to reevaluate the work.
+* Reset the number of attempts made to answer the question correctly so that students can try again. See :ref:`reset_attempts`.
 
-* Reset the number of attempts made to answer the question correctly so that students can try again.
+You can make these adjustments for a single student or for all of the students
+enrolled in your course. To make an adjustment for all students, you need the unique identifier of the problem. See :ref:`find_URL`.
 
-To make these adjustments, you need to specify a problem by supplying the unique identifier from its URL.
+Another grade adjustment technique is to delete a student's database history, or
+"state", completely for a problem. You can only delete student state for
+individual students. For example, you realize that a problem needs to be
+rewritten after only a few of your students have answered it. You rewrite the
+problem and delete student state individually for those students so that they
+can try again. See :ref:`delete_state`.
 
 .. _find_URL:
 
@@ -238,24 +243,44 @@ To find the unique identifier in the URL for a problem:
 .. image:: ../Images/Problem_URL.png
     :alt: The Staff Debug view of a problem with the unique identifier indicated at the end of a URL address
 
-
 4. To copy the identifier for the problem, select it, right click, and choose **Copy**.
 
 .. note:: If the URL does not include "problem/" before the identifier, you will need to specify that module identifier as well. Select and copy both the module identifier and the problem identifier.
 
 To close the Staff Debug viewer, click on the browser page outside of the viewer.
 
+.. _rescore:
+
 ===================================================
-Rescore Student Submissions
+Rescore Student Submissions for a Problem
 ===================================================
 
 Each problem that you define for your course includes a correct answer, and may also include a tolerance or acceptable alternatives. If you decide to make a change to these values, you can rescore any responses that were already submitted. For a specified problem, you can rescore the work submitted by a single student, or rescore the submissions made by every enrolled student. 
 
-**Note**: You can only rescore problems that have a correct answer entered in edX Studio. Problems that are scored by an external grader cannot be rescored with this procedure.
+.. note:: You can only rescore problems that have a correct answer entered in edX Studio. Problems that are scored by an external grader cannot be rescored with this procedure.
 
-To specify the problem you want to rescore, you need its unique identifier. See :ref:`find_URL`.
+Rescore a Submission for an Individual Student
+-----------------------------------------------
 
-To rescore a problem:
+To rescore a problem for a single student, you need that student's username or email address.
+
+#. View the live version of your course.
+
+#. Click **Courseware** and navigate to the component that contains the problem you want to rescore.
+
+#. Display the problem, then click **Staff Debug Info**. The Staff Debug viewer opens.
+
+#. In the **Username** field, enter the student's email address or username,
+   then click **Rescore Student Submission**. A message indicates a successful
+   adjustment.
+
+#. To close the Staff Debug viewer, click on the browser page outside of the
+   viewer.
+
+Rescore Submissions for All Students
+------------------------------------
+
+To specify the problem you want to rescore, you need its unique identifier. See :ref:`find_URL`. To rescore a problem:
 
 #. View the live version of your course.
 
@@ -263,51 +288,51 @@ To rescore a problem:
 
 #. Click **Student Admin**. 
 
-#. Rescore the problem, either for an individual student or for all students.
+#. In the **Course-Specific Grade Adjustment** section of the page, enter the unique problem identifier, and then click **Rescore ALL students' problem submissions**. 
 
-   To rescore a problem for one student, you work in the **Student-Specific Grade Adjustment** section of the page. Enter the student's email address or username and the unique problem identifier, and then click **Rescore Student Submission**.
+#. When you see a dialog box that notifies you that the rescore process is in progress, click **OK**. 
 
-   To rescore a problem for all enrolled students, you work in the **Course-Specific Grade Adjustment** section of the page. Enter the unique problem identifier, and then click **Rescore ALL students' problem submissions**. 
-
-5. When you see a dialog box that notifies you that the rescore process is in progress, click **OK**. 
-
-   This process does not take long for a single student, but can take some time to complete for all enrolled students. The process runs in the background, so you can navigate away from this page and do other work while it runs.
+   This process can take some time to complete for all enrolled students. The process runs in the background, so you can navigate away from this page and do other work while it runs.
 
 6. To view the results of the rescore process, click either **Show Background Task History for Student** or **Show Background Task History for Problem**.
 
    A table displays the status of the rescore process for each student or problem.
 
+.. note:: You can use a similar procedure to rescore the submission for a problem by a single student. You work in the **Student-Specific Grade Adjustment** section of the page to enter both the student’s email address or username and the unique problem identifier, and then click **Rescore Student Submission**. 
+
+.. _reset_attempts:
+
 ===================================================
-Reset Student Attempts
+Reset Student Attempts for a Problem
 ===================================================
 
 When you create a problem, you can limit the number of times that a student can try to answer that problem correctly. If unexpected issues occur for a problem, you can reset the value for one particular student's attempts back to zero so that the student can begin work over again. If the unexpected behavior affects all of the students in your course, you can reset the number of attempts for all students to zero. 
 
 For information about modifying a released problem, including other workarounds, see :ref:`Modifying a Released Problem`.
 
-
 Reset Attempts for an Individual Student
 ---------------------------------------------
 
-To reset the number of attempts for a student, you need the student's username or email address.
-
-To reset a single student's attempts for a problem:
+To reset the number of attempts for a single student, you need that student's username or email address.
 
 #. View the live version of your course.
 
-#. Click **Courseware** and navigate to the component that contains the problem you want to review.
+#. Click **Courseware** and navigate to the component that contains the problem you want to reset.
 
-#. Display the problem, and click **Staff Debug Info**.
-#. %%%
+#. Display the problem, then click **Staff Debug Info**. The Staff Debug viewer opens.
 
+#. In the **Username** field, enter the student's email address or username,
+   then click **Reset Student Attempts**. A message indicates a successful  adjustment. 
+
+#. To close the Staff Debug viewer, click on the browser page outside of the
+   viewer.
 
 Reset Attempts for All Students
 ------------------------------------
 
 To reset the number of attempts that all enrolled students have for a problem,
-you need the unique identifier of the problem. See :ref:`find_URL`.
-
-To reset attempts for all students:
+you need the unique identifier of the problem. See :ref:`find_URL`. To reset
+attempts for all students:
 
 #. View the live version of your course.
 
@@ -315,16 +340,58 @@ To reset attempts for all students:
 
 #. Click **Student Admin**. 
 
-#. To reset the number of attempts for all enrolled students, you work in the Course-Specific Grade Adjustment section of the page. Enter the unique problem identifier then click **Reset ALL students' attempts**. 
+#. To reset the number of attempts for all enrolled students, you work in the **Course-Specific Grade Adjustment** section of the page. Enter the unique problem identifier then click **Reset ALL students' attempts**. 
 
 #. A dialog opens to indicate that the reset process is in progress. Click **OK**. 
 
-   This process does not take long for a single student, but can take some time to complete for all enrolled students. The process runs in the background, so you can navigate away from this page and do other work while it runs.
+   This process can take some time to complete. The process runs in the
+   background, so you can navigate away from this page and do other work while
+   it runs.
 
 7. To view the results of the reset process, click either **Show Background Task History for Student** or **Show Background Task History for Problem**.
 
    A table displays the status of the reset process for each student or problem.
 
+.. note:: You can use a similar procedure to reset problem attempts for a single student. You work in the **Student-Specific Grade Adjustment** section of the page to enter both the student’s email address or username and the unique problem identifier, and then click **Reset Student Attempts**. 
+
+.. _delete_state:
+
+=============================================
+Delete Student State for a Problem
+=============================================
+
+To delete a student's entire history for a problem from the database, you need
+that student's username or email address. You can use either the Staff Debug
+viewer or the Instructor Dashboard to delete student state.
+.. future example: this is how to help a student who has gotten poor feedback on an ORA problem.
+
+To use the Staff Debug viewer:
+
+#. View the live version of your course.
+
+#. Click **Courseware** and navigate to the component that contains the problem.
+
+#. Display the problem, then click **Staff Debug Info**. The Staff Debug viewer
+   opens.
+
+#. In the **Username** field, enter the student's email address or username,
+   then click **Delete Student State**. A message indicates a successful
+   adjustment.
+
+#. To close the Staff Debug viewer, click on the browser page outside of the
+   viewer.
+
+To use the Instructor Dashboard, you need the unique identifier of the problem.
+See :ref:`find_URL`.
+
+#. Click **Instructor** > **Try New Beta Dashboard**.
+
+#. Click **Student Admin**. 
+
+#. In the **Student-Specific Grade Adjustment** section of the page, enter both
+   the student’s email address or username and the unique problem identifier,
+   and then click **Delete Student State for Problem**.
+   
 .. _Review_Answers:
 
 ****************************************
