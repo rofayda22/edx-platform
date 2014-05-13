@@ -220,7 +220,8 @@ either:
 
 * Rescore the submitted answers to reevaluate the work. See :ref:`rescore`.
 
-* Reset the number of attempts made to answer the question correctly so that students can try again. See :ref:`reset_attempts`.
+* Reset the number of times a student has attempted to answer the problem to
+  zero so that the student can try again. See :ref:`reset_attempts`.
 
 You can make these adjustments for a single student or for all of the students
 enrolled in your course. To make an adjustment for all students, you need the unique identifier of the problem. See :ref:`find_URL`.
@@ -228,9 +229,9 @@ enrolled in your course. To make an adjustment for all students, you need the un
 Another grade adjustment technique is to delete a student's database history, or
 "state", completely for a problem. You can only delete student state for
 individual students. For example, you realize that a problem needs to be
-rewritten after only a few of your students have answered it. You rewrite the
-problem and delete student state individually for those students so that they
-can try again. See :ref:`delete_state`.
+rewritten after only a few of your students have answered it. To resolve this
+situation, you rewrite the problem and then delete student state for the
+affected students only so that they can try again. See :ref:`delete_state`.
 
 .. _find_URL:
 
@@ -367,7 +368,9 @@ attempts for all students:
 
 #. Click **Student Admin**. 
 
-#. To reset the number of attempts for all enrolled students, you work in the **Course-Specific Grade Adjustment** section of the page. Enter the unique problem identifier then click **Reset ALL students' attempts**. 
+#. To reset the number of attempts for all enrolled students, you work in the
+   **Course-Specific Grade Adjustment** section of the page. Enter the unique
+   problem identifier, then click **Reset ALL students' attempts**.
 
 #. A dialog opens to indicate that the reset process is in progress. Click **OK**. 
 
