@@ -36,8 +36,8 @@ def import_static_content(
 
     verbose = True
 
-    mimetypes.add_type('application/json', '.sjson')
-    mimetypes.add_type('application/x-subrip', '.srt')
+    #mimetypes.add_type('application/octet-stream', '.sjson')
+    #mimetypes.add_type('application/octet-stream', '.srt')
     mimetypes_list = mimetypes.types_map.values()
 
     for dirname, _, filenames in os.walk(static_dir):
