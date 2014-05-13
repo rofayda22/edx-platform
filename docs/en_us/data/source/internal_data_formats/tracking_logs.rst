@@ -264,10 +264,10 @@ DDThh:mm:ss.xxxxxx' format.
 ``username`` Field
 ===================
 
-**Type:** The username of the user who caused the event to be emitted. This string is
-empty for anonymous events, such as when the user is not logged in.
+**Type:** string
 
-**Details:** string
+**Details:** The username of the user who caused the event to be emitted. This
+string is empty for anonymous events, such as when the user is not logged in.
 
 .. _Student_Event_Types:
 
@@ -294,8 +294,7 @@ outside the Instructor Dashboard.
 
 The descriptions that follow include what each event represents, the system
 component it originates from, the history of any changes made to the event over
-time, and what additional member fields the ``context`` and ``event`` fields
-contain.
+time, and any additional member fields that the ``context`` and ``event`` fields contain.
 
 The value in the ``event_source`` field (see the :ref:`common` section above)
 distinguishes between events that originate in the browser (in JavaScript) and
@@ -319,12 +318,11 @@ activities completed by a student.
   **Unregister** for the course.
 
 In addition, actions by instructors and course staff members also generate
-enrollment events. For the actions that members of the course team complete that
-result in these events, see :ref:`instructor_enrollment`.
+enrollment events. For the actions that members of the course team complete that result in these events, see :ref:`instructor_enrollment`.
 
 **Event Source**: Server
 
-**History**: The enrollment Events were added on 03 Dec 2013.
+**History**: The enrollment events were added on 03 Dec 2013.
 
 ``context`` **Member Fields**: 
 
@@ -377,29 +375,29 @@ Example
 
 .. code-block:: json
 
-  {
-    "username": "AAAAAAAAAA",
-    "host": "courses.edx.org",
-    "event_source": "server",
-    "event_type": "edx.course.enrollment.activated",
-    "context": {
-      "course_id": "edX\/DemoX\/Demo_Course",
-      "org_id": "edX",
-      "path": "/change_enrollment",
-      "user_id": 9999999
-    },
-    "time": "2014-01-26T00:28:28.388782+00:00",
-    "ip": "NN.NN.NNN.NNN",
-    "event": {
-      "course_id": "edX\/DemoX\/Demo_Course",
-      "user_id": 9999999,
-      "mode": "honor"
-      "name": "edx.course.enrollment.activated",
-      "session": a14j3ifhskngw0gfgn230g
-    },
-    "agent": "Mozilla\/5.0 (Windows NT 6.1; WOW64; Trident\/7.0; rv:11.0) like Gecko",
-    "page": null
-  }
+    {
+        "username": "AAAAAAAAAA",
+        "host": "courses.edx.org",
+        "event_source": "server",
+        "event_type": "edx.course.enrollment.activated",
+        "context": {
+          "course_id": "edX\/DemoX\/Demo_Course",
+          "org_id": "edX",
+          "path": "/change_enrollment",
+          "user_id": 9999999
+        },
+        "time": "2014-01-26T00:28:28.388782+00:00",
+        "ip": "NN.NN.NNN.NNN",
+        "event": {
+          "course_id": "edX\/DemoX\/Demo_Course",
+          "user_id": 9999999,
+          "mode": "honor"
+          "name": "edx.course.enrollment.activated",
+          "session": a14j3ifhskngw0gfgn230g
+        },
+        "agent": "Mozilla\/5.0 (Windows NT 6.1; WOW64; Trident\/7.0; rv:11.0) like Gecko",
+        "page": null
+      }
 
 .. _navigational:
 
@@ -411,9 +409,10 @@ The browser emits these events when a user selects a navigational control.
 
 * ``seq_goto`` is emitted when a user jumps between units in a sequence. 
 
-* ``seq_next`` is emitted when a user navigates to the next unit in a sequence. 
+* ``seq_next`` is emitted when a user navigates to the next unit in a sequence.
 
-* ``seq_prev`` is emitted when a user navigates to the previous unit in a sequence. 
+* ``seq_prev`` is emitted when a user navigates to the previous unit in a
+  sequence.
 
 **Component**: Sequence 
 
@@ -450,7 +449,7 @@ in the ``event`` dict field.
 An additional type of event, ``page_close``, originates from within the
 JavaScript Logger itself.
 
-.. what is the function of the Logger? what value do the events that it logs have?
+.. what is the function of the Logger? what value do the events that it logs have? is event_source by any chance set to 'task' for these?
 
 **Component**: JavaScript Logger
 
@@ -526,7 +525,6 @@ transcript to go to a different point in the video file.
 
 .. need types
 
-
 ``speed_change_video`` 
 ------------------------
 
@@ -592,8 +590,7 @@ Textbook Interaction Events
 ``book``
 ----------
 
-The browser emits ``book`` events when a user navigates within the PDF Viewer or
-the PNG Viewer.
+The browser emits ``book`` events when a user navigates within the PDF Viewer or the PNG Viewer.
 
 * For textbooks in PDF format, the URL in the common ``page`` field contains
   '/pdfbook/'.
@@ -618,28 +615,23 @@ fields ``name`` and ``chapter``.
      - Details
    * - ``type``
      - string
-     - 'gotopage' is emitted when a page loads after the student manually enters its number.
-   * - 
      -  
-     - 'prevpage' is emitted when the next page button is clicked.
-   * - 
-     - 
-     - 'nextpage' is emitted when the previous page button is clicked.
+       * 'gotopage' is emitted when a page loads after the student manually enters its number.
+       * 'prevpage' is emitted when the next page button is clicked.
+       * 'nextpage' is emitted when the previous page button is clicked.
+
    * - ``name``
      - string
-     - For 'gotopage', set to ``textbook.pdf.page.loaded``.
-   * - 
-     - 
-     - For 'prevpage', set to ``textbook.pdf.page.navigatedprevious``. 
-   * - 
-     - 
-     - For 'nextpage', set to ``textbook.pdf.page.navigatednext``. 
-   * - 
-     - 
-     - **History**: Added for events produced by the PDF Viewer on 16 Apr 2014.
+     -  
+       * For 'gotopage', set to ``textbook.pdf.page.loaded``.
+       * For 'prevpage', set to ``textbook.pdf.page.navigatedprevious``. 
+       * For 'nextpage', set to ``textbook.pdf.page.navigatednext``. 
+       
+       **History**: Added for events produced by the PDF Viewer on 16 Apr 2014.
    * - ``chapter``
      - string
-     - The name of the PDF file. **History**: Added for events produced by the PDF Viewer on 16 Apr 2014.
+     - The name of the PDF file. 
+       **History**: Added for events produced by the PDF Viewer on 16 Apr 2014.
    * - ``old``
      - integer
      - The original page number. Applies to 'gotopage' event types only.   
@@ -1688,9 +1680,9 @@ content that differs in some way for comparison testing. When a student
 navigates to a module that is set up for A/B testing in this way, the student is
 randomly assigned to a group and shown only one of the child modules.
 
-* Internally, a *partition* defines the type of experiment: between video and
-  text, for example. A course can include any number of modules with the same
-  partition, or experiment type.
+* Internally, a *partition* defines the type of experiment: comparing the
+  effectiveness of video alone to text alone, for example. A course can include
+  any number of modules with the same partition, or experiment type.
 
 * For each partition, students are randomly assigned to a *group*. The group
   determines which content, either video or text in this example, is shown by
